@@ -1,0 +1,15 @@
+---
+import { SITE } from '../consts';
+---
+<header class="relative z-10 max-w-5xl mx-auto px-5 sm:px-6 py-4 flex items-center justify-between gap-2">
+  <a href="/" class="font-black text-xl sm:text-2xl tracking-tight bg-gradient-to-r from-tirma-pink to-tirma-beige bg-clip-text text-transparent">
+    getcroquis
+  </a>
+  <nav class="flex items-center gap-1.5 sm:gap-3 text-sm">
+    <a href="/guias" class="text-white/60 hover:text-white px-2.5 sm:px-3 py-1.5">Guías</a>
+    <a href={SITE.appUrl} class="text-white/60 hover:text-white px-2.5 sm:px-3 py-1.5">Explora</a>
+    <a href={SITE.appUrl} class="font-bold px-3.5 py-1.5 rounded-full bg-gradient-to-r from-tirma-pink to-tirma-deep text-tirma-beige shadow-lg shadow-tirma-pink/25 whitespace-nowrap">
+      Abrir app
+    </a>
+  </nav>
+</header>

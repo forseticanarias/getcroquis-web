@@ -1,0 +1,14 @@
+---
+import { SITE } from '../consts';
+const year = new Date().getFullYear();
+---
+<footer class="relative z-10 border-t border-white/[0.06] mt-20">
+  <div class="max-w-5xl mx-auto px-6 py-8 flex flex-wrap items-center justify-between gap-3 text-xs text-white/40">
+    <div>© {year} Croquis · <a href="/guias" class="hover:text-white/70">Guías de viaje</a></div>
+    <div class="flex gap-4">
+      <a href={`${SITE.appUrl}/legal/privacidad`} class="hover:text-white/70">Privacidad</a>
+      <a href={`${SITE.appUrl}/legal/terminos`} class="hover:text-white/70">Términos</a>
+      <a href={SITE.appUrl} class="hover:text-white/70">Abrir app</a>
+    </div>
+  </div>
+</footer>
