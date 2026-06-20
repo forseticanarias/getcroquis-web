@@ -1,0 +1,71 @@
+---
+import Base from '../../layouts/Base.astro';
+import { COUNTRIES } from '../../data/countries';
+
+const countries = [...COUNTRIES].sort((a, b) => a.name.localeCompare(b.name));
+---
+
+<Base
+  title="Destinos: guías de países para viajar"
+  description="Elige un país y descubre la mejor época para viajar, presupuesto, esenciales y consejos. El atlas viajero de getcroquis."
+>
+  <section class="max-w-4xl mx-auto px-5 sm:px-6 pt-10 sm:pt-14 pb-6">
+    <p class="text-xs font-bold tracking-widest text-tirma-pink/80 uppercase mb-3">El atlas viajero</p>
+    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight">¿A dónde viajas?</h1>
+    <p class="mt-3 text-white/65 leading-relaxed">Busca un país y descubre cuándo ir, cuánto cuesta y qué necesitas.</p>
+
+    <div class="mt-6 relative">
+      <input
+        id="country-search"
+        type="search"
+        placeholder="Busca un país… (ej. Japón)"
+        autocomplete="off"
+        class="w-full px-4 py-3 rounded-xl bg-white/[0.06] border border-white/15 text-white placeholder-white/40 outline-none focus:border-tirma-pink/50"
+      />
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-5 sm:px-6 pb-16">
+    <div id="country-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      {countries.map((c) => (
+        <a
+          href={`/destinos/${c.slug}`}
+          data-name={c.name.toLowerCase()}
+          class="country-card flex items-center gap-3 p-4 rounded-2xl bg-white/[0.03] border border-white/[0.08] hover:border-tirma-pink/30 hover:bg-white/[0.05] transition"
+        >
+          <img src={`https://flagcdn.com/h20/${c.code}.png`} alt="" width="28" class="rounded-sm ring-1 ring-white/10" />
+          <div class="min-w-0">
+            <div class="font-bold text-sm truncate">{c.name}</div>
+            {c.bestMonths && <div class="text-[11px] text-white/45 truncate">{c.bestMonths}</div>}
+          </div>
+        </a>
+      ))}
+    </div>
+    <p id="no-results" class="hidden text-center text-white/50 py-10">
+      Aún no tenemos ficha de ese país. ¡Estamos ampliando el atlas! 🌍
+    </p>
+  </section>
+
+  <script>
+    const input = document.getElementById('country-search');
+    const cards = Array.from(document.querySelectorAll('.country-card'));
+    const noResults = document.getElementById('no-results');
+    input?.addEventListener('input', (e) => {
+      const q = e.target.value.trim().toLowerCase();
+      let visible = 0;
+      cards.forEach((card) => {
+        const match = card.getAttribute('data-name').includes(q);
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      noResults?.classList.toggle('hidden', visible > 0);
+    });
+    // Enter abre el primer resultado visible
+    input?.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        const first = cards.find((c) => c.style.display !== 'none');
+        if (first) window.location.href = first.getAttribute('href');
+      }
+    });
+  </script>
+</Base>

@@ -24,8 +24,23 @@ const guias = (await getCollection('guias', ({ data }) => !data.draft))
       <a href={`${SITE.appUrl}/dashboard`} class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-tirma-pink to-tirma-deep text-tirma-beige font-bold shadow-lg shadow-tirma-pink/30 hover:brightness-105 transition">
         Planifica gratis →
       </a>
-      <a href="/guias" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full border border-white/15 text-white/80 font-bold hover:border-tirma-pink/40 hover:text-white transition">
-        Ver guías
+      <a href="/destinos" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full border border-white/15 text-white/80 font-bold hover:border-tirma-pink/40 hover:text-white transition">
+        Explorar destinos
+      </a>
+    </div>
+  </section>
+
+  <!-- Atlas de destinos -->
+  <section class="max-w-5xl mx-auto px-5 sm:px-6 py-12 sm:py-16">
+    <div class="rounded-3xl border border-tirma-pink/20 bg-gradient-to-br from-tirma-pink/[0.08] to-transparent p-6 sm:p-10 text-center">
+      <p class="text-xs font-bold tracking-widest text-tirma-pink/80 uppercase mb-3">El atlas viajero</p>
+      <h2 class="text-2xl md:text-3xl font-bold max-w-2xl mx-auto">Busca un país y descubre cuándo ir</h2>
+      <p class="text-sm text-white/60 mt-3 max-w-xl mx-auto leading-relaxed">
+        Mejor época, clima por estación, presupuesto, esenciales y consejos.
+        Toda la información de tu destino, centralizada.
+      </p>
+      <a href="/destinos" class="inline-flex items-center gap-2 mt-6 px-7 py-3 rounded-full bg-gradient-to-r from-tirma-pink to-tirma-deep text-tirma-beige font-bold shadow-lg shadow-tirma-pink/25 hover:brightness-105 transition">
+        Explorar el atlas 🌍
       </a>
     </div>
   </section>

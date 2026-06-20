@@ -1,0 +1,103 @@
+---
+import Base from '../../layouts/Base.astro';
+import { SITE } from '../../consts';
+import { COUNTRIES } from '../../data/countries';
+
+export async function getStaticPaths() {
+  return COUNTRIES.map((c) => ({ params: { slug: c.slug }, props: { c } }));
+}
+
+const { c } = Astro.props;
+const flag = `https://flagcdn.com/h40/${c.code}.png`;
+const facts = [
+  ['Capital', c.capital],
+  ['Moneda', c.currency],
+  ['Idioma', c.language],
+  ['Enchufe', c.plug],
+  ['Huso horario', c.tz],
+  ['Presupuesto', c.budget],
+].filter(([, v]) => v);
+---
+
+<Base
+  title={`${c.name}: mejor época, presupuesto y guía`}
+  description={`Cuándo viajar a ${c.name}: mejor época, clima por estación, presupuesto, esenciales y consejos. ${c.summary?.slice(0, 90) ?? ''}`}
+>
+  <article class="max-w-3xl mx-auto px-5 sm:px-6 pt-8 sm:pt-12 pb-12">
+    <a href="/destinos" class="text-sm text-white/50 hover:text-white">← Destinos</a>
+
+    <header class="mt-5 flex items-center gap-4">
+      <img src={flag} alt={`Bandera de ${c.name}`} width="56" class="rounded-md ring-1 ring-white/15" />
+      <div>
+        <h1 class="text-3xl sm:text-4xl font-bold tracking-tight">{c.name}</h1>
+        {c.bestMonths && <p class="text-sm text-tirma-beige/90 mt-1">Mejor época: <strong>{c.bestMonths}</strong></p>}
+      </div>
+    </header>
+
+    {c.summary && <p class="mt-5 text-white/70 leading-relaxed text-lg">{c.summary}</p>}
+
+    <!-- Datos rápidos -->
+    <section class="mt-7 grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+      {facts.map(([k, v]) => (
+        <div class="rounded-xl bg-white/[0.03] border border-white/[0.08] p-3">
+          <div class="text-[10px] font-bold uppercase tracking-wider text-white/40">{k}</div>
+          <div class="text-sm font-semibold mt-0.5">{v}</div>
+        </div>
+      ))}
+    </section>
+
+    <!-- Mejor época -->
+    {c.seasons && c.seasons.length > 0 && (
+      <section class="mt-10">
+        <h2 class="text-2xl font-bold mb-4">Mejor época para viajar a {c.name}</h2>
+        <div class="grid sm:grid-cols-2 gap-4">
+          {c.seasons.map((s) => (
+            <div class="rounded-2xl bg-white/[0.03] border border-white/[0.08] p-4">
+              <div class="flex items-baseline justify-between mb-2">
+                <h3 class="font-bold">{s.name}</h3>
+                <span class="text-xs text-white/45">{s.months}</span>
+              </div>
+              <ul class="space-y-1 text-sm">
+                {s.pros.map((p) => <li class="text-emerald-300/90">✓ {p}</li>)}
+                {s.cons.map((co) => <li class="text-white/50">✕ {co}</li>)}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Zonas destacadas -->
+    {c.regions && c.regions.length > 0 && (
+      <section class="mt-10">
+        <h2 class="text-2xl font-bold mb-3">Zonas destacadas</h2>
+        <div class="flex flex-wrap gap-2">
+          {c.regions.map((r) => (
+            <span class="px-3 py-1.5 rounded-full bg-tirma-pink/10 border border-tirma-pink/25 text-sm text-tirma-beige/90">{r}</span>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Consejos -->
+    {c.tips && c.tips.length > 0 && (
+      <section class="mt-10">
+        <h2 class="text-2xl font-bold mb-3">Consejos para tu viaje</h2>
+        <ul class="space-y-2">
+          {c.tips.map((t) => (
+            <li class="flex gap-2 text-white/70"><span class="text-tirma-pink">›</span>{t}</li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <!-- CTA a la app -->
+    <div class="mt-12 p-6 rounded-2xl bg-gradient-to-br from-tirma-pink/12 to-transparent border border-tirma-pink/25 text-center">
+      <p class="font-bold text-lg">¿Te animas con {c.name}?</p>
+      <p class="text-sm text-white/65 mt-1">Crea tu itinerario con IA y organiza todo el viaje en un sitio.</p>
+      <a href={`${SITE.appUrl}/dashboard`} class="inline-flex items-center gap-2 mt-4 px-7 py-3 rounded-full bg-gradient-to-r from-tirma-pink to-tirma-deep text-tirma-beige font-bold shadow-lg shadow-tirma-pink/25 hover:brightness-105 transition">
+        Planifica tu viaje a {c.name} →
+      </a>
+    </div>
+  </article>
+</Base>
