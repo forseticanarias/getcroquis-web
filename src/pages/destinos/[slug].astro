@@ -1,6 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { SITE } from '../../consts';
+import { SITE, ESSENTIALS } from '../../consts';
 import { COUNTRIES } from '../../data/countries';
 
 export async function getStaticPaths() {
@@ -14,90 +14,112 @@ const facts = [
   ['Moneda', c.currency],
   ['Idioma', c.language],
   ['Enchufe', c.plug],
-  ['Huso horario', c.tz],
+  ['Huso', c.tz],
   ['Presupuesto', c.budget],
 ].filter(([, v]) => v);
 ---
 
 <Base
   title={`${c.name}: mejor época, presupuesto y guía`}
-  description={`Cuándo viajar a ${c.name}: mejor época, clima por estación, presupuesto, esenciales y consejos. ${c.summary?.slice(0, 90) ?? ''}`}
+  description={`Cuándo viajar a ${c.name}: mejor época, clima por estación, presupuesto, esenciales y consejos. ${c.summary?.slice(0, 80) ?? ''}`}
+  image={c.image}
 >
-  <article class="max-w-3xl mx-auto px-5 sm:px-6 pt-8 sm:pt-12 pb-12">
-    <a href="/destinos" class="text-sm text-white/50 hover:text-white">← Destinos</a>
-
-    <header class="mt-5 flex items-center gap-4">
-      <img src={flag} alt={`Bandera de ${c.name}`} width="56" class="rounded-md ring-1 ring-white/15" />
-      <div>
-        <h1 class="text-3xl sm:text-4xl font-bold tracking-tight">{c.name}</h1>
-        {c.bestMonths && <p class="text-sm text-tirma-beige/90 mt-1">Mejor época: <strong>{c.bestMonths}</strong></p>}
+  <!-- HERO con foto icónica -->
+  <header class="relative h-[44vh] min-h-[300px] max-h-[460px] w-full overflow-hidden">
+    {c.image && <img src={c.image} alt={c.imageAlt ?? c.name} class="absolute inset-0 w-full h-full object-cover" />}
+    <div class="absolute inset-0 bg-gradient-to-t from-[#0a0d12] via-[#0a0d12]/40 to-[#0a0d12]/10"></div>
+    <div class="relative z-10 max-w-5xl mx-auto h-full px-5 sm:px-6 flex flex-col justify-end pb-7">
+      <a href="/destinos" class="absolute top-4 left-5 sm:left-6 text-sm text-white/80 hover:text-white bg-black/30 backdrop-blur px-3 py-1.5 rounded-full">← Destinos</a>
+      <div class="flex items-center gap-3 mb-2">
+        <img src={flag} alt={`Bandera de ${c.name}`} width="44" class="rounded-md ring-1 ring-white/25 shadow-lg" />
+        {c.budget && <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-white/15 backdrop-blur">{c.budget}</span>}
       </div>
-    </header>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight drop-shadow-lg">{c.name}</h1>
+      {c.bestMonths && <p class="text-base sm:text-lg text-tirma-beige mt-2 drop-shadow">Mejor época: <strong>{c.bestMonths}</strong></p>}
+    </div>
+  </header>
 
-    {c.summary && <p class="mt-5 text-white/70 leading-relaxed text-lg">{c.summary}</p>}
+  <div class="max-w-5xl mx-auto px-5 sm:px-6 py-10 grid lg:grid-cols-3 gap-8">
+    <!-- COLUMNA PRINCIPAL -->
+    <div class="lg:col-span-2 space-y-10">
+      {c.summary && <p class="text-lg text-white/75 leading-relaxed">{c.summary}</p>}
 
-    <!-- Datos rápidos -->
-    <section class="mt-7 grid grid-cols-2 sm:grid-cols-3 gap-2.5">
-      {facts.map(([k, v]) => (
-        <div class="rounded-xl bg-white/[0.03] border border-white/[0.08] p-3">
-          <div class="text-[10px] font-bold uppercase tracking-wider text-white/40">{k}</div>
-          <div class="text-sm font-semibold mt-0.5">{v}</div>
-        </div>
-      ))}
-    </section>
-
-    <!-- Mejor época -->
-    {c.seasons && c.seasons.length > 0 && (
-      <section class="mt-10">
-        <h2 class="text-2xl font-bold mb-4">Mejor época para viajar a {c.name}</h2>
-        <div class="grid sm:grid-cols-2 gap-4">
-          {c.seasons.map((s) => (
-            <div class="rounded-2xl bg-white/[0.03] border border-white/[0.08] p-4">
-              <div class="flex items-baseline justify-between mb-2">
-                <h3 class="font-bold">{s.name}</h3>
-                <span class="text-xs text-white/45">{s.months}</span>
+      {c.seasons && c.seasons.length > 0 && (
+        <section>
+          <h2 class="text-2xl font-bold mb-4">¿Cuándo ir a {c.name}?</h2>
+          <div class="grid sm:grid-cols-2 gap-3">
+            {c.seasons.map((s) => (
+              <div class="rounded-2xl bg-white/[0.03] border border-white/[0.08] p-4">
+                <div class="flex items-baseline justify-between mb-2">
+                  <h3 class="font-bold">{s.name}</h3>
+                  <span class="text-xs text-white/45">{s.months}</span>
+                </div>
+                <ul class="space-y-1 text-sm">
+                  {s.pros.map((p) => <li class="text-emerald-300/90">✓ {p}</li>)}
+                  {s.cons.map((co) => <li class="text-white/45">✕ {co}</li>)}
+                </ul>
               </div>
-              <ul class="space-y-1 text-sm">
-                {s.pros.map((p) => <li class="text-emerald-300/90">✓ {p}</li>)}
-                {s.cons.map((co) => <li class="text-white/50">✕ {co}</li>)}
-              </ul>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {c.regions && c.regions.length > 0 && (
+        <section>
+          <h2 class="text-2xl font-bold mb-3">Zonas destacadas</h2>
+          <div class="flex flex-wrap gap-2">
+            {c.regions.map((r) => (
+              <span class="px-3 py-1.5 rounded-full bg-tirma-pink/10 border border-tirma-pink/25 text-sm text-tirma-beige/90">{r}</span>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {c.tips && c.tips.length > 0 && (
+        <section>
+          <h2 class="text-2xl font-bold mb-3">Consejos clave</h2>
+          <ul class="space-y-2">
+            {c.tips.map((t) => (
+              <li class="flex gap-2 text-white/75"><span class="text-tirma-pink font-bold">›</span>{t}</li>
+            ))}
+          </ul>
+        </section>
+      )}
+    </div>
+
+    <!-- BARRA LATERAL (datos + esenciales + CTA) -->
+    <aside class="space-y-5 lg:sticky lg:top-6 self-start">
+      <div class="rounded-2xl bg-white/[0.03] border border-white/[0.08] p-4">
+        <h2 class="text-sm font-bold uppercase tracking-wider text-white/50 mb-3">Datos rápidos</h2>
+        <dl class="space-y-2">
+          {facts.map(([k, v]) => (
+            <div class="flex justify-between gap-3 text-sm">
+              <dt class="text-white/45">{k}</dt>
+              <dd class="font-semibold text-right">{v}</dd>
             </div>
           ))}
-        </div>
-      </section>
-    )}
+        </dl>
+      </div>
 
-    <!-- Zonas destacadas -->
-    {c.regions && c.regions.length > 0 && (
-      <section class="mt-10">
-        <h2 class="text-2xl font-bold mb-3">Zonas destacadas</h2>
-        <div class="flex flex-wrap gap-2">
-          {c.regions.map((r) => (
-            <span class="px-3 py-1.5 rounded-full bg-tirma-pink/10 border border-tirma-pink/25 text-sm text-tirma-beige/90">{r}</span>
+      <div class="rounded-2xl border border-tirma-pink/25 bg-gradient-to-br from-tirma-pink/[0.1] to-transparent p-4">
+        <h2 class="text-sm font-bold uppercase tracking-wider text-tirma-beige/80 mb-1">Antes de viajar a {c.name}</h2>
+        <p class="text-xs text-white/55 mb-3">Lo que de verdad necesitas (y te ahorra dinero):</p>
+        <div class="space-y-2">
+          {ESSENTIALS.map((e) => (
+            <a href={e.url} target="_blank" rel="noreferrer sponsored"
+               class="block rounded-xl bg-white/[0.04] border border-white/[0.08] p-3 hover:border-tirma-pink/40 hover:bg-white/[0.06] transition">
+              <div class="flex items-center gap-2 font-bold text-sm"><span>{e.icon}</span>{e.title}</div>
+              <p class="text-xs text-white/55 mt-1 leading-snug">{e.desc}</p>
+              <span class="inline-block mt-1.5 text-xs font-semibold text-tirma-beige">{e.cta} →</span>
+            </a>
           ))}
         </div>
-      </section>
-    )}
+      </div>
 
-    <!-- Consejos -->
-    {c.tips && c.tips.length > 0 && (
-      <section class="mt-10">
-        <h2 class="text-2xl font-bold mb-3">Consejos para tu viaje</h2>
-        <ul class="space-y-2">
-          {c.tips.map((t) => (
-            <li class="flex gap-2 text-white/70"><span class="text-tirma-pink">›</span>{t}</li>
-          ))}
-        </ul>
-      </section>
-    )}
-
-    <!-- CTA a la app -->
-    <div class="mt-12 p-6 rounded-2xl bg-gradient-to-br from-tirma-pink/12 to-transparent border border-tirma-pink/25 text-center">
-      <p class="font-bold text-lg">¿Te animas con {c.name}?</p>
-      <p class="text-sm text-white/65 mt-1">Crea tu itinerario con IA y organiza todo el viaje en un sitio.</p>
-      <a href={`${SITE.appUrl}/dashboard`} class="inline-flex items-center gap-2 mt-4 px-7 py-3 rounded-full bg-gradient-to-r from-tirma-pink to-tirma-deep text-tirma-beige font-bold shadow-lg shadow-tirma-pink/25 hover:brightness-105 transition">
-        Planifica tu viaje a {c.name} →
+      <a href={`${SITE.appUrl}/dashboard`}
+         class="block text-center px-6 py-3.5 rounded-2xl bg-gradient-to-r from-tirma-pink to-tirma-deep text-tirma-beige font-bold shadow-lg shadow-tirma-pink/25 hover:brightness-105 transition">
+        Planifica {c.name} con IA →
       </a>
-    </div>
-  </article>
+    </aside>
+  </div>
 </Base>

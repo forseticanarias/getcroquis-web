@@ -1,6 +1,5 @@
 // Modelo de datos por país: la base del "atlas viajero". Cada país con ficha
-// genera una página /destinos/[slug]. Empezamos con los más buscados y ampliamos
-// (idealmente con datos revisados, no relleno). El buscador de la home navega aquí.
+// genera una página /destinos/[slug]. Imágenes icónicas verificadas (Wikimedia).
 
 export interface Season {
   name: string;
@@ -12,14 +11,15 @@ export interface Season {
 export interface Country {
   slug: string;
   name: string;
-  code: string; // ISO-3166 alpha-2 (para la bandera flagcdn)
-  emoji?: string;
+  code: string; // ISO alpha-2 (bandera flagcdn)
+  image?: string; // foto icónica (hero)
+  imageAlt?: string;
   capital?: string;
   currency?: string;
   language?: string;
   plug?: string;
   tz?: string;
-  budget?: string; // nivel orientativo
+  budget?: string;
   bestMonths?: string;
   summary?: string;
   seasons?: Season[];
@@ -29,115 +29,143 @@ export interface Country {
 
 export const COUNTRIES: Country[] = [
   {
-    slug: 'japon',
-    name: 'Japón',
-    code: 'jp',
-    emoji: '🇯🇵',
-    capital: 'Tokio',
-    currency: 'Yen (JPY)',
-    language: 'Japonés',
-    plug: 'Tipo A/B (100 V)',
-    tz: 'UTC+9',
-    budget: 'Medio-alto',
-    bestMonths: 'Marzo-Mayo y Octubre-Noviembre',
-    summary:
-      'Japón combina tradición y futuro como ningún otro país. La mejor época coincide con los cerezos en primavera y los arces rojos en otoño: clima suave y paisajes espectaculares.',
+    slug: 'japon', name: 'Japón', code: 'jp',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/View_of_Mount_Fuji_from_%C5%8Cwakudani_20211202.jpg/1100px-View_of_Mount_Fuji_from_%C5%8Cwakudani_20211202.jpg',
+    imageAlt: 'Monte Fuji, Japón',
+    capital: 'Tokio', currency: 'Yen (JPY)', language: 'Japonés', plug: 'Tipo A/B (100 V)', tz: 'UTC+9',
+    budget: 'Medio-alto', bestMonths: 'Marzo-Mayo y Octubre-Noviembre',
+    summary: 'Tradición y futuro como en ningún otro país. La mejor época coincide con los cerezos en primavera y los arces rojos en otoño: clima suave y paisajes espectaculares.',
     seasons: [
-      { name: 'Primavera', months: 'Mar–May', pros: ['Cerezos en flor (sakura)', 'Clima agradable'], cons: ['Mucha gente en sakura', 'Precios altos'] },
-      { name: 'Verano', months: 'Jun–Ago', pros: ['Festivales (matsuri)', 'Montaña y norte'], cons: ['Calor y humedad', 'Lluvias y tifones'] },
-      { name: 'Otoño', months: 'Sep–Nov', pros: ['Arces rojos (koyo)', 'Clima ideal', 'Menos masificado'], cons: ['Algún tifón en septiembre'] },
+      { name: 'Primavera', months: 'Mar–May', pros: ['Cerezos en flor (sakura)', 'Clima agradable'], cons: ['Mucha gente', 'Precios altos'] },
+      { name: 'Verano', months: 'Jun–Ago', pros: ['Festivales (matsuri)', 'Montaña y norte'], cons: ['Calor y humedad', 'Tifones'] },
+      { name: 'Otoño', months: 'Sep–Nov', pros: ['Arces rojos (koyo)', 'Clima ideal', 'Menos gente'], cons: ['Algún tifón'] },
       { name: 'Invierno', months: 'Dic–Feb', pros: ['Nieve y onsen', 'Esquí en Hokkaido', 'Más barato'], cons: ['Frío en el norte'] },
     ],
     regions: ['Tokio', 'Kioto', 'Osaka', 'Hokkaido', 'Okinawa'],
     tips: ['Saca la Japan Rail Pass si harás varias ciudades', 'Lleva eSIM: el wifi público escasea', 'El efectivo aún manda en sitios pequeños'],
   },
   {
-    slug: 'tailandia',
-    name: 'Tailandia',
-    code: 'th',
-    emoji: '🇹🇭',
-    capital: 'Bangkok',
-    currency: 'Baht (THB)',
-    language: 'Tailandés',
-    plug: 'Tipo A/B/C (220 V)',
-    tz: 'UTC+7',
-    budget: 'Bajo',
-    bestMonths: 'Noviembre-Marzo',
-    summary:
-      'Playas de postal, templos dorados y comida increíble a precios bajos. La estación seca (noviembre a marzo) es la mejor: sol, calor llevadero y mar en calma.',
+    slug: 'tailandia', name: 'Tailandia', code: 'th',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/%E0%B9%80%E0%B8%88%E0%B8%94%E0%B8%B5%E0%B8%A2%E0%B9%8C%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%87%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%87%E0%B8%84%E0%B9%8C%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AD%E0%B8%A3%E0%B8%B8%E0%B8%932.jpg/1100px-%E0%B9%80%E0%B8%88%E0%B8%94%E0%B8%B5%E0%B8%A2%E0%B9%8C%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%87%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%87%E0%B8%84%E0%B9%8C%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AD%E0%B8%A3%E0%B8%B8%E0%B8%932.jpg',
+    imageAlt: 'Templo Wat Arun, Bangkok',
+    capital: 'Bangkok', currency: 'Baht (THB)', language: 'Tailandés', plug: 'Tipo A/B/C (220 V)', tz: 'UTC+7',
+    budget: 'Bajo', bestMonths: 'Noviembre-Marzo',
+    summary: 'Playas de postal, templos dorados y comida increíble a precios bajos. La estación seca (noviembre a marzo) es la mejor: sol, calor llevadero y mar en calma.',
     seasons: [
-      { name: 'Estación seca', months: 'Nov–Feb', pros: ['El mejor clima', 'Mar tranquilo', 'Ideal para islas'], cons: ['Temporada alta', 'Más caro y lleno'] },
-      { name: 'Calor', months: 'Mar–May', pros: ['Menos gente', 'Año Nuevo (Songkran) en abril'], cons: ['Calor extremo'] },
-      { name: 'Monzón', months: 'Jun–Oct', pros: ['Verde y barato', 'Pocos turistas'], cons: ['Lluvias intensas', 'Algunas islas cierran'] },
+      { name: 'Estación seca', months: 'Nov–Feb', pros: ['El mejor clima', 'Mar tranquilo', 'Ideal islas'], cons: ['Temporada alta', 'Más caro'] },
+      { name: 'Calor', months: 'Mar–May', pros: ['Menos gente', 'Songkran (abril)'], cons: ['Calor extremo'] },
+      { name: 'Monzón', months: 'Jun–Oct', pros: ['Verde y barato', 'Pocos turistas'], cons: ['Lluvias intensas', 'Islas cerradas'] },
     ],
     regions: ['Bangkok', 'Chiang Mai', 'Phuket', 'Krabi', 'Koh Samui'],
-    tips: ['Costa oeste (Andamán) y este tienen monzones distintos', 'Regatea con respeto en los mercados', 'Seguro de viaje imprescindible para scooters'],
+    tips: ['Las dos costas tienen monzones distintos', 'Regatea con respeto', 'Seguro imprescindible para scooters'],
   },
   {
-    slug: 'italia',
-    name: 'Italia',
-    code: 'it',
-    emoji: '🇮🇹',
-    capital: 'Roma',
-    currency: 'Euro (EUR)',
-    language: 'Italiano',
-    plug: 'Tipo C/F/L (230 V)',
-    tz: 'UTC+1',
-    budget: 'Medio',
-    bestMonths: 'Abril-Junio y Septiembre-Octubre',
-    summary:
-      'Arte, historia y la mejor gastronomía a cada esquina. Primavera y principios de otoño son ideales: buen tiempo, menos calor y menos turistas que en pleno verano.',
+    slug: 'italia', name: 'Italia', code: 'it',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Colosseo_2020.jpg/1100px-Colosseo_2020.jpg',
+    imageAlt: 'Coliseo de Roma',
+    capital: 'Roma', currency: 'Euro (EUR)', language: 'Italiano', plug: 'Tipo C/F/L (230 V)', tz: 'UTC+1',
+    budget: 'Medio', bestMonths: 'Abril-Junio y Septiembre-Octubre',
+    summary: 'Arte, historia y la mejor gastronomía a cada esquina. Primavera y principios de otoño son ideales: buen tiempo, menos calor y menos turistas que en pleno verano.',
     seasons: [
-      { name: 'Primavera', months: 'Abr–Jun', pros: ['Clima perfecto', 'Campos en flor', 'Menos colas'], cons: ['Semana Santa muy concurrida'] },
-      { name: 'Verano', months: 'Jul–Ago', pros: ['Costa y playas', 'Días largos'], cons: ['Calor sofocante', 'Lleno y caro', 'Ciudades vacías en agosto'] },
-      { name: 'Otoño', months: 'Sep–Oct', pros: ['Vendimia', 'Clima suave', 'Precios mejores'], cons: ['Días más cortos'] },
-      { name: 'Invierno', months: 'Nov–Mar', pros: ['Ciudades sin masas', 'Alpes para esquiar'], cons: ['Frío y lluvia en el norte'] },
+      { name: 'Primavera', months: 'Abr–Jun', pros: ['Clima perfecto', 'Menos colas'], cons: ['Semana Santa llena'] },
+      { name: 'Verano', months: 'Jul–Ago', pros: ['Costa y playas', 'Días largos'], cons: ['Calor', 'Lleno y caro'] },
+      { name: 'Otoño', months: 'Sep–Oct', pros: ['Vendimia', 'Clima suave', 'Mejores precios'], cons: ['Días más cortos'] },
+      { name: 'Invierno', months: 'Nov–Mar', pros: ['Ciudades sin masas', 'Alpes para esquiar'], cons: ['Frío y lluvia'] },
     ],
     regions: ['Roma', 'Florencia', 'Venecia', 'Costa Amalfitana', 'Toscana'],
     tips: ['Reserva museos online (Uffizi, Vaticano)', 'Evita agosto si no buscas playa', 'El tren es la mejor forma de moverse'],
   },
   {
-    slug: 'islandia',
-    name: 'Islandia',
-    code: 'is',
-    emoji: '🇮🇸',
-    capital: 'Reikiavik',
-    currency: 'Corona islandesa (ISK)',
-    language: 'Islandés',
-    plug: 'Tipo C/F (230 V)',
-    tz: 'UTC+0',
-    budget: 'Alto',
-    bestMonths: 'Junio-Agosto (sol) o Octubre-Marzo (auroras)',
-    summary:
-      'Cascadas, volcanes y auroras boreales. La época depende de qué busques: verano para recorrer la isla con luz casi infinita, o invierno para cazar auroras.',
+    slug: 'islandia', name: 'Islandia', code: 'is',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Gullfoss_from_the_Air_%28cropped%29.jpg/1100px-Gullfoss_from_the_Air_%28cropped%29.jpg',
+    imageAlt: 'Cascada de Gullfoss, Islandia',
+    capital: 'Reikiavik', currency: 'Corona islandesa (ISK)', language: 'Islandés', plug: 'Tipo C/F (230 V)', tz: 'UTC+0',
+    budget: 'Alto', bestMonths: 'Junio-Agosto (sol) o Octubre-Marzo (auroras)',
+    summary: 'Cascadas, volcanes y auroras boreales. La época depende de qué busques: verano para recorrer la isla con luz casi infinita, o invierno para cazar auroras.',
     seasons: [
-      { name: 'Verano', months: 'Jun–Ago', pros: ['Sol de medianoche', 'Todas las carreteras abiertas', 'Frailecillos'], cons: ['Temporada alta', 'Sin auroras'] },
-      { name: 'Entretiempo', months: 'Sep–Oct / Abr–May', pros: ['Menos gente', 'Auroras posibles en otoño', 'Mejores precios'], cons: ['Clima cambiante'] },
-      { name: 'Invierno', months: 'Nov–Mar', pros: ['Auroras boreales', 'Cuevas de hielo', 'Paisaje nevado'], cons: ['Pocas horas de luz', 'Carreteras del interior cerradas'] },
+      { name: 'Verano', months: 'Jun–Ago', pros: ['Sol de medianoche', 'Carreteras abiertas', 'Frailecillos'], cons: ['Temporada alta', 'Sin auroras'] },
+      { name: 'Entretiempo', months: 'Sep–Oct / Abr–May', pros: ['Menos gente', 'Auroras en otoño', 'Mejor precio'], cons: ['Clima cambiante'] },
+      { name: 'Invierno', months: 'Nov–Mar', pros: ['Auroras boreales', 'Cuevas de hielo'], cons: ['Poca luz', 'Interior cerrado'] },
     ],
     regions: ['Reikiavik', 'Círculo Dorado', 'Costa Sur', 'Fiordos del Oeste', 'Norte (Akureyri)'],
-    tips: ['Alquila coche; el transporte público es escaso', 'Ropa impermeable y por capas todo el año', 'Es caro: cocina algo para ahorrar'],
+    tips: ['Alquila coche; el transporte público es escaso', 'Ropa impermeable por capas', 'Es caro: cocina algo para ahorrar'],
   },
   {
-    slug: 'mexico',
-    name: 'México',
-    code: 'mx',
-    emoji: '🇲🇽',
-    capital: 'Ciudad de México',
-    currency: 'Peso mexicano (MXN)',
-    language: 'Español',
-    plug: 'Tipo A/B (127 V)',
-    tz: 'UTC-6 (centro)',
-    budget: 'Bajo-medio',
-    bestMonths: 'Noviembre-Abril',
-    summary:
-      'Playas del Caribe, ruinas mayas, ciudades coloniales y una cultura vibrante. La estación seca (noviembre a abril) ofrece el mejor clima y evita la temporada de huracanes.',
+    slug: 'mexico', name: 'México', code: 'mx',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Chichen_Itza_3.jpg/1100px-Chichen_Itza_3.jpg',
+    imageAlt: 'Chichén Itzá, México',
+    capital: 'Ciudad de México', currency: 'Peso mexicano (MXN)', language: 'Español', plug: 'Tipo A/B (127 V)', tz: 'UTC-6',
+    budget: 'Bajo-medio', bestMonths: 'Noviembre-Abril',
+    summary: 'Playas del Caribe, ruinas mayas, ciudades coloniales y una cultura vibrante. La estación seca (noviembre a abril) ofrece el mejor clima y evita los huracanes.',
     seasons: [
-      { name: 'Estación seca', months: 'Nov–Abr', pros: ['El mejor clima', 'Sin huracanes', 'Día de Muertos (nov)'], cons: ['Temporada alta', 'Caro en Semana Santa'] },
-      { name: 'Estación húmeda', months: 'May–Oct', pros: ['Verde y barato', 'Menos turistas'], cons: ['Lluvias por la tarde', 'Riesgo de huracán en el Caribe'] },
+      { name: 'Estación seca', months: 'Nov–Abr', pros: ['El mejor clima', 'Sin huracanes', 'Día de Muertos (nov)'], cons: ['Temporada alta'] },
+      { name: 'Estación húmeda', months: 'May–Oct', pros: ['Verde y barato', 'Menos turistas'], cons: ['Lluvias', 'Riesgo de huracán'] },
     ],
     regions: ['Ciudad de México', 'Riviera Maya', 'Oaxaca', 'Yucatán', 'Baja California'],
-    tips: ['Bebe agua embotellada', 'El Caribe tiene huracanes de junio a noviembre', 'Combina playa con ciudades coloniales'],
+    tips: ['Bebe agua embotellada', 'Huracanes de junio a noviembre en el Caribe', 'Combina playa y ciudades coloniales'],
+  },
+  {
+    slug: 'francia', name: 'Francia', code: 'fr',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg/1100px-Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg',
+    imageAlt: 'Torre Eiffel, París',
+    capital: 'París', currency: 'Euro (EUR)', language: 'Francés', plug: 'Tipo C/E (230 V)', tz: 'UTC+1',
+    budget: 'Medio-alto', bestMonths: 'Abril-Junio y Septiembre-Octubre',
+    summary: 'París, castillos del Loira, lavanda en Provenza y Costa Azul. Primavera y otoño dan el mejor equilibrio: buen clima, menos turistas y precios más razonables.',
+    seasons: [
+      { name: 'Primavera', months: 'Abr–Jun', pros: ['Clima ideal', 'Jardines en flor', 'Menos colas'], cons: ['Puentes concurridos'] },
+      { name: 'Verano', months: 'Jul–Ago', pros: ['Lavanda en Provenza', 'Costa Azul', 'Festivales'], cons: ['Lleno y caro', 'Calor en el sur'] },
+      { name: 'Otoño', months: 'Sep–Oct', pros: ['Vendimia', 'Clima suave', 'Mejores precios'], cons: ['Días más cortos'] },
+      { name: 'Invierno', months: 'Nov–Mar', pros: ['Alpes para esquiar', 'París con menos gente'], cons: ['Frío y lluvia'] },
+    ],
+    regions: ['París', 'Provenza', 'Costa Azul', 'Valle del Loira', 'Alsacia'],
+    tips: ['Reserva el Louvre y Versalles online', 'El TGV conecta el país en horas', 'Lavanda en flor: finales de junio a julio'],
+  },
+  {
+    slug: 'espana', name: 'España', code: 'es',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/SF_maig_2_cropped.jpg/1100px-SF_maig_2_cropped.jpg',
+    imageAlt: 'Sagrada Familia, Barcelona',
+    capital: 'Madrid', currency: 'Euro (EUR)', language: 'Español', plug: 'Tipo C/F (230 V)', tz: 'UTC+1',
+    budget: 'Medio', bestMonths: 'Mayo-Junio y Septiembre-Octubre',
+    summary: 'Playas, ciudades con historia, gastronomía y fiesta. La primavera y el principio del otoño ofrecen buen tiempo sin el calor sofocante ni la masificación del verano.',
+    seasons: [
+      { name: 'Primavera', months: 'Abr–Jun', pros: ['Clima perfecto', 'Ferias (Sevilla)', 'Menos gente'], cons: ['Semana Santa llena'] },
+      { name: 'Verano', months: 'Jul–Ago', pros: ['Playas', 'Vida nocturna', 'Fiestas'], cons: ['Calor extremo interior', 'Costa abarrotada'] },
+      { name: 'Otoño', months: 'Sep–Oct', pros: ['Mar aún cálido', 'Buen clima', 'Precios mejores'], cons: ['Días más cortos'] },
+      { name: 'Invierno', months: 'Nov–Mar', pros: ['Sur templado', 'Esquí en Sierra Nevada/Pirineos'], cons: ['Frío en el interior'] },
+    ],
+    regions: ['Madrid', 'Barcelona', 'Andalucía', 'Islas Canarias', 'País Vasco'],
+    tips: ['Se come y cena tarde', 'Canarias es buen destino todo el año', 'El AVE conecta las grandes ciudades'],
+  },
+  {
+    slug: 'grecia', name: 'Grecia', code: 'gr',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/The_Parthenon_in_Athens.jpg/1100px-The_Parthenon_in_Athens.jpg',
+    imageAlt: 'Partenón, Atenas',
+    capital: 'Atenas', currency: 'Euro (EUR)', language: 'Griego', plug: 'Tipo C/F (230 V)', tz: 'UTC+2',
+    budget: 'Medio', bestMonths: 'Mayo-Junio y Septiembre',
+    summary: 'Islas de aguas turquesa, ruinas antiguas y pueblos blancos. La temporada media (mayo-junio y septiembre) da mar cálido, sol y menos masificación que en pleno agosto.',
+    seasons: [
+      { name: 'Primavera', months: 'Abr–Jun', pros: ['Clima ideal', 'Islas tranquilas', 'Campos en flor'], cons: ['Mar aún fresco en abril'] },
+      { name: 'Verano', months: 'Jul–Ago', pros: ['Mar cálido', 'Ambiente en las islas'], cons: ['Calor y meltemi', 'Lleno y caro'] },
+      { name: 'Otoño', months: 'Sep–Oct', pros: ['Mar cálido', 'Menos gente', 'Mejores precios'], cons: ['Algunos servicios cierran en oct'] },
+      { name: 'Invierno', months: 'Nov–Mar', pros: ['Atenas sin colas', 'Muy barato'], cons: ['Islas vacías', 'Ferris reducidos'] },
+    ],
+    regions: ['Atenas', 'Santorini', 'Mykonos', 'Creta', 'Meteora'],
+    tips: ['Reserva los ferris entre islas con antelación', 'Santorini en agosto es carísimo', 'Lleva calzado para las ruinas'],
+  },
+  {
+    slug: 'peru', name: 'Perú', code: 'pe',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Machu_Picchu%2C_2023_%28012%29.jpg/1100px-Machu_Picchu%2C_2023_%28012%29.jpg',
+    imageAlt: 'Machu Picchu, Perú',
+    capital: 'Lima', currency: 'Sol (PEN)', language: 'Español', plug: 'Tipo A/C (220 V)', tz: 'UTC-5',
+    budget: 'Bajo-medio', bestMonths: 'Mayo-Septiembre',
+    summary: 'Machu Picchu, los Andes, el Amazonas y una gastronomía de las mejores del mundo. La estación seca (mayo a septiembre) es la ideal para la sierra y el Camino Inca.',
+    seasons: [
+      { name: 'Estación seca', months: 'May–Sep', pros: ['Mejor para Machu Picchu', 'Cielos despejados', 'Ideal trekking'], cons: ['Temporada alta', 'Noches frías en altura'] },
+      { name: 'Transición', months: 'Abr y Oct', pros: ['Menos gente', 'Paisaje verde', 'Buenos precios'], cons: ['Alguna lluvia'] },
+      { name: 'Estación húmeda', months: 'Nov–Mar', pros: ['Costa soleada', 'Verde y barato'], cons: ['Lluvias en la sierra', 'Camino Inca cierra en febrero'] },
+    ],
+    regions: ['Cusco', 'Machu Picchu', 'Lima', 'Arequipa', 'Lago Titicaca'],
+    tips: ['Aclimátate a la altura en Cusco', 'Reserva Machu Picchu y el Camino Inca con meses', 'No bebas agua del grifo'],
   },
 ];
 
