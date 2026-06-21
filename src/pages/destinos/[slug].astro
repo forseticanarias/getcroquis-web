@@ -75,7 +75,7 @@ const faqLd = c.faq?.length
 
   <div class="max-w-5xl mx-auto px-5 sm:px-6 py-10 grid lg:grid-cols-3 gap-8">
     <!-- COLUMNA PRINCIPAL -->
-    <div class="lg:col-span-2 space-y-10">
+    <div class="lg:col-span-2 space-y-10 order-2 lg:order-1">
       <div class="space-y-3">
         {c.summary && <p class="text-lg text-white/90 font-medium leading-relaxed">{c.summary}</p>}
         {c.tags && c.tags.length > 0 && (
@@ -312,7 +312,7 @@ const faqLd = c.faq?.length
     </div>
 
     <!-- BARRA LATERAL (datos + esenciales + CTA) -->
-    <aside class="space-y-5 lg:sticky lg:top-6 self-start">
+    <aside class="space-y-5 lg:sticky lg:top-6 self-start order-1 lg:order-2">
       <div class="hidden lg:block rounded-2xl bg-white/[0.03] border border-white/[0.08] p-4">
         <h2 class="text-sm font-bold uppercase tracking-wider text-white/50 mb-3">Datos rápidos</h2>
         <dl class="space-y-2">
