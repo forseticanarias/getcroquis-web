@@ -1,0 +1,57 @@
+---
+import Base from '../layouts/Base.astro';
+import { COUNTRIES } from '../data/countries';
+
+const countries = [...COUNTRIES].sort((a, b) => a.name.localeCompare(b.name));
+const budgetRank: Record<string, number> = { 'Bajo': 1, 'Bajo-medio': 2, 'Medio': 3, 'Medio-alto': 4, 'Alto': 5 };
+---
+
+<Base
+  title="Comparar países para viajar"
+  description="¿No sabes a dónde ir? Compara destinos de un vistazo: mejor época, presupuesto y dificultad. Elige tu próximo viaje con getcroquis."
+>
+  <section class="max-w-4xl mx-auto px-5 sm:px-6 pt-10 sm:pt-14 pb-6">
+    <p class="text-xs font-bold tracking-widest text-tirma-pink/80 uppercase mb-3">¿No lo tienes claro?</p>
+    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight">Compara destinos de un vistazo</h1>
+    <p class="mt-3 text-white/65 leading-relaxed">Cuándo ir, cuánto cuesta y qué tipo de viaje es cada uno. Toca un país para ver su ficha completa.</p>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-5 sm:px-6 pb-16">
+    <div class="overflow-x-auto rounded-2xl border border-white/[0.08]">
+      <table class="w-full text-sm border-collapse min-w-[560px]">
+        <thead>
+          <tr class="bg-white/[0.04] text-left text-white/50 text-xs uppercase tracking-wide">
+            <th class="p-3 font-bold">País</th>
+            <th class="p-3 font-bold">Mejor época</th>
+            <th class="p-3 font-bold">Coste</th>
+            <th class="p-3 font-bold">Ideal para</th>
+            <th class="p-3"></th>
+          </tr>
+        </thead>
+        <tbody>
+          {countries.map((c) => (
+            <tr class="border-t border-white/[0.06] hover:bg-white/[0.03] transition">
+              <td class="p-3">
+                <a href={`/destinos/${c.slug}`} class="flex items-center gap-2.5 font-semibold hover:text-tirma-pink transition">
+                  <img src={`https://flagcdn.com/h20/${c.code}.png`} alt="" width="24" class="rounded-sm ring-1 ring-white/10" />
+                  {c.name}
+                </a>
+              </td>
+              <td class="p-3 text-white/70">{c.bestMonths ?? '—'}</td>
+              <td class="p-3">
+                {c.budget
+                  ? <span class="inline-flex items-center gap-1.5"><span class="text-tirma-beige/90">{'€'.repeat(budgetRank[c.budget] ?? 3)}</span><span class="text-white/45 text-xs">{c.budget}</span></span>
+                  : '—'}
+              </td>
+              <td class="p-3 text-white/60 text-xs">{c.tags ? c.tags.slice(0, 2).join(' · ') : '—'}</td>
+              <td class="p-3 text-right">
+                <a href={`/destinos/${c.slug}`} class="text-tirma-beige/90 hover:text-tirma-beige whitespace-nowrap">Ver →</a>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-xs text-white/40 mt-3">💡 Datos orientativos. Iremos añadiendo más países y filtros para afinar la búsqueda.</p>
+  </section>
+</Base>
