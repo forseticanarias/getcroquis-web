@@ -341,7 +341,7 @@ export const COUNTRIES: Country[] = [
   },
   {
     slug: 'portugal', name: 'Portugal', code: 'pt',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Lisboa_-_Portugal_%2852597836992%29.jpg/500px-Lisboa_-_Portugal_%2852597836992%29.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Lisboa_-_Portugal_%2852597836992%29.jpg/1280px-Lisboa_-_Portugal_%2852597836992%29.jpg',
     imageAlt: 'Lisboa, Portugal',
     capital: 'Lisboa', currency: 'Euro (EUR)', language: 'Portugués', plug: 'Tipo C/F (230 V)', tz: 'UTC+0',
     budget: 'Medio', bestMonths: 'Mayo-Junio y Septiembre-Octubre',
@@ -358,7 +358,7 @@ export const COUNTRIES: Country[] = [
   },
   {
     slug: 'marruecos', name: 'Marruecos', code: 'ma',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Chefchaouen_%2852189357475%29.jpg/500px-Chefchaouen_%2852189357475%29.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Chefchaouen_%2852189357475%29.jpg/1280px-Chefchaouen_%2852189357475%29.jpg',
     imageAlt: 'Chefchaouen, Marruecos',
     capital: 'Rabat', currency: 'Dírham (MAD)', language: 'Árabe y francés', plug: 'Tipo C/E (220 V)', tz: 'UTC+1',
     budget: 'Bajo', bestMonths: 'Marzo-Mayo y Septiembre-Noviembre',
@@ -375,7 +375,7 @@ export const COUNTRIES: Country[] = [
   },
   {
     slug: 'croacia', name: 'Croacia', code: 'hr',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/The_walls_of_the_fortress_and_View_of_the_old_city._panorama.jpg/500px-The_walls_of_the_fortress_and_View_of_the_old_city._panorama.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/The_walls_of_the_fortress_and_View_of_the_old_city._panorama.jpg/1280px-The_walls_of_the_fortress_and_View_of_the_old_city._panorama.jpg',
     imageAlt: 'Murallas de Dubrovnik, Croacia',
     capital: 'Zagreb', currency: 'Euro (EUR)', language: 'Croata', plug: 'Tipo C/F (230 V)', tz: 'UTC+1',
     budget: 'Medio', bestMonths: 'Mayo-Junio y Septiembre',
@@ -392,7 +392,7 @@ export const COUNTRIES: Country[] = [
   },
   {
     slug: 'vietnam', name: 'Vietnam', code: 'vn',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Ha_Long_Bay_in_2019.jpg/500px-Ha_Long_Bay_in_2019.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Ha_Long_Bay_in_2019.jpg/1280px-Ha_Long_Bay_in_2019.jpg',
     imageAlt: 'Bahía de Ha Long, Vietnam',
     capital: 'Hanói', currency: 'Dong (VND)', language: 'Vietnamita', plug: 'Tipo A/C (220 V)', tz: 'UTC+7',
     budget: 'Bajo', bestMonths: 'Marzo-Abril y Octubre-Noviembre',
