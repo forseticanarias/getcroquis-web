@@ -73,6 +73,7 @@ export interface Country {
   duration?: string;
   difficulty?: string; // 'Fácil' | 'Media' | 'Alta'
   difficultyNote?: string;
+  tags?: string[]; // para quién es: cultural, primerizos, solo travel, friki…
   english?: string; // utilidad del inglés
   paperwork?: string[]; // pasaporte, visado, carnet internacional, vacunas…
   topSights?: Sight[]; // (legado) top 10 qué ver
@@ -125,6 +126,7 @@ export const COUNTRIES: Country[] = [
     ],
     difficulty: 'Media',
     difficultyNote: 'Muy seguro y limpio, pero el idioma y los kanjis despistan al principio. Con apps de traducción y la red de trenes, te mueves sin problema.',
+    tags: ['Cultural', 'Gastronómico', 'Bueno para primerizos', 'Seguro para viajar solo', 'Para frikis (anime y tecnología)', 'En pareja'],
     english: 'Limitado fuera de zonas turísticas. Señalética en inglés en transporte; útil llevar Google Translate con cámara.',
     paperwork: [
       'Pasaporte con al menos 6 meses de validez',
@@ -152,7 +154,7 @@ export const COUNTRIES: Country[] = [
     cityGuides: [
       {
         name: 'Tokio', days: '3-4 días',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Skyscrapers_of_Shinjuku_2009_January.jpg/500px-Skyscrapers_of_Shinjuku_2009_January.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Shibuya_Crossing%2C_Aerial.jpg/900px-Shibuya_Crossing%2C_Aerial.jpg',
         fact: 'El metro mueve 8 millones de personas al día y casi nunca llega tarde.',
         sights: [
           { name: 'Templo Senso-ji y barrio de Asakusa' },
@@ -164,7 +166,7 @@ export const COUNTRIES: Country[] = [
       },
       {
         name: 'Kioto', days: '2-3 días',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Torii_path_with_lantern_at_Fushimi_Inari_Taisha_Shrine%2C_Kyoto%2C_Japan.jpg/500px-Torii_path_with_lantern_at_Fushimi_Inari_Taisha_Shrine%2C_Kyoto%2C_Japan.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Golden_Pavilion_Kinkaku-ji_water_mirror_2024.jpg/900px-Golden_Pavilion_Kinkaku-ji_water_mirror_2024.jpg',
         fact: 'Conserva 1.600 templos budistas; fue capital más de mil años.',
         sights: [
           { name: 'Santuario Fushimi Inari', note: 'Ve al amanecer para esquivar las masas' },
@@ -176,7 +178,7 @@ export const COUNTRIES: Country[] = [
       },
       {
         name: 'Osaka', days: '1-2 días',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Dotonbori%2C_Osaka%2C_at_night%2C_November_2016.jpg/500px-Dotonbori%2C_Osaka%2C_at_night%2C_November_2016.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Osaka_Castle_03bs3200.jpg/900px-Osaka_Castle_03bs3200.jpg',
         fact: 'Capital gastronómica: cuna del takoyaki y el okonomiyaki ("kuidaore").',
         sights: [
           { name: 'Dotonbori y el cartel de Glico', note: 'El mejor sitio para comer de calle' },
@@ -186,7 +188,7 @@ export const COUNTRIES: Country[] = [
       },
       {
         name: 'Nara y Hakone', days: 'Excursiones de 1 día',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Nara_Park_-_panoramio_%282%29.jpg/500px-Nara_Park_-_panoramio_%282%29.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/T%C5%8Ddai-ji_Kon-d%C5%8D.jpg/900px-T%C5%8Ddai-ji_Kon-d%C5%8D.jpg',
         fact: 'Nara para los ciervos libres; Hakone para ver el Fuji y un onsen.',
         sights: [
           { name: 'Parque de Nara (ciervos) y Templo Todai-ji' },
