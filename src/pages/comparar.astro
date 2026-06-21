@@ -2,89 +2,93 @@
 import Base from '../layouts/Base.astro';
 import { COUNTRIES } from '../data/countries';
 
-const countries = [...COUNTRIES].sort((a, b) => a.name.localeCompare(b.name));
-const budgetRank: Record<string, number> = { 'Bajo': 1, 'Bajo-medio': 2, 'Medio': 3, 'Medio-alto': 4, 'Alto': 5 };
-const allTags = [...new Set(COUNTRIES.flatMap((c) => c.tags ?? []))].sort();
+const data = COUNTRIES.map((c) => ({
+  slug: c.slug,
+  name: c.name,
+  code: c.code,
+  best: c.bestMonths ?? '—',
+  budget: c.budget ?? '—',
+  difficulty: c.difficulty ?? '—',
+  tags: (c.tags ?? []).slice(0, 3),
+})).sort((a, b) => a.name.localeCompare(b.name));
 ---
 
 <Base
   title="Comparar países para viajar"
-  description="¿No sabes a dónde ir? Compara destinos de un vistazo: mejor época, presupuesto y dificultad. Elige tu próximo viaje con getcroquis."
+  description="¿Dudas entre varios destinos? Elige hasta 3 países y compara sus datos esenciales lado a lado: mejor época, presupuesto y dificultad."
 >
-  <section class="max-w-4xl mx-auto px-5 sm:px-6 pt-10 sm:pt-14 pb-6">
-    <p class="text-xs font-bold tracking-widest text-tirma-pink/80 uppercase mb-3">¿No lo tienes claro?</p>
-    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight">Compara destinos de un vistazo</h1>
-    <p class="mt-3 text-white/65 leading-relaxed">Cuándo ir, cuánto cuesta y qué tipo de viaje es cada uno. Toca un país para ver su ficha completa.</p>
-
-    <div class="mt-5 flex flex-wrap gap-2" id="filters">
-      <button data-tag="" class="filter-chip active px-3 py-1.5 rounded-full text-xs font-semibold border transition">Todos</button>
-      {allTags.map((t) => (
-        <button data-tag={t} class="filter-chip px-3 py-1.5 rounded-full text-xs font-semibold border transition">{t}</button>
-      ))}
-    </div>
+  <section class="max-w-4xl mx-auto px-5 sm:px-6 pt-10 sm:pt-14 pb-4">
+    <p class="text-xs font-bold tracking-widest text-tirma-pink/80 uppercase mb-3">¿No te decides?</p>
+    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight">Compara y decídete</h1>
+    <p class="mt-3 text-white/65 leading-relaxed">¿Dudas entre dos o tres destinos? Elígelos abajo y mira sus datos esenciales <strong class="text-white/80">lado a lado</strong>.</p>
   </section>
 
   <section class="max-w-4xl mx-auto px-5 sm:px-6 pb-16">
-    <div class="overflow-x-auto rounded-2xl border border-white/[0.08]">
-      <table class="w-full text-sm border-collapse min-w-[560px]">
-        <thead>
-          <tr class="bg-white/[0.04] text-left text-white/50 text-xs uppercase tracking-wide">
-            <th class="p-3 font-bold">País</th>
-            <th class="p-3 font-bold">Mejor época</th>
-            <th class="p-3 font-bold">Coste</th>
-            <th class="p-3 font-bold">Ideal para</th>
-            <th class="p-3"></th>
-          </tr>
-        </thead>
-        <tbody>
-          {countries.map((c) => (
-            <tr class="country-row border-t border-white/[0.06] hover:bg-white/[0.03] transition" data-tags={(c.tags ?? []).join('|')}>
-              <td class="p-3">
-                <a href={`/destinos/${c.slug}`} class="flex items-center gap-2.5 font-semibold hover:text-tirma-pink transition">
-                  <img src={`https://flagcdn.com/h20/${c.code}.png`} alt="" width="24" class="rounded-sm ring-1 ring-white/10" />
-                  {c.name}
-                </a>
-              </td>
-              <td class="p-3 text-white/70">{c.bestMonths ?? '—'}</td>
-              <td class="p-3">
-                {c.budget
-                  ? <span class="inline-flex items-center gap-1.5"><span class="text-tirma-beige/90">{'€'.repeat(budgetRank[c.budget] ?? 3)}</span><span class="text-white/45 text-xs">{c.budget}</span></span>
-                  : '—'}
-              </td>
-              <td class="p-3 text-white/60 text-xs">{c.tags ? c.tags.slice(0, 2).join(' · ') : '—'}</td>
-              <td class="p-3 text-right">
-                <a href={`/destinos/${c.slug}`} class="text-tirma-beige/90 hover:text-tirma-beige whitespace-nowrap">Ver →</a>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <div id="picker" class="flex flex-wrap gap-2 mb-6">
+      {data.map((c) => (
+        <button data-slug={c.slug} class="pick-btn inline-flex items-center gap-2 px-3 py-2 rounded-full text-sm font-semibold border transition">
+          <img src={`https://flagcdn.com/h20/${c.code}.png`} alt="" width="20" class="rounded-sm ring-1 ring-white/10" />
+          {c.name}
+        </button>
+      ))}
     </div>
-    <p class="text-xs text-white/40 mt-3" id="empty" hidden>No hay países con ese criterio todavía. ¡Estamos ampliando el atlas! 🌍</p>
-    <p class="text-xs text-white/40 mt-3">💡 Datos orientativos. Iremos añadiendo más países para afinar la búsqueda.</p>
+
+    <p id="hint" class="text-white/45 text-sm py-8 text-center">👆 Elige hasta 3 países para compararlos.</p>
+    <div id="compare" class="grid gap-3" style="grid-template-columns:repeat(auto-fit,minmax(0,1fr));"></div>
   </section>
 
   <style>
-    .filter-chip { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); }
-    .filter-chip:hover { border-color: rgba(230,21,127,0.4); }
-    .filter-chip.active { background: #C30F68; border-color: #C30F68; color: #F1E2B3; }
+    .pick-btn { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.1); color: rgba(255,255,255,0.75); }
+    .pick-btn:hover { border-color: rgba(230,21,127,0.4); }
+    .pick-btn.on { background: #C30F68; border-color: #C30F68; color: #F1E2B3; }
+    .pick-btn.dim { opacity: 0.4; }
   </style>
-  <script>
-    const chips = document.querySelectorAll('.filter-chip');
-    const rows = Array.from(document.querySelectorAll('.country-row'));
-    const empty = document.getElementById('empty');
-    chips.forEach((chip) => chip.addEventListener('click', () => {
-      chips.forEach((c) => c.classList.remove('active'));
-      chip.classList.add('active');
-      const tag = chip.getAttribute('data-tag');
-      let visible = 0;
-      rows.forEach((row) => {
-        const tags = (row.getAttribute('data-tags') || '').split('|');
-        const show = !tag || tags.includes(tag);
-        row.style.display = show ? '' : 'none';
-        if (show) visible++;
+
+  <script define:vars={{ data }}>
+    const bySlug = Object.fromEntries(data.map((c) => [c.slug, c]));
+    const picker = document.getElementById('picker');
+    const compare = document.getElementById('compare');
+    const hint = document.getElementById('hint');
+    let selected = [];
+
+    function row(label, value) {
+      return `<div class="flex justify-between gap-2 py-1.5 border-b border-white/[0.05] text-sm"><span class="text-white/40">${label}</span><span class="font-semibold text-right">${value}</span></div>`;
+    }
+
+    function render() {
+      hint.style.display = selected.length ? 'none' : '';
+      compare.innerHTML = selected.map((slug) => {
+        const c = bySlug[slug];
+        const tags = c.tags.map((t) => `<span class="px-2 py-0.5 rounded-full bg-white/[0.06] text-[11px] text-white/60">${t}</span>`).join(' ');
+        return `<div class="rounded-2xl bg-white/[0.03] border border-white/[0.08] p-4">
+          <div class="flex items-center gap-2 mb-3">
+            <img src="https://flagcdn.com/h20/${c.code}.png" width="24" class="rounded-sm ring-1 ring-white/10" alt="" />
+            <span class="font-bold text-lg">${c.name}</span>
+          </div>
+          ${row('Mejor época', c.best)}
+          ${row('Coste', c.budget)}
+          ${row('Dificultad', c.difficulty)}
+          <div class="flex flex-wrap gap-1 mt-2">${tags}</div>
+          <a href="/destinos/${c.slug}" class="block text-center mt-4 px-4 py-2.5 rounded-xl bg-gradient-to-r from-tirma-pink to-tirma-deep text-tirma-beige font-bold text-sm hover:brightness-105 transition">Ver ficha completa →</a>
+        </div>`;
+      }).join('');
+    }
+
+    function updateButtons() {
+      const full = selected.length >= 3;
+      picker.querySelectorAll('.pick-btn').forEach((b) => {
+        const on = selected.includes(b.dataset.slug);
+        b.classList.toggle('on', on);
+        b.classList.toggle('dim', full && !on);
       });
-      if (empty) empty.hidden = visible > 0;
+    }
+
+    picker.querySelectorAll('.pick-btn').forEach((b) => b.addEventListener('click', () => {
+      const slug = b.dataset.slug;
+      if (selected.includes(slug)) selected = selected.filter((s) => s !== slug);
+      else if (selected.length < 3) selected.push(slug);
+      updateButtons();
+      render();
     }));
   </script>
 </Base>
