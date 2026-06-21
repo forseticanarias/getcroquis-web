@@ -13,10 +13,40 @@ const facts = [
   ['Capital', c.capital],
   ['Moneda', c.currency],
   ['Idioma', c.language],
+  ['Visado', c.visa],
+  ['Internet', c.internet],
+  ['Duración ideal', c.duration],
   ['Enchufe', c.plug],
   ['Huso', c.tz],
   ['Presupuesto', c.budget],
 ].filter(([, v]) => v);
+
+const RC = { good: 'bg-emerald-500/80', mid: 'bg-amber-500/80', avoid: 'bg-red-500/70' };
+const budgetRows = c.budgetLevels
+  ? [
+      ['🎒 Mochilero', c.budgetLevels.mochilero],
+      ['🙂 Normal', c.budgetLevels.normal],
+      ['😎 Cómodo', c.budgetLevels.comodo],
+      ['✨ Lujo', c.budgetLevels.lujo],
+    ]
+  : [];
+
+// SEO: datos estructurados (Google los lee para rich results).
+const jsonld: any = {
+  '@context': 'https://schema.org',
+  '@type': 'TouristDestination',
+  name: c.name,
+  ...(c.summary && { description: c.summary }),
+  ...(c.image && { image: c.image }),
+  url: `${SITE.url}/destinos/${c.slug}`,
+};
+const faqLd = c.faq?.length
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: c.faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+    }
+  : null;
 ---
 
 <Base
@@ -24,9 +54,12 @@ const facts = [
   description={`Cuándo viajar a ${c.name}: mejor época, clima por estación, presupuesto, esenciales y consejos. ${c.summary?.slice(0, 80) ?? ''}`}
   image={c.image}
 >
+  <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />
+  {faqLd && <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />}
+
   <!-- HERO con foto icónica -->
   <header class="relative h-[44vh] min-h-[300px] max-h-[460px] w-full overflow-hidden">
-    {c.image && <img src={c.image} alt={c.imageAlt ?? c.name} class="absolute inset-0 w-full h-full object-cover" />}
+    {c.image && <img src={c.image} alt={c.imageAlt ?? c.name} loading="eager" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover" />}
     <div class="absolute inset-0 bg-gradient-to-t from-[#0a0d12] via-[#0a0d12]/40 to-[#0a0d12]/10"></div>
     <div class="relative z-10 max-w-5xl mx-auto h-full px-5 sm:px-6 flex flex-col justify-end pb-7">
       <a href="/destinos" class="absolute top-4 left-5 sm:left-6 text-sm text-white/80 hover:text-white bg-black/30 backdrop-blur px-3 py-1.5 rounded-full">← Destinos</a>
@@ -64,6 +97,40 @@ const facts = [
         </section>
       )}
 
+      {c.climate && c.climate.length === 12 && (
+        <section>
+          <h2 class="text-2xl font-bold mb-3">Calendario: mes a mes</h2>
+          <div class="grid grid-cols-6 sm:grid-cols-12 gap-1.5">
+            {c.climate.map((mo) => (
+              <div class="text-center">
+                <div class={`h-9 rounded-lg ${RC[mo.r]} flex items-center justify-center text-[11px] font-bold text-white/90`}>{mo.m}</div>
+              </div>
+            ))}
+          </div>
+          <div class="flex flex-wrap gap-4 mt-3 text-xs text-white/50">
+            <span class="flex items-center gap-1.5"><i class="w-3 h-3 rounded bg-emerald-500/80"></i> Buena época</span>
+            <span class="flex items-center gap-1.5"><i class="w-3 h-3 rounded bg-amber-500/80"></i> Aceptable</span>
+            <span class="flex items-center gap-1.5"><i class="w-3 h-3 rounded bg-red-500/70"></i> A evitar</span>
+          </div>
+        </section>
+      )}
+
+      {budgetRows.length > 0 && (
+        <section>
+          <h2 class="text-2xl font-bold mb-3">¿Cuánto cuesta al día?</h2>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            {budgetRows.map(([label, val]) => (
+              <div class="rounded-2xl bg-white/[0.03] border border-white/[0.08] p-4 text-center">
+                <div class="text-sm text-white/60">{label}</div>
+                <div class="text-2xl font-bold mt-1">{val}€</div>
+                <div class="text-[11px] text-white/40">por día</div>
+              </div>
+            ))}
+          </div>
+          <p class="text-xs text-white/40 mt-2">Orientativo por persona, sin contar el vuelo.</p>
+        </section>
+      )}
+
       {c.regions && c.regions.length > 0 && (
         <section>
           <h2 class="text-2xl font-bold mb-3">Zonas destacadas</h2>
@@ -83,6 +150,29 @@ const facts = [
               <li class="flex gap-2 text-white/75"><span class="text-tirma-pink font-bold">›</span>{t}</li>
             ))}
           </ul>
+        </section>
+      )}
+      {c.opinion && (
+        <section class="rounded-2xl bg-gradient-to-br from-tirma-pink/[0.08] to-transparent border border-tirma-pink/20 p-5 sm:p-6">
+          <h2 class="text-2xl font-bold mb-2">Mi opinión sobre {c.name}</h2>
+          <p class="text-white/75 leading-relaxed italic">{c.opinion}</p>
+        </section>
+      )}
+
+      {c.faq && c.faq.length > 0 && (
+        <section>
+          <h2 class="text-2xl font-bold mb-3">Preguntas frecuentes</h2>
+          <div class="space-y-2">
+            {c.faq.map((f) => (
+              <details class="group rounded-2xl bg-white/[0.03] border border-white/[0.08] p-4">
+                <summary class="font-semibold cursor-pointer list-none flex justify-between items-center gap-3">
+                  {f.q}
+                  <span class="text-tirma-pink transition-transform group-open:rotate-45 text-xl leading-none">+</span>
+                </summary>
+                <p class="text-sm text-white/65 mt-2 leading-relaxed">{f.a}</p>
+              </details>
+            ))}
+          </div>
         </section>
       )}
     </div>

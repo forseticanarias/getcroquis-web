@@ -8,6 +8,23 @@ export interface Season {
   cons: string[];
 }
 
+export interface MonthClimate {
+  m: string; // 'Ene', 'Feb'…
+  r: 'good' | 'mid' | 'avoid';
+}
+
+export interface BudgetLevels {
+  mochilero: number;
+  normal: number;
+  comodo: number;
+  lujo: number;
+}
+
+export interface Faq {
+  q: string;
+  a: string;
+}
+
 export interface Country {
   slug: string;
   name: string;
@@ -21,10 +38,18 @@ export interface Country {
   tz?: string;
   budget?: string;
   bestMonths?: string;
+  visa?: string;
+  internet?: string;
+  duration?: string;
   summary?: string;
+  // Texto humano y único por país: la clave anti "thin content" para SEO.
+  opinion?: string;
+  budgetLevels?: BudgetLevels; // €/día por estilo de viaje
+  climate?: MonthClimate[]; // 12 meses (🟢🟡🔴)
   seasons?: Season[];
   regions?: string[];
   tips?: string[];
+  faq?: Faq[];
 }
 
 export const COUNTRIES: Country[] = [
@@ -43,6 +68,23 @@ export const COUNTRIES: Country[] = [
     ],
     regions: ['Tokio', 'Kioto', 'Osaka', 'Hokkaido', 'Okinawa'],
     tips: ['Saca la Japan Rail Pass si harás varias ciudades', 'Lleva eSIM: el wifi público escasea', 'El efectivo aún manda en sitios pequeños'],
+    visa: 'No requerido hasta 90 días',
+    internet: 'Excelente · eSIM recomendada',
+    duration: '10-14 días',
+    budgetLevels: { mochilero: 60, normal: 110, comodo: 200, lujo: 380 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'mid' }, { m: 'Jul', r: 'avoid' }, { m: 'Ago', r: 'avoid' },
+      { m: 'Sep', r: 'mid' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'good' }, { m: 'Dic', r: 'mid' },
+    ],
+    opinion:
+      'Japón es de esos sitios que te reordenan la cabeza. La primera vez impresiona el contraste: cruzas Shibuya entre millones de personas y media hora después estás solo en un templo de Kioto escuchando el agua. Si puedes, ve en otoño en vez de en plena sakura: los arces rojos son igual de brutales, hay la mitad de gente y los precios bajan. Y no lo metas todo en Tokio y Kioto; un par de noches en un ryokan con onsen en el campo es lo que de verdad recuerdas al volver.',
+    faq: [
+      { q: '¿Cuántos días necesito para Japón?', a: 'Con 10-14 días ves Tokio, Kioto, Osaka y alguna escapada (Hakone, Nara o Hiroshima). Con menos de una semana, céntrate en Tokio + Kioto.' },
+      { q: '¿Es caro viajar a Japón?', a: 'Es medio-alto, pero más asequible de lo que parece: comer está muy bien de precio y el transporte, aunque caro, es eficiente. Calcula unos 100-120 € al día por persona en un viaje normal.' },
+      { q: '¿Hace falta visado?', a: 'Para estancias turísticas de hasta 90 días, los españoles no necesitan visado.' },
+      { q: '¿Cuál es la mejor época?', a: 'Primavera (marzo-mayo) por los cerezos y otoño (octubre-noviembre) por los arces. Evita julio y agosto: calor, humedad y tifones.' },
+    ],
   },
   {
     slug: 'tailandia', name: 'Tailandia', code: 'th',
