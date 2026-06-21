@@ -220,6 +220,14 @@ export const COUNTRIES: Country[] = [
     ],
     regions: ['Bangkok', 'Chiang Mai', 'Phuket', 'Krabi', 'Koh Samui'],
     tips: ['Las dos costas tienen monzones distintos', 'Regatea con respeto', 'Seguro imprescindible para scooters'],
+    opinion:
+      'Tailandia engancha y es perfecta para lanzarte a Asia por primera vez. Es barata, la gente es un encanto y la comida… la comida es de otro nivel. Mi consejo: combina un par de días del caos maravilloso de Bangkok con el norte tranquilo de Chiang Mai y unas islas para rematar. Y come en los puestos callejeros sin miedo: ahí está lo mejor y por cuatro euros. Vas a querer volver antes de irte.',
+    faq: [
+      { q: '¿Cuántos días para Tailandia?', a: 'Con 12-15 días combinas Bangkok, el norte (Chiang Mai) y unas islas. Para solo islas o solo norte, una semana basta.' },
+      { q: '¿Hace falta visado?', a: 'Los españoles entran sin visado para estancias turísticas cortas; confirma el plazo vigente antes de viajar.' },
+      { q: '¿Es seguro viajar solo?', a: 'Es uno de los destinos favoritos de mochileros y viajeros solos. Sentido común y seguro de viaje, sobre todo si conduces scooter.' },
+    ],
+    paperwork: ['Pasaporte con al menos 6 meses de validez', 'Exención de visado para turismo (confirma el plazo)', 'Seguro de viaje muy recomendable', 'Sin vacunas obligatorias (consulta las recomendadas)'],
   },
   {
     slug: 'italia', name: 'Italia', code: 'it',
@@ -238,6 +246,14 @@ export const COUNTRIES: Country[] = [
     ],
     regions: ['Roma', 'Florencia', 'Venecia', 'Costa Amalfitana', 'Toscana'],
     tips: ['Reserva museos online (Uffizi, Vaticano)', 'Evita agosto si no buscas playa', 'El tren es la mejor forma de moverse'],
+    opinion:
+      'Italia no decepciona jamás. Te tomas un café en una piazza, te pierdes por callejones en Roma y de repente tienes el Coliseo delante sin esperarlo. Mi consejo de amigo: no intentes verlo todo en un viaje, es imposible y acabas reventado. Elige dos o tres ciudades, come pasta y pizza sin remordimientos, y deja huecos para sentarte a ver pasar la vida. Eso es lo más italiano que vas a hacer.',
+    faq: [
+      { q: '¿Cuántos días necesito para Italia?', a: 'Con 7-10 días ves Roma, Florencia y Venecia tranquilo. Si quieres sumar la Costa Amalfitana o la Toscana, mejor 12-14.' },
+      { q: '¿Hace falta visado?', a: 'No: con el DNI español en vigor es suficiente para entrar (es zona Schengen).' },
+      { q: '¿Cuál es la mejor época?', a: 'Primavera (abril-junio) y principios de otoño (septiembre-octubre): buen clima y menos turistas que en pleno verano.' },
+    ],
+    paperwork: ['DNI o pasaporte en vigor (zona Schengen)', 'Sin visado para turismo', 'Tarjeta Sanitaria Europea recomendada', 'Sin vacunas obligatorias'],
   },
   {
     slug: 'islandia', name: 'Islandia', code: 'is',
