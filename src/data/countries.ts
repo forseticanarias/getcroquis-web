@@ -131,6 +131,7 @@ export const COUNTRIES: Country[] = [
     paperwork: [
       'Pasaporte con al menos 6 meses de validez',
       'Sin visado para turismo hasta 90 días (españoles)',
+      'Registro en Visit Japan Web: genera el QR para aduanas e inmigración',
       'Carnet de conducir internacional si vas a conducir',
       'Sin vacunas obligatorias',
     ],
@@ -197,9 +198,10 @@ export const COUNTRIES: Country[] = [
       },
     ],
     links: [
-      { label: 'Visado y entrada (Embajada de Japón en España)', url: 'https://www.es.emb-japan.go.jp/' },
+      { label: 'Visit Japan Web (QR de aduanas e inmigración)', url: 'https://www.vjw.digital.go.jp/' },
+      { label: 'Embajada de España en Japón', url: 'https://www.exteriores.gob.es/Embajadas/tokio' },
       { label: 'Japan Rail Pass (info oficial)', url: 'https://japanrailpass.net/es/' },
-      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
     ],
   },
   {
