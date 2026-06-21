@@ -88,6 +88,10 @@ const faqLd = c.faq?.length
         )}
       </div>
 
+      <a href={`${SITE.appUrl}/dashboard`} class="lg:hidden flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-gradient-to-r from-tirma-pink to-tirma-deep text-tirma-beige font-bold shadow-lg shadow-tirma-pink/25 active:brightness-95">
+        Planifica {c.name} con IA →
+      </a>
+
       {c.seasons && c.seasons.length > 0 && (
         <section>
           <h2 class="text-2xl font-bold mb-4">¿Cuándo ir a {c.name}?</h2>
