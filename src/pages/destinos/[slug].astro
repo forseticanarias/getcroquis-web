@@ -156,9 +156,13 @@ const faqLd = c.faq?.length
                 </summary>
                 <div class="px-4 pb-4">
                   {(city.image || city.fact) && (
-                    <div class="flex flex-col sm:flex-row gap-3 mb-3">
-                      {city.image && <img src={city.image} alt={city.name} loading="lazy" class="w-full sm:w-1/2 aspect-[4/3] object-cover rounded-xl flex-shrink-0" />}
-                      {city.fact && <p class="text-sm text-white/60 italic self-center">{city.fact}</p>}
+                    <div class="flex flex-col sm:flex-row gap-4 mb-4 items-start">
+                      {city.image && <img src={city.image} alt={city.name} loading="lazy" class="w-full sm:w-2/5 aspect-[4/3] object-cover rounded-xl flex-shrink-0" />}
+                      {city.fact && (
+                        <p class="text-sm text-white/65 leading-relaxed">
+                          <span class="text-tirma-pink font-semibold">¿Sabías que…?</span> {city.fact}
+                        </p>
+                      )}
                     </div>
                   )}
                   {city.sights && (
@@ -249,6 +253,7 @@ const faqLd = c.faq?.length
             {c.paperwork && c.paperwork.length > 0 && (
               <div class="rounded-2xl bg-white/[0.03] border border-white/[0.08] p-4">
                 <div class="text-sm font-bold mb-1">📄 Papeleo necesario</div>
+                <p class="text-[11px] text-white/40 mb-2">🇪🇸 Requisitos para <strong class="text-white/55">pasaporte español</strong>. Con otra nacionalidad, consulta los de tu país.</p>
                 <ul class="text-sm text-white/65 space-y-1 mt-1">
                   {c.paperwork.map((p) => <li class="flex gap-2"><span class="text-tirma-pink">·</span>{p}</li>)}
                 </ul>

@@ -37,6 +37,15 @@ const canonical = new URL(Astro.url.pathname, SITE.url).href;
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={pageDesc} />
     <meta name="twitter:image" content={new URL(image, SITE.url).href} />
+
+    <!-- Tipografía de marca (más personalidad que la del sistema) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style is:global>
+      body { font-family: 'Sora', system-ui, -apple-system, sans-serif; }
+      h1, h2, h3 { letter-spacing: -0.02em; }
+    </style>
   </head>
   <body class="min-h-screen bg-[#0a0d12] text-white antialiased selection:bg-tirma-pink/30">
     <div class="pointer-events-none fixed inset-x-0 top-0 h-[500px] overflow-hidden -z-10">
