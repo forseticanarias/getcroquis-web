@@ -25,10 +25,10 @@ const facts = [
 const RC = { good: 'bg-emerald-500/80', mid: 'bg-amber-500/80', avoid: 'bg-red-500/70' };
 const budgetRows = c.budgetLevels
   ? [
-      ['🎒 Mochilero', c.budgetLevels.mochilero],
-      ['🙂 Normal', c.budgetLevels.normal],
-      ['😎 Cómodo', c.budgetLevels.comodo],
-      ['✨ Lujo', c.budgetLevels.lujo],
+      ['Mochilero', c.budgetLevels.mochilero],
+      ['Normal', c.budgetLevels.normal],
+      ['Cómodo', c.budgetLevels.comodo],
+      ['Lujo', c.budgetLevels.lujo],
     ]
   : [];
 
@@ -77,7 +77,7 @@ const faqLd = c.faq?.length
     <!-- COLUMNA PRINCIPAL -->
     <div class="lg:col-span-2 space-y-10">
       <div class="space-y-3">
-        {c.summary && <p class="text-lg text-white/75 leading-relaxed">{c.summary}</p>}
+        {c.summary && <p class="text-lg text-white/90 font-medium leading-relaxed">{c.summary}</p>}
         {c.tags && c.tags.length > 0 && (
           <div class="flex flex-wrap items-center gap-2">
             <span class="text-xs font-bold uppercase tracking-wider text-white/40">Ideal para</span>
@@ -279,8 +279,8 @@ const faqLd = c.faq?.length
 
       {c.opinion && (
         <section class="rounded-2xl bg-gradient-to-br from-tirma-pink/[0.08] to-transparent border border-tirma-pink/20 p-5 sm:p-6">
-          <h2 class="text-2xl font-bold mb-2">Mi opinión sobre {c.name}</h2>
-          <p class="text-white/75 leading-relaxed italic">{c.opinion}</p>
+          <h2 class="text-2xl font-bold mb-2">Mi opinión sobre {c.name} 💬</h2>
+          <p class="text-white/85 leading-relaxed">{c.opinion}</p>
         </section>
       )}
 

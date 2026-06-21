@@ -117,7 +117,7 @@ export const COUNTRIES: Country[] = [
       { m: 'Sep', r: 'mid' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'good' }, { m: 'Dic', r: 'mid' },
     ],
     opinion:
-      'Japón es de esos sitios que te reordenan la cabeza. La primera vez impresiona el contraste: cruzas Shibuya entre millones de personas y media hora después estás solo en un templo de Kioto escuchando el agua. Si puedes, ve en otoño en vez de en plena sakura: los arces rojos son igual de brutales, hay la mitad de gente y los precios bajan. Y no lo metas todo en Tokio y Kioto; un par de noches en un ryokan con onsen en el campo es lo que de verdad recuerdas al volver.',
+      'Te lo digo de corazón: Japón engancha. La primera vez flipas con el contraste — cruzas Shibuya entre un mar de gente y media hora después estás tú solo en un templo de Kioto oyendo caer el agua. Mi consejo de amigo: si puedes, vete en otoño en lugar de en plena sakura. Los arces rojos son igual de espectaculares, hay la mitad de turistas y pagas bastante menos. Y no te quedes solo en Tokio y Kioto: una noche en un ryokan con onsen en mitad del campo es de esas cosas que no se te olvidan en la vida. Vamos, que vuelves siendo otra persona.',
     faq: [
       { q: '¿Cuántos días necesito para Japón?', a: 'Con 10-14 días ves Tokio, Kioto, Osaka y alguna escapada (Hakone, Nara o Hiroshima). Con menos de una semana, céntrate en Tokio + Kioto.' },
       { q: '¿Es caro viajar a Japón?', a: 'Es medio-alto, pero más asequible de lo que parece: comer está muy bien de precio y el transporte, aunque caro, es eficiente. Calcula unos 100-120 € al día por persona en un viaje normal.' },
