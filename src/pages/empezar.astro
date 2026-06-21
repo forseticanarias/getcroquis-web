@@ -49,12 +49,13 @@ const STYLES = ['Playa', 'Cultura', 'Aventura', 'Gastronómico', 'Naturaleza', '
 
     <!-- Resultado -->
     <div id="result" class="mt-10 hidden">
-      <h2 class="text-2xl font-bold mb-4">Tus destinos ✨</h2>
+      <h2 class="text-2xl font-bold mb-1">Tu viaje encaja con… ✨</h2>
+      <p class="text-sm text-white/55 mb-4">Te damos una pista. Lo demás, lo descubrís juntos. 😏</p>
       <div id="cards" class="grid sm:grid-cols-2 gap-3"></div>
       <div class="mt-8 text-center rounded-2xl bg-gradient-to-br from-tirma-pink/12 to-transparent border border-tirma-pink/25 p-6">
-        <p class="font-bold text-lg">¿Ya lo tienes más claro?</p>
-        <p class="text-sm text-white/65 mt-1">Crea tu cuenta y planifica el viaje con IA en minutos.</p>
-        <a href={`${SITE.appUrl}/signup`} class="inline-block mt-4 px-7 py-3 rounded-full bg-gradient-to-r from-tirma-pink to-tirma-deep text-tirma-beige font-bold hover:brightness-105 transition">Crear cuenta gratis →</a>
+        <p class="font-bold text-lg">¿Te ha picado el gusanillo?</p>
+        <p class="text-sm text-white/65 mt-1">Planifica tu itinerario y deja que getcroquis te acompañe en el viaje. 🧭</p>
+        <a href={`${SITE.appUrl}/signup`} class="inline-block mt-4 px-7 py-3 rounded-full bg-gradient-to-r from-tirma-pink to-tirma-deep text-tirma-beige font-bold hover:brightness-105 transition">Planifica tu itinerario →</a>
       </div>
     </div>
   </section>
@@ -82,6 +83,7 @@ const STYLES = ['Playa', 'Cultura', 'Aventura', 'Gastronómico', 'Naturaleza', '
     document.getElementById('go').addEventListener('click', () => {
       let matches = data.filter((c) => c.rank <= maxBudget && (styles.length === 0 || c.tags.some((t) => styles.includes(t))));
       if (matches.length === 0) matches = data.filter((c) => c.rank <= maxBudget);
+      matches = matches.slice(0, 3); // solo una pista, no la solución completa
       const cards = document.getElementById('cards');
       cards.innerHTML = matches.map((c) => `
         <a href="/destinos/${c.slug}" class="flex items-center gap-3 p-4 rounded-2xl bg-white/[0.03] border border-white/[0.08] hover:border-tirma-pink/30 hover:bg-white/[0.05] transition">
