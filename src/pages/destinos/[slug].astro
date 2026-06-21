@@ -132,7 +132,43 @@ const faqLd = c.faq?.length
         </section>
       )}
 
-      {c.topSights && c.topSights.length > 0 && (
+      {c.cityGuides && c.cityGuides.length > 0 && (
+        <section>
+          <h2 class="text-2xl font-bold mb-1">Ciudades: cuánto tiempo y qué ver</h2>
+          <p class="text-sm text-white/50 mb-4">Despliega cada ciudad para ver el ranking y los enlaces.</p>
+          <div class="space-y-2.5">
+            {c.cityGuides.map((city, i) => (
+              <details class="group rounded-2xl bg-white/[0.03] border border-white/[0.08]" open={i === 0}>
+                <summary class="cursor-pointer list-none p-4 flex items-center gap-3">
+                  <span class="text-base font-bold">{city.name}</span>
+                  {city.days && <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-tirma-pink/15 text-tirma-beige/90">{city.days}</span>}
+                  <span class="ml-auto text-tirma-pink text-xl leading-none transition-transform group-open:rotate-45">+</span>
+                </summary>
+                <div class="px-4 pb-4">
+                  {city.fact && <p class="text-sm text-white/55 italic mb-3">{city.fact}</p>}
+                  {city.sights && (
+                    <ol class="space-y-2">
+                      {city.sights.map((s, j) => (
+                        <li class="flex gap-2.5 text-sm">
+                          <span class="text-tirma-pink/70 font-bold flex-shrink-0">{j + 1}.</span>
+                          <span class="min-w-0">
+                            {s.url
+                              ? <a href={s.url} target="_blank" rel="noreferrer sponsored" class="text-tirma-beige/90 hover:text-tirma-beige underline underline-offset-2">{s.name} ↗</a>
+                              : <span class="text-white/80">{s.name}</span>}
+                            {s.note && <span class="block text-xs text-white/45 mt-0.5">💡 {s.note}</span>}
+                          </span>
+                        </li>
+                      ))}
+                    </ol>
+                  )}
+                </div>
+              </details>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {!c.cityGuides && c.topSights && c.topSights.length > 0 && (
         <section>
           <h2 class="text-2xl font-bold mb-4">Top {c.topSights.length}: qué ver en {c.name}</h2>
           <ol class="space-y-2.5">
@@ -149,7 +185,7 @@ const faqLd = c.faq?.length
         </section>
       )}
 
-      {c.cities && c.cities.length > 0 && (
+      {!c.cityGuides && c.cities && c.cities.length > 0 && (
         <section>
           <h2 class="text-2xl font-bold mb-3">Datos curiosos de sus ciudades</h2>
           <div class="space-y-3">
@@ -163,7 +199,7 @@ const faqLd = c.faq?.length
         </section>
       )}
 
-      {c.regions && c.regions.length > 0 && (
+      {!c.cityGuides && c.regions && c.regions.length > 0 && (
         <section>
           <h2 class="text-2xl font-bold mb-3">Zonas destacadas</h2>
           <div class="flex flex-wrap gap-2">

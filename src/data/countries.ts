@@ -36,6 +36,19 @@ export interface CityFact {
   fact: string;
 }
 
+export interface CitySight {
+  name: string;
+  note?: string;
+  url?: string; // enlace a la actividad/sitio (Klook, oficial…)
+}
+
+export interface CityGuide {
+  name: string;
+  days?: string; // tiempo recomendado
+  fact?: string; // dato curioso
+  sights?: CitySight[]; // ranking de qué ver/hacer
+}
+
 export interface Link {
   label: string;
   url: string;
@@ -61,8 +74,9 @@ export interface Country {
   difficultyNote?: string;
   english?: string; // utilidad del inglés
   paperwork?: string[]; // pasaporte, visado, carnet internacional, vacunas…
-  topSights?: Sight[]; // top 10 qué ver
-  cities?: CityFact[]; // datos curiosos de las ciudades top
+  topSights?: Sight[]; // (legado) top 10 qué ver
+  cities?: CityFact[]; // (legado) datos curiosos de las ciudades top
+  cityGuides?: CityGuide[]; // ciudades en desplegable: tiempo + ranking + enlaces
   links?: Link[]; // enlaces de interés / documentación
   summary?: string;
   // Texto humano y único por país: la clave anti "thin content" para SEO.
@@ -133,6 +147,47 @@ export const COUNTRIES: Country[] = [
       { name: 'Tokio', fact: 'Su red de metro mueve más de 8 millones de personas al día y casi nunca llega tarde: un retraso de 1 minuto se anuncia con disculpas.' },
       { name: 'Kioto', fact: 'Fue capital de Japón más de 1.000 años y se libró de los bombardeos de 1945, por eso conserva 1.600 templos budistas.' },
       { name: 'Osaka', fact: 'Es la capital gastronómica: aquí nacieron el takoyaki y el okonomiyaki. Su lema informal es "kuidaore" (arruinarse comiendo).' },
+    ],
+    cityGuides: [
+      {
+        name: 'Tokio', days: '3-4 días',
+        fact: 'El metro mueve 8 millones de personas al día y casi nunca llega tarde.',
+        sights: [
+          { name: 'Templo Senso-ji y barrio de Asakusa' },
+          { name: 'Cruce de Shibuya', note: 'Míralo desde el Starbucks de enfrente' },
+          { name: 'teamLab Planets (museo digital)', url: 'https://www.klook.com/es/search/?query=teamLab%20Tokyo' },
+          { name: 'Shinjuku de noche y Golden Gai' },
+          { name: 'Akihabara (anime y electrónica)' },
+        ],
+      },
+      {
+        name: 'Kioto', days: '2-3 días',
+        fact: 'Conserva 1.600 templos budistas; fue capital más de mil años.',
+        sights: [
+          { name: 'Santuario Fushimi Inari', note: 'Ve al amanecer para esquivar las masas' },
+          { name: 'Templo dorado Kinkaku-ji' },
+          { name: 'Barrio de Gion al atardecer', note: 'Posibilidad de ver geishas' },
+          { name: 'Bosque de bambú de Arashiyama' },
+          { name: 'Templo Kiyomizu-dera' },
+        ],
+      },
+      {
+        name: 'Osaka', days: '1-2 días',
+        fact: 'Capital gastronómica: cuna del takoyaki y el okonomiyaki ("kuidaore").',
+        sights: [
+          { name: 'Dotonbori y el cartel de Glico', note: 'El mejor sitio para comer de calle' },
+          { name: 'Castillo de Osaka' },
+          { name: 'Universal Studios Japan', url: 'https://www.klook.com/es/search/?query=Universal%20Studios%20Japan' },
+        ],
+      },
+      {
+        name: 'Nara y Hakone', days: 'Excursiones de 1 día',
+        fact: 'Nara para los ciervos libres; Hakone para ver el Fuji y un onsen.',
+        sights: [
+          { name: 'Parque de Nara (ciervos) y Templo Todai-ji' },
+          { name: 'Lago Ashi y vistas al Monte Fuji desde Hakone' },
+        ],
+      },
     ],
     links: [
       { label: 'Visado y entrada (Embajada de Japón en España)', url: 'https://www.es.emb-japan.go.jp/' },
