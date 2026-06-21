@@ -154,7 +154,7 @@ export const COUNTRIES: Country[] = [
     cityGuides: [
       {
         name: 'Tokio', days: '3-4 días',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Shibuya_Crossing%2C_Aerial.jpg/900px-Shibuya_Crossing%2C_Aerial.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Shibuya_Crossing%2C_Aerial.jpg/500px-Shibuya_Crossing%2C_Aerial.jpg',
         fact: 'El metro mueve 8 millones de personas al día y casi nunca llega tarde.',
         sights: [
           { name: 'Templo Senso-ji y barrio de Asakusa' },
@@ -166,7 +166,7 @@ export const COUNTRIES: Country[] = [
       },
       {
         name: 'Kioto', days: '2-3 días',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Golden_Pavilion_Kinkaku-ji_water_mirror_2024.jpg/900px-Golden_Pavilion_Kinkaku-ji_water_mirror_2024.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Golden_Pavilion_Kinkaku-ji_water_mirror_2024.jpg/500px-Golden_Pavilion_Kinkaku-ji_water_mirror_2024.jpg',
         fact: 'Conserva 1.600 templos budistas; fue capital más de mil años.',
         sights: [
           { name: 'Santuario Fushimi Inari', note: 'Ve al amanecer para esquivar las masas' },
@@ -178,7 +178,7 @@ export const COUNTRIES: Country[] = [
       },
       {
         name: 'Osaka', days: '1-2 días',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Osaka_Castle_03bs3200.jpg/900px-Osaka_Castle_03bs3200.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Osaka_Castle_03bs3200.jpg/500px-Osaka_Castle_03bs3200.jpg',
         fact: 'Capital gastronómica: cuna del takoyaki y el okonomiyaki ("kuidaore").',
         sights: [
           { name: 'Dotonbori y el cartel de Glico', note: 'El mejor sitio para comer de calle' },
@@ -188,7 +188,7 @@ export const COUNTRIES: Country[] = [
       },
       {
         name: 'Nara y Hakone', days: 'Excursiones de 1 día',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/T%C5%8Ddai-ji_Kon-d%C5%8D.jpg/900px-T%C5%8Ddai-ji_Kon-d%C5%8D.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/T%C5%8Ddai-ji_Kon-d%C5%8D.jpg/500px-T%C5%8Ddai-ji_Kon-d%C5%8D.jpg',
         fact: 'Nara para los ciervos libres; Hakone para ver el Fuji y un onsen.',
         sights: [
           { name: 'Parque de Nara (ciervos) y Templo Todai-ji' },
