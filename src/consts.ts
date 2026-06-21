@@ -14,7 +14,7 @@ export const SITE = {
 // anuncio). Cada uno con su nivel de necesidad y un enlace sutil. Sustituye las
 // URLs por tus enlaces de afiliado reales (Holafly, Klook, seguro, tarjeta).
 export const ESSENTIALS = [
-  { icon: '📶', title: 'eSIM con datos', need: 'Imprescindible', desc: 'Internet desde que aterrizas, sin roaming.', linkText: 'Consigue un descuento en Holafly', url: 'https://www.holafly.com/' },
+  { icon: '📶', title: 'eSIM con datos', need: 'Imprescindible', desc: 'Internet desde que aterrizas, sin roaming.', linkText: 'Consigue un descuento en Holafly', url: 'https://esim.holafly.com/' },
   { icon: '🛡️', title: 'Seguro de viaje', need: 'Muy recomendable', desc: 'Cubre salud, cancelación y equipaje.', linkText: 'Comparar seguros', url: 'https://www.heymondo.es/' },
   { icon: '🎟️', title: 'Actividades y entradas', need: 'Reserva con antelación', desc: 'Tours y experiencias populares se agotan.', linkText: 'Ver en Klook', url: 'https://www.klook.com/' },
   { icon: '💳', title: 'Tarjeta multidivisa', need: 'Ahorra dinero', desc: 'Paga fuera casi al cambio real (~0,5%).', linkText: 'Comparar tarjetas', url: 'https://wise.com/' },
