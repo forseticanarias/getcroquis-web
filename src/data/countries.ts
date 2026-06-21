@@ -204,6 +204,7 @@ export const COUNTRIES: Country[] = [
   },
   {
     slug: 'tailandia', name: 'Tailandia', code: 'th',
+    tags: ['Playa', 'Barato', 'Mochilero', 'Aventura', 'Solo travel', 'Gastronómico'],
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/%E0%B9%80%E0%B8%88%E0%B8%94%E0%B8%B5%E0%B8%A2%E0%B9%8C%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%87%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%87%E0%B8%84%E0%B9%8C%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AD%E0%B8%A3%E0%B8%B8%E0%B8%932.jpg/1280px-%E0%B9%80%E0%B8%88%E0%B8%94%E0%B8%B5%E0%B8%A2%E0%B9%8C%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%87%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%87%E0%B8%84%E0%B9%8C%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AD%E0%B8%A3%E0%B8%B8%E0%B8%932.jpg',
     imageAlt: 'Templo Wat Arun, Bangkok',
     capital: 'Bangkok', currency: 'Baht (THB)', language: 'Tailandés', plug: 'Tipo A/B/C (220 V)', tz: 'UTC+7',
@@ -219,6 +220,7 @@ export const COUNTRIES: Country[] = [
   },
   {
     slug: 'italia', name: 'Italia', code: 'it',
+    tags: ['Cultura', 'Gastronómico', 'Arte', 'En pareja', 'Bueno para primerizos'],
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Colosseo_2020.jpg/1280px-Colosseo_2020.jpg',
     imageAlt: 'Coliseo de Roma',
     capital: 'Roma', currency: 'Euro (EUR)', language: 'Italiano', plug: 'Tipo C/F/L (230 V)', tz: 'UTC+1',
@@ -235,6 +237,7 @@ export const COUNTRIES: Country[] = [
   },
   {
     slug: 'islandia', name: 'Islandia', code: 'is',
+    tags: ['Naturaleza', 'Aventura', 'Auroras', 'Road trip', 'Caro'],
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Gullfoss_from_the_Air_%28cropped%29.jpg/1280px-Gullfoss_from_the_Air_%28cropped%29.jpg',
     imageAlt: 'Cascada de Gullfoss, Islandia',
     capital: 'Reikiavik', currency: 'Corona islandesa (ISK)', language: 'Islandés', plug: 'Tipo C/F (230 V)', tz: 'UTC+0',
@@ -250,6 +253,7 @@ export const COUNTRIES: Country[] = [
   },
   {
     slug: 'mexico', name: 'México', code: 'mx',
+    tags: ['Playa', 'Cultura', 'Gastronómico', 'Barato', 'Aventura'],
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Chichen_Itza_3.jpg/1280px-Chichen_Itza_3.jpg',
     imageAlt: 'Chichén Itzá, México',
     capital: 'Ciudad de México', currency: 'Peso mexicano (MXN)', language: 'Español', plug: 'Tipo A/B (127 V)', tz: 'UTC-6',
@@ -264,6 +268,7 @@ export const COUNTRIES: Country[] = [
   },
   {
     slug: 'francia', name: 'Francia', code: 'fr',
+    tags: ['Cultura', 'Gastronómico', 'En pareja', 'Arte', 'Romántico'],
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg/1280px-Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg',
     imageAlt: 'Torre Eiffel, París',
     capital: 'París', currency: 'Euro (EUR)', language: 'Francés', plug: 'Tipo C/E (230 V)', tz: 'UTC+1',
@@ -280,6 +285,7 @@ export const COUNTRIES: Country[] = [
   },
   {
     slug: 'espana', name: 'España', code: 'es',
+    tags: ['Playa', 'Gastronómico', 'Fiesta', 'Cultura', 'Bueno para primerizos'],
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Dawn_Charles_V_Palace_Alhambra_Granada_Andalusia_Spain.jpg/1280px-Dawn_Charles_V_Palace_Alhambra_Granada_Andalusia_Spain.jpg',
     imageAlt: 'La Alhambra, Granada',
     capital: 'Madrid', currency: 'Euro (EUR)', language: 'Español', plug: 'Tipo C/F (230 V)', tz: 'UTC+1',
@@ -296,6 +302,7 @@ export const COUNTRIES: Country[] = [
   },
   {
     slug: 'grecia', name: 'Grecia', code: 'gr',
+    tags: ['Playa', 'Islas', 'Cultura', 'En pareja', 'Romántico'],
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/2011_Dimos_Thiras.png/1280px-2011_Dimos_Thiras.png',
     imageAlt: 'Santorini, Grecia',
     capital: 'Atenas', currency: 'Euro (EUR)', language: 'Griego', plug: 'Tipo C/F (230 V)', tz: 'UTC+2',
@@ -312,6 +319,7 @@ export const COUNTRIES: Country[] = [
   },
   {
     slug: 'peru', name: 'Perú', code: 'pe',
+    tags: ['Aventura', 'Naturaleza', 'Cultura', 'Trekking', 'Mochilero'],
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Machu_Picchu%2C_2023_%28012%29.jpg/1280px-Machu_Picchu%2C_2023_%28012%29.jpg',
     imageAlt: 'Machu Picchu, Perú',
     capital: 'Lima', currency: 'Sol (PEN)', language: 'Español', plug: 'Tipo A/C (220 V)', tz: 'UTC-5',

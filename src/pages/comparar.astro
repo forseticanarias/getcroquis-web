@@ -4,6 +4,7 @@ import { COUNTRIES } from '../data/countries';
 
 const countries = [...COUNTRIES].sort((a, b) => a.name.localeCompare(b.name));
 const budgetRank: Record<string, number> = { 'Bajo': 1, 'Bajo-medio': 2, 'Medio': 3, 'Medio-alto': 4, 'Alto': 5 };
+const allTags = [...new Set(COUNTRIES.flatMap((c) => c.tags ?? []))].sort();
 ---
 
 <Base
@@ -14,6 +15,13 @@ const budgetRank: Record<string, number> = { 'Bajo': 1, 'Bajo-medio': 2, 'Medio'
     <p class="text-xs font-bold tracking-widest text-tirma-pink/80 uppercase mb-3">¿No lo tienes claro?</p>
     <h1 class="text-3xl sm:text-4xl font-bold tracking-tight">Compara destinos de un vistazo</h1>
     <p class="mt-3 text-white/65 leading-relaxed">Cuándo ir, cuánto cuesta y qué tipo de viaje es cada uno. Toca un país para ver su ficha completa.</p>
+
+    <div class="mt-5 flex flex-wrap gap-2" id="filters">
+      <button data-tag="" class="filter-chip active px-3 py-1.5 rounded-full text-xs font-semibold border transition">Todos</button>
+      {allTags.map((t) => (
+        <button data-tag={t} class="filter-chip px-3 py-1.5 rounded-full text-xs font-semibold border transition">{t}</button>
+      ))}
+    </div>
   </section>
 
   <section class="max-w-4xl mx-auto px-5 sm:px-6 pb-16">
@@ -30,7 +38,7 @@ const budgetRank: Record<string, number> = { 'Bajo': 1, 'Bajo-medio': 2, 'Medio'
         </thead>
         <tbody>
           {countries.map((c) => (
-            <tr class="border-t border-white/[0.06] hover:bg-white/[0.03] transition">
+            <tr class="country-row border-t border-white/[0.06] hover:bg-white/[0.03] transition" data-tags={(c.tags ?? []).join('|')}>
               <td class="p-3">
                 <a href={`/destinos/${c.slug}`} class="flex items-center gap-2.5 font-semibold hover:text-tirma-pink transition">
                   <img src={`https://flagcdn.com/h20/${c.code}.png`} alt="" width="24" class="rounded-sm ring-1 ring-white/10" />
@@ -52,6 +60,31 @@ const budgetRank: Record<string, number> = { 'Bajo': 1, 'Bajo-medio': 2, 'Medio'
         </tbody>
       </table>
     </div>
-    <p class="text-xs text-white/40 mt-3">💡 Datos orientativos. Iremos añadiendo más países y filtros para afinar la búsqueda.</p>
+    <p class="text-xs text-white/40 mt-3" id="empty" hidden>No hay países con ese criterio todavía. ¡Estamos ampliando el atlas! 🌍</p>
+    <p class="text-xs text-white/40 mt-3">💡 Datos orientativos. Iremos añadiendo más países para afinar la búsqueda.</p>
   </section>
+
+  <style>
+    .filter-chip { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); }
+    .filter-chip:hover { border-color: rgba(230,21,127,0.4); }
+    .filter-chip.active { background: #C30F68; border-color: #C30F68; color: #F1E2B3; }
+  </style>
+  <script>
+    const chips = document.querySelectorAll('.filter-chip');
+    const rows = Array.from(document.querySelectorAll('.country-row'));
+    const empty = document.getElementById('empty');
+    chips.forEach((chip) => chip.addEventListener('click', () => {
+      chips.forEach((c) => c.classList.remove('active'));
+      chip.classList.add('active');
+      const tag = chip.getAttribute('data-tag');
+      let visible = 0;
+      rows.forEach((row) => {
+        const tags = (row.getAttribute('data-tags') || '').split('|');
+        const show = !tag || tags.includes(tag);
+        row.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      if (empty) empty.hidden = visible > 0;
+    }));
+  </script>
 </Base>

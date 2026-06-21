@@ -156,10 +156,10 @@ const faqLd = c.faq?.length
                 </summary>
                 <div class="px-4 pb-4">
                   {(city.image || city.fact) && (
-                    <div class="flex flex-col sm:flex-row gap-4 mb-4 items-start">
+                    <div class="flex flex-col sm:flex-row gap-4 mb-4 sm:items-center">
                       {city.image && <img src={city.image} alt={city.name} loading="lazy" class="w-full sm:w-2/5 aspect-[4/3] object-cover rounded-xl flex-shrink-0" />}
                       {city.fact && (
-                        <p class="text-sm text-white/65 leading-relaxed">
+                        <p class="text-sm text-white/65 leading-relaxed sm:flex-1">
                           <span class="text-tirma-pink font-semibold">¿Sabías que…?</span> {city.fact}
                         </p>
                       )}
