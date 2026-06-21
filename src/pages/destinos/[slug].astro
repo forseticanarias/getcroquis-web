@@ -88,6 +88,12 @@ const faqLd = c.faq?.length
         )}
       </div>
 
+      <div class="lg:hidden flex flex-wrap gap-2">
+        {facts.map(([k, v]) => (
+          <span class="text-xs px-2.5 py-1 rounded-full bg-white/[0.04] border border-white/[0.08]"><span class="text-white/40">{k}:</span> <span class="font-semibold">{v}</span></span>
+        ))}
+      </div>
+
       <a href={`${SITE.appUrl}/dashboard`} class="lg:hidden flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-gradient-to-r from-tirma-pink to-tirma-deep text-tirma-beige font-bold shadow-lg shadow-tirma-pink/25 active:brightness-95">
         Planifica {c.name} con IA →
       </a>
@@ -311,7 +317,7 @@ const faqLd = c.faq?.length
 
     <!-- BARRA LATERAL (datos + esenciales + CTA) -->
     <aside class="space-y-5 lg:sticky lg:top-6 self-start">
-      <div class="rounded-2xl bg-white/[0.03] border border-white/[0.08] p-4">
+      <div class="hidden lg:block rounded-2xl bg-white/[0.03] border border-white/[0.08] p-4">
         <h2 class="text-sm font-bold uppercase tracking-wider text-white/50 mb-3">Datos rápidos</h2>
         <dl class="space-y-2">
           {facts.map(([k, v]) => (
@@ -325,16 +331,19 @@ const faqLd = c.faq?.length
 
       <div class="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-4">
         <h2 class="text-sm font-bold uppercase tracking-wider text-white/50 mb-3">Qué necesitas para {c.name}</h2>
-        <ul class="space-y-3">
+        <ul class="space-y-4">
           {ESSENTIALS.map((e) => (
-            <li class="border-b border-white/[0.05] last:border-0 pb-3 last:pb-0">
-              <div class="flex items-center gap-2">
-                <span class="text-sm">{e.icon}</span>
+            <li class="border-b border-white/[0.05] last:border-0 pb-4 last:pb-0">
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="text-base">{e.icon}</span>
                 <span class="font-semibold text-sm">{e.title}</span>
-                <span class="ml-auto text-[9px] font-bold uppercase tracking-wide text-tirma-pink/90 text-right leading-tight">{e.need}</span>
+                <span class="text-[9px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full bg-tirma-pink/15 text-tirma-pink">{e.need}</span>
               </div>
-              <p class="text-xs text-white/50 mt-1 leading-snug">{e.desc}</p>
-              <a href={e.url} target="_blank" rel="noreferrer sponsored" class="text-xs text-tirma-beige/90 hover:text-tirma-beige underline underline-offset-2 mt-1 inline-block">{e.linkText} ↗</a>
+              <p class="text-xs text-white/55 mt-1.5 leading-relaxed">{e.desc}</p>
+              <a href={e.url} target="_blank" rel="noreferrer sponsored"
+                 class="mt-2.5 inline-flex items-center gap-1 text-xs font-semibold text-tirma-beige bg-white/[0.05] border border-white/10 rounded-full px-3.5 py-2 hover:border-tirma-pink/40 active:brightness-95 transition">
+                {e.linkText} ↗
+              </a>
             </li>
           ))}
         </ul>
