@@ -8,6 +8,10 @@ const data = COUNTRIES.map((c) => ({
   code: c.code,
   best: c.bestMonths ?? '—',
   budget: c.budget ?? '—',
+  perDay: c.budgetLevels ? `${c.budgetLevels.normal}€/día` : '—',
+  language: c.language ?? '—',
+  currency: c.currency ?? '—',
+  duration: c.duration ?? '—',
   difficulty: c.difficulty ?? '—',
   tags: (c.tags ?? []).slice(0, 3),
 })).sort((a, b) => a.name.localeCompare(b.name));
@@ -24,9 +28,15 @@ const data = COUNTRIES.map((c) => ({
   </section>
 
   <section class="max-w-4xl mx-auto px-5 sm:px-6 pb-16">
+    <div class="relative mb-4">
+      <input id="search" type="search" placeholder="Busca un país…" autocomplete="off"
+        class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-white/[0.06] border border-white/15 text-white placeholder-white/40 outline-none focus:border-tirma-pink/50" />
+      <span class="absolute left-3.5 top-1/2 -translate-y-1/2 text-white/40 pointer-events-none">🔍</span>
+    </div>
+
     <div id="picker" class="flex flex-wrap gap-2 mb-6">
       {data.map((c) => (
-        <button data-slug={c.slug} class="pick-btn inline-flex items-center gap-2 px-3 py-2 rounded-full text-sm font-semibold border transition">
+        <button data-slug={c.slug} data-name={c.name.toLowerCase()} class="pick-btn inline-flex items-center gap-2 px-3 py-2 rounded-full text-sm font-semibold border transition">
           <img src={`https://flagcdn.com/h20/${c.code}.png`} alt="" width="20" class="rounded-sm ring-1 ring-white/10" />
           {c.name}
         </button>
@@ -67,6 +77,10 @@ const data = COUNTRIES.map((c) => ({
           </div>
           ${row('Mejor época', c.best)}
           ${row('Coste', c.budget)}
+          ${row('€/día (medio)', c.perDay)}
+          ${row('Duración ideal', c.duration)}
+          ${row('Idioma', c.language)}
+          ${row('Moneda', c.currency)}
           ${row('Dificultad', c.difficulty)}
           <div class="flex flex-wrap gap-1 mt-2">${tags}</div>
           <a href="/destinos/${c.slug}" class="block text-center mt-4 px-4 py-2.5 rounded-xl bg-gradient-to-r from-tirma-pink to-tirma-deep text-tirma-beige font-bold text-sm hover:brightness-105 transition">Ver ficha completa →</a>
@@ -90,5 +104,13 @@ const data = COUNTRIES.map((c) => ({
       updateButtons();
       render();
     }));
+
+    const search = document.getElementById('search');
+    search.addEventListener('input', () => {
+      const q = search.value.trim().toLowerCase();
+      picker.querySelectorAll('.pick-btn').forEach((b) => {
+        b.style.display = b.dataset.name.includes(q) ? '' : 'none';
+      });
+    });
   </script>
 </Base>
