@@ -10,10 +10,12 @@ export const SITE = {
     'Crea tu itinerario con IA: presupuesto, guías de preparación y consejos para viajar mejor y más barato. Descubre viajes reales, cópialos y compártelos. Tu referente de viajes.',
 };
 
-// Esenciales del viaje (crean necesidad + monetizan). Sustituye las URLs por tus
-// enlaces de afiliado reales (Holafly/eSIM, seguro, tarjeta multidivisa).
+// "Ranking de necesidades" del viaje: informativo y discreto (no botones de
+// anuncio). Cada uno con su nivel de necesidad y un enlace sutil. Sustituye las
+// URLs por tus enlaces de afiliado reales (Holafly, Klook, seguro, tarjeta).
 export const ESSENTIALS = [
-  { icon: '📶', title: 'eSIM con datos al llegar', desc: 'Internet desde que aterrizas, sin pagar roaming ni buscar tiendas.', cta: 'Ver eSIM', url: 'https://www.holafly.com/' },
-  { icon: '🛡️', title: 'Seguro de viaje', desc: 'Salud, cancelación y equipaje cubiertos. No viajes sin él.', cta: 'Ver seguro', url: 'https://www.heymondo.es/' },
-  { icon: '💳', title: 'Tarjeta sin comisión de divisa', desc: 'Paga en el extranjero casi al cambio real (~0,5% en vez del 3-5% del banco).', cta: 'Ver tarjeta', url: 'https://wise.com/' },
+  { icon: '📶', title: 'eSIM con datos', need: 'Imprescindible', desc: 'Internet desde que aterrizas, sin roaming.', linkText: 'Consigue un descuento en Holafly', url: 'https://www.holafly.com/' },
+  { icon: '🛡️', title: 'Seguro de viaje', need: 'Muy recomendable', desc: 'Cubre salud, cancelación y equipaje.', linkText: 'Comparar seguros', url: 'https://www.heymondo.es/' },
+  { icon: '🎟️', title: 'Actividades y entradas', need: 'Reserva con antelación', desc: 'Tours y experiencias populares se agotan.', linkText: 'Ver en Klook', url: 'https://www.klook.com/' },
+  { icon: '💳', title: 'Tarjeta multidivisa', need: 'Ahorra dinero', desc: 'Paga fuera casi al cambio real (~0,5%).', linkText: 'Comparar tarjetas', url: 'https://wise.com/' },
 ];

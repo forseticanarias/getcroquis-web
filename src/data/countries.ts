@@ -25,6 +25,22 @@ export interface Faq {
   a: string;
 }
 
+export interface Sight {
+  name: string;
+  city?: string;
+  note?: string;
+}
+
+export interface CityFact {
+  name: string;
+  fact: string;
+}
+
+export interface Link {
+  label: string;
+  url: string;
+}
+
 export interface Country {
   slug: string;
   name: string;
@@ -41,6 +57,13 @@ export interface Country {
   visa?: string;
   internet?: string;
   duration?: string;
+  difficulty?: string; // 'Fácil' | 'Media' | 'Alta'
+  difficultyNote?: string;
+  english?: string; // utilidad del inglés
+  paperwork?: string[]; // pasaporte, visado, carnet internacional, vacunas…
+  topSights?: Sight[]; // top 10 qué ver
+  cities?: CityFact[]; // datos curiosos de las ciudades top
+  links?: Link[]; // enlaces de interés / documentación
   summary?: string;
   // Texto humano y único por país: la clave anti "thin content" para SEO.
   opinion?: string;
@@ -84,6 +107,37 @@ export const COUNTRIES: Country[] = [
       { q: '¿Es caro viajar a Japón?', a: 'Es medio-alto, pero más asequible de lo que parece: comer está muy bien de precio y el transporte, aunque caro, es eficiente. Calcula unos 100-120 € al día por persona en un viaje normal.' },
       { q: '¿Hace falta visado?', a: 'Para estancias turísticas de hasta 90 días, los españoles no necesitan visado.' },
       { q: '¿Cuál es la mejor época?', a: 'Primavera (marzo-mayo) por los cerezos y otoño (octubre-noviembre) por los arces. Evita julio y agosto: calor, humedad y tifones.' },
+    ],
+    difficulty: 'Media',
+    difficultyNote: 'Muy seguro y limpio, pero el idioma y los kanjis despistan al principio. Con apps de traducción y la red de trenes, te mueves sin problema.',
+    english: 'Limitado fuera de zonas turísticas. Señalética en inglés en transporte; útil llevar Google Translate con cámara.',
+    paperwork: [
+      'Pasaporte con al menos 6 meses de validez',
+      'Sin visado para turismo hasta 90 días (españoles)',
+      'Carnet de conducir internacional si vas a conducir',
+      'Sin vacunas obligatorias',
+    ],
+    topSights: [
+      { name: 'Santuario Fushimi Inari (miles de toriis)', city: 'Kioto', note: 'Ve al amanecer para esquivar las masas' },
+      { name: 'Templo Senso-ji y barrio de Asakusa', city: 'Tokio' },
+      { name: 'Cruce de Shibuya', city: 'Tokio', note: 'Míralo desde el Starbucks de enfrente' },
+      { name: 'Monte Fuji y los Cinco Lagos', city: 'Fujikawaguchiko' },
+      { name: 'Parque de Nara (ciervos libres)', city: 'Nara' },
+      { name: 'Templo dorado Kinkaku-ji', city: 'Kioto' },
+      { name: 'Barrio histórico de Gion (geishas)', city: 'Kioto', note: 'Atardecer entre callejones de madera' },
+      { name: 'Castillo de Himeji', city: 'Himeji', note: 'El castillo feudal mejor conservado' },
+      { name: 'Memorial de la Paz', city: 'Hiroshima' },
+      { name: 'Bosque de bambú de Arashiyama', city: 'Kioto' },
+    ],
+    cities: [
+      { name: 'Tokio', fact: 'Su red de metro mueve más de 8 millones de personas al día y casi nunca llega tarde: un retraso de 1 minuto se anuncia con disculpas.' },
+      { name: 'Kioto', fact: 'Fue capital de Japón más de 1.000 años y se libró de los bombardeos de 1945, por eso conserva 1.600 templos budistas.' },
+      { name: 'Osaka', fact: 'Es la capital gastronómica: aquí nacieron el takoyaki y el okonomiyaki. Su lema informal es "kuidaore" (arruinarse comiendo).' },
+    ],
+    links: [
+      { label: 'Visado y entrada (Embajada de Japón en España)', url: 'https://www.es.emb-japan.go.jp/' },
+      { label: 'Japan Rail Pass (info oficial)', url: 'https://japanrailpass.net/es/' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/' },
     ],
   },
   {
