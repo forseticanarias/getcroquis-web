@@ -46,6 +46,7 @@ export interface CityGuide {
   name: string;
   days?: string; // tiempo recomendado
   fact?: string; // dato curioso
+  image?: string; // foto de la ciudad (banner del desplegable)
   sights?: CitySight[]; // ranking de qué ver/hacer
 }
 
@@ -151,6 +152,7 @@ export const COUNTRIES: Country[] = [
     cityGuides: [
       {
         name: 'Tokio', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Skyscrapers_of_Shinjuku_2009_January.jpg/500px-Skyscrapers_of_Shinjuku_2009_January.jpg',
         fact: 'El metro mueve 8 millones de personas al día y casi nunca llega tarde.',
         sights: [
           { name: 'Templo Senso-ji y barrio de Asakusa' },
@@ -162,6 +164,7 @@ export const COUNTRIES: Country[] = [
       },
       {
         name: 'Kioto', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Torii_path_with_lantern_at_Fushimi_Inari_Taisha_Shrine%2C_Kyoto%2C_Japan.jpg/500px-Torii_path_with_lantern_at_Fushimi_Inari_Taisha_Shrine%2C_Kyoto%2C_Japan.jpg',
         fact: 'Conserva 1.600 templos budistas; fue capital más de mil años.',
         sights: [
           { name: 'Santuario Fushimi Inari', note: 'Ve al amanecer para esquivar las masas' },
@@ -173,6 +176,7 @@ export const COUNTRIES: Country[] = [
       },
       {
         name: 'Osaka', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Dotonbori%2C_Osaka%2C_at_night%2C_November_2016.jpg/500px-Dotonbori%2C_Osaka%2C_at_night%2C_November_2016.jpg',
         fact: 'Capital gastronómica: cuna del takoyaki y el okonomiyaki ("kuidaore").',
         sights: [
           { name: 'Dotonbori y el cartel de Glico', note: 'El mejor sitio para comer de calle' },
@@ -182,6 +186,7 @@ export const COUNTRIES: Country[] = [
       },
       {
         name: 'Nara y Hakone', days: 'Excursiones de 1 día',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Nara_Park_-_panoramio_%282%29.jpg/500px-Nara_Park_-_panoramio_%282%29.jpg',
         fact: 'Nara para los ciervos libres; Hakone para ver el Fuji y un onsen.',
         sights: [
           { name: 'Parque de Nara (ciervos) y Templo Todai-ji' },
