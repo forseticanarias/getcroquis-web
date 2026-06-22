@@ -2005,6 +2005,142 @@ export const COUNTRIES: Country[] = [
       { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
     ],
   },
+  {
+    slug: 'sudafrica', name: 'Sudáfrica', code: 'za',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Table_Mountain_DanieVDM.jpg/1280px-Table_Mountain_DanieVDM.jpg',
+    imageAlt: 'Table Mountain, Ciudad del Cabo',
+    capital: 'Pretoria / Ciudad del Cabo', currency: 'Rand (ZAR)', language: 'Inglés (y 10 idiomas más)', plug: 'Tipo M/N (230 V)', tz: 'UTC+2',
+    budget: 'Medio', bestMonths: 'Mayo-Septiembre (safari)',
+    difficulty: 'Media', duration: '12-16 días',
+    tags: ['Safari', 'Naturaleza', 'Aventura', 'Playa', 'Gastronómico'],
+    summary: 'Safaris con los "Big Five", la espectacular Ciudad del Cabo, viñedos, pingüinos y la Ruta Jardín. Sudáfrica lo tiene todo en un solo país, con una relación calidad-precio difícil de igualar.',
+    opinion:
+      'Sudáfrica es un viajazo que sorprende a todo el mundo. Ver leones y elefantes en libertad al amanecer es de esas cosas que no se olvidan, y Ciudad del Cabo es una de las ciudades más bonitas del planeta: montaña, mar y viñedos en el mismo sitio. Mi consejo: combina safari (Kruger) con la zona del Cabo y la Ruta Jardín, alquila coche y disfruta de un país enorme y variadísimo. Eso sí, infórmate de las zonas seguras y muévete con cabeza, como en cualquier gran ciudad.',
+    faq: [
+      { q: '¿Cuántos días para Sudáfrica?', a: 'Con 12-14 días combinas safari en Kruger, Ciudad del Cabo y la Ruta Jardín. Es grande: el coche o los vuelos internos ayudan mucho.' },
+      { q: '¿Cuándo es mejor ir?', a: 'Para safari, el invierno seco (mayo-septiembre): los animales se concentran en las charcas. Ciudad del Cabo luce más en su verano (nov-marzo).' },
+      { q: '¿Necesito visado?', a: 'No para turismo: los españoles pueden estar hasta 90 días solo con el pasaporte.' },
+    ],
+    paperwork: ['Pasaporte con al menos 2 páginas en blanco', 'Sin visado para turismo (hasta 90 días)', 'Seguro de viaje muy recomendable', 'Profilaxis de malaria en zonas de safari (consulta)'],
+    visa: 'No requerido hasta 90 días (turismo)',
+    internet: 'Bueno · eSIM recomendada',
+    difficultyNote: 'Media: relación calidad-precio increíble y en inglés, pero hay que informarse bien de la seguridad por zonas y se conduce por la izquierda.',
+    english: 'El inglés es idioma oficial; cero barrera.',
+    budgetLevels: { mochilero: 35, normal: 70, comodo: 140, lujo: 320 },
+    climate: [
+      { m: 'Ene', r: 'good' }, { m: 'Feb', r: 'good' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'good' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'good' }, { m: 'Dic', r: 'good' },
+    ],
+    cityGuides: [
+      {
+        name: 'Ciudad del Cabo', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Camps_bay_%2853460319478%29_%28cropped%29.jpg/500px-Camps_bay_%2853460319478%29_%28cropped%29.jpg',
+        fact: 'La Table Mountain es una de las 7 Maravillas Naturales del mundo y suele llevar un "mantel" de nubes.',
+        sights: [
+          { name: 'Subir a la Table Mountain' },
+          { name: 'Cabo de Buena Esperanza' },
+          { name: 'Pingüinos en Boulders Beach' },
+          { name: 'Viñedos de Stellenbosch' },
+        ],
+      },
+      {
+        name: 'Safari en Kruger', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Kruger_Zebra.JPG/500px-Kruger_Zebra.JPG',
+        fact: 'Aquí viven los "Big Five": león, leopardo, elefante, búfalo y rinoceronte.',
+        sights: [
+          { name: 'Ver los Big Five en libertad' },
+          { name: 'Safari al amanecer' },
+          { name: 'Lodges en plena sabana' },
+          { name: 'Reservas privadas (Sabi Sand)' },
+        ],
+      },
+      {
+        name: 'Ruta Jardín', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Knysna_waterfront.jpg/500px-Knysna_waterfront.jpg',
+        fact: 'Es una de las carreteras costeras más bonitas del mundo, entre Ciudad del Cabo y Port Elizabeth.',
+        sights: [
+          { name: 'Conducir la Garden Route' },
+          { name: 'Laguna de Knysna' },
+          { name: 'Avistar ballenas en Hermanus' },
+          { name: 'Parque de Tsitsikamma' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Sudáfrica', url: 'https://www.southafrica.net/' },
+      { label: 'Embajada de España en Sudáfrica', url: 'https://www.exteriores.gob.es/Embajadas/pretoria' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
+  {
+    slug: 'filipinas', name: 'Filipinas', code: 'ph',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/El_Nido_Bay_December_2018.jpg/1280px-El_Nido_Bay_December_2018.jpg',
+    imageAlt: 'Bahía de El Nido, Palawan, Filipinas',
+    capital: 'Manila', currency: 'Peso filipino (PHP)', language: 'Filipino e inglés', plug: 'Tipo A/B/C (220 V)', tz: 'UTC+8',
+    budget: 'Bajo', bestMonths: 'Diciembre-Mayo (estación seca)',
+    difficulty: 'Media', duration: '14-18 días',
+    tags: ['Playa', 'Islas', 'Buceo', 'Barato', 'Mochilero'],
+    summary: 'Más de 7.000 islas de aguas turquesa, lagunas escondidas, arrecifes para bucear y playas de postal. Filipinas es un paraíso tropical baratísimo y con la gente más sonriente de Asia.',
+    opinion:
+      'Filipinas es el paraíso playero que todos imaginamos, pero de verdad. El Nido y Coron, en Palawan, parecen un salvapantallas: lagunas turquesa entre paredes de roca que no te crees. Mi consejo: no intentes verlo todo, son miles de islas; elige una o dos zonas y muévete despacio. Y aprovecha que casi todos hablan inglés y son amabilísimos, lo que hace el viaje facilísimo. Lo único pesado son los traslados entre islas, así que ten paciencia con ferries y vuelos.',
+    faq: [
+      { q: '¿Cuántos días para Filipinas?', a: 'Con 14-16 días combinas Palawan (El Nido, Coron) con Cebú/Bohol o Boracay. Los traslados entre islas comen tiempo.' },
+      { q: '¿Cuándo es mejor ir?', a: 'Estación seca, de diciembre a mayo. Evita la temporada de tifones (julio-octubre).' },
+      { q: '¿Necesito visado?', a: 'No para turismo: los españoles pueden entrar sin visado para estancias de hasta 30 días.' },
+    ],
+    paperwork: ['Pasaporte con al menos 6 meses de validez', 'Sin visado para turismo (hasta 30 días)', 'Billete de salida del país', 'Seguro de viaje muy recomendable'],
+    visa: 'No requerido hasta 30 días (turismo)',
+    internet: 'Irregular en las islas · eSIM recomendada',
+    difficultyNote: 'Media: baratísima y con inglés muy extendido, pero son 7.000 islas y moverse entre ellas (ferries y vuelos) pide paciencia y planificación.',
+    english: 'El inglés es cooficial y se habla muchísimo. Cero barrera.',
+    budgetLevels: { mochilero: 25, normal: 50, comodo: 100, lujo: 220 },
+    climate: [
+      { m: 'Ene', r: 'good' }, { m: 'Feb', r: 'good' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'mid' }, { m: 'Jul', r: 'avoid' }, { m: 'Ago', r: 'avoid' },
+      { m: 'Sep', r: 'avoid' }, { m: 'Oct', r: 'avoid' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'good' },
+    ],
+    cityGuides: [
+      {
+        name: 'Palawan (El Nido y Coron)', days: '5-6 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Coron_skyline_Tapyas_%28Coron%2C_Palwan%3B_03-16-2024%29.jpg/500px-Coron_skyline_Tapyas_%28Coron%2C_Palwan%3B_03-16-2024%29.jpg',
+        fact: 'El Nido ha sido elegida varias veces la isla más bonita del mundo.',
+        sights: [
+          { name: 'Island hopping en barca por El Nido' },
+          { name: 'Lagunas de Coron' },
+          { name: 'Buceo en pecios de la II Guerra Mundial' },
+          { name: 'Playas y calas escondidas' },
+        ],
+      },
+      {
+        name: 'Bohol y Cebú', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Chocolate_Hills_Bohol.JPG/500px-Chocolate_Hills_Bohol.JPG',
+        fact: 'Las Chocolate Hills son más de 1.200 colinas que en seco se vuelven marrones, como bombones.',
+        sights: [
+          { name: 'Chocolate Hills de Bohol' },
+          { name: 'Ver los tarseros (primate diminuto)' },
+          { name: 'Nadar con tiburones ballena (Oslob)' },
+          { name: 'Cascadas de Kawasan' },
+        ],
+      },
+      {
+        name: 'Boracay', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Boracay_White_Beach.png/500px-Boracay_White_Beach.png',
+        fact: 'Su White Beach, de arena blanquísima, aparece siempre entre las mejores playas del mundo.',
+        sights: [
+          { name: 'White Beach al atardecer' },
+          { name: 'Deportes acuáticos y kitesurf' },
+          { name: 'Paseo en velero (paraw)' },
+          { name: 'Vida nocturna en la playa' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Filipinas', url: 'https://philippines.travel/' },
+      { label: 'Embajada de España en Filipinas', url: 'https://www.exteriores.gob.es/Embajadas/manila' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
 ];
 
 export const countryBySlug = (slug: string) => COUNTRIES.find((c) => c.slug === slug);
