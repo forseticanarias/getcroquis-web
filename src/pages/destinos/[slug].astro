@@ -32,6 +32,24 @@ const budgetRows = c.budgetLevels
     ]
   : [];
 
+// Esenciales HONESTOS según el destino: en la UE (roaming + Tarjeta Sanitaria
+// Europea) la eSIM y el seguro bajan de nivel. Color por nivel de necesidad.
+const EU_ROAMING = new Set(['es','pt','fr','it','gr','hr','is','de','nl','be','at','ie','dk','se','fi','pl','cz','hu','ro','bg','sk','si','ee','lv','lt','lu','mt','cy','no','li']);
+const inEU = EU_ROAMING.has(c.code);
+const NEED_COLORS: Record<string, string> = {
+  'Imprescindible': 'bg-red-500/15 text-red-300 border-red-500/25',
+  'Muy recomendable': 'bg-amber-500/15 text-amber-300 border-amber-500/25',
+  'Recomendable': 'bg-sky-500/15 text-sky-300 border-sky-500/25',
+  'Opcional': 'bg-white/[0.08] text-white/55 border-white/15',
+  'Reserva con antelación': 'bg-tirma-pink/15 text-tirma-beige border-tirma-pink/25',
+  'Ahorra dinero': 'bg-emerald-500/15 text-emerald-300 border-emerald-500/25',
+};
+const essentials = ESSENTIALS.map((e) => {
+  if (e.title.includes('eSIM') && inEU) return { ...e, need: 'Opcional', desc: 'Con el roaming de la UE no la necesitas. Solo si quieres aún más datos.' };
+  if (e.title.includes('Seguro') && inEU) return { ...e, need: 'Recomendable', desc: 'En la UE tienes la Tarjeta Sanitaria Europea; el seguro suma cancelación y equipaje.' };
+  return e;
+});
+
 // SEO: datos estructurados (Google los lee para rich results).
 const jsonld: any = {
   '@context': 'https://schema.org',
@@ -328,12 +346,12 @@ const faqLd = c.faq?.length
       <div class="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-4">
         <h2 class="text-sm font-bold uppercase tracking-wider text-white/50 mb-3">Qué necesitas para {c.name}</h2>
         <ul class="space-y-4">
-          {ESSENTIALS.map((e) => (
+          {essentials.map((e) => (
             <li class="border-b border-white/[0.05] last:border-0 pb-4 last:pb-0">
               <div class="flex items-center gap-2 flex-wrap">
                 <span class="text-base">{e.icon}</span>
                 <span class="font-semibold text-sm">{e.title}</span>
-                <span class="text-[9px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full bg-tirma-pink/15 text-tirma-pink">{e.need}</span>
+                <span class={`text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full border ${NEED_COLORS[e.need] ?? 'bg-white/[0.08] text-white/60 border-white/15'}`}>{e.need}</span>
               </div>
               <p class="text-xs text-white/55 mt-1.5 leading-relaxed">{e.desc}</p>
               <a href={e.url} target="_blank" rel="noreferrer sponsored"
