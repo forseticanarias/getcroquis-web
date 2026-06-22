@@ -2,7 +2,37 @@
 import Base from '../../layouts/Base.astro';
 import { COUNTRIES } from '../../data/countries';
 
-const countries = [...COUNTRIES].sort((a, b) => a.name.localeCompare(b.name));
+// Continente por código ISO y eslogan con gancho por país (más atractivo que los
+// meses). Agrupamos por continente (alfabético) y ordenamos países alfabéticamente.
+const CONT: Record<string, string> = {
+  jp: 'Asia', th: 'Asia', vn: 'Asia',
+  it: 'Europa', is: 'Europa', fr: 'Europa', es: 'Europa', gr: 'Europa', pt: 'Europa', hr: 'Europa',
+  mx: 'América', pe: 'América',
+  ma: 'África',
+};
+const TAGLINES: Record<string, string> = {
+  japon: 'El país del sol naciente',
+  tailandia: 'El país de las sonrisas',
+  vietnam: 'Dragones, bahías y arrozales',
+  italia: 'La dolce vita',
+  islandia: 'Tierra de hielo y fuego',
+  francia: 'Arte y saber vivir',
+  espana: 'Sol, historia y buena vida',
+  grecia: 'La cuna de la civilización',
+  portugal: 'El vecino que enamora',
+  croacia: 'La perla del Adriático',
+  mexico: 'Color, ruinas y fiesta',
+  peru: 'El imperio de los Andes',
+  marruecos: 'Las puertas de África',
+};
+
+const CONT_ORDER = ['África', 'América', 'Asia', 'Europa', 'Oceanía'];
+const grouped = CONT_ORDER
+  .map((cont) => ({
+    cont,
+    countries: COUNTRIES.filter((c) => CONT[c.code] === cont).sort((a, b) => a.name.localeCompare(b.name)),
+  }))
+  .filter((g) => g.countries.length > 0);
 ---
 
 <Base
@@ -12,7 +42,7 @@ const countries = [...COUNTRIES].sort((a, b) => a.name.localeCompare(b.name));
   <section class="max-w-4xl mx-auto px-5 sm:px-6 pt-10 sm:pt-14 pb-6">
     <p class="text-xs font-bold tracking-widest text-tirma-pink/80 uppercase mb-3">El atlas viajero</p>
     <h1 class="text-3xl sm:text-4xl font-bold tracking-tight">¿A dónde viajas?</h1>
-    <p class="mt-3 text-white/65 leading-relaxed">Busca un país y descubre cuándo ir, cuánto cuesta y qué necesitas.</p>
+    <p class="mt-3 text-white/65 leading-relaxed">Elige tu destino y descubre cuándo ir, cuánto cuesta y qué necesitas.</p>
 
     <div class="mt-6 relative">
       <input
@@ -20,52 +50,57 @@ const countries = [...COUNTRIES].sort((a, b) => a.name.localeCompare(b.name));
         type="search"
         placeholder="Busca un país… (ej. Japón)"
         autocomplete="off"
-        class="w-full px-4 py-3 rounded-xl bg-white/[0.06] border border-white/15 text-white placeholder-white/40 outline-none focus:border-tirma-pink/50"
+        class="w-full pl-11 pr-4 py-3 rounded-xl bg-white/[0.06] border border-white/15 text-white placeholder-white/40 outline-none focus:border-tirma-pink/50"
       />
+      <span class="absolute left-4 top-1/2 -translate-y-1/2 text-white/40 pointer-events-none">🔍</span>
     </div>
   </section>
 
-  <section class="max-w-4xl mx-auto px-5 sm:px-6 pb-16">
-    <div id="country-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-      {countries.map((c) => (
-        <a
-          href={`/destinos/${c.slug}`}
-          data-name={c.name.toLowerCase()}
-          class="country-card flex items-center gap-3 p-4 rounded-2xl bg-white/[0.03] border border-white/[0.08] hover:border-tirma-pink/30 hover:bg-white/[0.05] transition"
-        >
-          <img src={`https://flagcdn.com/h20/${c.code}.png`} alt="" width="28" class="rounded-sm ring-1 ring-white/10" />
-          <div class="min-w-0">
-            <div class="font-bold text-sm truncate">{c.name}</div>
-            {c.bestMonths && <div class="text-[11px] text-white/45 truncate">{c.bestMonths}</div>}
-          </div>
-        </a>
-      ))}
-    </div>
-    <p id="no-results" class="hidden text-center text-white/50 py-10">
-      Aún no tenemos ficha de ese país. ¡Estamos ampliando el atlas! 🌍
-    </p>
+  <section class="max-w-4xl mx-auto px-5 sm:px-6 pb-16 space-y-10">
+    {grouped.map((g) => (
+      <div class="cont-group" data-cont={g.cont}>
+        <h2 class="text-lg font-bold text-white/50 mb-4 flex items-center gap-2">
+          <span class="h-px flex-1 bg-white/10"></span>{g.cont}<span class="h-px flex-1 bg-white/10"></span>
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {g.countries.map((c) => (
+            <a
+              href={`/destinos/${c.slug}`}
+              data-name={c.name.toLowerCase()}
+              class="country-card flex items-center gap-3 p-4 rounded-2xl bg-white/[0.03] border border-white/[0.08] hover:border-tirma-pink/30 hover:bg-white/[0.05] transition"
+            >
+              <img src={`https://flagcdn.com/h24/${c.code}.png`} alt="" width="32" class="rounded-sm ring-1 ring-white/10 flex-shrink-0" />
+              <div class="min-w-0">
+                <div class="font-bold text-sm truncate">{c.name}</div>
+                <div class="text-[11px] text-tirma-beige/80 truncate italic">{TAGLINES[c.slug] ?? ''}</div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    ))}
+    <p id="no-results" class="hidden text-center text-white/50 py-10">No encontramos ese país. ¡Estamos ampliando el atlas! 🌍</p>
   </section>
 
   <script>
     const input = document.getElementById('country-search');
     const cards = Array.from(document.querySelectorAll('.country-card'));
+    const groups = Array.from(document.querySelectorAll('.cont-group'));
     const noResults = document.getElementById('no-results');
     input?.addEventListener('input', (e) => {
-      const q = e.target.value.trim().toLowerCase();
+      const q = (e.target as HTMLInputElement).value.trim().toLowerCase();
       let visible = 0;
       cards.forEach((card) => {
-        const match = card.getAttribute('data-name').includes(q);
-        card.style.display = match ? '' : 'none';
+        const match = (card.getAttribute('data-name') || '').includes(q);
+        (card as HTMLElement).style.display = match ? '' : 'none';
         if (match) visible++;
       });
+      // Oculta los continentes que se quedan sin países visibles
+      groups.forEach((g) => {
+        const any = Array.from(g.querySelectorAll('.country-card')).some((c) => (c as HTMLElement).style.display !== 'none');
+        (g as HTMLElement).style.display = any ? '' : 'none';
+      });
       noResults?.classList.toggle('hidden', visible > 0);
-    });
-    // Enter abre el primer resultado visible
-    input?.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') {
-        const first = cards.find((c) => c.style.display !== 'none');
-        if (first) window.location.href = first.getAttribute('href');
-      }
     });
   </script>
 </Base>
