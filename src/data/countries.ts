@@ -1525,6 +1525,85 @@ export const COUNTRIES: Country[] = [
       { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
     ],
   },
+  {
+    slug: 'noruega', name: 'Noruega', code: 'no',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Lyse_Fjord_et_Preikestolen.jpg/1280px-Lyse_Fjord_et_Preikestolen.jpg',
+    imageAlt: 'Preikestolen sobre el Lysefjord, Noruega',
+    capital: 'Oslo', currency: 'Corona noruega (NOK)', language: 'Noruego', plug: 'Tipo C/F (230 V)', tz: 'UTC+1',
+    budget: 'Alto', bestMonths: 'Junio-Agosto (sol) u Octubre-Marzo (auroras)',
+    difficulty: 'Fácil', duration: '8-12 días',
+    tags: ['Naturaleza', 'Aventura', 'Auroras', 'Road trip', 'En pareja'],
+    summary: 'Fiordos imposibles, auroras boreales, montañas que caen al mar y pueblos de postal. Noruega es naturaleza salvaje en estado puro, de las experiencias más espectaculares que puedes vivir en Europa.',
+    opinion:
+      'Noruega es de esos viajes que te recolocan. Los fiordos no se entienden hasta que estás delante: paredes de roca de cientos de metros cayendo al agua, cascadas por todos lados y un silencio que impone. Mi consejo: alquila coche y tómatelo con calma, que aquí lo bonito es parar cada dos curvas. Y decide qué buscas: verano para recorrerla con luz infinita, o invierno para perseguir auroras en Tromsø. Eso sí, llévate la cartera bien llena, porque cara, lo es un rato; pero lo vale.',
+    faq: [
+      { q: '¿Verano o invierno?', a: 'Verano (junio-agosto) para los fiordos, senderismo y sol de medianoche. Invierno (octubre-marzo) para cazar auroras boreales en el norte.' },
+      { q: '¿Cuántos días necesito?', a: 'Con 7-8 días ves Oslo, Bergen y los fiordos. Si subes al norte (Lofoten, Tromsø) por las auroras, mejor 10-12.' },
+      { q: '¿Hace falta visado?', a: 'No: Noruega está en Schengen, con el DNI español en vigor basta.' },
+    ],
+    paperwork: ['DNI o pasaporte en vigor (Schengen)', 'Sin visado para turismo', 'Tarjeta Sanitaria Europea recomendada', 'Sin vacunas obligatorias'],
+    visa: 'No requerido (DNI, Schengen)',
+    internet: 'Excelente · roaming UE (Noruega incluida)',
+    difficultyNote: 'Fácil y segurísimo, todo funciona como un reloj. Lo único: es CARÍSIMO y el clima manda en los fiordos.',
+    english: 'Todo el mundo habla un inglés perfecto. Cero barrera idiomática.',
+    budgetLevels: { mochilero: 90, normal: 160, comodo: 270, lujo: 480 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'mid' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'good' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'mid' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Oslo', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Nationaltheatret_evening.jpg/500px-Nationaltheatret_evening.jpg',
+        fact: 'Su Ópera está diseñada para que puedas subir caminando hasta el tejado, como un iceberg de mármol.',
+        sights: [
+          { name: 'Ópera de Oslo (sube al tejado)' },
+          { name: 'Parque de esculturas Vigeland' },
+          { name: 'Museos: Munch y los barcos vikingos' },
+          { name: 'Barrio moderno de Aker Brygge' },
+        ],
+      },
+      {
+        name: 'Bergen', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Bryggen%2C_Bergen%2C_Noruega%2C_2019-09-08%2C_DD_115-117_PAN.jpg/500px-Bryggen%2C_Bergen%2C_Noruega%2C_2019-09-08%2C_DD_115-117_PAN.jpg',
+        fact: 'Es la puerta a los fiordos y una de las ciudades más lluviosas de Europa: lleva chubasquero.',
+        sights: [
+          { name: 'Muelle Bryggen (casas de madera de colores)' },
+          { name: 'Mercado de pescado' },
+          { name: 'Funicular Fløibanen a la montaña' },
+          { name: 'Base para cruceros por los fiordos' },
+        ],
+      },
+      {
+        name: 'Los Fiordos', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Geirangerfjord_.jpg/500px-Geirangerfjord_.jpg',
+        fact: 'El Geirangerfjord y el Nærøyfjord son Patrimonio de la Humanidad por su belleza brutal.',
+        sights: [
+          { name: 'Geirangerfjord y sus cascadas' },
+          { name: 'Crucero por el Nærøyfjord' },
+          { name: 'Subir a Preikestolen (Pulpit Rock)' },
+          { name: 'Trolltunga (para senderistas)' },
+        ],
+      },
+      {
+        name: 'Lofoten y el Norte', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Moskenes_Reinebringen_lub_2025-07-21_img09_Aussicht.jpg/500px-Moskenes_Reinebringen_lub_2025-07-21_img09_Aussicht.jpg',
+        fact: 'En verano el sol no se pone durante semanas; en invierno bailan las auroras boreales.',
+        sights: [
+          { name: 'Islas Lofoten (picos y playas árticas)' },
+          { name: 'Auroras boreales en Tromsø (invierno)' },
+          { name: 'Sol de medianoche (verano)' },
+          { name: 'Pueblos pesqueros de cabañas rojas' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Noruega', url: 'https://www.visitnorway.es/' },
+      { label: 'Embajada de España en Noruega', url: 'https://www.exteriores.gob.es/Embajadas/oslo' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
 ];
 
 export const countryBySlug = (slug: string) => COUNTRIES.find((c) => c.slug === slug);
