@@ -375,6 +375,72 @@ export const COUNTRIES: Country[] = [
     ],
     regions: ['Reikiavik', 'Círculo Dorado', 'Costa Sur', 'Fiordos del Oeste', 'Norte (Akureyri)'],
     tips: ['Alquila coche; el transporte público es escaso', 'Ropa impermeable por capas', 'Es caro: cocina algo para ahorrar'],
+    opinion:
+      'Islandia no parece de este planeta. Cascadas que rugen, géiseres que escupen agua hirviendo, playas negras y, si hay suerte, auroras bailando en el cielo. Mi consejo: alquila un coche y hazte al menos la Costa Sur a tu ritmo, parando donde te apetezca (que será cada cinco minutos). Y no te obsesiones con verlo todo: aquí el viaje es el paisaje. Eso sí, ve con presupuesto holgado, porque cara, lo es; pero merece cada euro.',
+    faq: [
+      { q: '¿Verano o invierno?', a: 'Verano (junio-agosto) para recorrer la isla con luz casi infinita y todas las carreteras abiertas. Invierno (octubre-marzo) para cazar auroras boreales.' },
+      { q: '¿Cuántos días necesito?', a: 'Con 5-6 días haces Reikiavik, el Círculo Dorado y la Costa Sur. Para la vuelta completa a la isla, 8-10.' },
+      { q: '¿Hace falta visado?', a: 'No: Islandia está en Schengen, con el DNI español en vigor basta.' },
+    ],
+    paperwork: ['DNI o pasaporte en vigor (Schengen)', 'Sin visado para turismo', 'Tarjeta Sanitaria Europea recomendada', 'Sin vacunas obligatorias'],
+    visa: 'No requerido (DNI, Schengen)',
+    internet: 'Excelente · roaming UE (Islandia incluida)',
+    difficultyNote: 'Fácil de recorrer en coche, pero el clima manda y cambia en minutos. Revisa el parte y conduce con prudencia.',
+    english: 'Todo el mundo habla un inglés perfecto. Cero barrera idiomática.',
+    budgetLevels: { mochilero: 90, normal: 160, comodo: 260, lujo: 450 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'mid' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'good' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'mid' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Reikiavik', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Hallgrimskirkja_mai_2026.jpg/500px-Hallgrimskirkja_mai_2026.jpg',
+        fact: 'Es la capital más al norte del mundo y se calienta entera con energía geotérmica.',
+        sights: [
+          { name: 'Iglesia Hallgrímskirkja y sus vistas' },
+          { name: 'Sala de conciertos Harpa y puerto viejo' },
+          { name: 'Excursión a avistar ballenas' },
+          { name: 'Laguna Azul (de camino al aeropuerto)', url: 'https://www.klook.com/es/search/?query=Blue%20Lagoon%20Iceland' },
+        ],
+      },
+      {
+        name: 'Círculo Dorado', days: '1 día',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Erupting_geysir.jpg/500px-Erupting_geysir.jpg',
+        fact: 'En el parque Þingvellir caminas literalmente entre las placas tectónicas de Europa y América.',
+        sights: [
+          { name: 'Parque Nacional de Þingvellir' },
+          { name: 'Géiser Strokkur', note: 'Erupciona cada pocos minutos' },
+          { name: 'Cascada de Gullfoss' },
+        ],
+      },
+      {
+        name: 'Costa Sur', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Reynisfjara_Beach_Looking_West_Towards_Dyrh%C3%B3laey.jpg/500px-Reynisfjara_Beach_Looking_West_Towards_Dyrh%C3%B3laey.jpg',
+        fact: 'La playa negra de Reynisfjara tiene columnas de basalto y olas peligrosas: no te acerques al agua.',
+        sights: [
+          { name: 'Cascadas Seljalandsfoss y Skógafoss' },
+          { name: 'Playa negra de Reynisfjara' },
+          { name: 'Pueblo de Vík' },
+        ],
+      },
+      {
+        name: 'Glaciares', days: '1 día',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/J%C3%B6kuls%C3%A1rl%C3%B3n_lagoon_in_southeastern_Iceland.jpg/500px-J%C3%B6kuls%C3%A1rl%C3%B3n_lagoon_in_southeastern_Iceland.jpg',
+        fact: 'En la laguna de Jökulsárlón flotan icebergs que se desprenden del mayor glaciar de Europa.',
+        sights: [
+          { name: 'Laguna glaciar de Jökulsárlón' },
+          { name: 'Playa de los Diamantes' },
+          { name: 'Cuevas de hielo (solo invierno)' },
+          { name: 'Parque Nacional de Vatnajökull' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Islandia', url: 'https://www.visiticeland.com/' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
   },
   {
     slug: 'mexico', name: 'México', code: 'mx',
