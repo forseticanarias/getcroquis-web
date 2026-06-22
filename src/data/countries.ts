@@ -1147,6 +1147,88 @@ export const COUNTRIES: Country[] = [
     ],
     regions: ['Hanói', 'Bahía de Ha Long', 'Hoi An', 'Sapa', 'Ho Chi Minh'],
     tips: ['El país es largo: el clima varía mucho entre norte y sur', 'Come en puestos callejeros, es seguro y delicioso', 'Cuidado al cruzar: el tráfico de motos es caótico'],
+    opinion:
+      'Vietnam es una pasada y, encima, baratísimo. Es de esos sitios donde con poco dinero vives muchísimo: comes como un rey en la calle, navegas entre islotes en Ha Long y paseas bajo mil farolillos en Hoi An. Mi consejo: ten claro que el país es muy largo, así que o eliges norte o sur, o reservas dos semanas largas. Y lánzate a la comida callejera sin miedo, que ahí está lo mejor. Lo único que cuesta pillar es cruzar la calle entre tanta moto: respira, camina firme y no pares.',
+    faq: [
+      { q: '¿Cuántos días para Vietnam?', a: 'El país es largo. Para verlo de norte a sur (Hanói, Ha Long, Hoi An, Saigón), calcula 14-18 días. Para solo el norte o el sur, una semana.' },
+      { q: '¿Cuándo es mejor ir?', a: 'Marzo-abril y octubre-noviembre son lo más equilibrado para todo el país. El clima varía mucho entre norte y sur.' },
+      { q: '¿Hace falta visado?', a: 'Depende de la estancia: hay exención corta para españoles o e-visa online. Confírmalo antes de viajar, que cambia.' },
+    ],
+    paperwork: ['Pasaporte con al menos 6 meses de validez', 'Exención corta o e-visa según la estancia (confírmalo)', 'Seguro de viaje muy recomendable', 'Vacunas recomendadas según zona (consulta)'],
+    visa: 'Exención corta o e-visa (confírmalo)',
+    internet: 'Bueno · eSIM recomendada',
+    difficultyNote: 'Media: barato y muy amable, pero el caos de las motos y las distancias norte-sur piden adaptarse. Una aventura asequible.',
+    english: 'Algo de inglés en zonas turísticas; en pueblos, poco. Apps de traducción y una sonrisa hacen el resto.',
+    budgetLevels: { mochilero: 25, normal: 50, comodo: 100, lujo: 220 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'mid' }, { m: 'Jun', r: 'avoid' }, { m: 'Jul', r: 'avoid' }, { m: 'Ago', r: 'avoid' },
+      { m: 'Sep', r: 'mid' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'good' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Hanói', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Thap_Rua.jpg/500px-Thap_Rua.jpg',
+        fact: 'Su casco antiguo tiene 36 calles, cada una dedicada históricamente a un gremio distinto.',
+        sights: [
+          { name: 'Casco antiguo y sus 36 calles gremiales' },
+          { name: 'Lago Hoan Kiem y el templo de la Tortuga' },
+          { name: 'Mausoleo de Ho Chi Minh' },
+          { name: 'Teatro de marionetas de agua' },
+          { name: 'Probar el pho y el café de huevo' },
+        ],
+      },
+      {
+        name: 'Bahía de Ha Long', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Ha_Long_Bay_in_2019.jpg/500px-Ha_Long_Bay_in_2019.jpg',
+        fact: 'Son casi 2.000 islotes de roca caliza que emergen del mar; Patrimonio de la Humanidad.',
+        sights: [
+          { name: 'Crucero de 1-2 noches entre los islotes', url: 'https://www.klook.com/es/search/?query=Ha%20Long%20Bay' },
+          { name: 'Kayak por aguas esmeralda' },
+          { name: 'Cuevas y grutas escondidas' },
+          { name: 'Amanecer desde la cubierta del barco' },
+        ],
+      },
+      {
+        name: 'Hoi An', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/10549-Hoi-An_%2837621348460%29.jpg/500px-10549-Hoi-An_%2837621348460%29.jpg',
+        fact: 'La "ciudad de los farolillos" se ilumina cada noche con miles de lámparas de seda de colores.',
+        sights: [
+          { name: 'Casco antiguo iluminado por farolillos' },
+          { name: 'Puente Japonés' },
+          { name: 'Hacerte ropa a medida en 24 h' },
+          { name: 'Soltar un farolillo en el río' },
+          { name: 'Playa de An Bang' },
+        ],
+      },
+      {
+        name: 'Sapa', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Thacbac3.jpg/500px-Thacbac3.jpg',
+        fact: 'Sus arrozales en terraza, esculpidos en la montaña hace siglos, parecen escaleras de gigantes.',
+        sights: [
+          { name: 'Arrozales en terraza' },
+          { name: 'Trekking entre aldeas de etnias locales' },
+          { name: 'Monte Fansipan, el techo de Indochina' },
+          { name: 'Cascada de Plata (Thac Bac)' },
+        ],
+      },
+      {
+        name: 'Ho Chi Minh (Saigón)', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Ho_Chi_Minh_City_panorama_2019_%28cropped2%29.jpg/500px-Ho_Chi_Minh_City_panorama_2019_%28cropped2%29.jpg',
+        fact: 'Bajo la ciudad hay 250 km de túneles de Cu Chi, usados durante la guerra de Vietnam.',
+        sights: [
+          { name: 'Túneles de Cu Chi' },
+          { name: 'Museo de los Vestigios de la Guerra' },
+          { name: 'Mercado de Ben Thanh' },
+          { name: 'Correos central y Catedral de Notre-Dame' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Vietnam', url: 'https://vietnam.travel/' },
+      { label: 'Embajada de España en Vietnam', url: 'https://www.exteriores.gob.es/Embajadas/hanoi' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
   },
 ];
 
