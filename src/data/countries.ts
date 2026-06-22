@@ -485,6 +485,77 @@ export const COUNTRIES: Country[] = [
     ],
     regions: ['Madrid', 'Barcelona', 'Andalucía', 'Islas Canarias', 'País Vasco'],
     tips: ['Se come y cena tarde', 'Canarias es buen destino todo el año', 'El AVE conecta las grandes ciudades'],
+    opinion:
+      'Lo de España es trampa: tenemos de todo y a tiro de piedra. Playa, montaña, ciudades con siglos de historia, la mejor comida del mundo (sí, lo he dicho) y un ambiente en la calle que no se ve en otro sitio. Mi consejo si la redescubres: no te quedes solo en lo típico. Un pueblo blanco de Andalucía, una sidrería en el norte o un atardecer en Canarias valen tanto como el monumento más famoso. Y come y cena tarde, que aquí se vive así.',
+    faq: [
+      { q: '¿Cuántos días para ver España?', a: 'Imposible en un viaje: es enorme y variada. Elige una zona (norte, sur, Levante, Canarias) y dedícale 7-10 días con calma.' },
+      { q: '¿Cuándo es mejor ir?', a: 'Primavera (mayo-junio) y principios de otoño (septiembre): buen clima sin el calor sofocante del verano interior. Canarias, todo el año.' },
+      { q: '¿Hace falta algo para entrar?', a: 'Para españoles, nada: es tu país. Para europeos, DNI o pasaporte (zona Schengen).' },
+    ],
+    paperwork: ['DNI o pasaporte en vigor', 'Sin visado ni controles (zona Schengen)', 'Tarjeta sanitaria para la sanidad pública', 'Sin vacunas obligatorias'],
+    visa: 'No requerido (zona Schengen)',
+    internet: 'Excelente · tu tarifa nacional, sin roaming',
+    difficultyNote: 'Facilísimo: buena infraestructura, AVE entre ciudades y todo muy accesible. Si es tu país, ni te cuento.',
+    english: 'En zonas turísticas se maneja; en general, con el español vas sobrado.',
+    budgetLevels: { mochilero: 45, normal: 90, comodo: 160, lujo: 300 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'mid' }, { m: 'Ago', r: 'mid' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Madrid', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Palacio_Real_de_Madrid_Julio_2016_%28cropped%29.jpg/500px-Palacio_Real_de_Madrid_Julio_2016_%28cropped%29.jpg',
+        fact: 'Tiene más bares por habitante que casi cualquier ciudad del mundo. El tapeo es deporte nacional.',
+        sights: [
+          { name: 'Museo del Prado', note: 'Entrada gratis las últimas 2 horas' },
+          { name: 'Palacio Real' },
+          { name: 'Parque del Retiro' },
+          { name: 'Gran Vía y Puerta del Sol' },
+          { name: 'Tapeo por La Latina (los domingos, El Rastro)' },
+        ],
+      },
+      {
+        name: 'Barcelona', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Aerial_view_of_Barcelona%2C_Spain_%2851227309370%29_edited.jpg/500px-Aerial_view_of_Barcelona%2C_Spain_%2851227309370%29_edited.jpg',
+        fact: 'La Sagrada Familia lleva en obras desde 1882 y aún no está terminada.',
+        sights: [
+          { name: 'Sagrada Familia', note: 'Reserva online sí o sí', url: 'https://www.klook.com/es/search/?query=Sagrada%20Familia' },
+          { name: 'Park Güell' },
+          { name: 'Barrio Gótico y Las Ramblas' },
+          { name: 'Casa Batlló y La Pedrera' },
+          { name: 'Playa de la Barceloneta' },
+        ],
+      },
+      {
+        name: 'Sevilla', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Sevilla_Cathedral_-_Southeast.jpg/500px-Sevilla_Cathedral_-_Southeast.jpg',
+        fact: 'Su catedral es la gótica más grande del mundo y guarda la tumba de Cristóbal Colón.',
+        sights: [
+          { name: 'Catedral y Giralda' },
+          { name: 'Real Alcázar', note: 'Escenario de Juego de Tronos' },
+          { name: 'Plaza de España' },
+          { name: 'Barrio de Santa Cruz' },
+          { name: 'Flamenco en Triana' },
+        ],
+      },
+      {
+        name: 'Islas Canarias', days: '5-7 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Roque_Cinchado_und_Teide.jpg/500px-Roque_Cinchado_und_Teide.jpg',
+        fact: 'El Teide es el pico más alto de España (3.715 m) y el tercer volcán más grande del planeta desde su base.',
+        sights: [
+          { name: 'Parque Nacional del Teide' },
+          { name: 'Playas de arena negra y dorada' },
+          { name: 'Senderismo en Anaga o La Gomera' },
+          { name: 'Avistamiento de cetáceos' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de España', url: 'https://www.spain.info/es/' },
+      { label: 'Información para viajeros (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
   },
   {
     slug: 'grecia', name: 'Grecia', code: 'gr',
