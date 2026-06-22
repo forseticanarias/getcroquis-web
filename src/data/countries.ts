@@ -1742,6 +1742,132 @@ export const COUNTRIES: Country[] = [
       { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
     ],
   },
+  {
+    slug: 'colombia', name: 'Colombia', code: 'co',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Valle_del_cocora_-_general_view.jpg/1280px-Valle_del_cocora_-_general_view.jpg',
+    imageAlt: 'Valle del Cocora, Colombia',
+    capital: 'Bogotá', currency: 'Peso colombiano (COP)', language: 'Español', plug: 'Tipo A/B (110 V)', tz: 'UTC-5',
+    budget: 'Bajo', bestMonths: 'Diciembre-Marzo y Julio-Agosto',
+    difficulty: 'Media', duration: '12-16 días',
+    tags: ['Naturaleza', 'Cultura', 'Aventura', 'Barato', 'Gastronómico'],
+    summary: 'Cafetales verdísimos, el Caribe de Cartagena, la eterna primavera de Medellín y una energía contagiosa. Colombia es color, salsa, café y la gente más acogedora que vas a conocer.',
+    opinion:
+      'Colombia te roba el corazón, en serio. La gente es pura alegría y hospitalidad: te acogen como si fueras de la familia. Mi consejo: combina ciudad, café y Caribe. Medellín sorprende por su transformación, el Eje Cafetero con sus palmeras gigantes es mágico, y Cartagena es puro color colonial junto al mar. Infórmate de las zonas seguras y ve con la mente abierta: la Colombia de hoy es un viajazo que muy pocos esperan.',
+    faq: [
+      { q: '¿Cuántos días para Colombia?', a: 'Con 12-14 días combinas Bogotá, Medellín, el Eje Cafetero y Cartagena. Para algo más corto, elige Caribe o cafetero.' },
+      { q: '¿Cuándo es mejor ir?', a: 'Las temporadas secas: diciembre-marzo y julio-agosto. Al estar en el ecuador, el clima depende más de la altitud que del mes.' },
+      { q: '¿Necesito visado?', a: 'No para turismo: los españoles pueden estar hasta 90 días solo con el pasaporte.' },
+    ],
+    paperwork: ['Pasaporte en vigor', 'Sin visado para turismo (hasta 90 días)', 'Seguro de viaje muy recomendable', 'Vacuna de fiebre amarilla recomendada para ciertas zonas'],
+    visa: 'No requerido hasta 90 días (turismo)',
+    internet: 'Bueno en ciudades · eSIM recomendada',
+    difficultyNote: 'Media: cálida, barata y se habla español, pero conviene informarse de las zonas seguras. La gente es de lo más acogedor del mundo.',
+    english: 'Se habla español; poco inglés. No lo necesitas para nada.',
+    budgetLevels: { mochilero: 30, normal: 60, comodo: 120, lujo: 240 },
+    climate: [
+      { m: 'Ene', r: 'good' }, { m: 'Feb', r: 'good' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'mid' },
+      { m: 'May', r: 'mid' }, { m: 'Jun', r: 'mid' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'good' },
+      { m: 'Sep', r: 'mid' }, { m: 'Oct', r: 'avoid' }, { m: 'Nov', r: 'avoid' }, { m: 'Dic', r: 'good' },
+    ],
+    cityGuides: [
+      {
+        name: 'Bogotá', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Bogota%2C_Colombia_%2836668708290%29.jpg/500px-Bogota%2C_Colombia_%2836668708290%29.jpg',
+        fact: 'Está a 2.640 m de altitud: es una de las capitales más altas del mundo.',
+        sights: [
+          { name: 'Barrio histórico de La Candelaria' },
+          { name: 'Subir al cerro de Monserrate' },
+          { name: 'Museo del Oro' },
+          { name: 'Museo Botero' },
+        ],
+      },
+      {
+        name: 'Medellín y el Eje Cafetero', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/El_Poblado_Medell%C3%ADn.jpg/500px-El_Poblado_Medell%C3%ADn.jpg',
+        fact: 'Medellín pasó de ser la ciudad más peligrosa del mundo a un referente de innovación urbana.',
+        sights: [
+          { name: 'Comuna 13 y sus grafitis' },
+          { name: 'Valle del Cocora y sus palmeras gigantes' },
+          { name: 'Fincas cafeteras (cata de café)' },
+          { name: 'Pueblo colorido de Guatapé y la Piedra del Peñol' },
+        ],
+      },
+      {
+        name: 'Cartagena y el Caribe', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Museo_Naval_del_Caribe.JPG/500px-Museo_Naval_del_Caribe.JPG',
+        fact: 'Su ciudad amurallada colonial es Patrimonio de la Humanidad: pura postal del Caribe.',
+        sights: [
+          { name: 'Ciudad amurallada al atardecer' },
+          { name: 'Barrio bohemio de Getsemaní' },
+          { name: 'Islas del Rosario (playa)' },
+          { name: 'Castillo de San Felipe' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Colombia', url: 'https://colombia.travel/es' },
+      { label: 'Embajada de España en Colombia', url: 'https://www.exteriores.gob.es/Embajadas/bogota' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
+  {
+    slug: 'emiratos-arabes', name: 'Emiratos Árabes Unidos', code: 'ae',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Burj_Khalifa_%28worlds_tallest_building%29_and_the_Dubai_skyline_%2825781049892%29.jpg/1280px-Burj_Khalifa_%28worlds_tallest_building%29_and_the_Dubai_skyline_%2825781049892%29.jpg',
+    imageAlt: 'Burj Khalifa y el skyline de Dubái',
+    capital: 'Abu Dabi', currency: 'Dírham (AED)', language: 'Árabe', plug: 'Tipo G (230 V)', tz: 'UTC+4',
+    budget: 'Alto', bestMonths: 'Noviembre-Marzo',
+    difficulty: 'Fácil', duration: '4-7 días',
+    tags: ['Lujo', 'Ciudades', 'Desierto', 'Compras', 'En pareja'],
+    summary: 'Rascacielos imposibles, lujo desmedido, islas artificiales y un desierto dorado a las afueras. Dubái y Abu Dabi son el futuro hecho ciudad, perfecto para una escapada deslumbrante o escala de camino a Asia.',
+    opinion:
+      'Emiratos impresiona por todo lo alto, nunca mejor dicho. Dubái es ciencia ficción: el edificio más alto del mundo, islas con forma de palmera y centros comerciales con pistas de esquí. Mi consejo: dedícale 2-3 días a Dubái, una excursión al desierto al atardecer (de lo mejor del viaje) y un día a Abu Dabi para ver su Gran Mezquita, que quita el sentido. Es caro, sí, pero hay planes para todos los bolsillos. Ideal también como escala de camino a Asia.',
+    faq: [
+      { q: '¿Cuántos días para Emiratos?', a: 'Con 4-5 días ves Dubái, un safari por el desierto y una escapada a Abu Dabi. Perfecto también como escala de 2-3 días.' },
+      { q: '¿Cuándo es mejor ir?', a: 'De noviembre a marzo. Evita el verano (mayo-septiembre): se superan los 45 ºC con facilidad.' },
+      { q: '¿Necesito visado?', a: 'No para turismo: los españoles tienen exención de visado para estancias cortas.' },
+    ],
+    paperwork: ['Pasaporte con al menos 6 meses de validez', 'Exención de visado para turismo', 'Respeta el código de vestimenta en lugares religiosos', 'Sin vacunas obligatorias'],
+    visa: 'Exención para turismo (hasta 90 días)',
+    internet: 'Excelente · eSIM recomendada',
+    difficultyNote: 'Muy fácil y seguro, todo es nuevo y reluciente. Solo evita el calor extremo del verano y respeta las normas locales.',
+    english: 'Se habla muchísimo inglés (la mayoría son expatriados). Cero barrera.',
+    budgetLevels: { mochilero: 60, normal: 120, comodo: 250, lujo: 600 },
+    climate: [
+      { m: 'Ene', r: 'good' }, { m: 'Feb', r: 'good' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'mid' },
+      { m: 'May', r: 'avoid' }, { m: 'Jun', r: 'avoid' }, { m: 'Jul', r: 'avoid' }, { m: 'Ago', r: 'avoid' },
+      { m: 'Sep', r: 'avoid' }, { m: 'Oct', r: 'mid' }, { m: 'Nov', r: 'good' }, { m: 'Dic', r: 'good' },
+    ],
+    cityGuides: [
+      {
+        name: 'Dubái', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Dubai_Marina_Skyline.jpg/500px-Dubai_Marina_Skyline.jpg',
+        fact: 'El Burj Khalifa mide 828 m: es más del doble que la Torre Eiffel.',
+        sights: [
+          { name: 'Mirador del Burj Khalifa', url: 'https://www.klook.com/es/search/?query=Burj%20Khalifa' },
+          { name: 'Dubai Mall y su acuario' },
+          { name: 'Isla Palm Jumeirah' },
+          { name: 'Zoco del oro y de las especias' },
+          { name: 'Marina de Dubái de noche' },
+        ],
+      },
+      {
+        name: 'Abu Dabi y el desierto', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Rub_al_Khali_002.JPG/500px-Rub_al_Khali_002.JPG',
+        fact: 'La Gran Mezquita Sheikh Zayed tiene la alfombra tejida a mano más grande del mundo.',
+        sights: [
+          { name: 'Gran Mezquita Sheikh Zayed' },
+          { name: 'Safari y cena en el desierto al atardecer' },
+          { name: 'Louvre Abu Dabi' },
+          { name: 'Ferrari World' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Dubái', url: 'https://www.visitdubai.com/es' },
+      { label: 'Embajada de España en Emiratos', url: 'https://www.exteriores.gob.es/Embajadas/abudabi' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
 ];
 
 export const countryBySlug = (slug: string) => COUNTRIES.find((c) => c.slug === slug);
