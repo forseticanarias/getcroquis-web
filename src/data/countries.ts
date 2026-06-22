@@ -2141,6 +2141,142 @@ export const COUNTRIES: Country[] = [
       { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
     ],
   },
+  {
+    slug: 'brasil', name: 'Brasil', code: 'br',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Christ_the_Redeemer_-_Cristo_Redentor.jpg/1280px-Christ_the_Redeemer_-_Cristo_Redentor.jpg',
+    imageAlt: 'Cristo Redentor sobre Río de Janeiro',
+    capital: 'Brasilia', currency: 'Real (BRL)', language: 'Portugués', plug: 'Tipo N/C (127/220 V)', tz: 'UTC-3',
+    budget: 'Medio', bestMonths: 'Septiembre-Marzo (Carnaval en febrero)',
+    difficulty: 'Media', duration: '14-21 días',
+    tags: ['Playa', 'Naturaleza', 'Fiesta', 'Cultura', 'Aventura'],
+    summary: 'Río y sus playas míticas, el Carnaval más famoso del mundo, la selva amazónica y el alma afrobrasileña de Bahía. Brasil es pura energía, naturaleza descomunal y la alegría hecha país.',
+    opinion:
+      'Brasil es puro contagio de alegría. Río te recibe con esa postal imposible del Cristo sobre la ciudad, las playas de Copacabana e Ipanema y un ritmo que no para. Pero Brasil es gigante: tienes la fuerza afrobrasileña de Salvador, la selva amazónica y playas paradisíacas en el nordeste. Mi consejo: elige zonas (no quieras abarcarlo todo) y déjate llevar por la música y la gente. Infórmate de la seguridad en las grandes ciudades y muévete con cabeza, pero ve con la mente abierta: engancha.',
+    faq: [
+      { q: '¿Cuántos días para Brasil?', a: 'Es enorme. Con 14-16 días combinas Río, una escapada de playa (nordeste) y quizá Amazonas o Iguazú, con vuelos internos.' },
+      { q: '¿Cuándo es mejor ir?', a: 'De septiembre a marzo (su primavera-verano), con el Carnaval en febrero como gran reclamo. El nordeste luce casi todo el año.' },
+      { q: '¿Necesito visado?', a: 'No para turismo: los españoles pueden estar hasta 90 días solo con el pasaporte.' },
+    ],
+    paperwork: ['Pasaporte en vigor', 'Sin visado para turismo (hasta 90 días)', 'Seguro de viaje muy recomendable', 'Vacuna de fiebre amarilla recomendada para Amazonas'],
+    visa: 'No requerido hasta 90 días (turismo)',
+    internet: 'Bueno en ciudades · eSIM recomendada',
+    difficultyNote: 'Media: enorme, vibrante y acogedor, pero se habla portugués y conviene informarse de la seguridad en las grandes ciudades.',
+    english: 'Se habla portugués; poco inglés. Con español te entiendes a medias.',
+    budgetLevels: { mochilero: 35, normal: 70, comodo: 140, lujo: 300 },
+    climate: [
+      { m: 'Ene', r: 'good' }, { m: 'Feb', r: 'good' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'mid' }, { m: 'Jul', r: 'mid' }, { m: 'Ago', r: 'mid' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'good' }, { m: 'Dic', r: 'good' },
+    ],
+    cityGuides: [
+      {
+        name: 'Río de Janeiro', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Cidade_Maravilhosa.jpg/500px-Cidade_Maravilhosa.jpg',
+        fact: 'La llaman "Cidade Maravilhosa" y su Cristo Redentor es una de las 7 Maravillas del mundo moderno.',
+        sights: [
+          { name: 'Cristo Redentor del Corcovado' },
+          { name: 'Pan de Azúcar en teleférico' },
+          { name: 'Playas de Copacabana e Ipanema' },
+          { name: 'Barrio bohemio de Santa Teresa' },
+        ],
+      },
+      {
+        name: 'Salvador de Bahía', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Salvador_BA_%28cropped%29_2.jpg/500px-Salvador_BA_%28cropped%29_2.jpg',
+        fact: 'Es el corazón afrobrasileño del país: cuna de la capoeira y del candomblé.',
+        sights: [
+          { name: 'Centro histórico del Pelourinho' },
+          { name: 'Capoeira y música en directo' },
+          { name: 'Iglesias barrocas doradas' },
+          { name: 'Playas de Bahía' },
+        ],
+      },
+      {
+        name: 'Amazonas', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Amazon17_%285641020319%29.jpg/500px-Amazon17_%285641020319%29.jpg',
+        fact: 'La selva amazónica es la mayor del mundo y produce buena parte del oxígeno del planeta.',
+        sights: [
+          { name: 'Navegar el río Amazonas' },
+          { name: 'Encuentro de las aguas (Manaos)' },
+          { name: 'Fauna y flora únicas' },
+          { name: 'Lodges en plena selva' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Brasil', url: 'https://www.visitbrasil.com/es/' },
+      { label: 'Embajada de España en Brasil', url: 'https://www.exteriores.gob.es/Embajadas/brasilia' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
+  {
+    slug: 'india', name: 'India', code: 'in',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Taj_Mahal_%28Edited%29.jpeg/1280px-Taj_Mahal_%28Edited%29.jpeg',
+    imageAlt: 'Taj Mahal, Agra, India',
+    capital: 'Nueva Delhi', currency: 'Rupia india (INR)', language: 'Hindi e inglés', plug: 'Tipo C/D/M (230 V)', tz: 'UTC+5:30',
+    budget: 'Bajo', bestMonths: 'Octubre-Marzo',
+    difficulty: 'Alta', duration: '15-21 días',
+    tags: ['Cultura', 'Espiritual', 'Aventura', 'Barato', 'Gastronómico'],
+    summary: 'El Taj Mahal, palacios de marajás, el Ganges sagrado, especias, colores y una espiritualidad que lo impregna todo. India es un viaje que abruma los sentidos y no deja indiferente a nadie.',
+    opinion:
+      'India no se visita, se siente. Es intensa hasta decir basta: colores, olores, ruido, multitudes y una belleza brutal conviviendo con el caos. El Taj Mahal al amanecer pone los pelos de punta, y Varanasi, a orillas del Ganges, es de los lugares más espirituales y sobrecogedores que verás. Mi consejo: ve con la mente muy abierta, sin prisa y aceptando que nada sale según el plan. No es un viaje cómodo, pero sí de los que te cambian. Mejor si no es tu primer gran viaje.',
+    faq: [
+      { q: '¿Cuántos días para India?', a: 'Con 15 días haces el Triángulo de Oro (Delhi, Agra, Jaipur) y sumas Varanasi o Kerala. El país es inmenso: elige una región.' },
+      { q: '¿Cuándo es mejor ir?', a: 'De octubre a marzo, cuando el calor afloja. Evita mayo-junio (calor extremo) y el monzón (julio-septiembre).' },
+      { q: '¿Necesito visado?', a: 'Sí: hay que tramitar el e-Visa online antes de viajar (es de pago y sencillo).' },
+    ],
+    paperwork: ['Pasaporte con al menos 6 meses de validez', 'e-Visa obligatorio (online, de pago)', 'Seguro de viaje imprescindible', 'Vacunas recomendadas: consulta a tu centro de vacunación'],
+    visa: 'e-Visa obligatorio (online, de pago)',
+    internet: 'Bueno en ciudades · eSIM recomendada',
+    difficultyNote: 'Alta: un país que abruma los sentidos (caos, multitudes, contrastes brutales). Increíble, pero exige paciencia, estómago y mente muy abierta.',
+    english: 'El inglés es cooficial y muy útil para moverte y entenderte.',
+    budgetLevels: { mochilero: 20, normal: 45, comodo: 95, lujo: 230 },
+    climate: [
+      { m: 'Ene', r: 'good' }, { m: 'Feb', r: 'good' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'mid' },
+      { m: 'May', r: 'avoid' }, { m: 'Jun', r: 'avoid' }, { m: 'Jul', r: 'avoid' }, { m: 'Ago', r: 'avoid' },
+      { m: 'Sep', r: 'mid' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'good' }, { m: 'Dic', r: 'good' },
+    ],
+    cityGuides: [
+      {
+        name: 'Triángulo de Oro', days: '6-7 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/East_facade_Hawa_Mahal_Jaipur_from_ground_level_%28July_2022%29_-_img_01.jpg/500px-East_facade_Hawa_Mahal_Jaipur_from_ground_level_%28July_2022%29_-_img_01.jpg',
+        fact: 'El Taj Mahal se construyó como mausoleo de amor y cambia de color según la luz del día.',
+        sights: [
+          { name: 'Taj Mahal al amanecer (Agra)' },
+          { name: 'Fuerte Amber y Hawa Mahal (Jaipur)' },
+          { name: 'Mercados y templos de Delhi' },
+          { name: 'Ciudad fantasma de Fatehpur Sikri' },
+        ],
+      },
+      {
+        name: 'Varanasi y el Ganges', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Varanasi%2C_India%2C_Ghats%2C_Cremation_ceremony_in_progress.jpg/500px-Varanasi%2C_India%2C_Ghats%2C_Cremation_ceremony_in_progress.jpg',
+        fact: 'Es una de las ciudades habitadas más antiguas del mundo y la más sagrada del hinduismo.',
+        sights: [
+          { name: 'Ceremonia del Ganga Aarti' },
+          { name: 'Amanecer en barca por el Ganges' },
+          { name: 'Los ghats junto al río' },
+          { name: 'Ambiente espiritual único' },
+        ],
+      },
+      {
+        name: 'Kerala', days: '4-5 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Boathouse_%287063399547%29.jpg/500px-Boathouse_%287063399547%29.jpg',
+        fact: 'Sus "backwaters" son una red de canales y lagunas que se recorren en casa-barca.',
+        sights: [
+          { name: 'Casa-barca por los backwaters' },
+          { name: 'Plantaciones de té en Munnar' },
+          { name: 'Playas de Varkala' },
+          { name: 'Tratamientos de ayurveda' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de India', url: 'https://www.incredibleindia.gov.in/' },
+      { label: 'Embajada de España en India', url: 'https://www.exteriores.gob.es/Embajadas/nuevadelhi' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
 ];
 
 export const countryBySlug = (slug: string) => COUNTRIES.find((c) => c.slug === slug);

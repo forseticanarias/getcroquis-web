@@ -5,10 +5,10 @@ import { COUNTRIES } from '../../data/countries';
 // Continente por código ISO y eslogan con gancho por país (más atractivo que los
 // meses). Agrupamos por continente (alfabético) y ordenamos países alfabéticamente.
 const CONT: Record<string, string> = {
-  jp: 'Asia', th: 'Asia', vn: 'Asia', tr: 'Asia', id: 'Asia', ae: 'Asia', ph: 'Asia',
+  jp: 'Asia', th: 'Asia', vn: 'Asia', tr: 'Asia', id: 'Asia', ae: 'Asia', ph: 'Asia', in: 'Asia',
   eg: 'África',
   it: 'Europa', is: 'Europa', fr: 'Europa', es: 'Europa', gr: 'Europa', pt: 'Europa', hr: 'Europa', no: 'Europa', ie: 'Europa',
-  mx: 'América', pe: 'América', us: 'América', co: 'América', ar: 'América', cr: 'América',
+  mx: 'América', pe: 'América', us: 'América', co: 'América', ar: 'América', cr: 'América', br: 'América',
   ma: 'África', za: 'África',
   gb: 'Europa',
 };
@@ -39,6 +39,8 @@ const TAGLINES: Record<string, string> = {
   'costa-rica': 'Pura vida y naturaleza',
   sudafrica: 'Safari, vino y dos océanos',
   filipinas: '7.000 islas de ensueño',
+  brasil: 'Playa, samba y Amazonas',
+  india: 'Colores, templos y especias',
 };
 
 const CONT_ORDER = ['África', 'América', 'Asia', 'Europa', 'Oceanía'];
