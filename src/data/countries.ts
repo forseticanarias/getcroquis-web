@@ -606,6 +606,75 @@ export const COUNTRIES: Country[] = [
     ],
     regions: ['Lisboa', 'Oporto', 'Algarve', 'Sintra', 'Madeira'],
     tips: ['El Algarve es lo top para playa', 'Prueba el bacalao y los pastéis de nata', 'Tren y bus conectan bien el país'],
+    opinion:
+      'Portugal es de esos sitios que te conquistan sin hacer ruido. Lisboa con sus tranvías y su luz, Oporto y su vino, y un Algarve que no tiene nada que envidiar al Caribe. Es el vecino que lo tiene todo y encima sale barato. Mi consejo: piérdete por los callejones de la Alfama escuchando fado, cómete todos los pastéis de nata que puedas y deja un par de días para el sur. Y la gente, encantadora; un "obrigado" con una sonrisa abre puertas.',
+    faq: [
+      { q: '¿Cuántos días para Portugal?', a: 'Con 6-8 días ves Lisboa, Sintra, Oporto y bajas al Algarve. Para una escapada corta, Lisboa + Sintra en 3-4 días.' },
+      { q: '¿Cuándo ir al Algarve?', a: 'De mayo a septiembre para playa. Junio y septiembre son el punto dulce: buen tiempo y menos lleno que agosto.' },
+      { q: '¿Hace falta visado?', a: 'No: con el DNI español en vigor basta (zona Schengen).' },
+    ],
+    paperwork: ['DNI o pasaporte en vigor (zona Schengen)', 'Sin visado para turismo', 'Tarjeta Sanitaria Europea recomendada', 'Sin vacunas obligatorias'],
+    visa: 'No requerido (DNI, zona Schengen)',
+    internet: 'Excelente · roaming UE sin coste extra',
+    difficultyNote: 'De los más fáciles y cercanos: zona euro, todo a mano y la gente muy amable. Cero complicaciones.',
+    english: 'Se habla bastante inglés, sobre todo gente joven y en turismo. Con el español también te entienden mucho.',
+    budgetLevels: { mochilero: 40, normal: 80, comodo: 150, lujo: 280 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'mid' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Lisboa', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Lisbon_alfalma.jpg/500px-Lisbon_alfalma.jpg',
+        fact: 'Es más antigua que Roma y una de las capitales más soleadas de Europa: casi 300 días de sol al año.',
+        sights: [
+          { name: 'Tranvía 28 por la Alfama' },
+          { name: 'Torre de Belém y Monasterio de los Jerónimos' },
+          { name: 'Castillo de San Jorge', note: 'Las mejores vistas de la ciudad' },
+          { name: 'Fado en una taberna del Barrio Alto' },
+          { name: 'Pastéis de Belém (los originales)' },
+        ],
+      },
+      {
+        name: 'Oporto', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Puente_Don_Luis_I%2C_Oporto%2C_Portugal%2C_2012-05-09%2C_DD_13.JPG/500px-Puente_Don_Luis_I%2C_Oporto%2C_Portugal%2C_2012-05-09%2C_DD_13.JPG',
+        fact: 'El vino de Oporto se cría aquí, en las bodegas de la otra orilla del Duero.',
+        sights: [
+          { name: 'Puente Don Luís I' },
+          { name: 'Barrio de la Ribeira a orillas del Duero' },
+          { name: 'Cata en las bodegas de Vila Nova de Gaia' },
+          { name: 'Librería Lello', note: 'Inspiró a J.K. Rowling; reserva entrada' },
+        ],
+      },
+      {
+        name: 'Algarve', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Praia_de_Benagil_-_Portugal_%F0%9F%87%B5%F0%9F%87%B9_%2853651979938%29.jpg/500px-Praia_de_Benagil_-_Portugal_%F0%9F%87%B5%F0%9F%87%B9_%2853651979938%29.jpg',
+        fact: 'La cueva de Benagil, con su agujero en el techo, solo se puede visitar por mar.',
+        sights: [
+          { name: 'Cueva de Benagil', note: 'En kayak o barco al amanecer' },
+          { name: 'Praia da Marinha' },
+          { name: 'Acantilados de Lagos (Ponta da Piedade)' },
+          { name: 'Pueblos pesqueros como Tavira' },
+        ],
+      },
+      {
+        name: 'Sintra', days: '1 día',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Sintra_Portugal_Pal%C3%A1cio_da_Pena-01.jpg/500px-Sintra_Portugal_Pal%C3%A1cio_da_Pena-01.jpg',
+        fact: 'Sus palacios de cuento la hicieron Patrimonio de la Humanidad; parece sacada de un cuadro.',
+        sights: [
+          { name: 'Palacio da Pena (el de colores)' },
+          { name: 'Quinta da Regaleira y su pozo iniciático' },
+          { name: 'Castelo dos Mouros' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Portugal', url: 'https://www.visitportugal.com/es' },
+      { label: 'Embajada de España en Portugal', url: 'https://www.exteriores.gob.es/Embajadas/lisboa' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
   },
   {
     slug: 'marruecos', name: 'Marruecos', code: 'ma',
