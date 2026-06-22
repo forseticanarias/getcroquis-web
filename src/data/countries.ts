@@ -228,6 +228,58 @@ export const COUNTRIES: Country[] = [
       { q: '¿Es seguro viajar solo?', a: 'Es uno de los destinos favoritos de mochileros y viajeros solos. Sentido común y seguro de viaje, sobre todo si conduces scooter.' },
     ],
     paperwork: ['Pasaporte con al menos 6 meses de validez', 'Exención de visado para turismo (confirma el plazo)', 'Seguro de viaje muy recomendable', 'Sin vacunas obligatorias (consulta las recomendadas)'],
+    visa: 'Exención para turismo (confirma el plazo)',
+    internet: 'Excelente · eSIM recomendada',
+    difficultyNote: 'Muy fácil para empezar en Asia: turística, barata y con todo a mano. El idioma se salva con apps de traducción y una sonrisa.',
+    english: 'Se maneja en zonas turísticas; en pueblos menos. Con señas y simpatía te apañas en todas partes.',
+    budgetLevels: { mochilero: 30, normal: 55, comodo: 110, lujo: 250 },
+    climate: [
+      { m: 'Ene', r: 'good' }, { m: 'Feb', r: 'good' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'mid' },
+      { m: 'May', r: 'avoid' }, { m: 'Jun', r: 'avoid' }, { m: 'Jul', r: 'avoid' }, { m: 'Ago', r: 'avoid' },
+      { m: 'Sep', r: 'avoid' }, { m: 'Oct', r: 'mid' }, { m: 'Nov', r: 'good' }, { m: 'Dic', r: 'good' },
+    ],
+    cityGuides: [
+      {
+        name: 'Bangkok', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/0005574_-_Wat_Phra_Kaew_006.jpg/500px-0005574_-_Wat_Phra_Kaew_006.jpg',
+        fact: 'Su nombre ceremonial completo es el más largo del mundo para una ciudad: tiene 168 letras.',
+        sights: [
+          { name: 'Gran Palacio y Wat Phra Kaew', note: 'Ve temprano y con hombros y rodillas cubiertos' },
+          { name: 'Wat Arun (templo del amanecer)' },
+          { name: 'Wat Pho (Buda reclinado)' },
+          { name: 'Mercado de fin de semana de Chatuchak' },
+          { name: 'Cenar comida callejera en Chinatown' },
+        ],
+      },
+      {
+        name: 'Chiang Mai', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Wat_Phra_That_Doi_Suthep_-_Chiang_Mai.jpg/500px-Wat_Phra_That_Doi_Suthep_-_Chiang_Mai.jpg',
+        fact: 'La "rosa del norte" tiene más de 300 templos y es el corazón cultural de Tailandia.',
+        sights: [
+          { name: 'Templo Doi Suthep', note: 'Vistas de toda la ciudad' },
+          { name: 'Santuario ético de elefantes', note: 'Elige uno sin montar a lomos del animal', url: 'https://www.klook.com/es/search/?query=elefantes%20Chiang%20Mai' },
+          { name: 'Templos del casco antiguo' },
+          { name: 'Mercado nocturno del domingo' },
+          { name: 'Clase de cocina tailandesa' },
+        ],
+      },
+      {
+        name: 'Krabi e islas', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Railay_Beach_5.jpg/500px-Railay_Beach_5.jpg',
+        fact: 'Railay solo es accecible en barca: sus acantilados la separan del resto del continente.',
+        sights: [
+          { name: 'Playa de Railay' },
+          { name: 'Islas Phi Phi', url: 'https://www.klook.com/es/search/?query=Phi%20Phi%20Krabi' },
+          { name: 'Snorkel en aguas turquesa' },
+          { name: 'Kayak entre acantilados de roca caliza' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Turismo oficial de Tailandia', url: 'https://www.tourismthailand.org/' },
+      { label: 'Embajada de España en Tailandia', url: 'https://www.exteriores.gob.es/Embajadas/bangkok' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
   },
   {
     slug: 'italia', name: 'Italia', code: 'it',
