@@ -973,6 +973,76 @@ export const COUNTRIES: Country[] = [
     ],
     regions: ['Marrakech', 'Fez', 'Chefchauen', 'Desierto de Merzouga', 'Esauira'],
     tips: ['Regatea siempre en los zocos', 'Vive una noche en una jaima en el desierto', 'Lleva efectivo, en zocos no aceptan tarjeta'],
+    opinion:
+      'Marruecos es un golpe a los sentidos en el buen sentido: colores, olores a especias, el ajetreo de los zocos y un desierto que te deja sin palabras. Está a un paso de España pero parece otro mundo. Mi consejo: el regateo es un juego, tómatelo con humor y una sonrisa. Y haz lo que sea por dormir una noche en el desierto: cenar bajo un cielo lleno de estrellas en mitad del Sáhara es de esas cosas que no se olvidan. Eso sí, ve con la mente abierta.',
+    faq: [
+      { q: '¿Cuántos días para Marruecos?', a: 'Con 8-10 días haces Marrakech, Fez, el desierto y algún pueblo azul como Chefchauen. Para solo Marrakech y desierto, 5-6 bastan.' },
+      { q: '¿Cuándo es mejor ir?', a: 'Primavera (marzo-mayo) y otoño (septiembre-noviembre): clima ideal. Evita julio y agosto, el interior y el desierto son un horno.' },
+      { q: '¿Hace falta visado?', a: 'No para turismo: los españoles pueden estar hasta 90 días solo con el pasaporte.' },
+    ],
+    paperwork: ['Pasaporte con al menos 6 meses de validez', 'Sin visado para turismo (hasta 90 días)', 'Seguro de viaje recomendable', 'Sin vacunas obligatorias'],
+    visa: 'No requerido hasta 90 días (turismo)',
+    internet: 'Bueno en ciudades · eSIM recomendada',
+    difficultyNote: 'Media: el regateo y el ajetreo de los zocos abruman al principio. Con paciencia y simpatía, acabas enamorado.',
+    english: 'Se habla árabe y francés; en turismo, algo de inglés y español. Saber algo de francés ayuda mucho.',
+    budgetLevels: { mochilero: 30, normal: 55, comodo: 110, lujo: 230 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'mid' }, { m: 'Jul', r: 'avoid' }, { m: 'Ago', r: 'avoid' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'good' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Marrakech', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Djemaa_el_Fna.jpg/500px-Djemaa_el_Fna.jpg',
+        fact: 'Su plaza Jemaa el-Fna es Patrimonio de la Humanidad por su tradición oral: cuentacuentos, músicos y encantadores de serpientes.',
+        sights: [
+          { name: 'Plaza Jemaa el-Fna al anochecer' },
+          { name: 'Perderse por los zocos de la medina' },
+          { name: 'Jardín Majorelle (el de Yves Saint Laurent)' },
+          { name: 'Palacio Bahía' },
+          { name: 'Mezquita Koutoubia' },
+        ],
+      },
+      {
+        name: 'Fez', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Chouara_Tannery_-_154_-_Marokko_Handybilder_2018_-_Fes_%2827347707917%29.jpg/500px-Chouara_Tannery_-_154_-_Marokko_Handybilder_2018_-_Fes_%2827347707917%29.jpg',
+        fact: 'Su medina tiene unos 9.000 callejones y es la zona peatonal urbana más grande del mundo.',
+        sights: [
+          { name: 'Curtidurías Chouara', note: 'Te dan menta para el olor' },
+          { name: 'Medina de Fes el-Bali (sin coches)' },
+          { name: 'Universidad Al Qarawiyyin', note: 'La más antigua del mundo aún en activo' },
+          { name: 'Puertas y medersas decoradas' },
+        ],
+      },
+      {
+        name: 'Desierto del Sáhara', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Merzouga_Dunes_2011.jpg/500px-Merzouga_Dunes_2011.jpg',
+        fact: 'Las dunas de Erg Chebbi alcanzan los 150 metros de altura, como un edificio de 50 pisos.',
+        sights: [
+          { name: 'Dunas de Erg Chebbi (Merzouga)' },
+          { name: 'Noche en jaima bajo las estrellas' },
+          { name: 'Paseo en camello al atardecer' },
+          { name: 'Amanecer sobre las dunas' },
+        ],
+      },
+      {
+        name: 'Esauira', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Morocco_-_Essaouira_Part_2_%2831679848385%29.jpg/500px-Morocco_-_Essaouira_Part_2_%2831679848385%29.jpg',
+        fact: 'La llaman "la ciudad del viento": es la meca del kitesurf en Marruecos.',
+        sights: [
+          { name: 'Medina amurallada frente al mar' },
+          { name: 'Puerto de pescadores azul' },
+          { name: 'Playa para kitesurf y windsurf' },
+          { name: 'Ambiente bohemio y relajado' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Marruecos', url: 'https://www.visitmorocco.com/es' },
+      { label: 'Embajada de España en Marruecos', url: 'https://www.exteriores.gob.es/Embajadas/rabat' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
   },
   {
     slug: 'croacia', name: 'Croacia', code: 'hr',
@@ -990,6 +1060,76 @@ export const COUNTRIES: Country[] = [
     ],
     regions: ['Dubrovnik', 'Split', 'Hvar', 'Lagos de Plitvice', 'Istria'],
     tips: ['Reserva los ferris entre islas con antelación', 'Plitvice mejor a primera hora', 'Split es buena base para las islas'],
+    opinion:
+      'Croacia se ha puesto de moda y con razón: tiene un Adriático de un azul que no parece real, ciudades amuralladas de piedra y unos parques naturales de cuento. Mi consejo: combina ciudad e islas. Dubrovnik impresiona (sí, la de Juego de Tronos), pero las islas como Hvar son donde de verdad desconectas. Y madruga para Plitvice: llegar antes que los autobuses de turistas marca la diferencia. Eso sí, evita agosto si puedes, que se llena y se dispara de precio.',
+    faq: [
+      { q: '¿Cuántos días para Croacia?', a: 'Con 7-10 días ves Dubrovnik, Split, los lagos de Plitvice y una o dos islas. La costa es larga, así que elige bien.' },
+      { q: '¿Cuándo es mejor ir?', a: 'Mayo-junio y septiembre: mar cálido, sol y mucha menos gente que en agosto, que está abarrotado.' },
+      { q: '¿Hace falta visado?', a: 'No: Croacia está en la zona Schengen y euro, con el DNI español basta.' },
+    ],
+    paperwork: ['DNI o pasaporte en vigor (zona Schengen)', 'Sin visado para turismo', 'Tarjeta Sanitaria Europea recomendada', 'Sin vacunas obligatorias'],
+    visa: 'No requerido (DNI, zona Schengen)',
+    internet: 'Excelente · roaming UE sin coste extra',
+    difficultyNote: 'Fácil: zona euro, seguro y muy turístico. Solo organizar los ferris entre islas pide algo de planificación.',
+    english: 'Se habla bastante inglés en la costa y zonas turísticas. Sin barrera.',
+    budgetLevels: { mochilero: 50, normal: 95, comodo: 170, lujo: 320 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'mid' }, { m: 'Ago', r: 'avoid' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Dubrovnik', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/The_walls_of_the_fortress_and_View_of_the_old_city._panorama.jpg/500px-The_walls_of_the_fortress_and_View_of_the_old_city._panorama.jpg',
+        fact: 'Fue Desembarco del Rey en Juego de Tronos; sus murallas rodean entera la ciudad vieja.',
+        sights: [
+          { name: 'Paseo completo por las murallas', note: 'Al amanecer, sin masas ni calor' },
+          { name: 'Casco antiguo de mármol pulido' },
+          { name: 'Teleférico al monte Srd' },
+          { name: 'Ruta de escenarios de Juego de Tronos' },
+          { name: 'Kayak alrededor de las murallas' },
+        ],
+      },
+      {
+        name: 'Split', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Croatia-01239_-_The_Peristil_%289551533404%29.jpg/500px-Croatia-01239_-_The_Peristil_%289551533404%29.jpg',
+        fact: 'Su casco antiguo es un palacio romano de 1.700 años: la gente vive y abre bares dentro de él.',
+        sights: [
+          { name: 'Palacio de Diocleciano' },
+          { name: 'Paseo marítimo de la Riva' },
+          { name: 'Catedral de San Domnio' },
+          { name: 'Base para saltar a las islas' },
+        ],
+      },
+      {
+        name: 'Lagos de Plitvice', days: '1 día',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/View_in_Plitvice_Lakes_National_Park.jpg/500px-View_in_Plitvice_Lakes_National_Park.jpg',
+        fact: 'Son 16 lagos turquesa en cascada conectados por pasarelas de madera sobre el agua.',
+        sights: [
+          { name: 'Pasarelas sobre los lagos turquesa' },
+          { name: 'Gran cascada de Veliki Slap' },
+          { name: 'Bosque y fauna del parque' },
+          { name: 'Ir a primera hora de la mañana' },
+        ],
+      },
+      {
+        name: 'Hvar', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/View_of_Hvar_02.jpg/500px-View_of_Hvar_02.jpg',
+        fact: 'Es una de las islas más soleadas de Europa y huele a lavanda por todas partes.',
+        sights: [
+          { name: 'Casco antiguo y fortaleza Španjola' },
+          { name: 'Calas y playas de aguas claras' },
+          { name: 'Islas Pakleni en barca' },
+          { name: 'Campos de lavanda' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Croacia', url: 'https://croatia.hr/es-es' },
+      { label: 'Embajada de España en Croacia', url: 'https://www.exteriores.gob.es/Embajadas/zagreb' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
   },
   {
     slug: 'vietnam', name: 'Vietnam', code: 'vn',
