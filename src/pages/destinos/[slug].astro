@@ -66,6 +66,21 @@ const faqLd = c.faq?.length
       mainEntity: c.faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
     }
   : null;
+
+// SEO: migas de pan (rich results) + enlazado interno a destinos relacionados.
+const breadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Inicio', item: SITE.url },
+    { '@type': 'ListItem', position: 2, name: 'Destinos', item: `${SITE.url}/destinos` },
+    { '@type': 'ListItem', position: 3, name: c.name, item: `${SITE.url}/destinos/${c.slug}` },
+  ],
+};
+const CONT_MAP: Record<string, string> = { jp: 'Asia', th: 'Asia', vn: 'Asia', it: 'Europa', is: 'Europa', fr: 'Europa', es: 'Europa', gr: 'Europa', pt: 'Europa', hr: 'Europa', mx: 'América', pe: 'América', ma: 'África' };
+const sameCont = COUNTRIES.filter((x) => x.slug !== c.slug && CONT_MAP[x.code] === CONT_MAP[c.code]);
+const otherCont = COUNTRIES.filter((x) => x.slug !== c.slug && CONT_MAP[x.code] !== CONT_MAP[c.code]);
+const related = [...sameCont, ...otherCont].slice(0, 6);
 ---
 
 <Base
@@ -75,6 +90,7 @@ const faqLd = c.faq?.length
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />
   {faqLd && <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />}
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)} />
 
   <!-- HERO con foto icónica -->
   <header class="relative h-[44vh] min-h-[300px] max-h-[460px] w-full overflow-hidden">
@@ -369,6 +385,20 @@ const faqLd = c.faq?.length
       </a>
     </aside>
   </div>
+
+  {related.length > 0 && (
+    <section class="max-w-5xl mx-auto px-5 sm:px-6 pb-12">
+      <h2 class="text-xl font-bold mb-4">Más destinos que te pueden gustar</h2>
+      <div class="grid grid-cols-3 sm:grid-cols-6 gap-3">
+        {related.map((r) => (
+          <a href={`/destinos/${r.slug}`} class="flex flex-col items-center gap-2 p-3 rounded-2xl bg-white/[0.03] border border-white/[0.08] hover:border-tirma-pink/30 hover:bg-white/[0.05] transition text-center">
+            <img src={`https://flagcdn.com/h24/${r.code}.png`} width="34" class="rounded-sm ring-1 ring-white/10" alt={`Bandera de ${r.name}`} />
+            <span class="text-xs font-semibold leading-tight">{r.name}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
 
   <!-- Barra fija inferior en MÓVIL: el CTA siempre a mano mientras bajas -->
   <div class="lg:hidden h-20" aria-hidden="true"></div>
