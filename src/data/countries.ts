@@ -1868,6 +1868,143 @@ export const COUNTRIES: Country[] = [
       { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
     ],
   },
+  {
+    slug: 'argentina', name: 'Argentina', code: 'ar',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Perito_Moreno_Glacier_2023.jpg/1280px-Perito_Moreno_Glacier_2023.jpg',
+    imageAlt: 'Glaciar Perito Moreno, Argentina',
+    capital: 'Buenos Aires', currency: 'Peso argentino (ARS)', language: 'Español', plug: 'Tipo C/I (220 V)', tz: 'UTC-3',
+    budget: 'Medio', bestMonths: 'Octubre-Abril',
+    difficulty: 'Media', duration: '14-21 días',
+    tags: ['Naturaleza', 'Aventura', 'Cultura', 'Road trip', 'Gastronómico'],
+    summary: 'Glaciares enormes, las cataratas del Iguazú, la pasión del tango en Buenos Aires y la Patagonia más salvaje. Argentina es un país inmenso de paisajes brutales, carne y vino, y una calidez que engancha.',
+    opinion:
+      'Argentina es de esos países que te dejan marca. Buenos Aires tiene un rollo europeo con alma latina que atrapa, y la Patagonia es de otro planeta: glaciares que crujen, montañas imposibles y un silencio enorme. Mi consejo: asume que es gigante y no quieras abarcarlo todo; elige norte (Iguazú, Salta) o sur (Patagonia) y vuela, que las distancias son de locos. Y déjate llevar por la comida: un asado y un Malbec con un argentino es de las mejores cosas que te pueden pasar.',
+    faq: [
+      { q: '¿Cuántos días para Argentina?', a: 'Es enorme. Con 14-16 días combinas Buenos Aires, Iguazú y la Patagonia (con vuelos internos). Para una sola zona, una semana.' },
+      { q: '¿Cuándo es mejor ir?', a: 'De octubre a abril (su primavera-verano), sobre todo para la Patagonia. Buenos Aires se disfruta casi todo el año.' },
+      { q: '¿Necesito visado?', a: 'No para turismo: los españoles pueden estar hasta 90 días solo con el pasaporte.' },
+    ],
+    paperwork: ['Pasaporte en vigor', 'Sin visado para turismo (hasta 90 días)', 'Seguro de viaje muy recomendable', 'Sin vacunas obligatorias'],
+    visa: 'No requerido hasta 90 días (turismo)',
+    internet: 'Bueno en ciudades · eSIM recomendada',
+    difficultyNote: 'Media: enorme (necesitas vuelos internos sí o sí) y con una economía cambiante, pero se habla español y la gente es cercanísima.',
+    english: 'Se habla español; poco inglés. No lo necesitas.',
+    budgetLevels: { mochilero: 35, normal: 70, comodo: 140, lujo: 280 },
+    climate: [
+      { m: 'Ene', r: 'good' }, { m: 'Feb', r: 'good' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'mid' }, { m: 'Jun', r: 'mid' }, { m: 'Jul', r: 'mid' }, { m: 'Ago', r: 'mid' },
+      { m: 'Sep', r: 'mid' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'good' }, { m: 'Dic', r: 'good' },
+    ],
+    cityGuides: [
+      {
+        name: 'Buenos Aires', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Avenida_9_de_Julio%2C_Buenos_Aires_%2840089810910%29.jpg/500px-Avenida_9_de_Julio%2C_Buenos_Aires_%2840089810910%29.jpg',
+        fact: 'Su avenida 9 de Julio es la más ancha del mundo: tiene hasta 16 carriles.',
+        sights: [
+          { name: 'Barrio de La Boca y Caminito' },
+          { name: 'Cementerio de la Recoleta' },
+          { name: 'Espectáculo de tango' },
+          { name: 'Palermo y sus bares' },
+          { name: 'Plaza de Mayo y la Casa Rosada' },
+        ],
+      },
+      {
+        name: 'Patagonia', days: '4-6 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/El_Chalt%C3%A9n.jpg/500px-El_Chalt%C3%A9n.jpg',
+        fact: 'El glaciar Perito Moreno es de los pocos del mundo que sigue avanzando, no retrocediendo.',
+        sights: [
+          { name: 'Glaciar Perito Moreno (El Calafate)' },
+          { name: 'Senderismo en El Chaltén (Fitz Roy)' },
+          { name: 'Ushuaia, el fin del mundo' },
+          { name: 'Avistamiento de ballenas (Península Valdés)' },
+        ],
+      },
+      {
+        name: 'Cataratas del Iguazú', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Iguazu_Cataratas2.jpg/500px-Iguazu_Cataratas2.jpg',
+        fact: 'Son 275 saltos de agua; la Garganta del Diablo es tan brutal que se oye a kilómetros.',
+        sights: [
+          { name: 'La Garganta del Diablo' },
+          { name: 'Pasarelas entre las cataratas' },
+          { name: 'Lado brasileño (vistas panorámicas)' },
+          { name: 'Selva subtropical y su fauna' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Argentina', url: 'https://www.argentina.gob.ar/turismo' },
+      { label: 'Embajada de España en Argentina', url: 'https://www.exteriores.gob.es/Embajadas/buenosaires' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
+  {
+    slug: 'costa-rica', name: 'Costa Rica', code: 'cr',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Arenal_volcano_%2870785p%29_%28cropped%29.jpg/1280px-Arenal_volcano_%2870785p%29_%28cropped%29.jpg',
+    imageAlt: 'Volcán Arenal, Costa Rica',
+    capital: 'San José', currency: 'Colón (CRC)', language: 'Español', plug: 'Tipo A/B (120 V)', tz: 'UTC-6',
+    budget: 'Medio', bestMonths: 'Diciembre-Abril (estación seca)',
+    difficulty: 'Fácil', duration: '10-14 días',
+    tags: ['Naturaleza', 'Aventura', 'Playa', 'Familia', 'Ecoturismo'],
+    summary: 'Volcanes, bosques nubosos llenos de vida, playas en dos océanos y la filosofía "pura vida". Costa Rica es el paraíso del ecoturismo: tirolinas, perezosos, tortugas y aventura, todo muy bien organizado.',
+    opinion:
+      'Costa Rica es felicidad en forma de país. Aquí la naturaleza es la protagonista: te despiertas con monos, ves perezosos colgando de los árboles y te bañas bajo cascadas. Mi consejo: alterna volcán, bosque nuboso y playa, que en pocos días pasas de tirarte en tirolina sobre la selva a hacer surf en el Pacífico. Y abraza el "pura vida": no es solo un saludo, es una forma de tomarse la vida con calma que se te pega. Ideal también para ir en familia.',
+    faq: [
+      { q: '¿Cuántos días para Costa Rica?', a: 'Con 10-12 días combinas el volcán Arenal, un bosque nuboso (Monteverde) y playa (Manuel Antonio o Guanacaste).' },
+      { q: '¿Cuándo es mejor ir?', a: 'Estación seca, de diciembre a abril. Evita septiembre-octubre (lo más lluvioso en el Pacífico).' },
+      { q: '¿Necesito visado?', a: 'No para turismo: los españoles pueden estar hasta 90 días solo con el pasaporte.' },
+    ],
+    paperwork: ['Pasaporte en vigor', 'Sin visado para turismo (hasta 90 días)', 'Seguro de viaje muy recomendable', 'Sin vacunas obligatorias'],
+    visa: 'No requerido hasta 90 días (turismo)',
+    internet: 'Bueno · eSIM recomendada',
+    difficultyNote: 'Fácil y de los más seguros de la zona, ideal para naturaleza y aventura. Se habla español y todo está muy preparado para el turismo.',
+    english: 'Se habla español; bastante inglés en zonas turísticas.',
+    budgetLevels: { mochilero: 40, normal: 75, comodo: 140, lujo: 280 },
+    climate: [
+      { m: 'Ene', r: 'good' }, { m: 'Feb', r: 'good' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'mid' }, { m: 'Jun', r: 'mid' }, { m: 'Jul', r: 'mid' }, { m: 'Ago', r: 'mid' },
+      { m: 'Sep', r: 'avoid' }, { m: 'Oct', r: 'avoid' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'good' },
+    ],
+    cityGuides: [
+      {
+        name: 'San José y el Volcán Arenal', days: '3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Costa_Rica-Teatro_Nacional.JPG/500px-Costa_Rica-Teatro_Nacional.JPG',
+        fact: 'El Arenal fue uno de los volcanes más activos del mundo; hoy preside un parque lleno de aguas termales.',
+        sights: [
+          { name: 'Volcán Arenal y La Fortuna' },
+          { name: 'Aguas termales naturales' },
+          { name: 'Catarata de La Fortuna' },
+          { name: 'Teatro Nacional en San José' },
+        ],
+      },
+      {
+        name: 'Manuel Antonio', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Manuel_antonio_06_april_2005.jpeg/500px-Manuel_antonio_06_april_2005.jpeg',
+        fact: 'Su parque nacional es de los más pequeños del país pero de los que más fauna concentra.',
+        sights: [
+          { name: 'Parque Nacional Manuel Antonio' },
+          { name: 'Playas con monos y perezosos' },
+          { name: 'Surf en el Pacífico' },
+          { name: 'Senderos por la selva' },
+        ],
+      },
+      {
+        name: 'Monteverde', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Monteverde_bosque.jpg/500px-Monteverde_bosque.jpg',
+        fact: 'Su bosque nuboso está siempre entre la niebla y alberga unas 500 especies de orquídeas.',
+        sights: [
+          { name: 'Reserva del bosque nuboso' },
+          { name: 'Puentes colgantes entre las copas' },
+          { name: 'Tirolinas (canopy) sobre la selva' },
+          { name: 'Avistar quetzales y colibríes' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Costa Rica', url: 'https://www.visitcostarica.com/es' },
+      { label: 'Embajada de España en Costa Rica', url: 'https://www.exteriores.gob.es/Embajadas/sanjosedecostarica' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
 ];
 
 export const countryBySlug = (slug: string) => COUNTRIES.find((c) => c.slug === slug);

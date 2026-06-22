@@ -77,7 +77,7 @@ const breadcrumb = {
     { '@type': 'ListItem', position: 3, name: c.name, item: `${SITE.url}/destinos/${c.slug}` },
   ],
 };
-const CONT_MAP: Record<string, string> = { jp: 'Asia', th: 'Asia', vn: 'Asia', it: 'Europa', is: 'Europa', fr: 'Europa', es: 'Europa', gr: 'Europa', pt: 'Europa', hr: 'Europa', gb: 'Europa', no: 'Europa', ie: 'Europa', mx: 'América', pe: 'América', us: 'América', co: 'América', ma: 'África', eg: 'África', tr: 'Asia', id: 'Asia', ae: 'Asia' };
+const CONT_MAP: Record<string, string> = { jp: 'Asia', th: 'Asia', vn: 'Asia', it: 'Europa', is: 'Europa', fr: 'Europa', es: 'Europa', gr: 'Europa', pt: 'Europa', hr: 'Europa', gb: 'Europa', no: 'Europa', ie: 'Europa', mx: 'América', pe: 'América', us: 'América', co: 'América', ar: 'América', cr: 'América', ma: 'África', eg: 'África', tr: 'Asia', id: 'Asia', ae: 'Asia' };
 const sameCont = COUNTRIES.filter((x) => x.slug !== c.slug && CONT_MAP[x.code] === CONT_MAP[c.code]);
 const otherCont = COUNTRIES.filter((x) => x.slug !== c.slug && CONT_MAP[x.code] !== CONT_MAP[c.code]);
 const related = [...sameCont, ...otherCont].slice(0, 6);
