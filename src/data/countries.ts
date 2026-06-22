@@ -573,6 +573,66 @@ export const COUNTRIES: Country[] = [
     ],
     regions: ['Atenas', 'Santorini', 'Mykonos', 'Creta', 'Meteora'],
     tips: ['Reserva los ferris entre islas con antelación', 'Santorini en agosto es carísimo', 'Lleva calzado para las ruinas'],
+    difficulty: 'Fácil', duration: '8-12 días',
+    opinion:
+      'Grecia es historia y postal a partes iguales. Te paseas entre columnas de hace 2.500 años en Atenas y al día siguiente estás viendo el atardecer más famoso del mundo en Santorini. Mi consejo: no te quedes solo en las islas de Instagram. Atenas merece dos días, y Creta es casi un país en sí misma. Y come en las tabernas familiares, lejos del puerto: ahí está la Grecia de verdad, con su aceite, su feta y su sobremesa eterna.',
+    faq: [
+      { q: '¿Cuántos días para Grecia?', a: 'Con 8-10 días combinas Atenas y un par de islas (Santorini, Naxos o Creta). Saltar de isla en isla lleva su tiempo por los ferris.' },
+      { q: '¿Cuándo es mejor ir?', a: 'Mayo-junio y septiembre: mar cálido, sol y mucha menos gente que en agosto, que está a reventar y carísimo.' },
+      { q: '¿Hace falta visado?', a: 'No: con el DNI español en vigor basta (zona Schengen).' },
+    ],
+    paperwork: ['DNI o pasaporte en vigor (zona Schengen)', 'Sin visado para turismo', 'Tarjeta Sanitaria Europea recomendada', 'Sin vacunas obligatorias'],
+    visa: 'No requerido (DNI, zona Schengen)',
+    internet: 'Excelente · roaming UE sin coste extra',
+    difficultyNote: 'Fácil: zona euro y muy turística. Lo único que requiere organización son los ferris entre islas.',
+    english: 'Se maneja bien el inglés en zonas turísticas. El alfabeto griego despista, pero hay rótulos en latino.',
+    budgetLevels: { mochilero: 50, normal: 95, comodo: 170, lujo: 320 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'mid' }, { m: 'Ago', r: 'avoid' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Atenas', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/1029_Acropolis_of_Athens_in_Greece_at_night_Photo_by_Giles_Laurent.jpg/500px-1029_Acropolis_of_Athens_in_Greece_at_night_Photo_by_Giles_Laurent.jpg',
+        fact: 'Es una de las ciudades habitadas más antiguas del mundo: más de 3.400 años de historia.',
+        sights: [
+          { name: 'Acrópolis y Partenón', note: 'Ve a primera hora, antes del calor y las masas' },
+          { name: 'Museo de la Acrópolis' },
+          { name: 'Barrio de Plaka' },
+          { name: 'Ágora antigua' },
+          { name: 'Atardecer en la colina Licabeto' },
+        ],
+      },
+      {
+        name: 'Santorini', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Santorini_Fira3_tango7174.jpg/500px-Santorini_Fira3_tango7174.jpg',
+        fact: 'La isla es lo que queda de un volcán que explotó hace 3.600 años; su caldera es de las mayores del mundo.',
+        sights: [
+          { name: 'Atardecer en Oia', note: 'El más fotografiado del planeta; llega con tiempo' },
+          { name: 'Pueblos blancos de Fira' },
+          { name: 'Playas de arena negra y roja' },
+          { name: 'Cata de vino en viñedos volcánicos' },
+        ],
+      },
+      {
+        name: 'Creta', days: '4-5 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/%CE%95%CE%BB%CE%B1%CF%86%CE%BF%CE%BD%CE%AE%CF%83%CE%B9_1287.jpg/500px-%CE%95%CE%BB%CE%B1%CF%86%CE%BF%CE%BD%CE%AE%CF%83%CE%B9_1287.jpg',
+        fact: 'Aquí nació la civilización minoica, la más antigua de Europa, hace más de 4.000 años.',
+        sights: [
+          { name: 'Palacio de Knossos' },
+          { name: 'Playa rosa de Elafonissi' },
+          { name: 'Garganta de Samaria (senderismo)' },
+          { name: 'Casco viejo veneciano de Chania' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Grecia', url: 'https://www.visitgreece.gr/' },
+      { label: 'Embajada de España en Grecia', url: 'https://www.exteriores.gob.es/Embajadas/atenas' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
   },
   {
     slug: 'peru', name: 'Perú', code: 'pe',
