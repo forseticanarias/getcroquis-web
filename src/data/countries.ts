@@ -408,6 +408,65 @@ export const COUNTRIES: Country[] = [
     ],
     regions: ['París', 'Provenza', 'Costa Azul', 'Valle del Loira', 'Alsacia'],
     tips: ['Reserva el Louvre y Versalles online', 'El TGV conecta el país en horas', 'Lavanda en flor: finales de junio a julio'],
+    opinion:
+      'Francia es mucho más que París (aunque París bien merece el viaje). Mi consejo: dale un par de días a la capital y luego escápate. La Provenza con sus campos de lavanda y sus pueblos de piedra es de otro planeta, y la Costa Azul tiene ese punto de glamour que engancha. Eso sí: aprende a decir "bonjour" antes de pedir nada, marca la diferencia. Y déjate caer en cualquier panadería de barrio: ahí está la mejor Francia.',
+    faq: [
+      { q: '¿Cuántos días para Francia?', a: 'París pide 3-4 días. Si sumas Provenza o la Costa Azul, mejor 8-10. El TGV hace que moverse sea rapidísimo.' },
+      { q: '¿Hace falta visado?', a: 'No: con el DNI español en vigor basta para entrar (zona Schengen).' },
+      { q: '¿Cuándo ver la lavanda?', a: 'Los campos de Provenza florecen de finales de junio a mediados de julio. Es la mejor época para esa estampa.' },
+    ],
+    paperwork: ['DNI o pasaporte en vigor (zona Schengen)', 'Sin visado para turismo', 'Tarjeta Sanitaria Europea recomendada', 'Sin vacunas obligatorias'],
+    visa: 'No requerido (DNI, zona Schengen)',
+    internet: 'Excelente · roaming UE sin coste extra',
+    difficultyNote: 'Muy fácil: zona euro, TGV rapidísimo y todo preparado para el turista. Solo el idioma te recuerda que estás fuera.',
+    english: 'En París se maneja; fuera de las grandes ciudades, menos. Un "bonjour" y un "merci" antes de hablar abren todas las puertas.',
+    budgetLevels: { mochilero: 65, normal: 120, comodo: 200, lujo: 380 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'mid' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'París', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/500px-Louvre_Museum_Wikimedia_Commons.jpg',
+        fact: 'El Louvre es el museo más visitado del mundo: verlo entero entero llevaría unos 200 días.',
+        sights: [
+          { name: 'Torre Eiffel', note: 'De noche brilla cada hora durante 5 minutos' },
+          { name: 'Museo del Louvre', url: 'https://www.klook.com/es/search/?query=Louvre%20Paris' },
+          { name: 'Notre-Dame y el Barrio Latino' },
+          { name: 'Montmartre y el Sacré-Cœur' },
+          { name: 'Crucero por el Sena al atardecer' },
+        ],
+      },
+      {
+        name: 'Provenza', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/1_gordes_pano_2016.jpg/500px-1_gordes_pano_2016.jpg',
+        fact: 'Sus campos de lavanda inspiraron a Van Gogh, que pintó aquí más de 300 cuadros.',
+        sights: [
+          { name: 'Campos de lavanda de Valensole', note: 'Florecen de finales de junio a julio' },
+          { name: 'Pueblos colgados: Gordes y Roussillon' },
+          { name: 'Aviñón y el Palacio de los Papas' },
+          { name: 'Mercados provenzales (los sábados)' },
+        ],
+      },
+      {
+        name: 'Costa Azul', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Promenade_des_Anglais_Nice_IMG_1255.jpg/500px-Promenade_des_Anglais_Nice_IMG_1255.jpg',
+        fact: 'En Mónaco hay un millonario por cada tres habitantes: es el país más rico del mundo per cápita.',
+        sights: [
+          { name: 'Paseo de los Ingleses en Niza' },
+          { name: 'Mónaco y Montecarlo' },
+          { name: 'Pueblo medieval de Èze, sobre el mar' },
+          { name: 'Calas y playas de la Riviera' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Francia', url: 'https://es.france.fr/es' },
+      { label: 'Embajada de España en Francia', url: 'https://www.exteriores.gob.es/Embajadas/paris' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
   },
   {
     slug: 'espana', name: 'España', code: 'es',
