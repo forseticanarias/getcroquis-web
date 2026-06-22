@@ -1,64 +1,89 @@
 ---
-import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import { SITE } from '../consts';
+import { COUNTRIES } from '../data/countries';
 
-const guias = (await getCollection('guias', ({ data }) => !data.draft))
-  .sort((a, b) => a.data.order - b.data.order);
+const FEATURED: { slug: string; tagline: string }[] = [
+  { slug: 'japon', tagline: 'El país del sol naciente' },
+  { slug: 'italia', tagline: 'La dolce vita' },
+  { slug: 'tailandia', tagline: 'El país de las sonrisas' },
+  { slug: 'mexico', tagline: 'Color, ruinas y fiesta' },
+  { slug: 'marruecos', tagline: 'Las puertas de África' },
+  { slug: 'islandia', tagline: 'Hielo y fuego' },
+];
+const featured = FEATURED
+  .map((f) => ({ ...f, c: COUNTRIES.find((x) => x.slug === f.slug) }))
+  .filter((f) => f.c);
 ---
 
 <Base>
-  <section class="max-w-5xl mx-auto px-5 sm:px-6 pt-10 sm:pt-16 pb-6 text-center">
-    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-tirma-pink/10 border border-tirma-pink/25 text-tirma-beige/90 text-xs font-medium mb-6">
+  <!-- HERO -->
+  <section class="max-w-4xl mx-auto px-5 sm:px-6 pt-12 sm:pt-20 pb-4 text-center">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-tirma-pink/10 border border-tirma-pink/25 text-tirma-beige/90 text-xs font-semibold mb-6">
       ✦ Tu referente de viajes
     </div>
-    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.05] tracking-tight max-w-3xl mx-auto">
-      Planifica tu viaje con IA,
-      <span class="bg-gradient-to-r from-tirma-pink to-tirma-beige bg-clip-text text-transparent">guías y consejos</span>
+    <h1 class="text-4xl sm:text-6xl font-bold leading-[1.05] tracking-tight">
+      Tu próximo viaje<br />empieza
+      <span class="bg-gradient-to-r from-tirma-pink to-tirma-beige bg-clip-text text-transparent">aquí</span>
     </h1>
-    <p class="mt-5 text-base sm:text-lg text-white/65 max-w-xl mx-auto leading-relaxed">
-      Crea tu itinerario, calcula el presupuesto y descubre los trucos que de
-      verdad ahorran dinero. Todo tu viaje, en un sitio.
+    <p class="mt-5 text-base sm:text-lg text-white/70 max-w-md mx-auto">
+      Descubre a dónde ir, cuándo y cuánto cuesta. Y planifícalo con IA.
     </p>
     <div class="mt-8 flex flex-wrap gap-3 justify-center">
-      <a href="/empezar" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-tirma-pink to-tirma-deep text-tirma-beige font-bold shadow-lg shadow-tirma-pink/30 hover:brightness-105 transition">
+      <a href="/empezar" class="px-8 py-3.5 rounded-full bg-gradient-to-r from-tirma-pink to-tirma-deep text-tirma-beige font-bold shadow-lg shadow-tirma-pink/30 hover:brightness-105 transition">
         Empieza aquí →
       </a>
-      <a href="/destinos" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full border border-white/15 text-white/80 font-bold hover:border-tirma-pink/40 hover:text-white transition">
-        Explorar destinos
+      <a href="/destinos" class="px-8 py-3.5 rounded-full border border-white/15 text-white/80 font-bold hover:border-tirma-pink/40 hover:text-white transition">
+        Ver destinos
       </a>
     </div>
   </section>
 
-  <!-- Atlas de destinos -->
+  <!-- DESTINOS DESTACADOS (visual) -->
   <section class="max-w-5xl mx-auto px-5 sm:px-6 py-12 sm:py-16">
-    <div class="rounded-3xl border border-tirma-pink/20 bg-gradient-to-br from-tirma-pink/[0.08] to-transparent p-6 sm:p-10 text-center">
-      <p class="text-xs font-bold tracking-widest text-tirma-pink/80 uppercase mb-3">El atlas viajero</p>
-      <h2 class="text-2xl md:text-3xl font-bold max-w-2xl mx-auto">Busca un país y descubre cuándo ir</h2>
-      <p class="text-sm text-white/60 mt-3 max-w-xl mx-auto leading-relaxed">
-        Mejor época, clima por estación, presupuesto, esenciales y consejos.
-        Toda la información de tu destino, centralizada.
-      </p>
-      <a href="/destinos" class="inline-flex items-center gap-2 mt-6 px-7 py-3 rounded-full bg-gradient-to-r from-tirma-pink to-tirma-deep text-tirma-beige font-bold shadow-lg shadow-tirma-pink/25 hover:brightness-105 transition">
+    <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8">Destinos que enamoran</h2>
+    <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+      {featured.map((f) => (
+        <a href={`/destinos/${f.slug}`} class="group relative rounded-2xl overflow-hidden aspect-[4/5] sm:aspect-square ring-1 ring-white/10">
+          <img src={f.c!.image} alt={f.c!.name} loading="lazy" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-3 sm:p-4">
+            <div class="font-bold text-base sm:text-lg drop-shadow">{f.c!.name}</div>
+            <div class="text-[11px] sm:text-xs text-tirma-beige/90 drop-shadow">{f.tagline}</div>
+          </div>
+        </a>
+      ))}
+    </div>
+    <div class="text-center mt-8">
+      <a href="/destinos" class="inline-block px-7 py-3 rounded-full border border-white/15 text-white/80 font-bold hover:border-tirma-pink/40 hover:text-white transition">
         Explorar el atlas 🌍
       </a>
     </div>
   </section>
 
-  <section class="max-w-5xl mx-auto px-5 sm:px-6 py-12 sm:py-16">
-    <div class="text-center mb-8 sm:mb-10">
-      <p class="text-xs font-bold tracking-widest text-tirma-pink/80 uppercase mb-3">Guías de viaje</p>
-      <h2 class="text-2xl md:text-3xl font-bold">Todo lo que necesitas antes de salir</h2>
+  <!-- 3 PASOS -->
+  <section class="max-w-4xl mx-auto px-5 sm:px-6 py-10 sm:py-14">
+    <div class="grid sm:grid-cols-3 gap-4 text-center">
+      <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/[0.08]">
+        <div class="text-3xl mb-2">🧭</div>
+        <h3 class="font-bold mb-1">Elige destino</h3>
+        <p class="text-sm text-white/55">Cuándo ir, presupuesto y consejos reales.</p>
+      </div>
+      <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/[0.08]">
+        <div class="text-3xl mb-2">✨</div>
+        <h3 class="font-bold mb-1">Planifica con IA</h3>
+        <p class="text-sm text-white/55">Tu itinerario día a día en segundos.</p>
+      </div>
+      <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/[0.08]">
+        <div class="text-3xl mb-2">🌍</div>
+        <h3 class="font-bold mb-1">Comparte y descubre</h3>
+        <p class="text-sm text-white/55">Inspírate con viajes reales de la gente.</p>
+      </div>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      {guias.map((g) => (
-        <a href={`/guias/${g.slug}`} class="block p-5 rounded-2xl bg-white/[0.03] border border-white/[0.08] hover:border-tirma-pink/30 hover:bg-white/[0.05] transition">
-          <div class="text-2xl mb-3">{g.data.emoji}</div>
-          <h3 class="font-bold text-base mb-1.5 leading-snug">{g.data.title}</h3>
-          <p class="text-sm text-white/60 leading-relaxed line-clamp-3">{g.data.description}</p>
-          <span class="inline-block mt-3 text-sm text-tirma-beige/90">Leer guía →</span>
-        </a>
-      ))}
+    <div class="text-center mt-8">
+      <a href={`${SITE.appUrl}/signup`} class="inline-block px-8 py-3.5 rounded-full bg-gradient-to-r from-tirma-pink to-tirma-deep text-tirma-beige font-bold shadow-lg shadow-tirma-pink/25 hover:brightness-105 transition">
+        Crear cuenta gratis →
+      </a>
     </div>
   </section>
 </Base>
