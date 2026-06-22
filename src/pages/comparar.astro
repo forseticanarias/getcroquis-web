@@ -44,7 +44,8 @@ const data = COUNTRIES.map((c) => ({
     </div>
 
     <p id="hint" class="text-white/45 text-sm py-8 text-center">👆 Elige hasta 3 países para compararlos.</p>
-    <div id="compare" class="grid gap-3" style="grid-template-columns:repeat(auto-fit,minmax(0,1fr));"></div>
+    <p id="swipe-hint" class="hidden sm:hidden text-white/35 text-xs text-center mb-2">← Desliza para comparar →</p>
+    <div id="compare" class="flex gap-3 overflow-x-auto snap-x snap-mandatory pb-2 cmp-scroll sm:grid sm:grid-cols-3 sm:overflow-visible"></div>
   </section>
 
   <style>
@@ -52,6 +53,8 @@ const data = COUNTRIES.map((c) => ({
     .pick-btn:hover { border-color: rgba(230,21,127,0.4); }
     .pick-btn.on { background: #C30F68; border-color: #C30F68; color: #F1E2B3; }
     .pick-btn.dim { opacity: 0.4; }
+    .cmp-scroll::-webkit-scrollbar { height: 0; }
+    .cmp-scroll { scrollbar-width: none; }
   </style>
 
   <script define:vars={{ data }}>
@@ -67,10 +70,12 @@ const data = COUNTRIES.map((c) => ({
 
     function render() {
       hint.style.display = selected.length ? 'none' : '';
+      const sh = document.getElementById('swipe-hint');
+      if (sh) sh.classList.toggle('hidden', selected.length < 2);
       compare.innerHTML = selected.map((slug) => {
         const c = bySlug[slug];
         const tags = c.tags.map((t) => `<span class="px-2 py-0.5 rounded-full bg-white/[0.06] text-[11px] text-white/60">${t}</span>`).join(' ');
-        return `<div class="rounded-2xl bg-white/[0.03] border border-white/[0.08] p-4">
+        return `<div class="rounded-2xl bg-white/[0.03] border border-white/[0.08] p-4 min-w-[82%] snap-center flex-shrink-0 sm:min-w-0">
           <div class="flex items-center gap-2 mb-3">
             <img src="https://flagcdn.com/h20/${c.code}.png" width="24" class="rounded-sm ring-1 ring-white/10" alt="" />
             <span class="font-bold text-lg">${c.name}</span>
