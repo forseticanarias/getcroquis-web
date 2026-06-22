@@ -2413,6 +2413,142 @@ export const COUNTRIES: Country[] = [
       { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
     ],
   },
+  {
+    slug: 'suiza', name: 'Suiza', code: 'ch',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Matterhorn_from_Domh%C3%BCtte_-_2.jpg/1280px-Matterhorn_from_Domh%C3%BCtte_-_2.jpg',
+    imageAlt: 'El Cervino (Matterhorn), Suiza',
+    capital: 'Berna', currency: 'Franco suizo (CHF)', language: 'Alemán, francés e italiano', plug: 'Tipo J (230 V)', tz: 'UTC+1',
+    budget: 'Alto', bestMonths: 'Junio-Septiembre (verano) y Diciembre-Marzo (esquí)',
+    difficulty: 'Fácil', duration: '5-8 días',
+    tags: ['Naturaleza', 'Montaña', 'En pareja', 'Lujo', 'Aventura'],
+    summary: 'Los Alpes más espectaculares, lagos turquesa, trenes panorámicos de leyenda y pueblos de chocolate. Suiza es naturaleza de postal con una organización perfecta… y precios a la altura de sus montañas.',
+    opinion:
+      'Suiza parece un cuento, en serio. Asomarte al Cervino, subir en tren a un glaciar o pasear junto a un lago de color imposible es de esas cosas que no olvidas. Todo funciona con una precisión asombrosa: los trenes salen al segundo y los paisajes se suceden uno más bonito que otro. Mi consejo: hazte algún tren panorámico (el Glacier Express es brutal) y combina ciudad con montaña. El único pero es el precio, porque es carísima; pero como naturaleza, pocas cosas le ganan en el mundo.',
+    faq: [
+      { q: '¿Cuántos días para Suiza?', a: 'Con 5-6 días combinas un par de ciudades (Zúrich, Lucerna) con los Alpes (Interlaken, Zermatt). Los trenes lo hacen todo fácil.' },
+      { q: '¿Cuándo es mejor ir?', a: 'Verano (junio-septiembre) para senderismo y lagos; invierno (diciembre-marzo) para esquí y paisajes nevados.' },
+      { q: '¿Hace falta visado?', a: 'No: Suiza está en Schengen (aunque no en la UE), con el DNI español en vigor basta.' },
+    ],
+    paperwork: ['DNI o pasaporte en vigor (Schengen)', 'Sin visado para turismo', 'Tarjeta Sanitaria Europea recomendada', 'Sin vacunas obligatorias'],
+    visa: 'No requerido (DNI, Schengen)',
+    internet: 'Excelente · eSIM recomendada (Suiza no entra en el roaming UE)',
+    difficultyNote: 'Facilísima: trenes perfectos, segurísima y con paisajes de cuento. El único "pero" es el precio: es de los países más caros del mundo.',
+    english: 'Mucho inglés, además de alemán, francés o italiano según la región.',
+    budgetLevels: { mochilero: 90, normal: 160, comodo: 280, lujo: 500 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'mid' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'good' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'mid' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Zúrich', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Altstadt_Z%C3%BCrich_2015.jpg/500px-Altstadt_Z%C3%BCrich_2015.jpg',
+        fact: 'Suele encabezar las listas de las ciudades con mejor calidad de vida del mundo.',
+        sights: [
+          { name: 'Casco antiguo junto al río Limmat' },
+          { name: 'Lago de Zúrich' },
+          { name: 'Avenida Bahnhofstrasse' },
+          { name: 'Excursiones a la montaña' },
+        ],
+      },
+      {
+        name: 'Lucerna', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/2009_08_24_06262_Lucerne.jpg/500px-2009_08_24_06262_Lucerne.jpg',
+        fact: 'Su puente de la Capilla, de madera, es uno de los más antiguos de Europa.',
+        sights: [
+          { name: 'Puente de la Capilla (Kapellbrücke)' },
+          { name: 'Lago de los Cuatro Cantones' },
+          { name: 'Subir al monte Pilatus o Rigi' },
+          { name: 'Monumento del León' },
+        ],
+      },
+      {
+        name: 'Interlaken y los Alpes', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Goldswil-Viadukt_Panorama_mit_Interlaken_im_Hintergrund_2.jpg/500px-Goldswil-Viadukt_Panorama_mit_Interlaken_im_Hintergrund_2.jpg',
+        fact: 'Desde aquí se sube al Jungfraujoch, la estación de tren más alta de Europa.',
+        sights: [
+          { name: 'Jungfraujoch, la "cima de Europa"' },
+          { name: 'Zermatt y el Cervino' },
+          { name: 'Parapente sobre Interlaken' },
+          { name: 'Tren panorámico Glacier Express' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Suiza', url: 'https://www.myswitzerland.com/es/' },
+      { label: 'Embajada de España en Suiza', url: 'https://www.exteriores.gob.es/Embajadas/berna' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
+  {
+    slug: 'cuba', name: 'Cuba', code: 'cu',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/El_Capitolio_Havana_Cuba.jpg/1280px-El_Capitolio_Havana_Cuba.jpg',
+    imageAlt: 'El Capitolio, La Habana, Cuba',
+    capital: 'La Habana', currency: 'Peso cubano (CUP)', language: 'Español', plug: 'Tipo A/B/C (110/220 V)', tz: 'UTC-5',
+    budget: 'Medio', bestMonths: 'Noviembre-Abril (estación seca)',
+    difficulty: 'Media', duration: '10-14 días',
+    tags: ['Playa', 'Cultura', 'Historia', 'Música', 'Vintage'],
+    summary: 'Coches clásicos, música en cada esquina, mojitos, playas caribeñas y una Habana detenida en el tiempo. Cuba es pura autenticidad y ritmo, un viaje al pasado que enamora con su gente.',
+    opinion:
+      'Cuba es una cápsula del tiempo que hay que ver con la mente abierta. La Habana es pura magia decadente: coches de los 50, música por todas partes y un Malecón donde se vive la vida. Mi consejo: aléjate de los resorts y duerme en casas particulares para conocer a los cubanos de verdad, que son alegría pura pese a las dificultades. Combina La Habana, los valles de tabaco de Viñales y la colonial Trinidad. Eso sí, ve mentalizado: hay escasez de productos e internet va muy justo, pero forma parte de la experiencia.',
+    faq: [
+      { q: '¿Cuántos días para Cuba?', a: 'Con 10-12 días combinas La Habana, Viñales, Trinidad y algo de playa (Varadero o Cayo). Las distancias son largas.' },
+      { q: '¿Cuándo es mejor ir?', a: 'Estación seca, de noviembre a abril. Evita la temporada de huracanes (agosto-octubre).' },
+      { q: '¿Necesito visado?', a: 'Sí: hace falta la "tarjeta de turista" (visado turístico), que se compra antes de viajar.' },
+    ],
+    paperwork: ['Pasaporte con al menos 6 meses de validez', 'Tarjeta de turista obligatoria (de pago)', 'Seguro de viaje obligatorio', 'Lleva algo de efectivo: las tarjetas extranjeras fallan a menudo'],
+    visa: 'Tarjeta de turista obligatoria (de pago)',
+    internet: 'Muy limitado (wifi por tarjetas Nauta)',
+    difficultyNote: 'Media: un país que parece detenido en el tiempo, con un encanto único pero también escasez de productos e internet muy limitado. Se habla español y la gente es pura música.',
+    english: 'Se habla español; poco inglés. No lo necesitas.',
+    budgetLevels: { mochilero: 35, normal: 65, comodo: 120, lujo: 240 },
+    climate: [
+      { m: 'Ene', r: 'good' }, { m: 'Feb', r: 'good' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'mid' }, { m: 'Jun', r: 'mid' }, { m: 'Jul', r: 'mid' }, { m: 'Ago', r: 'avoid' },
+      { m: 'Sep', r: 'avoid' }, { m: 'Oct', r: 'avoid' }, { m: 'Nov', r: 'good' }, { m: 'Dic', r: 'good' },
+    ],
+    cityGuides: [
+      {
+        name: 'La Habana', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Havana_Cathedral_crop.jpg/500px-Havana_Cathedral_crop.jpg',
+        fact: 'Por sus calles circulan miles de coches americanos de los años 50, aún en uso.',
+        sights: [
+          { name: 'Paseo en coche clásico descapotable' },
+          { name: 'La Habana Vieja (Patrimonio)' },
+          { name: 'El Malecón al atardecer' },
+          { name: 'Mojitos y son cubano en directo' },
+        ],
+      },
+      {
+        name: 'Viñales', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Vi%C3%B1ales_Valley.jpg/500px-Vi%C3%B1ales_Valley.jpg',
+        fact: 'Aquí se cultiva el mejor tabaco del mundo, entre formaciones rocosas llamadas "mogotes".',
+        sights: [
+          { name: 'Valle de Viñales y sus mogotes' },
+          { name: 'Plantaciones y secaderos de tabaco' },
+          { name: 'Paseos a caballo' },
+          { name: 'Cuevas y miradores' },
+        ],
+      },
+      {
+        name: 'Trinidad', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Trinidad_in_Kuba.jpg/500px-Trinidad_in_Kuba.jpg',
+        fact: 'Su casco colonial empedrado es Patrimonio de la Humanidad, congelado en el siglo XIX.',
+        sights: [
+          { name: 'Casco colonial empedrado' },
+          { name: 'Plaza Mayor y sus iglesias' },
+          { name: 'Música en la Casa de la Trova' },
+          { name: 'Playa de Ancón' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Cuba', url: 'https://www.cuba.travel/' },
+      { label: 'Embajada de España en Cuba', url: 'https://www.exteriores.gob.es/Embajadas/lahabana' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
 ];
 
 export const countryBySlug = (slug: string) => COUNTRIES.find((c) => c.slug === slug);
