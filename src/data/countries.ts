@@ -1379,6 +1379,152 @@ export const COUNTRIES: Country[] = [
       { label: 'Embajada de España en Reino Unido', url: 'https://www.exteriores.gob.es/Embajadas/londres' },
     ],
   },
+  {
+    slug: 'turquia', name: 'Turquía', code: 'tr',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Cappadocia_balloon_trip%2C_Ortahisar_Castle_%2811893715185%29.jpg/1280px-Cappadocia_balloon_trip%2C_Ortahisar_Castle_%2811893715185%29.jpg',
+    imageAlt: 'Globos sobre Capadocia, Turquía',
+    capital: 'Ankara', currency: 'Lira turca (TRY)', language: 'Turco', plug: 'Tipo C/F (230 V)', tz: 'UTC+3',
+    budget: 'Bajo-medio', bestMonths: 'Abril-Junio y Septiembre-Octubre',
+    difficulty: 'Media', duration: '10-14 días',
+    tags: ['Cultura', 'Historia', 'Aventura', 'Gastronómico', 'En pareja'],
+    summary: 'A caballo entre Europa y Asia: Estambul y sus mezquitas, los globos de Capadocia al amanecer, las terrazas blancas de Pamukkale y ruinas grecorromanas. Exótica, barata y con una hospitalidad enorme.',
+    opinion:
+      'Turquía es de esos viajes que sorprenden por todo. Estambul es pura magia entre dos continentes, con el bullicio del Gran Bazar y las llamadas a la oración sonando al atardecer. Pero el momentazo es Capadocia: levantarte de madrugada y ver cientos de globos flotando sobre ese paisaje lunar no se olvida. Mi consejo: combina ciudad y naturaleza, déjate invitar a un té (te lo ofrecerán mil veces) y ve con hambre, que la comida es una pasada y baratísima.',
+    faq: [
+      { q: '¿Cuántos días para Turquía?', a: 'Con 10-12 días ves Estambul, Capadocia, Pamukkale y Éfeso con calma. Solo Estambul ya pide 3 días.' },
+      { q: '¿Cuándo es mejor ir?', a: 'Primavera (abril-junio) y otoño (septiembre-octubre): clima ideal. Verano hace mucho calor en el interior.' },
+      { q: '¿Hace falta visado?', a: 'No para turismo: los españoles pueden estar hasta 90 días solo con el pasaporte.' },
+    ],
+    paperwork: ['Pasaporte con al menos 6 meses de validez', 'Sin visado para turismo (hasta 90 días)', 'Seguro de viaje recomendable', 'Sin vacunas obligatorias'],
+    visa: 'No requerido hasta 90 días (turismo)',
+    internet: 'Bueno · eSIM recomendada',
+    difficultyNote: 'Media: turística y acogedora, pero con su propio idioma y alfabeto. Se viaja muy bien, es barata y la gente, encantadora.',
+    english: 'Algo de inglés en zonas turísticas; el español, poco. Con simpatía y gestos te apañas.',
+    budgetLevels: { mochilero: 30, normal: 60, comodo: 120, lujo: 240 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'mid' }, { m: 'Ago', r: 'mid' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Estambul', days: '3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Hagia_Sophia_%28228968325%29.jpeg/500px-Hagia_Sophia_%28228968325%29.jpeg',
+        fact: 'Es la única ciudad del mundo asentada sobre dos continentes: Europa y Asia.',
+        sights: [
+          { name: 'Santa Sofía' },
+          { name: 'Mezquita Azul' },
+          { name: 'Gran Bazar', note: 'Más de 4.000 tiendas; regatea' },
+          { name: 'Palacio Topkapi' },
+          { name: 'Crucero por el Bósforo' },
+        ],
+      },
+      {
+        name: 'Capadocia', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Cappadocia_balloon_trip%2C_Ortahisar_Castle_%2811893715185%29.jpg/500px-Cappadocia_balloon_trip%2C_Ortahisar_Castle_%2811893715185%29.jpg',
+        fact: 'Sus casas y ciudades están excavadas en la roca volcánica blanda; las hay subterráneas de varios pisos.',
+        sights: [
+          { name: 'Vuelo en globo al amanecer', note: 'La experiencia estrella; reserva con tiempo', url: 'https://www.klook.com/es/search/?query=globo%20Capadocia' },
+          { name: 'Ciudades subterráneas' },
+          { name: 'Valles de chimeneas de hadas' },
+          { name: 'Museo al aire libre de Göreme' },
+        ],
+      },
+      {
+        name: 'Pamukkale', days: '1 día',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Pamukkale%2C_Denizli_2026_68.jpg/500px-Pamukkale%2C_Denizli_2026_68.jpg',
+        fact: 'Significa "castillo de algodón": sus terrazas blancas son de roca caliza formada por aguas termales.',
+        sights: [
+          { name: 'Terrazas blancas de travertino' },
+          { name: 'Piscinas termales naturales' },
+          { name: 'Ruinas de Hierápolis' },
+        ],
+      },
+      {
+        name: 'Éfeso', days: '1 día',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Ephesus_Celsus_Library_Fa%C3%A7ade.jpg/500px-Ephesus_Celsus_Library_Fa%C3%A7ade.jpg',
+        fact: 'Fue una de las mayores ciudades del Imperio romano; aquí estuvo el Templo de Artemisa, una de las 7 maravillas.',
+        sights: [
+          { name: 'Biblioteca de Celso' },
+          { name: 'Gran teatro romano' },
+          { name: 'Casa de la Virgen María' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Turquía', url: 'https://www.goturkiye.com/' },
+      { label: 'Embajada de España en Turquía', url: 'https://www.exteriores.gob.es/Embajadas/ankara' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
+  {
+    slug: 'egipto', name: 'Egipto', code: 'eg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Pyramids_of_the_Giza_Necropolis.jpg/1280px-Pyramids_of_the_Giza_Necropolis.jpg',
+    imageAlt: 'Pirámides de Guiza, Egipto',
+    capital: 'El Cairo', currency: 'Libra egipcia (EGP)', language: 'Árabe', plug: 'Tipo C/F (220 V)', tz: 'UTC+2',
+    budget: 'Bajo', bestMonths: 'Octubre-Abril',
+    difficulty: 'Media', duration: '8-12 días',
+    tags: ['Historia', 'Cultura', 'Aventura', 'Desierto', 'Crucero'],
+    summary: 'Las pirámides de Guiza, los templos del Nilo y 5.000 años de historia bajo los pies. Egipto es un viaje en el tiempo: faraones, jeroglíficos y un crucero por el río más famoso del mundo.',
+    opinion:
+      'Egipto te deja con la boca abierta una y otra vez. Estás delante de las pirámides, lo único que queda de las 7 maravillas del mundo antiguo, y aún no te lo crees. Mi consejo: combina El Cairo con un crucero por el Nilo entre Luxor y Asuán; ver los templos desde el río, sin prisas, es la mejor forma de vivirlo. Eso sí, ármate de paciencia con los vendedores y el regateo, tómatelo con humor. Lo que vas a ver compensa cualquier agobio.',
+    faq: [
+      { q: '¿Cuántos días para Egipto?', a: 'Con 8-10 días ves El Cairo y haces un crucero por el Nilo (Luxor-Asuán) con Abu Simbel. Si sumas el Mar Rojo para bucear, 12-14.' },
+      { q: '¿Cuándo es mejor ir?', a: 'De octubre a abril: el calor es soportable. Evita el verano, en el sur se superan fácil los 40 ºC.' },
+      { q: '¿Necesito visado?', a: 'Sí: visado a la llegada o e-visa online (de pago). Es sencillo de tramitar.' },
+    ],
+    paperwork: ['Pasaporte con al menos 6 meses de validez', 'Visado a la llegada o e-visa online (de pago)', 'Seguro de viaje muy recomendable', 'Vacunas recomendadas según zona (consulta)'],
+    visa: 'Visado a la llegada o e-visa (de pago)',
+    internet: 'Aceptable · eSIM recomendada',
+    difficultyNote: 'Media: el calor y la insistencia de los vendedores cansan, pero los templos compensan con creces. Un tour o guía facilita mucho el viaje.',
+    english: 'Algo de inglés en turismo. El regateo es constante; paciencia, sonrisa y humor.',
+    budgetLevels: { mochilero: 25, normal: 50, comodo: 100, lujo: 220 },
+    climate: [
+      { m: 'Ene', r: 'good' }, { m: 'Feb', r: 'good' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'mid' }, { m: 'Jun', r: 'avoid' }, { m: 'Jul', r: 'avoid' }, { m: 'Ago', r: 'avoid' },
+      { m: 'Sep', r: 'mid' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'good' }, { m: 'Dic', r: 'good' },
+    ],
+    cityGuides: [
+      {
+        name: 'El Cairo y Guiza', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/%D8%AE%D8%A7%D9%86_%D8%A7%D9%84%D8%AE%D9%84%D9%8A%D9%84%D9%8A_1.jpg/500px-%D8%AE%D8%A7%D9%86_%D8%A7%D9%84%D8%AE%D9%84%D9%8A%D9%84%D9%8A_1.jpg',
+        fact: 'La Gran Pirámide fue la estructura más alta del mundo durante casi 4.000 años.',
+        sights: [
+          { name: 'Pirámides de Guiza y la Esfinge' },
+          { name: 'Gran Museo Egipcio' },
+          { name: 'Bazar Khan el-Khalili' },
+          { name: 'El Cairo islámico y la ciudadela' },
+        ],
+      },
+      {
+        name: 'Luxor', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Temple_de_Louxor_68.jpg/500px-Temple_de_Louxor_68.jpg',
+        fact: 'Se la conoce como "el mayor museo al aire libre del mundo": concentra un tercio de las antigüedades del planeta.',
+        sights: [
+          { name: 'Valle de los Reyes (tumba de Tutankamón)' },
+          { name: 'Templos de Karnak y Luxor' },
+          { name: 'Globo al amanecer sobre el Nilo' },
+          { name: 'Templo de Hatshepsut' },
+        ],
+      },
+      {
+        name: 'Asuán y Abu Simbel', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Ramsis%2C_Aswan_Governorate%2C_Egypt_-_panoramio.jpg/500px-Ramsis%2C_Aswan_Governorate%2C_Egypt_-_panoramio.jpg',
+        fact: 'Los templos de Abu Simbel fueron trasladados pieza a pieza para salvarlos de las aguas de una presa.',
+        sights: [
+          { name: 'Templos de Abu Simbel' },
+          { name: 'Navegar en faluca por el Nilo' },
+          { name: 'Templo de File' },
+          { name: 'Mercado nubio' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Egipto', url: 'https://egypt.travel/' },
+      { label: 'Embajada de España en Egipto', url: 'https://www.exteriores.gob.es/Embajadas/elcairo' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
 ];
 
 export const countryBySlug = (slug: string) => COUNTRIES.find((c) => c.slug === slug);
