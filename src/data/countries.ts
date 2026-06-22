@@ -2277,6 +2277,142 @@ export const COUNTRIES: Country[] = [
       { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
     ],
   },
+  {
+    slug: 'alemania', name: 'Alemania', code: 'de',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Schloss_Neuschwanstein_2013.jpg/1280px-Schloss_Neuschwanstein_2013.jpg',
+    imageAlt: 'Castillo de Neuschwanstein, Baviera',
+    capital: 'Berlín', currency: 'Euro (EUR)', language: 'Alemán', plug: 'Tipo C/F (230 V)', tz: 'UTC+1',
+    budget: 'Medio-alto', bestMonths: 'Mayo-Septiembre (y Navidad por los mercadillos)',
+    difficulty: 'Fácil', duration: '7-12 días',
+    tags: ['Ciudades', 'Cultura', 'Historia', 'Naturaleza', 'Cerveza'],
+    summary: 'Castillos de cuento, la historia viva de Berlín, las cervecerías de Múnich, la Selva Negra y mercadillos navideños mágicos. Alemania combina ciudades potentes con naturaleza y una organización impecable.',
+    opinion:
+      'Alemania sorprende por lo variada que es. Berlín es puro presente y pasado a la vez: arte alternativo, historia del Muro y una energía única. Múnich es la cara más tradicional, con sus cervecerías y los Alpes al lado, y el castillo de Neuschwanstein parece sacado de Disney (de hecho, lo inspiró). Mi consejo: combina una ciudad grande con naturaleza (Baviera o la Selva Negra) y, si puedes, ve en Navidad por los mercadillos, que son mágicos. Todo funciona como un reloj, así que viajar es facilísimo.',
+    faq: [
+      { q: '¿Cuántos días para Alemania?', a: 'Con 7-8 días ves Berlín y Múnich con Baviera. Para sumar Selva Negra o el Rin, mejor 10-12.' },
+      { q: '¿Cuándo es mejor ir?', a: 'De mayo a septiembre por el buen tiempo, o en diciembre por los mercadillos de Navidad (eso sí, con frío).' },
+      { q: '¿Hace falta visado?', a: 'No: Alemania está en Schengen, con el DNI español en vigor basta.' },
+    ],
+    paperwork: ['DNI o pasaporte en vigor (Schengen)', 'Sin visado para turismo', 'Tarjeta Sanitaria Europea recomendada', 'Sin vacunas obligatorias'],
+    visa: 'No requerido (DNI, Schengen)',
+    internet: 'Excelente · roaming UE sin coste extra',
+    difficultyNote: 'Muy fácil: ordenada, segura y con un transporte público impecable. Solo el idioma, pero con inglés te apañas de sobra.',
+    english: 'Mucho inglés en las ciudades, sobre todo entre los jóvenes.',
+    budgetLevels: { mochilero: 60, normal: 110, comodo: 190, lujo: 360 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'good' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'mid' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Berlín', days: '3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Museumsinsel_Berlin_Juli_2021_1_%28cropped%29_b.jpg/500px-Museumsinsel_Berlin_Juli_2021_1_%28cropped%29_b.jpg',
+        fact: 'Tiene más puentes que Venecia y una escena alternativa de las más vibrantes de Europa.',
+        sights: [
+          { name: 'Puerta de Brandeburgo' },
+          { name: 'Restos del Muro (East Side Gallery)' },
+          { name: 'Isla de los Museos' },
+          { name: 'Cúpula del Reichstag' },
+        ],
+      },
+      {
+        name: 'Múnich y Baviera', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/500px-Stadtbild_M%C3%BCnchen.jpg',
+        fact: 'Su Oktoberfest es la mayor fiesta de la cerveza del mundo: más de 6 millones de visitantes.',
+        sights: [
+          { name: 'Castillo de Neuschwanstein' },
+          { name: 'Plaza Marienplatz' },
+          { name: 'Cervecerías tradicionales' },
+          { name: 'Excursión a los Alpes bávaros' },
+        ],
+      },
+      {
+        name: 'Selva Negra', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Blick_vom_Hohfelsen.jpg/500px-Blick_vom_Hohfelsen.jpg',
+        fact: 'Inspiró los cuentos de los hermanos Grimm y es la cuna de la tarta Selva Negra.',
+        sights: [
+          { name: 'Pueblos de cuento (Triberg)' },
+          { name: 'Rutas de senderismo entre bosques' },
+          { name: 'Probar la tarta Selva Negra' },
+          { name: 'Ruta Romántica' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Alemania', url: 'https://www.germany.travel/es/' },
+      { label: 'Embajada de España en Alemania', url: 'https://www.exteriores.gob.es/Embajadas/berlin' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
+  {
+    slug: 'paises-bajos', name: 'Países Bajos', code: 'nl',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/KinderdijkMolens02.jpg/1280px-KinderdijkMolens02.jpg',
+    imageAlt: 'Molinos de Kinderdijk, Países Bajos',
+    capital: 'Ámsterdam', currency: 'Euro (EUR)', language: 'Neerlandés', plug: 'Tipo C/F (230 V)', tz: 'UTC+1',
+    budget: 'Medio-alto', bestMonths: 'Abril-Septiembre (tulipanes en abril)',
+    difficulty: 'Fácil', duration: '4-6 días',
+    tags: ['Ciudades', 'Cultura', 'En bici', 'Arte', 'En pareja'],
+    summary: 'Canales de cuento, molinos, campos de tulipanes, arte de los grandes maestros y una vida en bici envidiable. Los Países Bajos son compactos, cómodos y de los destinos más fáciles y bonitos de Europa.',
+    opinion:
+      'Países Bajos es comodidad y encanto a partes iguales. Ámsterdam enamora con sus canales, sus casas estrechas inclinadas y su ambiente liberal y relajado; se recorre andando o en bici en nada. Mi consejo: no te quedes solo en la capital, que el país es pequeño y en un tren cortito llegas a Róterdam (moderna), a los molinos de Kinderdijk o a pueblos de postal como Giethoorn. Y si vas en abril, los campos de tulipanes y el jardín de Keukenhof son un espectáculo. Todo facilísimo y con un inglés perfecto.',
+    faq: [
+      { q: '¿Cuántos días para los Países Bajos?', a: 'Con 4-5 días ves Ámsterdam con calma y haces escapadas a Róterdam, los molinos o los tulipanes. El país es pequeño y todo está cerca.' },
+      { q: '¿Cuándo es mejor ir?', a: 'De abril a septiembre. Abril es el mes de los tulipanes (Keukenhof); el verano es muy agradable.' },
+      { q: '¿Hace falta visado?', a: 'No: están en Schengen, con el DNI español en vigor basta.' },
+    ],
+    paperwork: ['DNI o pasaporte en vigor (Schengen)', 'Sin visado para turismo', 'Tarjeta Sanitaria Europea recomendada', 'Sin vacunas obligatorias'],
+    visa: 'No requerido (DNI, Schengen)',
+    internet: 'Excelente · roaming UE sin coste extra',
+    difficultyNote: 'De lo más fácil de Europa: todo cerca, en bici o en tren y con un inglés perfecto. Compacto y comodísimo.',
+    english: 'Hablan un inglés casi perfecto. Cero barrera.',
+    budgetLevels: { mochilero: 70, normal: 120, comodo: 200, lujo: 380 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'good' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'mid' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Ámsterdam', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png/500px-Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png',
+        fact: 'Tiene más bicicletas que habitantes y unos 100 km de canales con 1.500 puentes.',
+        sights: [
+          { name: 'Paseo en barco por los canales' },
+          { name: 'Casa de Ana Frank' },
+          { name: 'Rijksmuseum y Museo Van Gogh' },
+          { name: 'Barrio del Jordaan' },
+        ],
+      },
+      {
+        name: 'Campos de tulipanes', days: '1 día',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/26Y_1599_2.jpg/500px-26Y_1599_2.jpg',
+        fact: 'El jardín de Keukenhof planta más de 7 millones de bulbos cada año (abre solo en primavera).',
+        sights: [
+          { name: 'Jardines de Keukenhof (abril-mayo)' },
+          { name: 'Campos de tulipanes en bici' },
+          { name: 'Molinos tradicionales' },
+          { name: 'Mercado de flores de Ámsterdam' },
+        ],
+      },
+      {
+        name: 'Róterdam y los pueblos', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/A_view_of_Rotterdam%2C_taken_from_the_roof_of_the_Maassilo%2C_Rotterdam%2C_The_Netherlands.jpg/500px-A_view_of_Rotterdam%2C_taken_from_the_roof_of_the_Maassilo%2C_Rotterdam%2C_The_Netherlands.jpg',
+        fact: 'Róterdam se reconstruyó tras la guerra y hoy es una capital de la arquitectura moderna.',
+        sights: [
+          { name: 'Arquitectura futurista de Róterdam' },
+          { name: 'Molinos de Kinderdijk' },
+          { name: 'Pueblo de canales de Giethoorn' },
+          { name: 'La Haya y Delft' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Países Bajos', url: 'https://www.holland.com/global/tourism.htm' },
+      { label: 'Embajada de España en Países Bajos', url: 'https://www.exteriores.gob.es/Embajadas/lahaya' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
 ];
 
 export const countryBySlug = (slug: string) => COUNTRIES.find((c) => c.slug === slug);
