@@ -722,6 +722,88 @@ export const COUNTRIES: Country[] = [
     ],
     regions: ['Cusco', 'Machu Picchu', 'Lima', 'Arequipa', 'Lago Titicaca'],
     tips: ['Aclimátate a la altura en Cusco', 'Reserva Machu Picchu y el Camino Inca con meses', 'No bebas agua del grifo'],
+    opinion:
+      'Perú te da uno de esos viajes que recuerdas toda la vida. Machu Picchu impresiona, claro, pero el país es mucho más: los Andes, el lago Titicaca, la Amazonía y una gastronomía que está considerada de las mejores del mundo (el ceviche y el lomo saltado, palabras mayores). Mi consejo: tómate la altura en serio, llega a Cusco y descansa un par de días antes de subir. Y no te vayas sin probar lo que se cocina en Lima: ahí entiendes por qué Perú está en boca de todos.',
+    faq: [
+      { q: '¿Cuántos días para Perú?', a: 'Con 12-14 días ves Lima, Cusco y Machu Picchu, el Valle Sagrado y Arequipa o Titicaca. Si sumas Amazonía, mejor 16-18.' },
+      { q: '¿Cuándo ir a Machu Picchu?', a: 'Estación seca, de mayo a septiembre: cielos despejados e ideal para el Camino Inca (que cierra en febrero).' },
+      { q: '¿Cómo llevo la altura?', a: 'Cusco está a 3.400 m. Aclimátate uno o dos días, bebe mate de coca, camina despacio y bebe mucha agua. Mejora rápido.' },
+    ],
+    paperwork: ['Pasaporte con validez para toda la estancia', 'Sin visado para turismo', 'Vacuna de la fiebre amarilla recomendada si vas a la Amazonía', 'Seguro de viaje muy recomendable'],
+    visa: 'No requerido para turismo',
+    internet: 'Bueno en ciudades · eSIM recomendada',
+    difficultyNote: 'Media: la altura de Cusco y Titicaca pasa factura los primeros días. Aclimátate con calma; el resto es fácil y se habla español.',
+    english: 'Se habla español; algo de inglés en zonas turísticas. No lo necesitas.',
+    budgetLevels: { mochilero: 35, normal: 70, comodo: 140, lujo: 280 },
+    climate: [
+      { m: 'Ene', r: 'avoid' }, { m: 'Feb', r: 'avoid' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'good' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'mid' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Cusco y Machu Picchu', days: '4-5 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Vista_Calle_Suecia.jpg/500px-Vista_Calle_Suecia.jpg',
+        fact: 'Cusco fue la capital del Imperio inca y su nombre significa "ombligo del mundo".',
+        sights: [
+          { name: 'Machu Picchu', note: 'Reserva entrada y tren con meses de antelación', url: 'https://www.klook.com/es/search/?query=Machu%20Picchu' },
+          { name: 'Valle Sagrado (Pisac y Ollantaytambo)' },
+          { name: 'Plaza de Armas y barrio de San Blas' },
+          { name: 'Fortaleza de Sacsayhuamán' },
+          { name: 'Montaña de 7 Colores (Vinicunca)' },
+        ],
+      },
+      {
+        name: 'Lima', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Bas%C3%ADlica_Catedral_Metropolitana_de_Lima_%28cropped%29.jpg/500px-Bas%C3%ADlica_Catedral_Metropolitana_de_Lima_%28cropped%29.jpg',
+        fact: 'Tiene dos de los 50 mejores restaurantes del mundo: es la capital gastronómica de América.',
+        sights: [
+          { name: 'Centro histórico colonial' },
+          { name: 'Miraflores y Barranco frente al mar' },
+          { name: 'Comer el mejor ceviche de tu vida' },
+          { name: 'Huaca Pucllana' },
+          { name: 'Circuito Mágico del Agua' },
+        ],
+      },
+      {
+        name: 'Arequipa', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Plaza_de_Armas%2C_Arequipa_2006.jpg/500px-Plaza_de_Armas%2C_Arequipa_2006.jpg',
+        fact: 'La "ciudad blanca" está construida con sillar, una piedra volcánica blanca, y la rodean tres volcanes.',
+        sights: [
+          { name: 'Monasterio de Santa Catalina' },
+          { name: 'Plaza de Armas y catedral' },
+          { name: 'Cañón del Colca (vuelo de cóndores)' },
+          { name: 'Vistas al volcán Misti' },
+        ],
+      },
+      {
+        name: 'Lago Titicaca', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Indigenous_woman_of_Peru_showing_her_traditional_textiles.png/500px-Indigenous_woman_of_Peru_showing_her_traditional_textiles.png',
+        fact: 'Es el lago navegable más alto del mundo (3.812 m) y sobre él flotan islas hechas de totora.',
+        sights: [
+          { name: 'Islas flotantes de los Uros' },
+          { name: 'Isla Taquile y sus textiles' },
+          { name: 'Amanecer sobre el lago' },
+          { name: 'Comunidades aimaras y quechuas' },
+        ],
+      },
+      {
+        name: 'Amazonía', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Amazon17_%285641020319%29.jpg/500px-Amazon17_%285641020319%29.jpg',
+        fact: 'La selva peruana alberga más especies de aves que toda Europa y Norteamérica juntas.',
+        sights: [
+          { name: 'Lodge en la selva (Iquitos o Puerto Maldonado)' },
+          { name: 'Avistar monos, caimanes y delfines rosados' },
+          { name: 'Navegación nocturna por el río' },
+          { name: 'Visita a comunidades nativas' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Perú', url: 'https://www.peru.travel/es' },
+      { label: 'Embajada de España en Perú', url: 'https://www.exteriores.gob.es/Embajadas/lima' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
   },
   {
     slug: 'portugal', name: 'Portugal', code: 'pt',
