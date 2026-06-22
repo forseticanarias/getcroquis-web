@@ -2549,6 +2549,141 @@ export const COUNTRIES: Country[] = [
       { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
     ],
   },
+  {
+    slug: 'china', name: 'China', code: 'cn',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/The_Great_Wall_of_China_at_Jinshanling-edit.jpg/1280px-The_Great_Wall_of_China_at_Jinshanling-edit.jpg',
+    imageAlt: 'La Gran Muralla China en Jinshanling',
+    capital: 'Pekín', currency: 'Yuan (CNY)', language: 'Chino mandarín', plug: 'Tipo A/I/C (220 V)', tz: 'UTC+8',
+    budget: 'Medio', bestMonths: 'Abril-Mayo y Septiembre-Octubre',
+    difficulty: 'Alta', duration: '14-18 días',
+    tags: ['Cultura', 'Historia', 'Ciudades', 'Aventura', 'Gastronómico'],
+    summary: 'La Gran Muralla, los Guerreros de Terracota, megaciudades futuristas y 5.000 años de historia. China es un viaje monumental que mezcla templos milenarios con rascacielos imposibles, a una escala que abruma.',
+    opinion:
+      'China impone por su escala: todo es enorme, antiguo y a la vez ultramoderno. Caminar por la Gran Muralla o plantarte ante los Guerreros de Terracota es un viaje en el tiempo, y luego aterrizas en Shanghái y parece el futuro. Mi consejo: ve mentalizado de que hay barrera idiomática de verdad y que muchas apps de aquí no funcionan (necesitas VPN para Google, WhatsApp, etc.). Lleva todo descargado y algo de paciencia. No es el viaje más cómodo, pero la recompensa cultural es brutal.',
+    faq: [
+      { q: '¿Cuántos días para China?', a: 'Con 14 días ves Pekín, Xi\'an y Shanghái con calma, usando trenes de alta velocidad. El país es inmenso: elige una ruta.' },
+      { q: '¿Cuándo es mejor ir?', a: 'Primavera (abril-mayo) y otoño (septiembre-octubre), con temperaturas suaves. Evita el invierno gélido del norte y el verano húmedo.' },
+      { q: '¿Necesito visado?', a: 'España tiene exención de visado para estancias cortas, pero la normativa cambia: confirma la vigencia antes de viajar.' },
+    ],
+    paperwork: ['Pasaporte con al menos 6 meses de validez', 'Exención de visado para estancias cortas (confirma vigencia)', 'VPN instalada ANTES de llegar (Google, WhatsApp están bloqueados)', 'Apps locales (mapas, pagos) descargadas'],
+    visa: 'Exención de visado para estancias cortas (consulta vigencia)',
+    internet: 'Restringido (Gran Cortafuegos) · eSIM/VPN recomendados',
+    difficultyNote: 'Alta: fascinante e inmensa, pero con barrera idiomática real, internet censurado (necesitas VPN) y apps locales para casi todo. Vale mucho la pena, pero exige preparación.',
+    english: 'Muy poco inglés; lleva apps de traducción descargadas de antemano.',
+    budgetLevels: { mochilero: 35, normal: 70, comodo: 140, lujo: 300 },
+    climate: [
+      { m: 'Ene', r: 'avoid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'mid' }, { m: 'Jul', r: 'mid' }, { m: 'Ago', r: 'mid' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'avoid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Pekín', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/The_Forbidden_City_-_View_from_Coal_Hill.jpg/500px-The_Forbidden_City_-_View_from_Coal_Hill.jpg',
+        fact: 'La Gran Muralla mide más de 21.000 km: es la mayor construcción humana de la historia.',
+        sights: [
+          { name: 'Gran Muralla China' },
+          { name: 'Ciudad Prohibida' },
+          { name: 'Plaza de Tiananmen' },
+          { name: 'Templo del Cielo y los hutongs' },
+        ],
+      },
+      {
+        name: "Xi'an", days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/51714-Terracota-Army.jpg/500px-51714-Terracota-Army.jpg',
+        fact: 'Los Guerreros de Terracota son más de 8.000 soldados, todos con rostros distintos.',
+        sights: [
+          { name: 'Ejército de Guerreros de Terracota' },
+          { name: 'Muralla antigua de la ciudad' },
+          { name: 'Barrio musulmán y su comida' },
+          { name: 'Gran Pagoda de la Oca Silvestre' },
+        ],
+      },
+      {
+        name: 'Shanghái', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Huangpu_Park_20124-Shanghai_%2832208802494%29.jpg/500px-Huangpu_Park_20124-Shanghai_%2832208802494%29.jpg',
+        fact: 'Su torre es el segundo edificio más alto del mundo, con 632 metros.',
+        sights: [
+          { name: 'El Bund y el skyline de Pudong' },
+          { name: 'Torre de Shanghái' },
+          { name: 'Jardín clásico de Yuyuan' },
+          { name: 'Vida nocturna y rascacielos' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Embajada de España en China', url: 'https://www.exteriores.gob.es/Embajadas/pekin' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
+  {
+    slug: 'corea-del-sur', name: 'Corea del Sur', code: 'kr',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/%EA%B4%91%ED%99%94%EB%AC%B8_%EC%9B%94%EB%8C%80.jpg/1280px-%EA%B4%91%ED%99%94%EB%AC%B8_%EC%9B%94%EB%8C%80.jpg',
+    imageAlt: 'Palacio Gyeongbokgung, Seúl',
+    capital: 'Seúl', currency: 'Won (KRW)', language: 'Coreano', plug: 'Tipo C/F (220 V)', tz: 'UTC+9',
+    budget: 'Medio-alto', bestMonths: 'Abril-Mayo (cerezos) y Septiembre-Octubre (otoño)',
+    difficulty: 'Media', duration: '8-12 días',
+    tags: ['Cultura', 'Ciudades', 'Gastronómico', 'Tecnología', 'K-pop'],
+    summary: 'Palacios milenarios junto a rascacielos, K-pop, una gastronomía adictiva y una tecnología de otro mundo. Corea del Sur mezcla tradición y futuro como ningún otro país, y todo funciona a la perfección.',
+    opinion:
+      'Corea del Sur es el viaje de moda y se entiende perfectamente por qué. Seúl es pura energía: palacios con gente vestida de hanbok al lado de barrios hipertecnológicos, cafés monísimos y una comida callejera para chuparse los dedos. Mi consejo: aprovecha que es segurísima y comodísima (el metro y el internet son de otro planeta) para moverte sin miedo, y no te quedes solo en Seúl: Busan y la isla de Jeju merecen mucho. Si te va el K-pop, la gastronomía o la tecnología, te va a encantar.',
+    faq: [
+      { q: '¿Cuántos días para Corea?', a: 'Con 8-10 días ves Seúl a fondo y sumas Busan y/o la isla de Jeju. Los trenes de alta velocidad (KTX) lo hacen muy fácil.' },
+      { q: '¿Cuándo es mejor ir?', a: 'Primavera (abril-mayo) por los cerezos en flor y otoño (septiembre-octubre) por los colores. Evita el monzón de julio-agosto.' },
+      { q: '¿Necesito visado?', a: 'No para turismo, pero suele pedirse la autorización K-ETA online. Confirma la vigencia (a veces está exenta) antes de viajar.' },
+    ],
+    paperwork: ['Pasaporte con al menos 6 meses de validez', 'Autorización K-ETA online (confirma vigencia)', 'Sin visado para turismo (hasta 90 días)', 'Sin vacunas obligatorias'],
+    visa: 'No requerido hasta 90 días (K-ETA según vigencia)',
+    internet: 'Excelente (de los mejores del mundo) · eSIM recomendada',
+    difficultyNote: 'Media: ultramoderna, segura y comodísima, con un transporte e internet brutales. Lo único, algo de barrera idiomática fuera de Seúl.',
+    english: 'Algo de inglés en Seúl; menos fuera. Los carteles suelen llevar romanización.',
+    budgetLevels: { mochilero: 45, normal: 85, comodo: 160, lujo: 320 },
+    climate: [
+      { m: 'Ene', r: 'avoid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'mid' }, { m: 'Jul', r: 'avoid' }, { m: 'Ago', r: 'avoid' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Seúl', days: '4-5 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Bukchon_Hanok_Village_01.jpg/500px-Bukchon_Hanok_Village_01.jpg',
+        fact: 'Aquí conviven palacios de 600 años con uno de los skylines más tecnológicos del mundo.',
+        sights: [
+          { name: 'Palacio Gyeongbokgung' },
+          { name: 'Aldea hanok de Bukchon' },
+          { name: 'Myeongdong y Gangnam' },
+          { name: 'Mercado de Gwangjang (comida)' },
+        ],
+      },
+      {
+        name: 'Busan', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Gamcheon_Houses%2C_2024.jpg/500px-Gamcheon_Houses%2C_2024.jpg',
+        fact: 'Su aldea de Gamcheon es un laberinto de casas de colores en la ladera, "el Santorini coreano".',
+        sights: [
+          { name: 'Aldea cultural de Gamcheon' },
+          { name: 'Templo Haedong Yonggungsa (junto al mar)' },
+          { name: 'Playa de Haeundae' },
+          { name: 'Mercado de pescado de Jagalchi' },
+        ],
+      },
+      {
+        name: 'Isla de Jeju', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Hallasan_Above.jpg/500px-Hallasan_Above.jpg',
+        fact: 'Es una isla volcánica Patrimonio de la Humanidad, el destino de luna de miel de los coreanos.',
+        sights: [
+          { name: 'Volcán Hallasan' },
+          { name: 'Cráteres y cascadas' },
+          { name: 'Costas y playas de lava' },
+          { name: 'Senderos Olle junto al mar' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Corea', url: 'https://spanish.visitkorea.or.kr/' },
+      { label: 'Embajada de España en Corea', url: 'https://www.exteriores.gob.es/Embajadas/seul' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
 ];
 
 export const countryBySlug = (slug: string) => COUNTRIES.find((c) => c.slug === slug);
