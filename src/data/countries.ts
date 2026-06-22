@@ -2684,6 +2684,142 @@ export const COUNTRIES: Country[] = [
       { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
     ],
   },
+  {
+    slug: 'jordania', name: 'Jordania', code: 'jo',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Treasury_petra_crop.jpeg/1280px-Treasury_petra_crop.jpeg',
+    imageAlt: 'El Tesoro (Al-Khazneh) en Petra, Jordania',
+    capital: 'Amán', currency: 'Dinar jordano (JOD)', language: 'Árabe', plug: 'Tipo C/D/F/G/J (230 V)', tz: 'UTC+3',
+    budget: 'Medio', bestMonths: 'Marzo-Mayo y Septiembre-Noviembre',
+    difficulty: 'Media', duration: '7-10 días',
+    tags: ['Cultura', 'Historia', 'Desierto', 'Aventura', 'En pareja'],
+    summary: 'Petra esculpida en roca rosa, el desierto marciano de Wadi Rum y el Mar Muerto donde flotas sin esfuerzo. Jordania es un viaje seguro y deslumbrante por Oriente Medio, con miles de años de historia.',
+    opinion:
+      'Jordania es un viajazo que sorprende por lo segura y fácil que resulta para asomarte a Oriente Medio. Entrar a Petra por el desfiladero del Siq y ver aparecer el Tesoro es uno de esos momentos que no se olvidan. Y dormir bajo las estrellas en Wadi Rum, ese desierto que parece Marte, es pura magia. Mi consejo: compra el Jordan Pass antes de viajar (te ahorra el visado y las entradas) y deja un día para flotar en el Mar Muerto. La gente es hospitalaria de verdad.',
+    faq: [
+      { q: '¿Cuántos días para Jordania?', a: 'Con 7-8 días ves Petra, Wadi Rum, Amán y el Mar Muerto sin agobios. Es un país manejable para recorrer en coche o con tours.' },
+      { q: '¿Cuándo es mejor ir?', a: 'Primavera (marzo-mayo) y otoño (septiembre-noviembre), con temperaturas suaves. El verano en el desierto es muy caluroso.' },
+      { q: '¿Necesito visado?', a: 'Sí, pero es sencillo: visado a la llegada, o gratis si compras el Jordan Pass antes de viajar (incluye entradas).' },
+    ],
+    paperwork: ['Pasaporte con al menos 6 meses de validez', 'Visado a la llegada o Jordan Pass (recomendado)', 'Seguro de viaje muy recomendable', 'Sin vacunas obligatorias'],
+    visa: 'Visado a la llegada (o Jordan Pass)',
+    internet: 'Bueno · eSIM recomendada',
+    difficultyNote: 'Media: muy segura y acogedora, ideal para un primer viaje a Oriente Medio. El Jordan Pass te ahorra visado y entradas si lo compras antes.',
+    english: 'Bastante inglés en las zonas turísticas. Te apañas bien.',
+    budgetLevels: { mochilero: 45, normal: 85, comodo: 150, lujo: 300 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'mid' }, { m: 'Jul', r: 'avoid' }, { m: 'Ago', r: 'avoid' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'good' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Petra', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Al_Deir_Petra.JPG/500px-Al_Deir_Petra.JPG',
+        fact: 'Es una ciudad nabatea esculpida en la roca hace más de 2.000 años; una de las 7 Maravillas del mundo.',
+        sights: [
+          { name: 'El Tesoro (Al-Khazneh)' },
+          { name: 'El Monasterio (Ad Deir)' },
+          { name: 'El desfiladero del Siq' },
+          { name: 'Petra de noche a la luz de las velas' },
+        ],
+      },
+      {
+        name: 'Wadi Rum', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Mountain_in_Wadi_Rum%2C_Jordan.jpg/500px-Mountain_in_Wadi_Rum%2C_Jordan.jpg',
+        fact: 'Su paisaje marciano ha servido de rodaje a películas como "Marte" o "Dune".',
+        sights: [
+          { name: 'Safari en 4x4 por el desierto' },
+          { name: 'Dormir en campamento beduino' },
+          { name: 'Atardeceres de otro planeta' },
+          { name: 'Escalada y senderismo entre dunas' },
+        ],
+      },
+      {
+        name: 'Amán y el Mar Muerto', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Dead_Sea_beach_00.JPG/500px-Dead_Sea_beach_00.JPG',
+        fact: 'El Mar Muerto es el punto más bajo de la Tierra: flotas sin ningún esfuerzo por su salinidad.',
+        sights: [
+          { name: 'Flotar en el Mar Muerto' },
+          { name: 'Ciudadela y teatro romano de Amán' },
+          { name: 'Ciudad romana de Jerash' },
+          { name: 'Castillos del desierto' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Jordania', url: 'https://es.visitjordan.com/' },
+      { label: 'Embajada de España en Jordania', url: 'https://www.exteriores.gob.es/Embajadas/amman' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
+  {
+    slug: 'camboya', name: 'Camboya', code: 'kh',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Angkor_Wat.jpg/1280px-Angkor_Wat.jpg',
+    imageAlt: 'Templo de Angkor Wat, Camboya',
+    capital: 'Nom Pen', currency: 'Riel (KHR)', language: 'Jemer', plug: 'Tipo A/C/G (230 V)', tz: 'UTC+7',
+    budget: 'Bajo', bestMonths: 'Noviembre-Marzo (estación seca)',
+    difficulty: 'Media', duration: '7-12 días',
+    tags: ['Cultura', 'Historia', 'Templos', 'Barato', 'Mochilero'],
+    summary: 'Los templos de Angkor entre la selva, una historia reciente conmovedora y playas baratas en el golfo. Camboya es uno de los grandes tesoros del Sudeste Asiático, perfecto para combinar con Tailandia o Vietnam.',
+    opinion:
+      'Camboya te toca el alma. Ver amanecer sobre Angkor Wat, con sus torres recortándose en el cielo rosado, es de las imágenes más bonitas que te puedes llevar de un viaje, y Ta Prohm, el templo comido por las raíces de los árboles, parece de película. Pero Camboya también es su historia reciente, dura y conmovedora, que conviene conocer en Nom Pen. Mi consejo: combínala con Tailandia o Vietnam, ve con la mente abierta y disfruta de una gente cálida pese a todo lo que han pasado. Y encima es baratísima.',
+    faq: [
+      { q: '¿Cuántos días para Camboya?', a: 'Con 3-4 días para Angkor y un par para Nom Pen vas servido. Si sumas playa (Koh Rong), añade 3-4 días más.' },
+      { q: '¿Cuándo es mejor ir?', a: 'Estación seca, de noviembre a marzo. Evita la temporada de lluvias y el calor extremo de abril-mayo.' },
+      { q: '¿Necesito visado?', a: 'Sí: e-Visa online o visado a la llegada, ambos de pago y sencillos de tramitar.' },
+    ],
+    paperwork: ['Pasaporte con al menos 6 meses de validez', 'e-Visa o visado a la llegada (de pago)', 'Seguro de viaje muy recomendable', 'Vacunas recomendadas según zona (consulta)'],
+    visa: 'e-Visa o visado a la llegada (de pago)',
+    internet: 'Aceptable · eSIM recomendada',
+    difficultyNote: 'Media: barata y acogedora, perfecta para combinar con Tailandia o Vietnam. Solo el calor y algo de caos en los traslados entre ciudades.',
+    english: 'Algo de inglés en zonas turísticas; en pueblos, poco.',
+    budgetLevels: { mochilero: 25, normal: 45, comodo: 95, lujo: 200 },
+    climate: [
+      { m: 'Ene', r: 'good' }, { m: 'Feb', r: 'good' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'mid' },
+      { m: 'May', r: 'avoid' }, { m: 'Jun', r: 'avoid' }, { m: 'Jul', r: 'avoid' }, { m: 'Ago', r: 'avoid' },
+      { m: 'Sep', r: 'avoid' }, { m: 'Oct', r: 'mid' }, { m: 'Nov', r: 'good' }, { m: 'Dic', r: 'good' },
+    ],
+    cityGuides: [
+      {
+        name: 'Templos de Angkor', days: '3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Ta_Prohm_%28III%29.jpg/500px-Ta_Prohm_%28III%29.jpg',
+        fact: 'Angkor es el mayor complejo religioso del mundo: más de 1.000 templos en plena selva.',
+        sights: [
+          { name: 'Amanecer en Angkor Wat' },
+          { name: 'Ta Prohm, el "templo de las raíces"' },
+          { name: 'Las caras gigantes del Bayon' },
+          { name: 'Recorrer el complejo en tuk-tuk' },
+        ],
+      },
+      {
+        name: 'Nom Pen', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Phnom_Penh_skyline_from_TK_district_Dec_2024.jpg/500px-Phnom_Penh_skyline_from_TK_district_Dec_2024.jpg',
+        fact: 'Su historia reciente, marcada por los Jemeres Rojos, conmueve y ayuda a entender el país.',
+        sights: [
+          { name: 'Palacio Real y Pagoda de Plata' },
+          { name: 'Museo del Genocidio (Tuol Sleng)' },
+          { name: 'Mercados locales' },
+          { name: 'Paseo por el río Mekong' },
+        ],
+      },
+      {
+        name: 'Costa e islas', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Sok_San_Bungalows_koh_Rong_island_Cambodia.jpg/500px-Sok_San_Bungalows_koh_Rong_island_Cambodia.jpg',
+        fact: 'En sus aguas brilla el plancton bioluminiscente: el mar se ilumina de noche.',
+        sights: [
+          { name: 'Playas de Koh Rong' },
+          { name: 'Plancton bioluminiscente de noche' },
+          { name: 'Snorkel y buceo' },
+          { name: 'Ambiente mochilero y relajado' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Camboya', url: 'https://www.tourismcambodia.com/' },
+      { label: 'Embajada de España (concurrente en Bangkok)', url: 'https://www.exteriores.gob.es/Embajadas/bangkok' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
 ];
 
 export const countryBySlug = (slug: string) => COUNTRIES.find((c) => c.slug === slug);

@@ -77,7 +77,7 @@ const breadcrumb = {
     { '@type': 'ListItem', position: 3, name: c.name, item: `${SITE.url}/destinos/${c.slug}` },
   ],
 };
-const CONT_MAP: Record<string, string> = { jp: 'Asia', th: 'Asia', vn: 'Asia', it: 'Europa', is: 'Europa', fr: 'Europa', es: 'Europa', gr: 'Europa', pt: 'Europa', hr: 'Europa', gb: 'Europa', no: 'Europa', ie: 'Europa', de: 'Europa', nl: 'Europa', ch: 'Europa', mx: 'América', pe: 'América', us: 'América', co: 'América', cu: 'América', ar: 'América', cr: 'América', br: 'América', ma: 'África', eg: 'África', za: 'África', tr: 'Asia', id: 'Asia', ae: 'Asia', ph: 'Asia', in: 'Asia', cn: 'Asia', kr: 'Asia' };
+const CONT_MAP: Record<string, string> = { jp: 'Asia', th: 'Asia', vn: 'Asia', it: 'Europa', is: 'Europa', fr: 'Europa', es: 'Europa', gr: 'Europa', pt: 'Europa', hr: 'Europa', gb: 'Europa', no: 'Europa', ie: 'Europa', de: 'Europa', nl: 'Europa', ch: 'Europa', mx: 'América', pe: 'América', us: 'América', co: 'América', cu: 'América', ar: 'América', cr: 'América', br: 'América', ma: 'África', eg: 'África', za: 'África', tr: 'Asia', id: 'Asia', ae: 'Asia', ph: 'Asia', in: 'Asia', cn: 'Asia', kr: 'Asia', jo: 'Asia', kh: 'Asia' };
 const sameCont = COUNTRIES.filter((x) => x.slug !== c.slug && CONT_MAP[x.code] === CONT_MAP[c.code]);
 const otherCont = COUNTRIES.filter((x) => x.slug !== c.slug && CONT_MAP[x.code] !== CONT_MAP[c.code]);
 const related = [...sameCont, ...otherCont].slice(0, 6);
