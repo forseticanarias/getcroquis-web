@@ -3364,6 +3364,142 @@ export const COUNTRIES: Country[] = [
       { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
     ],
   },
+  {
+    slug: 'austria', name: 'Austria', code: 'at',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Hallstatt_-_Zentrum_.JPG/1280px-Hallstatt_-_Zentrum_.JPG',
+    imageAlt: 'Pueblo de Hallstatt, Austria',
+    capital: 'Viena', currency: 'Euro (EUR)', language: 'Alemán', plug: 'Tipo C/F (230 V)', tz: 'UTC+1',
+    budget: 'Medio-alto', bestMonths: 'Mayo-Septiembre y Diciembre-Marzo (esquí/Navidad)',
+    difficulty: 'Fácil', duration: '5-8 días',
+    tags: ['Ciudades', 'Cultura', 'Montaña', 'Música', 'En pareja'],
+    summary: 'Palacios imperiales en Viena, la Salzburgo de Mozart, pueblos alpinos de postal como Hallstatt y mercadillos navideños de ensueño. Austria combina la elegancia imperial con los Alpes más bonitos.',
+    opinion:
+      'Austria es elegancia y montaña a partes iguales. Viena te transporta a la época imperial con sus palacios, sus cafés históricos y su música clásica sonando por todas partes. Pero para mí lo que enamora de verdad es salir a los Alpes: Hallstatt, ese pueblecito a orillas de un lago, es de los rincones más bonitos de Europa. Mi consejo: combina una ciudad (Viena o Salzburgo) con un par de días de naturaleza alpina. Y si vas en Navidad, los mercadillos son pura magia. Todo funciona de maravilla.',
+    faq: [
+      { q: '¿Cuántos días para Austria?', a: 'Con 5-6 días ves Viena y Salzburgo. Si sumas los Alpes (Hallstatt, Innsbruck), mejor 7-8.' },
+      { q: '¿Cuándo es mejor ir?', a: 'Mayo-septiembre para ciudades y montaña en verde; diciembre-marzo para esquí y mercadillos de Navidad.' },
+      { q: '¿Hace falta visado?', a: 'No: está en Schengen, con el DNI español en vigor basta.' },
+    ],
+    paperwork: ['DNI o pasaporte en vigor (Schengen)', 'Sin visado para turismo', 'Tarjeta Sanitaria Europea recomendada', 'Sin vacunas obligatorias'],
+    visa: 'No requerido (DNI, Schengen)',
+    internet: 'Excelente · roaming UE sin coste extra',
+    difficultyNote: 'Muy fácil: ordenada, segura y con trenes perfectos. Combina ciudades imperiales con Alpes de postal sin esfuerzo.',
+    english: 'Bastante inglés en las ciudades.',
+    budgetLevels: { mochilero: 60, normal: 110, comodo: 190, lujo: 360 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'good' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'mid' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Viena', days: '3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Schoenbrunn_philharmoniker_2012.jpg/500px-Schoenbrunn_philharmoniker_2012.jpg',
+        fact: 'Es la ciudad de la música clásica: aquí vivieron Mozart, Beethoven, Strauss y Schubert.',
+        sights: [
+          { name: 'Palacio de Schönbrunn' },
+          { name: 'Catedral de San Esteban' },
+          { name: 'Concierto de música clásica' },
+          { name: 'Cafés vieneses históricos' },
+        ],
+      },
+      {
+        name: 'Salzburgo', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Salzburg_%2848489551981%29.jpg/500px-Salzburg_%2848489551981%29.jpg',
+        fact: 'Cuna de Mozart y escenario de la película "Sonrisas y lágrimas".',
+        sights: [
+          { name: 'Casco antiguo (Patrimonio)' },
+          { name: 'Fortaleza de Hohensalzburg' },
+          { name: 'Casa natal de Mozart' },
+          { name: 'Escenarios de "Sonrisas y lágrimas"' },
+        ],
+      },
+      {
+        name: 'Hallstatt y los Alpes', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/B%C3%BCrgerstra%C3%9Fe_26%2B24_%28BT0A2830%29.jpg/500px-B%C3%BCrgerstra%C3%9Fe_26%2B24_%28BT0A2830%29.jpg',
+        fact: 'Hallstatt es tan bonito que China construyó una réplica a tamaño real.',
+        sights: [
+          { name: 'Pueblo de Hallstatt junto al lago' },
+          { name: 'Innsbruck entre montañas' },
+          { name: 'Esquí y senderismo alpino' },
+          { name: 'Lagos de aguas turquesa' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Austria', url: 'https://www.austria.info/es' },
+      { label: 'Embajada de España en Austria', url: 'https://www.exteriores.gob.es/Embajadas/viena' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
+  {
+    slug: 'belgica', name: 'Bélgica', code: 'be',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Br%C3%BCgge_Blick_vom_Belfried_4.jpg/1280px-Br%C3%BCgge_Blick_vom_Belfried_4.jpg',
+    imageAlt: 'Vista de Brujas desde el campanario',
+    capital: 'Bruselas', currency: 'Euro (EUR)', language: 'Neerlandés, francés y alemán', plug: 'Tipo C/E (230 V)', tz: 'UTC+1',
+    budget: 'Medio-alto', bestMonths: 'Abril-Septiembre y Navidad',
+    difficulty: 'Fácil', duration: '4-6 días',
+    tags: ['Ciudades', 'Cultura', 'Gastronómico', 'Cerveza', 'En pareja'],
+    summary: 'Brujas y sus canales de cuento, la Grand-Place de Bruselas, chocolate, gofres y las mejores cervezas del mundo. Bélgica es pequeña, está todo cerquísima en tren y rebosa encanto medieval.',
+    opinion:
+      'Bélgica es perfecta para una escapada corta y golosa. Brujas parece un cuento medieval con sus canales y sus casitas de ladrillo; es de esas ciudades en las que solo apetece pasear y comer chocolate. Bruselas tiene una de las plazas más bonitas de Europa, la Grand-Place, y un rollo cosmopolita muy majo. Mi consejo: aprovecha que el país es pequeñísimo para combinar varias ciudades en tren (Brujas, Gante, Amberes están a un paso) y déjate llevar por la gastronomía: cerveza, gofres, mejillones y chocolate. Imposible aburrirse.',
+    faq: [
+      { q: '¿Cuántos días para Bélgica?', a: 'Con 4-5 días ves Bruselas, Brujas y Gante con calma. Todo está a menos de una hora en tren.' },
+      { q: '¿Cuándo es mejor ir?', a: 'De abril a septiembre por el buen tiempo, o en diciembre por los mercadillos de Navidad.' },
+      { q: '¿Hace falta visado?', a: 'No: está en Schengen, con el DNI español en vigor basta.' },
+    ],
+    paperwork: ['DNI o pasaporte en vigor (Schengen)', 'Sin visado para turismo', 'Tarjeta Sanitaria Europea recomendada', 'Sin vacunas obligatorias'],
+    visa: 'No requerido (DNI, Schengen)',
+    internet: 'Excelente · roaming UE sin coste extra',
+    difficultyNote: 'De lo más fácil de Europa: pequeña, con todo cerquísima en tren y un sinfín de chocolate, cerveza y gofres. Ideal para una escapada.',
+    english: 'Mucho inglés en las ciudades.',
+    budgetLevels: { mochilero: 65, normal: 115, comodo: 200, lujo: 370 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'good' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'mid' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Bruselas', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Grand-Place%2C_Brussels_-_panorama%2C_June_2018.jpg/500px-Grand-Place%2C_Brussels_-_panorama%2C_June_2018.jpg',
+        fact: 'Su Grand-Place está considerada una de las plazas más bonitas del mundo.',
+        sights: [
+          { name: 'La Grand-Place' },
+          { name: 'El Manneken Pis' },
+          { name: 'El Atomium' },
+          { name: 'Chocolaterías y gofres' },
+        ],
+      },
+      {
+        name: 'Brujas', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Brugge_Belfort_HDR.jpg/500px-Brugge_Belfort_HDR.jpg',
+        fact: 'La llaman "la Venecia del Norte" por sus canales y puentes medievales.',
+        sights: [
+          { name: 'Paseo en barca por los canales' },
+          { name: 'Campanario (Belfort)' },
+          { name: 'Plaza del Markt' },
+          { name: 'Cata de chocolate y cerveza' },
+        ],
+      },
+      {
+        name: 'Gante y Amberes', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Gent%2C_de_Graslei_vanaf_de_Korenlei_met_oeg24758tm61%2B25159_IMG_0447_2021-08-13_18.37.jpg/500px-Gent%2C_de_Graslei_vanaf_de_Korenlei_met_oeg24758tm61%2B25159_IMG_0447_2021-08-13_18.37.jpg',
+        fact: 'Gante combina ambiente medieval y universitario; Amberes es la capital mundial del diamante.',
+        sights: [
+          { name: 'Muelle de Graslei en Gante' },
+          { name: 'Castillo de los Condes' },
+          { name: 'Catedral y moda en Amberes' },
+          { name: 'Ambiente joven y animado' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Flandes', url: 'https://www.visitflanders.com/es' },
+      { label: 'Embajada de España en Bélgica', url: 'https://www.exteriores.gob.es/Embajadas/bruselas' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
 ];
 
 export const countryBySlug = (slug: string) => COUNTRIES.find((c) => c.slug === slug);
