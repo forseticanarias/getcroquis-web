@@ -3092,6 +3092,142 @@ export const COUNTRIES: Country[] = [
       { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
     ],
   },
+  {
+    slug: 'australia', name: 'Australia', code: 'au',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Sydney_Australia._%2821339175489%29.jpg/1280px-Sydney_Australia._%2821339175489%29.jpg',
+    imageAlt: 'Bahía de Sídney, Australia',
+    capital: 'Canberra', currency: 'Dólar australiano (AUD)', language: 'Inglés', plug: 'Tipo I (230 V)', tz: 'UTC+8 a +11',
+    budget: 'Alto', bestMonths: 'Septiembre-Noviembre y Marzo-Mayo',
+    difficulty: 'Media', duration: '16-24 días',
+    tags: ['Naturaleza', 'Playa', 'Aventura', 'Ciudades', 'Road trip'],
+    summary: 'La Ópera de Sídney, la Gran Barrera de Coral, el Outback rojo con Uluru y playas interminables. Australia es un continente entero por descubrir, con naturaleza brutal, ciudades de primera y una fauna única.',
+    opinion:
+      'Australia es el viaje de "una vez en la vida" por antonomasia. Es tan grande y está tan lejos que merece tiempo: no vayas con prisa. Sídney enamora desde el primer momento con su bahía, bucear en la Gran Barrera de Coral es flipante y plantarte ante Uluru al atardecer, en mitad del Outback, es casi espiritual. Mi consejo: elige bien (costa este + centro rojo, por ejemplo) porque verlo todo es imposible, y si puedes, hazte algún tramo en autocaravana. Caro y lejos, sí, pero un viajazo como pocos.',
+    faq: [
+      { q: '¿Cuántos días para Australia?', a: 'Mínimo 16-18 por las distancias y el jet lag. Lo típico: costa este (Sídney, Cairns) + Uluru. Verlo entero requiere semanas.' },
+      { q: '¿Cuándo es mejor ir?', a: 'Primavera (sep-nov) y otoño (mar-may) son ideales. Recuerda que las estaciones están invertidas respecto a España.' },
+      { q: '¿Necesito visado?', a: 'Sí, pero es fácil: la autorización electrónica eVisitor/ETA se tramita online y para España es gratuita.' },
+    ],
+    paperwork: ['Pasaporte en vigor', 'eVisitor/ETA obligatorio (online, gratuito)', 'Seguro de viaje muy recomendable', 'Control aduanero estricto (no metas comida ni semillas)'],
+    visa: 'eVisitor/ETA obligatorio (online, gratuito)',
+    internet: 'Excelente · eSIM recomendada',
+    difficultyNote: 'Media: segurísima, en inglés y comodísima, pero está MUY lejos (vuelos largos) y es enorme: las distancias internas son brutales. Necesitas tiempo.',
+    english: 'Es el idioma del país; cero barrera.',
+    budgetLevels: { mochilero: 65, normal: 120, comodo: 210, lujo: 400 },
+    climate: [
+      { m: 'Ene', r: 'good' }, { m: 'Feb', r: 'good' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'mid' }, { m: 'Jul', r: 'mid' }, { m: 'Ago', r: 'mid' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'good' }, { m: 'Dic', r: 'good' },
+    ],
+    cityGuides: [
+      {
+        name: 'Sídney', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Sydney_Opera_House_and_Harbour_Bridge_Dusk_%282%29_2019-06-21.jpg/500px-Sydney_Opera_House_and_Harbour_Bridge_Dusk_%282%29_2019-06-21.jpg',
+        fact: 'La Ópera de Sídney, Patrimonio de la Humanidad, tiene más de un millón de tejas en su cubierta.',
+        sights: [
+          { name: 'Ópera de Sídney' },
+          { name: 'Harbour Bridge' },
+          { name: 'Playa de Bondi' },
+          { name: 'Excursión a las Blue Mountains' },
+        ],
+      },
+      {
+        name: 'Gran Barrera de Coral', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/ISS-45_StoryOfWater%2C_Great_Barrier_Reef%2C_Australia.jpg/500px-ISS-45_StoryOfWater%2C_Great_Barrier_Reef%2C_Australia.jpg',
+        fact: 'Es el mayor sistema de arrecifes del mundo: se ve incluso desde el espacio.',
+        sights: [
+          { name: 'Buceo y snorkel en el arrecife' },
+          { name: 'Cairns y las islas Whitsundays' },
+          { name: 'Whitehaven Beach' },
+          { name: 'Vuelo sobre el Corazón del arrecife' },
+        ],
+      },
+      {
+        name: 'Uluru y el Outback', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/ULURU.jpg/500px-ULURU.jpg',
+        fact: 'Uluru es una roca sagrada para los aborígenes que cambia de color al atardecer.',
+        sights: [
+          { name: 'Atardecer en Uluru' },
+          { name: 'Cultura aborigen' },
+          { name: 'El Outback rojo' },
+          { name: 'Las cúpulas de Kata Tjuta' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Australia', url: 'https://www.australia.com/es-es' },
+      { label: 'Embajada de España en Australia', url: 'https://www.exteriores.gob.es/Embajadas/canberra' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
+  {
+    slug: 'nueva-zelanda', name: 'Nueva Zelanda', code: 'nz',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Milford_Sound_%28New_Zealand%29.JPG/1280px-Milford_Sound_%28New_Zealand%29.JPG',
+    imageAlt: 'Milford Sound, Nueva Zelanda',
+    capital: 'Wellington', currency: 'Dólar neozelandés (NZD)', language: 'Inglés y maorí', plug: 'Tipo I (230 V)', tz: 'UTC+12',
+    budget: 'Alto', bestMonths: 'Diciembre-Marzo (verano austral)',
+    difficulty: 'Media', duration: '14-21 días',
+    tags: ['Naturaleza', 'Aventura', 'Road trip', 'Montaña', 'En pareja'],
+    summary: 'Fiordos imposibles, glaciares, volcanes, lagos turquesa y los paisajes de "El Señor de los Anillos". Nueva Zelanda es el paraíso de la naturaleza y la aventura, perfecta para un road trip inolvidable.',
+    opinion:
+      'Nueva Zelanda es un parque de atracciones natural. En cada curva hay un paisaje de los que paras el coche para hacer fotos: fiordos, montañas nevadas, lagos imposibles, playas vacías… No es casualidad que rodaran aquí "El Señor de los Anillos". Mi consejo: alquila una autocaravana y recórrela sin prisa (la Isla Sur es la más espectacular). Y si te va la adrenalina, Queenstown es la capital mundial de los deportes extremos. Está lejísimos y no es barata, pero como destino de naturaleza, está en el top mundial.',
+    faq: [
+      { q: '¿Cuántos días para Nueva Zelanda?', a: 'Con 14-16 días ves las dos islas con calma. Si solo eliges una, que sea la Isla Sur (la más espectacular).' },
+      { q: '¿Cuándo es mejor ir?', a: 'Verano austral (diciembre-marzo) para senderismo y buen tiempo. Recuerda que las estaciones están invertidas.' },
+      { q: '¿Necesito visado?', a: 'Sí: hay que tramitar la autorización NZeTA online antes de viajar (es de pago).' },
+    ],
+    paperwork: ['Pasaporte en vigor', 'NZeTA obligatorio (online, de pago)', 'Seguro de viaje muy recomendable', 'Bioseguridad estricta (declara material orgánico)'],
+    visa: 'NZeTA obligatorio (online, de pago)',
+    internet: 'Bueno · eSIM recomendada',
+    difficultyNote: 'Media: segurísima y en inglés, ideal para un road trip en autocaravana. Lo único, está lejísimos y conviene alquilar coche porque las distancias son grandes.',
+    english: 'Es el idioma del país; cero barrera.',
+    budgetLevels: { mochilero: 60, normal: 110, comodo: 190, lujo: 360 },
+    climate: [
+      { m: 'Ene', r: 'good' }, { m: 'Feb', r: 'good' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'mid' },
+      { m: 'May', r: 'mid' }, { m: 'Jun', r: 'avoid' }, { m: 'Jul', r: 'avoid' }, { m: 'Ago', r: 'mid' },
+      { m: 'Sep', r: 'mid' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'good' }, { m: 'Dic', r: 'good' },
+    ],
+    cityGuides: [
+      {
+        name: 'Auckland y la Isla Norte', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Auckland_skyline_-_May_2024_%282%29.jpg/500px-Auckland_skyline_-_May_2024_%282%29.jpg',
+        fact: 'La llaman "la ciudad de las velas": tiene más barcos por habitante que ninguna otra.',
+        sights: [
+          { name: 'Sky Tower de Auckland' },
+          { name: 'Set de cine de Hobbiton' },
+          { name: 'Isla de Waiheke y sus viñedos' },
+          { name: 'Playas y volcanes cercanos' },
+        ],
+      },
+      {
+        name: 'Rotorua y la cultura maorí', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Government_Gardens_in_Rotorua_01.jpg/500px-Government_Gardens_in_Rotorua_01.jpg',
+        fact: 'Huele a azufre por su actividad geotérmica: géiseres y pozas humeantes por todas partes.',
+        sights: [
+          { name: 'Géiseres y pozas termales' },
+          { name: 'Cultura maorí (hangi y haka)' },
+          { name: 'Lagos y bosque de secuoyas' },
+          { name: 'Aguas termales naturales' },
+        ],
+      },
+      {
+        name: 'Queenstown y los fiordos', days: '4-5 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Queenstown_1_%288168013172%29.jpg/500px-Queenstown_1_%288168013172%29.jpg',
+        fact: 'Queenstown es la capital mundial de los deportes de aventura: aquí se inventó el puenting comercial.',
+        sights: [
+          { name: 'Puenting y deportes extremos' },
+          { name: 'Crucero por Milford Sound' },
+          { name: 'Alpes del Sur y glaciares' },
+          { name: 'Lago Wakatipu' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Nueva Zelanda', url: 'https://www.newzealand.com/es/' },
+      { label: 'Embajada de España en Nueva Zelanda', url: 'https://www.exteriores.gob.es/Embajadas/wellington' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
 ];
 
 export const countryBySlug = (slug: string) => COUNTRIES.find((c) => c.slug === slug);
