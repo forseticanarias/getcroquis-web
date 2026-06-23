@@ -3228,6 +3228,142 @@ export const COUNTRIES: Country[] = [
       { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
     ],
   },
+  {
+    slug: 'republica-checa', name: 'República Checa', code: 'cz',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Prague_%286365119737%29.jpg/1280px-Prague_%286365119737%29.jpg',
+    imageAlt: 'Vista de Praga, República Checa',
+    capital: 'Praga', currency: 'Corona checa (CZK)', language: 'Checo', plug: 'Tipo C/E (230 V)', tz: 'UTC+1',
+    budget: 'Medio', bestMonths: 'Mayo-Septiembre y Navidad (mercadillos)',
+    difficulty: 'Fácil', duration: '4-6 días',
+    tags: ['Ciudades', 'Cultura', 'Historia', 'Cerveza', 'En pareja'],
+    summary: 'Praga de cuento con su puente de Carlos y su castillo, pueblos medievales, cervecerías centenarias y mercadillos de Navidad mágicos. La República Checa es una de las escapadas con más encanto (y mejor precio) de Europa.',
+    opinion:
+      'Praga es de esas ciudades que parecen un decorado, y lo digo en el mejor sentido. Cruzar el puente de Carlos al amanecer, con la niebla y el castillo al fondo, es pura magia. Mi consejo: piérdete por sus callejones, métete en una cervecería tradicional (la cerveza checa es de las mejores y baratísimas) y, si tienes un par de días más, escápate a Český Krumlov, un pueblo medieval que parece detenido en el tiempo. Es compacta, segura y se disfruta mucho con poco presupuesto.',
+    faq: [
+      { q: '¿Cuántos días para la República Checa?', a: 'Con 3-4 días ves Praga a fondo. Si sumas Český Krumlov o Karlovy Vary, mejor 5-6.' },
+      { q: '¿Cuándo es mejor ir?', a: 'De mayo a septiembre por el buen tiempo, o en diciembre por los mercadillos de Navidad (con frío).' },
+      { q: '¿Hace falta visado?', a: 'No: está en Schengen, con el DNI español en vigor basta.' },
+    ],
+    paperwork: ['DNI o pasaporte en vigor (Schengen)', 'Sin visado para turismo', 'Tarjeta Sanitaria Europea recomendada', 'Sin vacunas obligatorias'],
+    visa: 'No requerido (DNI, Schengen)',
+    internet: 'Excelente · roaming UE sin coste extra',
+    difficultyNote: 'Muy fácil: segura, compacta y barata para lo que ofrece. Praga se ve a pie y el resto del país está bien conectado en tren.',
+    english: 'Bastante inglés en Praga; algo menos en los pueblos.',
+    budgetLevels: { mochilero: 50, normal: 90, comodo: 160, lujo: 300 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'good' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'mid' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Praga', days: '3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Karl%C5%AFv_most_Praha%2C_Star%C3%A9_M%C4%9Bsto_20170810_007.jpg/500px-Karl%C5%AFv_most_Praha%2C_Star%C3%A9_M%C4%9Bsto_20170810_007.jpg',
+        fact: 'El Castillo de Praga es, según el Guinness, el recinto de castillo más grande del mundo.',
+        sights: [
+          { name: 'Puente de Carlos al amanecer' },
+          { name: 'Castillo de Praga' },
+          { name: 'Reloj astronómico de la Plaza Vieja' },
+          { name: 'Barrio judío (Josefov)' },
+        ],
+      },
+      {
+        name: 'Český Krumlov', days: '1 día',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Historic_Centre_of_%C4%8Cesk%C3%BD_Krumlov-111747.jpg/500px-Historic_Centre_of_%C4%8Cesk%C3%BD_Krumlov-111747.jpg',
+        fact: 'Su casco medieval, abrazado por un meandro del río Moldava, es Patrimonio de la Humanidad.',
+        sights: [
+          { name: 'Casco medieval (Patrimonio)' },
+          { name: 'Castillo sobre el río Moldava' },
+          { name: 'Callejear sin rumbo' },
+          { name: 'Bajar el río en canoa' },
+        ],
+      },
+      {
+        name: 'Karlovy Vary', days: '1 día',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Karlovy_Vary_Czech.jpg/500px-Karlovy_Vary_Czech.jpg',
+        fact: 'Es la ciudad balneario más famosa del país, con manantiales termales que puedes beber.',
+        sights: [
+          { name: 'Manantiales termales' },
+          { name: 'Columnatas elegantes' },
+          { name: 'Licor Becherovka' },
+          { name: 'Ambiente de balneario imperial' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Chequia', url: 'https://www.visitczechia.com/es-ES' },
+      { label: 'Embajada de España en la República Checa', url: 'https://www.exteriores.gob.es/Embajadas/praga' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
+  {
+    slug: 'hungria', name: 'Hungría', code: 'hu',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/View_from_Gell%C3%A9rt_Hill_to_the_Danube%2C_Hungary_-_Budapest_%2828493220635%29.jpg/1280px-View_from_Gell%C3%A9rt_Hill_to_the_Danube%2C_Hungary_-_Budapest_%2828493220635%29.jpg',
+    imageAlt: 'Budapest y el Danubio desde la colina Gellért',
+    capital: 'Budapest', currency: 'Florín (HUF)', language: 'Húngaro', plug: 'Tipo C/F (230 V)', tz: 'UTC+1',
+    budget: 'Medio', bestMonths: 'Abril-Octubre',
+    difficulty: 'Fácil', duration: '4-6 días',
+    tags: ['Ciudades', 'Cultura', 'Baños termales', 'En pareja', 'Barato'],
+    summary: 'Budapest partida por el Danubio, baños termales centenarios, bares en ruinas y una de las mejores relaciones belleza-precio de Europa. Hungría es una escapada urbana redonda y mucho más barata de lo que imaginas.',
+    opinion:
+      'Budapest es, para mí, una de las capitales más bonitas y agradecidas de Europa. La vista del Parlamento iluminado sobre el Danubio de noche quita el hipo. Y tiene un puntazo único: puedes pasar la mañana viendo monumentos y la tarde relajándote en unos baños termales como los Széchenyi, en plena ciudad. Mi consejo: cruza el Danubio para ver Buda y Pest, métete en algún "ruin bar" por la noche y aprovecha lo barato que sale todo. Para una escapada de 3-4 días es perfecta.',
+    faq: [
+      { q: '¿Cuántos días para Hungría?', a: 'Con 3-4 días ves Budapest con calma, incluyendo baños termales. Si sumas el lago Balaton o Eger, añade un par de días.' },
+      { q: '¿Cuándo es mejor ir?', a: 'De abril a octubre por el buen tiempo. El invierno es frío pero los baños termales se disfrutan igual.' },
+      { q: '¿Hace falta visado?', a: 'No: está en Schengen, con el DNI español en vigor basta.' },
+    ],
+    paperwork: ['DNI o pasaporte en vigor (Schengen)', 'Sin visado para turismo', 'Tarjeta Sanitaria Europea recomendada', 'Sin vacunas obligatorias'],
+    visa: 'No requerido (DNI, Schengen)',
+    internet: 'Excelente · roaming UE sin coste extra',
+    difficultyNote: 'Muy fácil: una de las capitales más bonitas y baratas de Europa, perfecta para una escapada. Budapest se recorre a pie y en metro.',
+    english: 'Bastante inglés en Budapest, sobre todo entre los jóvenes.',
+    budgetLevels: { mochilero: 45, normal: 85, comodo: 150, lujo: 280 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'good' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Budapest', days: '3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Hungarian_Parliament_Building_from_across_the_Danube%2C_2025-01-11.jpg/500px-Hungarian_Parliament_Building_from_across_the_Danube%2C_2025-01-11.jpg',
+        fact: 'Nació de la unión de tres ciudades (Buda, Óbuda y Pest) a ambos lados del Danubio.',
+        sights: [
+          { name: 'Parlamento sobre el Danubio' },
+          { name: 'Bastión de los Pescadores' },
+          { name: 'Castillo de Buda' },
+          { name: 'Ruin bars por la noche' },
+        ],
+      },
+      {
+        name: 'Los baños termales', days: '1 día',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Budapest_Sz%C3%A9chenyi_Baths_R02.jpg/500px-Budapest_Sz%C3%A9chenyi_Baths_R02.jpg',
+        fact: 'Budapest es la "ciudad de los balnearios": tiene más de 100 manantiales termales.',
+        sights: [
+          { name: 'Baños Széchenyi' },
+          { name: 'Baños Gellért (art nouveau)' },
+          { name: 'Relax en aguas termales' },
+          { name: 'Fiestas "sparty" nocturnas' },
+        ],
+      },
+      {
+        name: 'Lago Balaton y el campo', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Balaton_Hungary_Landscape.jpg/500px-Balaton_Hungary_Landscape.jpg',
+        fact: 'El Balaton es el lago más grande de Europa central, el "mar" de los húngaros.',
+        sights: [
+          { name: 'Playas del lago Balaton' },
+          { name: 'Viñedos y vino húngaro' },
+          { name: 'Ciudad barroca de Eger' },
+          { name: 'Pueblos con encanto' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Hungría', url: 'https://visithungary.com/' },
+      { label: 'Embajada de España en Hungría', url: 'https://www.exteriores.gob.es/Embajadas/budapest' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
 ];
 
 export const countryBySlug = (slug: string) => COUNTRIES.find((c) => c.slug === slug);
