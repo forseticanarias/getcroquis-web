@@ -3500,6 +3500,143 @@ export const COUNTRIES: Country[] = [
       { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
     ],
   },
+  {
+    slug: 'singapur', name: 'Singapur', code: 'sg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Marina_Bay_Sands_%28I%29.jpg/1280px-Marina_Bay_Sands_%28I%29.jpg',
+    imageAlt: 'Marina Bay Sands, Singapur',
+    capital: 'Singapur', currency: 'Dólar de Singapur (SGD)', language: 'Inglés, malayo, mandarín y tamil', plug: 'Tipo G (230 V)', tz: 'UTC+8',
+    budget: 'Alto', bestMonths: 'Febrero-Abril (clima tropical todo el año)',
+    difficulty: 'Fácil', duration: '3-5 días',
+    tags: ['Ciudades', 'Gastronómico', 'Familia', 'Lujo', 'Compras'],
+    summary: 'Una ciudad-estado futurista donde conviven rascacielos, jardines imposibles, templos y la mejor comida callejera de Asia. Singapur es limpísima, segura y la escala perfecta de camino a otros destinos asiáticos.',
+    opinion:
+      'Singapur es el futuro hecho ciudad, pero con alma. Impresiona ver la piscina infinita del Marina Bay Sands o los Supertrees iluminándose de noche, y a la vez te pierdes en Chinatown o Little India y parece otro mundo. Mi consejo: aunque es cara para dormir, comer es baratísimo y espectacular en los "hawker centres" (mercados de comida) que tienen hasta estrellas Michelin. Con 3-4 días la exprimes, y va genial como escala para romper un vuelo largo a Asia o Australia. Limpia, segura y facilísima.',
+    faq: [
+      { q: '¿Cuántos días para Singapur?', a: 'Con 3-4 días ves lo principal sin agobios. Es ideal como escala de 2-3 días de camino a Indonesia, Australia o Tailandia.' },
+      { q: '¿Cuándo es mejor ir?', a: 'Es tropical todo el año (calor y humedad). Febrero-abril suele ser algo más seco. Llueve en cualquier época, pero a ratos.' },
+      { q: '¿Necesito visado?', a: 'No para turismo: los españoles pueden estar hasta 90 días solo con el pasaporte.' },
+    ],
+    paperwork: ['Pasaporte con al menos 6 meses de validez', 'Sin visado para turismo (hasta 90 días)', 'Tarjeta de llegada SG Arrival Card (online, gratis)', 'Leyes muy estrictas: respeta las normas (multas altas)'],
+    visa: 'No requerido hasta 90 días (turismo)',
+    internet: 'Excelente · eSIM recomendada',
+    difficultyNote: 'Facilísima: de los países más seguros, limpios y organizados del mundo, y todo en inglés. Es cara para dormir, pero la comida en los "hawker centres" es barata y espectacular.',
+    english: 'El inglés es idioma oficial; cero barrera.',
+    budgetLevels: { mochilero: 60, normal: 110, comodo: 200, lujo: 400 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'good' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'good' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Marina Bay y los jardines', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Supertree_Grove%2C_Gardens_by_the_Bay%2C_Singapore_-_20120712-02.jpg/500px-Supertree_Grove%2C_Gardens_by_the_Bay%2C_Singapore_-_20120712-02.jpg',
+        fact: 'Los Supertrees son árboles artificiales de hasta 50 m que se iluminan en un espectáculo nocturno.',
+        sights: [
+          { name: 'Piscina infinita del Marina Bay Sands' },
+          { name: 'Supertrees de Gardens by the Bay' },
+          { name: 'Espectáculo de luces nocturno' },
+          { name: 'La estatua del Merlion' },
+        ],
+      },
+      {
+        name: 'Barrios con alma', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Aerial_perspective_of_Singapore%27s_Chinatown.jpg/500px-Aerial_perspective_of_Singapore%27s_Chinatown.jpg',
+        fact: 'En unos pocos km conviven culturas china, india, malaya y árabe, cada una con su barrio.',
+        sights: [
+          { name: 'Chinatown y sus templos' },
+          { name: 'Little India' },
+          { name: 'Barrio árabe (Kampong Glam)' },
+          { name: 'Comer en un hawker centre' },
+        ],
+      },
+      {
+        name: 'Sentosa y ocio', days: '1 día',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/1_sentosa_aerial_2016.jpg/500px-1_sentosa_aerial_2016.jpg',
+        fact: 'Sentosa es una isla de ocio con parques temáticos, playas y acuario, pegada a la ciudad.',
+        sights: [
+          { name: 'Universal Studios Singapur' },
+          { name: 'Playas de Sentosa' },
+          { name: 'Acuario S.E.A.' },
+          { name: 'Teleférico con vistas' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Singapur', url: 'https://www.visitsingapore.com/es_es/' },
+      { label: 'Embajada de España en Singapur', url: 'https://www.exteriores.gob.es/Embajadas/singapur' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
+  {
+    slug: 'polonia', name: 'Polonia', code: 'pl',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Krakow_Rynek_Glowny_panorama_2.jpg/1280px-Krakow_Rynek_Glowny_panorama_2.jpg',
+    imageAlt: 'Plaza del Mercado de Cracovia, Polonia',
+    capital: 'Varsovia', currency: 'Esloti (PLN)', language: 'Polaco', plug: 'Tipo C/E (230 V)', tz: 'UTC+1',
+    budget: 'Bajo', bestMonths: 'Mayo-Septiembre',
+    difficulty: 'Fácil', duration: '5-7 días',
+    tags: ['Ciudades', 'Cultura', 'Historia', 'Barato', 'Memoria'],
+    summary: 'La preciosa Cracovia, la reconstruida Varsovia, la mina de sal de Wieliczka y la memoria de Auschwitz. Polonia es historia intensa, ciudades con muchísimo encanto y una de las mejores relaciones calidad-precio de Europa.',
+    opinion:
+      'Polonia sorprende a todo el que la visita, y suele ser mucho más barata de lo que esperas. Cracovia es una pasada: su plaza del mercado es de las más grandes y bonitas de Europa, con un ambiente joven y animado. Mi consejo: dedica tiempo a Cracovia y, desde allí, haz la visita a Auschwitz-Birkenau; es dura y sobrecoge, pero es de esas experiencias que todo el mundo debería vivir una vez. Y baja a la mina de sal de Wieliczka, que es alucinante. Por precio, historia y belleza, un viajazo poco valorado.',
+    faq: [
+      { q: '¿Cuántos días para Polonia?', a: 'Con 4-5 días ves Cracovia (con Auschwitz y Wieliczka) y Varsovia. Si sumas Gdansk y la costa, una semana.' },
+      { q: '¿Cuándo es mejor ir?', a: 'De mayo a septiembre por el buen tiempo. El invierno es muy frío, aunque los mercadillos de Navidad tienen su encanto.' },
+      { q: '¿Hace falta visado?', a: 'No: está en Schengen, con el DNI español en vigor basta.' },
+    ],
+    paperwork: ['DNI o pasaporte en vigor (Schengen)', 'Sin visado para turismo', 'Tarjeta Sanitaria Europea recomendada', 'Sin vacunas obligatorias'],
+    visa: 'No requerido (DNI, Schengen)',
+    internet: 'Excelente · roaming UE sin coste extra',
+    difficultyNote: 'Muy fácil: segura, con muchísima historia y de las más baratas de Europa. Cracovia es una joya y la visita a Auschwitz, dura pero necesaria.',
+    english: 'Bastante inglés en las ciudades, sobre todo entre los jóvenes.',
+    budgetLevels: { mochilero: 40, normal: 75, comodo: 140, lujo: 260 },
+    climate: [
+      { m: 'Ene', r: 'avoid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'good' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'mid' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Cracovia', days: '3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Wawel_%284%29.jpg/500px-Wawel_%284%29.jpg',
+        fact: 'Su plaza del Mercado (Rynek) es la mayor plaza medieval de Europa.',
+        sights: [
+          { name: 'Plaza del Mercado (Rynek)' },
+          { name: 'Castillo de Wawel' },
+          { name: 'Barrio judío de Kazimierz' },
+          { name: 'Mina de sal de Wieliczka' },
+          { name: 'Auschwitz-Birkenau (memoria)' },
+        ],
+      },
+      {
+        name: 'Varsovia', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Aleja_Niepdleglosci_Warsaw_2022_aerial_%28cropped%29.jpg/500px-Aleja_Niepdleglosci_Warsaw_2022_aerial_%28cropped%29.jpg',
+        fact: 'Su casco antiguo fue reconstruido piedra a piedra tras quedar arrasado en la guerra.',
+        sights: [
+          { name: 'Casco antiguo reconstruido (Patrimonio)' },
+          { name: 'Castillo Real' },
+          { name: 'Parque Łazienki' },
+          { name: 'Museo del Levantamiento de Varsovia' },
+        ],
+      },
+      {
+        name: 'Gdansk y la costa', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Calle_Dlugie_Pobrzeze%2C_Gdansk%2C_Polonia%2C_2013-05-20%2C_DD_06.jpg/500px-Calle_Dlugie_Pobrzeze%2C_Gdansk%2C_Polonia%2C_2013-05-20%2C_DD_06.jpg',
+        fact: 'Es la capital mundial del ámbar y una de las ciudades hanseáticas más bonitas del Báltico.',
+        sights: [
+          { name: 'Casco antiguo de colores' },
+          { name: 'Calle Dluga' },
+          { name: 'Costa del mar Báltico' },
+          { name: 'Mercado del ámbar' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Polonia', url: 'https://www.poland.travel/es' },
+      { label: 'Embajada de España en Polonia', url: 'https://www.exteriores.gob.es/Embajadas/varsovia' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
 ];
 
 export const countryBySlug = (slug: string) => COUNTRIES.find((c) => c.slug === slug);
