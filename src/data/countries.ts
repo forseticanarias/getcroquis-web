@@ -2820,6 +2820,142 @@ export const COUNTRIES: Country[] = [
       { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
     ],
   },
+  {
+    slug: 'kenia', name: 'Kenia', code: 'ke',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Masai_Mara_at_Sunset.jpg/1280px-Masai_Mara_at_Sunset.jpg',
+    imageAlt: 'Atardecer en el Masái Mara, Kenia',
+    capital: 'Nairobi', currency: 'Chelín keniano (KES)', language: 'Suajili e inglés', plug: 'Tipo G (240 V)', tz: 'UTC+3',
+    budget: 'Medio', bestMonths: 'Julio-Octubre (Gran Migración) y Enero-Febrero',
+    difficulty: 'Media', duration: '8-12 días',
+    tags: ['Safari', 'Naturaleza', 'Playa', 'Aventura', 'En pareja'],
+    summary: 'La cuna del safari: el Masái Mara, la Gran Migración, los Big Five y playas paradisíacas en el Índico. Kenia es África en estado puro, con sabanas infinitas y una vida salvaje que sobrecoge.',
+    opinion:
+      'Kenia es el safari de tus sueños hecho realidad. Ver una manada de elefantes cruzar la sabana o un león al atardecer en el Masái Mara es una de esas experiencias que te cambian la forma de ver el mundo. Y si coincides con la Gran Migración, lo de los ñus cruzando el río es de lo más espectacular de la naturaleza. Mi consejo: contrata el safari con una agencia seria, combina un par de parques y remata con unos días de playa en la costa (Diani es un paraíso). Pon la profilaxis de la malaria y ve con la cámara cargada.',
+    faq: [
+      { q: '¿Cuántos días para Kenia?', a: 'Con 8-10 días haces safari en un par de parques y sumas playa en la costa. El Masái Mara es imprescindible.' },
+      { q: '¿Cuándo es mejor ir?', a: 'Julio-octubre por la Gran Migración y enero-febrero por el clima seco. Evita las lluvias largas (abril-mayo).' },
+      { q: '¿Necesito visado?', a: 'Sí: hay que tramitar la autorización eTA online antes de viajar (es de pago y sencilla).' },
+    ],
+    paperwork: ['Pasaporte con al menos 6 meses de validez', 'eTA obligatoria (online, de pago)', 'Seguro de viaje imprescindible', 'Profilaxis de malaria y vacunas recomendadas (consulta)'],
+    visa: 'eTA obligatoria (online, de pago)',
+    internet: 'Aceptable · eSIM recomendada',
+    difficultyNote: 'Media: el safari se organiza fácil con agencias, pero hay que informarse de la seguridad en Nairobi y poner profilaxis de malaria.',
+    english: 'El inglés es idioma oficial; te entiendes sin problema.',
+    budgetLevels: { mochilero: 50, normal: 100, comodo: 180, lujo: 400 },
+    climate: [
+      { m: 'Ene', r: 'good' }, { m: 'Feb', r: 'good' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'avoid' },
+      { m: 'May', r: 'avoid' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'good' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'good' },
+    ],
+    cityGuides: [
+      {
+        name: 'Safari: Masái Mara', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Lake-Nakuru-Baboon-Hill-View.JPG/500px-Lake-Nakuru-Baboon-Hill-View.JPG',
+        fact: 'Cada año, más de un millón de ñus cruzan la sabana en la Gran Migración.',
+        sights: [
+          { name: 'La Gran Migración de los ñus (jul-oct)' },
+          { name: 'Ver los Big Five' },
+          { name: 'Globo aerostático al amanecer' },
+          { name: 'Flamencos del lago Nakuru' },
+        ],
+      },
+      {
+        name: 'Nairobi', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Nairobi_skyline_from_Gem_Hotel.jpg/500px-Nairobi_skyline_from_Gem_Hotel.jpg',
+        fact: 'Es la única capital del mundo con un parque nacional de fauna salvaje dentro de la ciudad.',
+        sights: [
+          { name: 'Parque Nacional de Nairobi' },
+          { name: 'Orfanato de elefantes (Sheldrick)' },
+          { name: 'Jirafas en el Giraffe Centre' },
+          { name: 'Mercados y artesanía' },
+        ],
+      },
+      {
+        name: 'Costa: Diani y Mombasa', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Diani_Beach_Ukunda.jpg/500px-Diani_Beach_Ukunda.jpg',
+        fact: 'Sus playas de arena blanca en el Índico están entre las mejores de África.',
+        sights: [
+          { name: 'Playas de Diani' },
+          { name: 'Ciudad vieja de Mombasa' },
+          { name: 'Arrecifes para bucear' },
+          { name: 'Paseos en dhow tradicional' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Kenia', url: 'https://magicalkenya.com/' },
+      { label: 'Embajada de España en Kenia', url: 'https://www.exteriores.gob.es/Embajadas/nairobi' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
+  {
+    slug: 'sri-lanka', name: 'Sri Lanka', code: 'lk',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Sigiriya_%28141688197%29.jpeg/1280px-Sigiriya_%28141688197%29.jpeg',
+    imageAlt: 'La roca de Sigiriya, Sri Lanka',
+    capital: 'Colombo', currency: 'Rupia de Sri Lanka (LKR)', language: 'Cingalés y tamil', plug: 'Tipo D/G/M (230 V)', tz: 'UTC+5:30',
+    budget: 'Bajo', bestMonths: 'Diciembre-Marzo (sur y oeste)',
+    difficulty: 'Media', duration: '12-16 días',
+    tags: ['Naturaleza', 'Playa', 'Cultura', 'Té', 'Barato'],
+    summary: 'Una isla que lo tiene todo: la roca-fortaleza de Sigiriya, trenes que cruzan montañas de té, templos budistas, safaris de leopardos y playas de surf. Sri Lanka es una concentración brutal de paisajes en poco espacio.',
+    opinion:
+      'Sri Lanka es de los viajes con mejor relación variedad-precio que existen. En dos semanas pasas de trepar a la roca de Sigiriya, a cruzar plantaciones de té en uno de los trenes más bonitos del mundo, a tumbarte en una playa de surf en el sur. Mi consejo: no corras, que las carreteras tienen muchas curvas y los trenes van lentos (pero el viaje es parte del espectáculo). La gente es dulce, la comida (el rice & curry) está buenísima y todo cuesta muy poco. Una joya.',
+    faq: [
+      { q: '¿Cuántos días para Sri Lanka?', a: 'Con 12-14 días combinas el triángulo cultural, las montañas de té (Ella) y las playas del sur. La isla es pequeña pero se va despacio.' },
+      { q: '¿Cuándo es mejor ir?', a: 'De diciembre a marzo para el sur y el oeste. La isla tiene dos monzones, así que la mejor costa cambia según el mes.' },
+      { q: '¿Necesito visado?', a: 'Sí: hay que tramitar la autorización ETA / e-Visa online antes de viajar (de pago).' },
+    ],
+    paperwork: ['Pasaporte con al menos 6 meses de validez', 'ETA / e-Visa obligatorio (online, de pago)', 'Seguro de viaje muy recomendable', 'Sin vacunas obligatorias'],
+    visa: 'ETA / e-Visa obligatorio (online, de pago)',
+    internet: 'Aceptable · eSIM recomendada',
+    difficultyNote: 'Media: pequeña pero intensa, con trenes lentos pero preciosos y carreteras con muchas curvas. Barata, segura y con una variedad brutal en poco espacio.',
+    english: 'Bastante inglés (herencia británica); te apañas bien.',
+    budgetLevels: { mochilero: 25, normal: 50, comodo: 100, lujo: 220 },
+    climate: [
+      { m: 'Ene', r: 'good' }, { m: 'Feb', r: 'good' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'mid' },
+      { m: 'May', r: 'avoid' }, { m: 'Jun', r: 'mid' }, { m: 'Jul', r: 'mid' }, { m: 'Ago', r: 'mid' },
+      { m: 'Sep', r: 'mid' }, { m: 'Oct', r: 'avoid' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'good' },
+    ],
+    cityGuides: [
+      {
+        name: 'Triángulo cultural', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/SL_Kandy_asv2020-01_img04_Queens_Hotel.jpg/500px-SL_Kandy_asv2020-01_img04_Queens_Hotel.jpg',
+        fact: 'La roca de Sigiriya esconde en su cima las ruinas de un palacio real del siglo V.',
+        sights: [
+          { name: 'Subir a la roca de Sigiriya' },
+          { name: 'Templo del Diente de Buda (Kandy)' },
+          { name: 'Ciudades antiguas (Anuradhapura, Polonnaruwa)' },
+          { name: 'Templo cueva de Dambulla' },
+        ],
+      },
+      {
+        name: 'Ella y las montañas de té', days: '3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Ella_railway_station.jpg/500px-Ella_railway_station.jpg',
+        fact: 'El tren de Kandy a Ella está considerado uno de los trayectos más bonitos del mundo.',
+        sights: [
+          { name: 'Tren panorámico Kandy-Ella' },
+          { name: 'Puente de los Nueve Arcos' },
+          { name: 'Plantaciones de té de Nuwara Eliya' },
+          { name: "Senderismo a Little Adam's Peak" },
+        ],
+      },
+      {
+        name: 'El Sur: Galle y playas', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Galle_Fort.jpg/500px-Galle_Fort.jpg',
+        fact: 'El fuerte de Galle, construido por los holandeses, es Patrimonio de la Humanidad.',
+        sights: [
+          { name: 'Fuerte colonial de Galle' },
+          { name: 'Playas de Mirissa y Unawatuna' },
+          { name: 'Avistamiento de ballenas azules' },
+          { name: 'Surf en Weligama' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Sri Lanka', url: 'https://www.srilanka.travel/' },
+      { label: 'Embajada de España (concurrente en Nueva Delhi)', url: 'https://www.exteriores.gob.es/Embajadas/nuevadelhi' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
 ];
 
 export const countryBySlug = (slug: string) => COUNTRIES.find((c) => c.slug === slug);
