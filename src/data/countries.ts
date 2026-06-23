@@ -2956,6 +2956,142 @@ export const COUNTRIES: Country[] = [
       { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
     ],
   },
+  {
+    slug: 'tanzania', name: 'Tanzania', code: 'tz',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Kilimanjaro_from_Amboseli.jpg/1280px-Kilimanjaro_from_Amboseli.jpg',
+    imageAlt: 'El Kilimanjaro sobre la sabana',
+    capital: 'Dodoma', currency: 'Chelín tanzano (TZS)', language: 'Suajili e inglés', plug: 'Tipo D/G (230 V)', tz: 'UTC+3',
+    budget: 'Medio-alto', bestMonths: 'Junio-Octubre (safari) y Enero-Febrero',
+    difficulty: 'Media', duration: '8-12 días',
+    tags: ['Safari', 'Naturaleza', 'Playa', 'Aventura', 'En pareja'],
+    summary: 'El Serengeti, el cráter del Ngorongoro, el techo de África en el Kilimanjaro y las playas turquesa de Zanzíbar. Tanzania ofrece la combinación de safari y playa más espectacular del planeta.',
+    opinion:
+      'Tanzania es un viaje de los que se quedan grabados para siempre. El Serengeti es la imagen del safari que todos tenemos en la cabeza: llanuras infinitas con animales hasta donde alcanza la vista. Y el cráter del Ngorongoro es como un arca de Noé natural, con una concentración de fauna increíble. Mi consejo: remata el safari con unos días en Zanzíbar, que pasar de los leones a una playa de postal en un par de horas de vuelo es un lujazo. Es un viaje caro, pero de los que valen cada euro. Y si te atreves, ahí está el Kilimanjaro.',
+    faq: [
+      { q: '¿Cuántos días para Tanzania?', a: 'Con 8-10 días haces safari (Serengeti, Ngorongoro) y unos días de playa en Zanzíbar. Subir el Kilimanjaro requiere 6-7 días aparte.' },
+      { q: '¿Cuándo es mejor ir?', a: 'Junio-octubre (estación seca) para el safari y la migración. Evita las lluvias largas de marzo-mayo.' },
+      { q: '¿Necesito visado?', a: 'Sí: e-Visa online o visado a la llegada, ambos de pago.' },
+    ],
+    paperwork: ['Pasaporte con al menos 6 meses de validez', 'e-Visa o visado a la llegada (de pago)', 'Seguro de viaje imprescindible', 'Fiebre amarilla y profilaxis de malaria (consulta)'],
+    visa: 'e-Visa o visado a la llegada (de pago)',
+    internet: 'Aceptable · eSIM recomendada',
+    difficultyNote: 'Media: el safari y Zanzíbar se organizan fácil, pero es un viaje caro y hay que poner profilaxis de malaria. La combinación safari + playa es de las mejores del mundo.',
+    english: 'El inglés es idioma cooficial; te entiendes sin problema.',
+    budgetLevels: { mochilero: 55, normal: 110, comodo: 200, lujo: 450 },
+    climate: [
+      { m: 'Ene', r: 'good' }, { m: 'Feb', r: 'good' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'avoid' },
+      { m: 'May', r: 'avoid' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'good' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'good' },
+    ],
+    cityGuides: [
+      {
+        name: 'Serengeti y safari', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Tanzania-_Serengeti_National_Park-_elefante.jpg/500px-Tanzania-_Serengeti_National_Park-_elefante.jpg',
+        fact: 'En el Serengeti ocurre la Gran Migración: más de un millón de ñus y cebras en movimiento.',
+        sights: [
+          { name: 'La Gran Migración en el Serengeti' },
+          { name: 'Ver los Big Five' },
+          { name: 'Globo aerostático al amanecer' },
+          { name: 'Manadas hasta el horizonte' },
+        ],
+      },
+      {
+        name: 'Ngorongoro', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Ngorongoro-1001-2.jpg/500px-Ngorongoro-1001-2.jpg',
+        fact: 'Su cráter es la caldera volcánica intacta más grande del mundo, un "arca de Noé" natural.',
+        sights: [
+          { name: 'Cráter del Ngorongoro' },
+          { name: 'Fauna concentrada todo el año' },
+          { name: 'Rinocerontes negros' },
+          { name: 'Poblados masái' },
+        ],
+      },
+      {
+        name: 'Zanzíbar', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Zanzibar_sultan_palace.jpg/500px-Zanzibar_sultan_palace.jpg',
+        fact: 'La "isla de las especias" tiene un casco antiguo, Stone Town, que es Patrimonio de la Humanidad.',
+        sights: [
+          { name: 'Stone Town (Patrimonio)' },
+          { name: 'Playas de Nungwi y Kendwa' },
+          { name: 'Granjas de especias' },
+          { name: 'Buceo y snorkel en el arrecife' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Tanzania', url: 'https://www.tanzaniatourism.go.tz/' },
+      { label: 'Embajada de España en Tanzania', url: 'https://www.exteriores.gob.es/Embajadas/daressalam' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
+  {
+    slug: 'maldivas', name: 'Maldivas', code: 'mv',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/AriAtoll.jpg/1280px-AriAtoll.jpg',
+    imageAlt: 'Atolón de coral en Maldivas',
+    capital: 'Malé', currency: 'Rupia de Maldivas (MVR)', language: 'Dhivehi', plug: 'Tipo D/G/J/L (230 V)', tz: 'UTC+5',
+    budget: 'Alto', bestMonths: 'Noviembre-Abril (estación seca)',
+    difficulty: 'Fácil', duration: '5-8 días',
+    tags: ['Playa', 'Lujo', 'Buceo', 'En pareja', 'Luna de miel'],
+    summary: 'Mil doscientas islas de coral, agua turquesa transparente, bungalows sobre el mar y arrecifes llenos de vida. Maldivas es el paraíso de postal por excelencia, ideal para una luna de miel o desconectar del todo.',
+    opinion:
+      'Maldivas es ese sitio que ves en las fotos y piensas "eso no puede ser real"… y luego llegas y lo es. Agua de un azul imposible, peces de colores nada más meter la cabeza y una calma total. Mi consejo honesto: no tiene por qué arruinarte. Los resorts de bungalow sobre el agua son carísimos, pero desde que se abrieron las islas locales (como Maafushi) puedes vivir el paraíso por mucho menos, durmiendo en guesthouses. Eso sí, en isla local respeta las normas (es un país musulmán). Para snorkel y buceo, no hay rival.',
+    faq: [
+      { q: '¿Cuántos días para Maldivas?', a: 'Con 5-7 días desconectas de sobra. Muchos lo combinan como remate de playa tras Sri Lanka o Dubái.' },
+      { q: '¿Es solo para ricos?', a: 'No necesariamente: los resorts de lujo son caros, pero las islas locales (Maafushi) permiten disfrutarlo con presupuesto medio.' },
+      { q: '¿Necesito visado?', a: 'No: se concede un visado gratuito a la llegada para 30 días.' },
+    ],
+    paperwork: ['Pasaporte con al menos 6 meses de validez', 'Visado gratuito a la llegada (30 días)', 'Billete de salida y reserva de alojamiento', 'En islas locales, respeta el código de vestimenta'],
+    visa: 'Gratis a la llegada (30 días)',
+    internet: 'Bueno en resorts · eSIM recomendada',
+    difficultyNote: 'Facilísima: llegas, te recogen y a relajarte. Lo único a decidir es resort de lujo (carísimo) o isla local (Maafushi), mucho más barata.',
+    english: 'Mucho inglés en el sector turístico. Sin barrera.',
+    budgetLevels: { mochilero: 90, normal: 180, comodo: 350, lujo: 800 },
+    climate: [
+      { m: 'Ene', r: 'good' }, { m: 'Feb', r: 'good' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'mid' }, { m: 'Jun', r: 'mid' }, { m: 'Jul', r: 'mid' }, { m: 'Ago', r: 'mid' },
+      { m: 'Sep', r: 'avoid' }, { m: 'Oct', r: 'mid' }, { m: 'Nov', r: 'good' }, { m: 'Dic', r: 'good' },
+    ],
+    cityGuides: [
+      {
+        name: 'Atolones y resorts', days: '3-5 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Kuramathi_Beach_%28Lagoon%29_001.jpg/500px-Kuramathi_Beach_%28Lagoon%29_001.jpg',
+        fact: 'El país se reparte en unos 26 atolones de coral; muchos resorts ocupan una isla entera.',
+        sights: [
+          { name: 'Bungalow sobre el agua' },
+          { name: 'Snorkel en la casa-arrecife' },
+          { name: 'Cena en la playa' },
+          { name: 'Spa sobre el mar' },
+        ],
+      },
+      {
+        name: 'Malé, la capital', days: '1 día',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Mal%C3%A9.jpg/500px-Mal%C3%A9.jpg',
+        fact: 'Es una de las capitales más pequeñas y densamente pobladas del mundo, sobre una sola isla.',
+        sights: [
+          { name: 'Mercado de pescado' },
+          { name: 'Mezquita de coral' },
+          { name: 'Paseo por la capital' },
+          { name: 'Puerta de entrada al país' },
+        ],
+      },
+      {
+        name: 'Islas locales y vida marina', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Malediven_R%C3%BCckflug_Hulhumale_6.jpg/500px-Malediven_R%C3%BCckflug_Hulhumale_6.jpg',
+        fact: 'En Maafushi y otras islas locales puedes vivir Maldivas por una fracción del precio.',
+        sights: [
+          { name: 'Isla local de Maafushi' },
+          { name: 'Buceo con mantas y tiburón ballena' },
+          { name: 'Plancton bioluminiscente' },
+          { name: 'Bancos de arena en mitad del mar' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Maldivas', url: 'https://visitmaldives.com/' },
+      { label: 'Embajada de España (concurrente en Nueva Delhi)', url: 'https://www.exteriores.gob.es/Embajadas/nuevadelhi' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
 ];
 
 export const countryBySlug = (slug: string) => COUNTRIES.find((c) => c.slug === slug);

@@ -5,11 +5,11 @@ import { COUNTRIES } from '../../data/countries';
 // Continente por código ISO y eslogan con gancho por país (más atractivo que los
 // meses). Agrupamos por continente (alfabético) y ordenamos países alfabéticamente.
 const CONT: Record<string, string> = {
-  jp: 'Asia', th: 'Asia', vn: 'Asia', tr: 'Asia', id: 'Asia', ae: 'Asia', ph: 'Asia', in: 'Asia', cn: 'Asia', kr: 'Asia', jo: 'Asia', kh: 'Asia', lk: 'Asia',
+  jp: 'Asia', th: 'Asia', vn: 'Asia', tr: 'Asia', id: 'Asia', ae: 'Asia', ph: 'Asia', in: 'Asia', cn: 'Asia', kr: 'Asia', jo: 'Asia', kh: 'Asia', lk: 'Asia', mv: 'Asia',
   eg: 'África',
   it: 'Europa', is: 'Europa', fr: 'Europa', es: 'Europa', gr: 'Europa', pt: 'Europa', hr: 'Europa', no: 'Europa', ie: 'Europa', de: 'Europa', nl: 'Europa', ch: 'Europa',
   mx: 'América', pe: 'América', us: 'América', co: 'América', ar: 'América', cr: 'América', br: 'América', cu: 'América',
-  ma: 'África', za: 'África', ke: 'África',
+  ma: 'África', za: 'África', ke: 'África', tz: 'África',
   gb: 'Europa',
 };
 const TAGLINES: Record<string, string> = {
@@ -51,6 +51,8 @@ const TAGLINES: Record<string, string> = {
   camboya: 'Angkor y templos en la selva',
   kenia: 'Safari, sabana y Big Five',
   'sri-lanka': 'Té, templos y playas de surf',
+  tanzania: 'Serengeti, Kilimanjaro y Zanzíbar',
+  maldivas: 'Atolones de agua turquesa',
 };
 
 const CONT_ORDER = ['África', 'América', 'Asia', 'Europa', 'Oceanía'];
