@@ -8,6 +8,8 @@ export const SITE = {
   title: 'getcroquis · Planifica tu viaje con IA, guías y consejos',
   description:
     'Crea tu itinerario con IA: presupuesto, guías de preparación y consejos para viajar mejor y más barato. Descubre viajes reales, cópialos y compártelos. Tu referente de viajes.',
+  // Redes sociales de la marca (cambia el handle aquí en un solo sitio).
+  instagram: 'https://instagram.com/getcroquis',
 };
 
 // "Ranking de necesidades" del viaje: informativo y discreto (no botones de
