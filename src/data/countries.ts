@@ -4181,6 +4181,142 @@ export const COUNTRIES: Country[] = [
       { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
     ],
   },
+  {
+    slug: 'eslovenia', name: 'Eslovenia', code: 'si',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Lake_Bled_from_the_Mountain.jpg/1280px-Lake_Bled_from_the_Mountain.jpg',
+    imageAlt: 'Lago Bled, Eslovenia',
+    capital: 'Liubliana', currency: 'Euro (EUR)', language: 'Esloveno', plug: 'Tipo C/F (230 V)', tz: 'UTC+1',
+    budget: 'Medio', bestMonths: 'Mayo-Septiembre',
+    difficulty: 'Fácil', duration: '5-7 días',
+    tags: ['Naturaleza', 'Montaña', 'Lagos', 'En pareja', 'Aventura'],
+    summary: 'El lago Bled con su islita y su castillo, los Alpes Julianos, cuevas espectaculares y un trocito de costa veneciana. Eslovenia es un país pequeño y verdísimo que concentra naturaleza de sobra para enamorarte.',
+    opinion:
+      'Eslovenia es la prueba de que las cosas buenas vienen en frascos pequeños. En pocos días pasas del lago Bled (esa estampa de la islita con la iglesia que parece un cuento) a los Alpes Julianos, a unas cuevas alucinantes y hasta a un pueblo costero con sabor veneciano. Mi consejo: alquila coche, que está todo a un paso y conducir por aquí es un placer. Y métete en el valle del Soča, con ese río de color esmeralda imposible. Es verde, tranquila, segura y todavía no está masificada. Una gozada.',
+    faq: [
+      { q: '¿Cuántos días para Eslovenia?', a: 'Con 5-6 días ves Liubliana, el lago Bled, los Alpes Julianos y un poco de costa. Es pequeña y todo está cerca.' },
+      { q: '¿Cuándo es mejor ir?', a: 'De mayo a septiembre para disfrutar de lagos y montaña. El invierno está bien para esquiar.' },
+      { q: '¿Hace falta visado?', a: 'No: está en Schengen, con el DNI español en vigor basta.' },
+    ],
+    paperwork: ['DNI o pasaporte en vigor (Schengen)', 'Sin visado para turismo', 'Tarjeta Sanitaria Europea recomendada', 'Sin vacunas obligatorias'],
+    visa: 'No requerido (DNI, Schengen)',
+    internet: 'Excelente · roaming UE sin coste extra',
+    difficultyNote: 'Muy fácil: pequeña, segura y verdísima, con todo cerca. Perfecta para un road trip tranquilo entre lagos, montañas y un trocito de costa.',
+    english: 'Mucho inglés, sobre todo entre los jóvenes.',
+    budgetLevels: { mochilero: 50, normal: 95, comodo: 170, lujo: 320 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'good' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'mid' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Liubliana', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Ljubljana_Old_Town%2C_Slovenia_%28Old_Camera%29_%2833286165680%29.jpg/500px-Ljubljana_Old_Town%2C_Slovenia_%28Old_Camera%29_%2833286165680%29.jpg',
+        fact: 'Es de las capitales más verdes de Europa: su centro es casi todo peatonal.',
+        sights: [
+          { name: 'Casco antiguo y el río Ljubljanica' },
+          { name: 'Castillo de Liubliana' },
+          { name: 'Puente de los Dragones' },
+          { name: 'Mercado central' },
+        ],
+      },
+      {
+        name: 'Lago Bled y los Alpes Julianos', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Aerial_image_of_Lake_Bohinj_%28view_from_the_south%29.jpg/500px-Aerial_image_of_Lake_Bohinj_%28view_from_the_south%29.jpg',
+        fact: 'El lago Bled tiene la única isla natural de Eslovenia, con una iglesia en el centro.',
+        sights: [
+          { name: 'Isla y castillo de Bled' },
+          { name: 'Lago Bohinj' },
+          { name: 'Garganta de Vintgar' },
+          { name: 'Parque Nacional del Triglav' },
+        ],
+      },
+      {
+        name: 'Costa y cuevas', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Piran%2C_Slovenia%2C_Viewpoint.jpg/500px-Piran%2C_Slovenia%2C_Viewpoint.jpg',
+        fact: 'Las cuevas de Postojna se recorren en un trenecito por su interior.',
+        sights: [
+          { name: 'Cuevas de Postojna' },
+          { name: 'Castillo de Predjama' },
+          { name: 'Pueblo veneciano de Piran' },
+          { name: 'Valle esmeralda del Soča' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Eslovenia', url: 'https://www.slovenia.info/es' },
+      { label: 'Embajada de España en Eslovenia', url: 'https://www.exteriores.gob.es/Embajadas/liubliana' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
+  {
+    slug: 'oman', name: 'Omán', code: 'om',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Wadi_Bani_Khalid%2C_Om%C3%A1n%2C_2024-08-17%2C_DD_51.jpg/1280px-Wadi_Bani_Khalid%2C_Om%C3%A1n%2C_2024-08-17%2C_DD_51.jpg',
+    imageAlt: 'Wadi Bani Khalid, Omán',
+    capital: 'Mascate', currency: 'Rial omaní (OMR)', language: 'Árabe', plug: 'Tipo G (240 V)', tz: 'UTC+4',
+    budget: 'Medio-alto', bestMonths: 'Octubre-Marzo',
+    difficulty: 'Media', duration: '8-12 días',
+    tags: ['Desierto', 'Naturaleza', 'Cultura', 'Road trip', 'Aventura'],
+    summary: 'Wadis de agua turquesa, el Gran Cañón de Arabia, dunas doradas, fortalezas y una hospitalidad árabe auténtica. Omán es la cara más genuina y tranquila de la península arábiga, perfecta para un road trip en 4x4.',
+    opinion:
+      'Omán es la joya tranquila de Arabia. Lejos del lujo desmedido de Dubái, aquí encuentras autenticidad: gente amabilísima, pueblos de adobe, fortalezas y una naturaleza brutal. Bañarte en un wadi de agua turquesa entre paredes de roca, asomarte al Gran Cañón del Jebel Shams o dormir bajo las estrellas en el desierto de Wahiba son experiencias top. Mi consejo: alquila un 4x4 y hazte un road trip, que es de los países más seguros y fáciles de Oriente Medio. Eso sí, ve en invierno: el calor del verano es de otro mundo.',
+    faq: [
+      { q: '¿Cuántos días para Omán?', a: 'Con 8-10 días haces Mascate, las montañas (Nizwa, Jebel Shams), algún wadi y una noche en el desierto de Wahiba.' },
+      { q: '¿Cuándo es mejor ir?', a: 'De octubre a marzo. Evita el verano (abril-septiembre): se superan los 45 ºC con facilidad.' },
+      { q: '¿Necesito visado?', a: 'Según vigencia: hay exención para estancias cortas o e-Visa online. Confírmalo antes de viajar.' },
+    ],
+    paperwork: ['Pasaporte con al menos 6 meses de validez', 'Exención o e-Visa para estancias cortas (consulta)', 'Seguro de viaje recomendable', 'Respeta el código de vestimenta y las costumbres locales'],
+    visa: 'Exención o e-Visa para estancias cortas (consulta)',
+    internet: 'Bueno · eSIM recomendada',
+    difficultyNote: 'Media: de los países más seguros y auténticos de Arabia, ideal para un road trip en 4x4 y aún poco masificado. El calor del verano es extremo.',
+    english: 'Bastante inglés en ciudades y zonas turísticas.',
+    budgetLevels: { mochilero: 45, normal: 90, comodo: 170, lujo: 380 },
+    climate: [
+      { m: 'Ene', r: 'good' }, { m: 'Feb', r: 'good' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'mid' },
+      { m: 'May', r: 'avoid' }, { m: 'Jun', r: 'avoid' }, { m: 'Jul', r: 'avoid' }, { m: 'Ago', r: 'avoid' },
+      { m: 'Sep', r: 'avoid' }, { m: 'Oct', r: 'mid' }, { m: 'Nov', r: 'good' }, { m: 'Dic', r: 'good' },
+    ],
+    cityGuides: [
+      {
+        name: 'Mascate', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Al_Alam_Palace.jpg/500px-Al_Alam_Palace.jpg',
+        fact: 'La Gran Mezquita del Sultán Qaboos tiene una de las mayores alfombras tejidas a mano del mundo.',
+        sights: [
+          { name: 'Gran Mezquita del Sultán Qaboos' },
+          { name: 'Zoco de Mutrah' },
+          { name: 'Palacio Al Alam' },
+          { name: 'Corniche junto al mar' },
+        ],
+      },
+      {
+        name: 'Nizwa y las montañas', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Nizwa_%287%29.jpg/500px-Nizwa_%287%29.jpg',
+        fact: 'Nizwa fue capital de Omán y su fuerte circular del siglo XVII es de los más visitados del país.',
+        sights: [
+          { name: 'Fuerte y zoco de Nizwa' },
+          { name: 'Mercado de cabras (viernes)' },
+          { name: 'Jebel Akhdar, la montaña verde' },
+          { name: 'Pueblos de adobe colgados' },
+        ],
+      },
+      {
+        name: 'Wadis, cañones y desierto', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Jebel_Shams.jpg/500px-Jebel_Shams.jpg',
+        fact: 'El Jebel Shams es el "Gran Cañón de Arabia"; en la costa, las tortugas desovan en Ras al Jinz.',
+        sights: [
+          { name: 'Jebel Shams (el Gran Cañón)' },
+          { name: 'Baño en Wadi Shab y Wadi Bani Khalid' },
+          { name: 'Noche en el desierto de Wahiba' },
+          { name: 'Tortugas en Ras al Jinz' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Omán', url: 'https://www.experienceoman.om/' },
+      { label: 'Embajada de España en Omán', url: 'https://www.exteriores.gob.es/Embajadas/mascate' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
 ];
 
 export const countryBySlug = (slug: string) => COUNTRIES.find((c) => c.slug === slug);
