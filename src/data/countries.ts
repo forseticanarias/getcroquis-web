@@ -4724,6 +4724,142 @@ export const COUNTRIES: Country[] = [
       { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
     ],
   },
+  {
+    slug: 'rumania', name: 'Rumanía', code: 'ro',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/01_Chateau_Peles.jpg/1280px-01_Chateau_Peles.jpg',
+    imageAlt: 'Castillo de Peleș, Rumanía',
+    capital: 'Bucarest', currency: 'Leu rumano (RON)', language: 'Rumano', plug: 'Tipo C/F (230 V)', tz: 'UTC+2',
+    budget: 'Bajo', bestMonths: 'Mayo-Septiembre',
+    difficulty: 'Fácil', duration: '6-9 días',
+    tags: ['Cultura', 'Historia', 'Castillos', 'Naturaleza', 'Barato'],
+    summary: 'Castillos de cuento (y de vampiros), pueblos medievales sajones, los Cárpatos llenos de osos y una de las carreteras más bonitas del mundo. Rumanía es historia, naturaleza y muchísimo encanto a precios mínimos.',
+    opinion:
+      'Rumanía es una sorpresa enorme y de las más baratas de Europa. Transilvania no es solo Drácula (aunque el castillo de Bran mola visitarlo): es un paisaje de pueblos medievales con iglesias fortificadas, ciudades preciosas como Brașov y montañas verdes por todas partes. Mi consejo: alquila coche y hazte la mítica carretera Transfăgărășan, de las más espectaculares que existen, parando en castillos como el de Peleș, que parece sacado de un cuento. La gente es hospitalaria, el rumano se parece al español y todo cuesta poquísimo. Muy infravalorada.',
+    faq: [
+      { q: '¿Cuántos días para Rumanía?', a: 'Con 6-7 días ves Bucarest y haces un road trip por Transilvania (Brașov, Bran, Sighișoara) y los Cárpatos.' },
+      { q: '¿Cuándo es mejor ir?', a: 'De mayo a septiembre. La carretera Transfăgărășan solo abre en verano (suele cerrar por nieve el resto del año).' },
+      { q: '¿Hace falta visado?', a: 'No: Rumanía está en la UE y en Schengen, con el DNI español en vigor basta.' },
+    ],
+    paperwork: ['DNI o pasaporte en vigor (Schengen)', 'Sin visado para turismo', 'Tarjeta Sanitaria Europea recomendada', 'Sin vacunas obligatorias'],
+    visa: 'No requerido (DNI, Schengen)',
+    internet: 'Excelente · roaming UE sin coste extra',
+    difficultyNote: 'Muy fácil: segura, baratísima y con un patrimonio brutal (castillos, pueblos medievales, naturaleza). Un road trip por Transilvania es una gozada.',
+    english: 'Bastante inglés entre los jóvenes; el rumano se parece al español e italiano.',
+    budgetLevels: { mochilero: 40, normal: 75, comodo: 140, lujo: 260 },
+    climate: [
+      { m: 'Ene', r: 'avoid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'good' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'mid' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Bucarest', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Bucharest_University_Square_%28cropped%29.jpg/500px-Bucharest_University_Square_%28cropped%29.jpg',
+        fact: 'En los años 30 la llamaban "el pequeño París" por su arquitectura y bulevares.',
+        sights: [
+          { name: 'Palacio del Parlamento (2º edificio más grande del mundo)' },
+          { name: 'Casco antiguo y sus terrazas' },
+          { name: 'Ateneo Rumano' },
+          { name: 'Museo del Pueblo' },
+        ],
+      },
+      {
+        name: 'Transilvania', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Castelul_Bran2.jpg/500px-Castelul_Bran2.jpg',
+        fact: 'El castillo de Bran es famoso por su vínculo con la leyenda del conde Drácula.',
+        sights: [
+          { name: 'Castillo de Bran (de Drácula)' },
+          { name: 'Ciudad medieval de Brașov' },
+          { name: 'Sighișoara, cuna de Vlad el Empalador' },
+          { name: 'Pueblos sajones fortificados' },
+        ],
+      },
+      {
+        name: 'Los Cárpatos', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Bra%C8%99ov%2C_Pia%C8%9Ba_Sfatului_-_Flickr_-_Jorge_Franganillo.jpg/500px-Bra%C8%99ov%2C_Pia%C8%9Ba_Sfatului_-_Flickr_-_Jorge_Franganillo.jpg',
+        fact: 'En los Cárpatos vive la mayor población de osos pardos de Europa fuera de Rusia.',
+        sights: [
+          { name: 'Carretera Transfăgărășan' },
+          { name: 'Castillo de Peleș' },
+          { name: 'Senderismo en los Cárpatos' },
+          { name: 'Monasterios pintados de Bucovina' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Rumanía', url: 'https://www.romania.travel/es' },
+      { label: 'Embajada de España en Rumanía', url: 'https://www.exteriores.gob.es/Embajadas/bucarest' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
+  {
+    slug: 'mongolia', name: 'Mongolia', code: 'mn',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Gobi_Desert.jpg/1280px-Gobi_Desert.jpg',
+    imageAlt: 'Desierto del Gobi, Mongolia',
+    capital: 'Ulán Bator', currency: 'Tugrik (MNT)', language: 'Mongol', plug: 'Tipo C/E (230 V)', tz: 'UTC+8',
+    budget: 'Medio', bestMonths: 'Junio-Septiembre',
+    difficulty: 'Alta', duration: '12-18 días',
+    tags: ['Naturaleza', 'Aventura', 'Nómada', 'Estepa', 'Off the beaten path'],
+    summary: 'Estepas infinitas, el desierto del Gobi, la cultura nómada de los gers y los caballos de Gengis Kan. Mongolia es uno de los últimos grandes destinos de aventura: vacío, salvaje y auténtico como ningún otro.',
+    opinion:
+      'Mongolia es la libertad hecha paisaje. Aquí no hay vallas ni casi carreteras: solo estepa infinita, cielos enormes y manadas de caballos. Dormir en un ger (la tienda nómada) con una familia, compartir su té con leche y montar a caballo por la pradera como hace siglos es una experiencia que te reconecta con lo esencial. Y el desierto del Gobi, con sus acantilados rojos llenos de fósiles de dinosaurio y sus dunas gigantes, es brutal. Mi consejo: es aventura de verdad (poca infraestructura, largas jornadas en 4x4), así que ve con un buen guía/conductor y mentalidad abierta. No es cómodo, pero es de los viajes más memorables que existen.',
+    faq: [
+      { q: '¿Cuántos días para Mongolia?', a: 'Mínimo 12-14: las distancias son enormes y se viaja despacio en 4x4. Lo clásico: Gobi + estepa central.' },
+      { q: '¿Cuándo es mejor ir?', a: 'De junio a septiembre (verano corto). El festival Naadam es en julio. El invierno es de los más fríos del planeta.' },
+      { q: '¿Necesito visado?', a: 'No para turismo: los españoles pueden entrar sin visado para estancias de hasta 30 días.' },
+    ],
+    paperwork: ['Pasaporte con al menos 6 meses de validez', 'Sin visado para turismo (hasta 30 días)', 'Seguro de viaje imprescindible', 'Guía/conductor casi imprescindible para el interior'],
+    visa: 'No requerido hasta 30 días (turismo)',
+    internet: 'Muy limitado fuera de la capital · eSIM recomendada',
+    difficultyNote: 'Alta: uno de los países menos poblados del mundo, de aventura pura. Apenas hay carreteras ni infraestructura fuera de la capital; se viaja en 4x4 y se duerme en gers. No apto para quien busca comodidad.',
+    english: 'Poco inglés; necesitas guía o conductor para moverte por el interior.',
+    budgetLevels: { mochilero: 35, normal: 65, comodo: 130, lujo: 280 },
+    climate: [
+      { m: 'Ene', r: 'avoid' }, { m: 'Feb', r: 'avoid' }, { m: 'Mar', r: 'avoid' }, { m: 'Abr', r: 'mid' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'good' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'mid' }, { m: 'Nov', r: 'avoid' }, { m: 'Dic', r: 'avoid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Ulán Bator', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/UB_downtown.jpg/500px-UB_downtown.jpg',
+        fact: 'Es la capital más fría del mundo y donde vive casi la mitad de la población del país.',
+        sights: [
+          { name: 'Plaza de Gengis Kan' },
+          { name: 'Monasterio de Gandan' },
+          { name: 'Estatua gigante de Gengis Kan a caballo' },
+          { name: 'Mercado de Naran Tuul' },
+        ],
+      },
+      {
+        name: 'La estepa y los nómadas', days: '4-6 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/SK_yurt_camp_%281_of_1%29-8.jpg/500px-SK_yurt_camp_%281_of_1%29-8.jpg',
+        fact: 'Cerca de un tercio de los mongoles sigue viviendo como nómadas en gers.',
+        sights: [
+          { name: 'Dormir en un campamento de gers' },
+          { name: 'Montar a caballo con nómadas' },
+          { name: 'Festival Naadam (julio)' },
+          { name: 'Valle del Orkhon' },
+        ],
+      },
+      {
+        name: 'El desierto del Gobi', days: '4-5 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Flaming_cliffs_5.jpg/500px-Flaming_cliffs_5.jpg',
+        fact: 'En los Acantilados Flamígeros se hallaron los primeros huevos de dinosaurio del mundo.',
+        sights: [
+          { name: 'Acantilados Flamígeros (fósiles de dinosaurio)' },
+          { name: 'Dunas gigantes de Khongoryn Els' },
+          { name: 'Camellos bactrianos' },
+          { name: 'Cañón helado de Yolyn Am' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Mongolia', url: 'https://mongolia.travel/' },
+      { label: 'Embajada de España (concurrente en Pekín)', url: 'https://www.exteriores.gob.es/Embajadas/pekin' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
 ];
 
 export const countryBySlug = (slug: string) => COUNTRIES.find((c) => c.slug === slug);
