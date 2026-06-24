@@ -3773,6 +3773,142 @@ export const COUNTRIES: Country[] = [
       { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
     ],
   },
+  {
+    slug: 'chile', name: 'Chile', code: 'cl',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Torres_del_Paine%2C_Chile_by_Karen_Chan_16.jpg/1280px-Torres_del_Paine%2C_Chile_by_Karen_Chan_16.jpg',
+    imageAlt: 'Torres del Paine, Patagonia chilena',
+    capital: 'Santiago', currency: 'Peso chileno (CLP)', language: 'Español', plug: 'Tipo C/L (220 V)', tz: 'UTC-4',
+    budget: 'Medio', bestMonths: 'Octubre-Marzo (Patagonia); Atacama todo el año',
+    difficulty: 'Media', duration: '12-18 días',
+    tags: ['Naturaleza', 'Aventura', 'Road trip', 'Desierto', 'Montaña'],
+    summary: 'El desierto más árido del mundo en Atacama, la Patagonia con las Torres del Paine, los moáis de Isla de Pascua y valles de vino. Chile es un país larguísimo y variadísimo, un paraíso para los amantes de la naturaleza.',
+    opinion:
+      'Chile es un país de extremos en el mejor sentido: tan largo que en sus 4.300 km cabe el desierto más seco del planeta y los glaciares de la Patagonia. Atacama te deja con la boca abierta, con sus paisajes lunares y unos cielos estrellados que no verás en ningún otro sitio. Y la Patagonia, con las Torres del Paine, es senderismo de otra liga. Mi consejo: asume que las distancias son enormes y usa vuelos internos para no perder días. Se habla español y es de los países más seguros de Latinoamérica, así que viajar es muy cómodo.',
+    faq: [
+      { q: '¿Cuántos días para Chile?', a: 'Con 12-14 días combinas Santiago, Atacama y la Patagonia (con vuelos internos). Isla de Pascua requiere 3-4 días aparte.' },
+      { q: '¿Cuándo es mejor ir?', a: 'Octubre-marzo (verano austral) para la Patagonia. Atacama se visita todo el año; el centro luce en primavera-verano.' },
+      { q: '¿Necesito visado?', a: 'No para turismo: los españoles pueden estar hasta 90 días solo con el pasaporte.' },
+    ],
+    paperwork: ['Pasaporte en vigor', 'Sin visado para turismo (hasta 90 días)', 'Seguro de viaje muy recomendable', 'Control agrícola estricto (no metas alimentos)'],
+    visa: 'No requerido hasta 90 días (turismo)',
+    internet: 'Bueno · eSIM recomendada',
+    difficultyNote: 'Media: seguro y desarrollado, se habla español, pero es larguísimo (4.300 km): las distancias entre el desierto y la Patagonia son enormes y necesitas vuelos internos.',
+    english: 'Se habla español; algo de inglés en el sector turístico.',
+    budgetLevels: { mochilero: 40, normal: 80, comodo: 150, lujo: 320 },
+    climate: [
+      { m: 'Ene', r: 'good' }, { m: 'Feb', r: 'good' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'mid' }, { m: 'Jun', r: 'mid' }, { m: 'Jul', r: 'mid' }, { m: 'Ago', r: 'mid' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'good' }, { m: 'Dic', r: 'good' },
+    ],
+    cityGuides: [
+      {
+        name: 'Santiago y los valles', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Palacio_de_La_Moneda_-_miguelreflex.jpg/500px-Palacio_de_La_Moneda_-_miguelreflex.jpg',
+        fact: 'Desde Santiago ves la cordillera de los Andes nevada de fondo en un día despejado.',
+        sights: [
+          { name: 'Cerro San Cristóbal y Bellavista' },
+          { name: 'Valles vinícolas (Maipo, Colchagua)' },
+          { name: 'Valparaíso y su puerto de colores' },
+          { name: 'Viña del Mar y la costa' },
+        ],
+      },
+      {
+        name: 'Desierto de Atacama', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Valle_della_Luna_01.jpg/500px-Valle_della_Luna_01.jpg',
+        fact: 'Es el desierto más árido del mundo y uno de los mejores lugares para observar las estrellas.',
+        sights: [
+          { name: 'Valle de la Luna' },
+          { name: 'Géiseres del Tatio al amanecer' },
+          { name: 'Lagunas altiplánicas y flamencos' },
+          { name: 'Observación astronómica' },
+        ],
+      },
+      {
+        name: 'Patagonia e Isla de Pascua', days: '5-6 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Easter_Island_5.jpg/500px-Easter_Island_5.jpg',
+        fact: 'Los moáis de Isla de Pascua son una de las civilizaciones más enigmáticas de la historia.',
+        sights: [
+          { name: 'Trekking en Torres del Paine' },
+          { name: 'Glaciares y fiordos australes' },
+          { name: 'Los moáis de Isla de Pascua' },
+          { name: 'Punta Arenas, el fin del mundo' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Chile', url: 'https://www.chile.travel/' },
+      { label: 'Embajada de España en Chile', url: 'https://www.exteriores.gob.es/Embajadas/santiagodechile' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
+  {
+    slug: 'nepal', name: 'Nepal', code: 'np',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Mt._Everest_from_Gokyo_Ri_November_5%2C_2012.jpg/1280px-Mt._Everest_from_Gokyo_Ri_November_5%2C_2012.jpg',
+    imageAlt: 'El Everest desde Gokyo Ri, Nepal',
+    capital: 'Katmandú', currency: 'Rupia nepalí (NPR)', language: 'Nepalí', plug: 'Tipo C/D/M (230 V)', tz: 'UTC+5:45',
+    budget: 'Bajo', bestMonths: 'Octubre-Noviembre y Marzo-Abril',
+    difficulty: 'Alta', duration: '12-20 días',
+    tags: ['Montaña', 'Trekking', 'Aventura', 'Espiritual', 'Barato'],
+    summary: 'El techo del mundo: el Everest, los Annapurnas y 8 de las 10 montañas más altas del planeta. Nepal es el paraíso del trekking y la espiritualidad, con templos milenarios, gente cálida y precios mínimos.',
+    opinion:
+      'Nepal es un viaje que te transforma. No hace falta subir el Everest: solo con caminar unos días entre montañas de 8.000 metros, cruzando aldeas sherpa y banderas de oración, ya sientes algo difícil de explicar. Katmandú es puro caos sensorial, con sus templos, incienso y monos por todas partes. Mi consejo: ve con tiempo, aclimata bien si haces altura y contrata un guía/porteador local (ayudas a la economía y vives el trek mucho mejor). Es barato, intenso y de los viajes más auténticos que puedes hacer. No apto para quien busca comodidad.',
+    faq: [
+      { q: '¿Hay que ser montañero para ir a Nepal?', a: 'No necesariamente. Hay treks suaves y se puede disfrutar Katmandú y Pokhara sin altura. Pero los grandes treks (Everest, Annapurna) sí piden forma física.' },
+      { q: '¿Cuándo es mejor ir?', a: 'Octubre-noviembre (cielos despejados) y marzo-abril (rododendros en flor). Evita el monzón (jun-sep) y el frío invierno en altura.' },
+      { q: '¿Necesito visado?', a: 'Sí, pero es fácil: visado a la llegada en el aeropuerto de Katmandú (de pago).' },
+    ],
+    paperwork: ['Pasaporte con al menos 6 meses de validez', 'Visado a la llegada (de pago)', 'Seguro de viaje con cobertura de trekking en altura', 'Permisos de trekking (TIMS) para ciertas rutas'],
+    visa: 'Visado a la llegada (de pago)',
+    internet: 'Irregular (malo en montaña) · eSIM recomendada',
+    difficultyNote: 'Alta: el país es barato y la gente increíble, pero el trekking en altura exige forma física y aclimatación, y los traslados por carretera son lentos y duros. La recompensa: el Himalaya.',
+    english: 'Bastante inglés en las zonas turísticas y de trekking.',
+    budgetLevels: { mochilero: 20, normal: 40, comodo: 85, lujo: 200 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'mid' }, { m: 'Jun', r: 'avoid' }, { m: 'Jul', r: 'avoid' }, { m: 'Ago', r: 'avoid' },
+      { m: 'Sep', r: 'mid' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'good' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Katmandú', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Kathmandu-Durbar_Square-06-Mahavishnu-Kuh-Vishnu-Pratapamalla-Jagannath-2007-gje.jpg/500px-Kathmandu-Durbar_Square-06-Mahavishnu-Kuh-Vishnu-Pratapamalla-Jagannath-2007-gje.jpg',
+        fact: 'El valle de Katmandú concentra siete sitios Patrimonio de la Humanidad en pocos kilómetros.',
+        sights: [
+          { name: 'Plazas Durbar (Patrimonio)' },
+          { name: 'Estupa de Boudhanath' },
+          { name: 'Templo de los monos (Swayambhunath)' },
+          { name: 'Barrio de Thamel' },
+        ],
+      },
+      {
+        name: 'Pokhara y los Annapurnas', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Pokhara_Valley.jpg/500px-Pokhara_Valley.jpg',
+        fact: 'Es la puerta de entrada a los Annapurnas y la capital relax del país.',
+        sights: [
+          { name: 'Lago Phewa' },
+          { name: 'Amaneceres sobre el Annapurna' },
+          { name: 'Parapente sobre el valle' },
+          { name: 'Inicio de los grandes treks' },
+        ],
+      },
+      {
+        name: 'El Everest y el trekking', days: '8-14 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Annapurna_Massif_Aerial_View.jpg/500px-Annapurna_Massif_Aerial_View.jpg',
+        fact: 'Nepal alberga 8 de las 10 montañas más altas del mundo, incluido el Everest (8.849 m).',
+        sights: [
+          { name: 'Campo Base del Everest' },
+          { name: 'Circuito de los Annapurnas' },
+          { name: 'Valle del Khumbu' },
+          { name: 'Monasterios y aldeas sherpa' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Nepal', url: 'https://www.welcomenepal.com/' },
+      { label: 'Embajada de España (concurrente en Nueva Delhi)', url: 'https://www.exteriores.gob.es/Embajadas/nuevadelhi' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
 ];
 
 export const countryBySlug = (slug: string) => COUNTRIES.find((c) => c.slug === slug);
