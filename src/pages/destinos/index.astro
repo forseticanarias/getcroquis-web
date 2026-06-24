@@ -123,12 +123,13 @@ const grouped = CONT_ORDER
   </section>
 
   <script>
-    const input = document.getElementById('country-search');
+    const input = document.getElementById('country-search') as HTMLInputElement | null;
     const cards = Array.from(document.querySelectorAll('.country-card'));
     const groups = Array.from(document.querySelectorAll('.cont-group'));
     const noResults = document.getElementById('no-results');
-    input?.addEventListener('input', (e) => {
-      const q = (e.target as HTMLInputElement).value.trim().toLowerCase();
+
+    function filterCountries(raw: string) {
+      const q = raw.trim().toLowerCase();
       let visible = 0;
       cards.forEach((card) => {
         const match = (card.getAttribute('data-name') || '').includes(q);
@@ -141,6 +142,15 @@ const grouped = CONT_ORDER
         (g as HTMLElement).style.display = any ? '' : 'none';
       });
       noResults?.classList.toggle('hidden', visible > 0);
-    });
+    }
+
+    input?.addEventListener('input', (e) => filterCountries((e.target as HTMLInputElement).value));
+
+    // Si llega ?buscar= (p. ej. desde la caja de búsqueda de Google), prefiltra al cargar.
+    const initial = new URLSearchParams(window.location.search).get('buscar');
+    if (initial && input) {
+      input.value = initial;
+      filterCountries(initial);
+    }
   </script>
 </Base>
