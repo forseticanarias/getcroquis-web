@@ -4453,6 +4453,141 @@ export const COUNTRIES: Country[] = [
       { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
     ],
   },
+  {
+    slug: 'polinesia-francesa', name: 'Polinesia Francesa', code: 'pf',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Borabora-2.jpg/1280px-Borabora-2.jpg',
+    imageAlt: 'Bora Bora, Polinesia Francesa',
+    capital: 'Papeete', currency: 'Franco CFP (XPF)', language: 'Francés y tahitiano', plug: 'Tipo C/E (220 V)', tz: 'UTC-10',
+    budget: 'Alto', bestMonths: 'Mayo-Octubre (estación seca)',
+    difficulty: 'Fácil', duration: '8-14 días',
+    tags: ['Playa', 'Lujo', 'Buceo', 'Luna de miel', 'En pareja'],
+    summary: 'Bora Bora y sus bungalows sobre lagunas turquesa, montañas verdes que caen al mar, perlas negras y buceo entre tiburones. La Polinesia Francesa es el paraíso de luna de miel por excelencia, en mitad del Pacífico.',
+    opinion:
+      'La Polinesia Francesa es, probablemente, el destino más soñado del planeta para una luna de miel, y cuando ves la laguna de Bora Bora entiendes por qué: ese azul no parece real. Pero hay mucho más allá de los bungalows de lujo: Moorea es pura naturaleza, Tahití tiene un interior salvaje y los atolones de las Tuamotu ofrecen de los mejores buceos del mundo. Mi consejo honesto: es carísima y está lejísimos (vuelos larguísimos con escala), así que ve con tiempo y combina varias islas para que merezca el viajón. Un capricho de los grandes.',
+    faq: [
+      { q: '¿Cuántos días para la Polinesia?', a: 'Mínimo 8-10 por las distancias y el jet lag. Lo ideal: combinar 2-3 islas (Tahití, Moorea, Bora Bora).' },
+      { q: '¿Cuándo es mejor ir?', a: 'De mayo a octubre (estación seca y más fresca). Evita el calor húmedo y las lluvias de noviembre-abril.' },
+      { q: '¿Necesito visado?', a: 'No: es territorio francés, los españoles no necesitan visado. Lleva pasaporte por las escalas del trayecto.' },
+    ],
+    paperwork: ['Pasaporte en vigor (por las escalas del trayecto)', 'Sin visado (territorio francés)', 'Revisa requisitos del país de escala (p. ej. ESTA si es por EE. UU.)', 'Seguro de viaje recomendable'],
+    visa: 'No requerido (territorio francés)',
+    internet: 'Bueno en islas principales · eSIM recomendada',
+    difficultyNote: 'Fácil pero carísima y lejísimos: los vuelos son larguísimos (con escala) y todo es muy caro. Un destino de lujo y luna de miel por excelencia.',
+    english: 'Francés y tahitiano; algo de inglés en los hoteles.',
+    budgetLevels: { mochilero: 100, normal: 200, comodo: 400, lujo: 900 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'good' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Tahití', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Papeete_-_Marina_Taina.JPG/500px-Papeete_-_Marina_Taina.JPG',
+        fact: 'Es la isla principal y la puerta de entrada; aquí está la ola gigante de Teahupo\'o.',
+        sights: [
+          { name: 'Mercado de Papeete' },
+          { name: 'Surf en Teahupo\'o' },
+          { name: 'Cascadas y valles del interior' },
+          { name: 'Museo de las islas' },
+        ],
+      },
+      {
+        name: 'Moorea', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/DSC00042_Polyn%C3%A9sia_Moor%C3%A9a_Island_Motu_Mo%C3%A9a_Lagoon_and_transportation_Boat_%288076082190%29.jpg/500px-DSC00042_Polyn%C3%A9sia_Moor%C3%A9a_Island_Motu_Mo%C3%A9a_Lagoon_and_transportation_Boat_%288076082190%29.jpg',
+        fact: 'Tiene forma de corazón y unas montañas verdes que caen directas a la laguna.',
+        sights: [
+          { name: 'Lagunas turquesa' },
+          { name: 'Nadar con rayas y tiburones' },
+          { name: 'Mirador de Belvedere' },
+          { name: 'Plantaciones de piña' },
+        ],
+      },
+      {
+        name: 'Atolones de las Tuamotu', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Fakarava.JPG/500px-Fakarava.JPG',
+        fact: 'Fakarava y Rangiroa son de los mejores destinos de buceo del mundo, con paredes de tiburones.',
+        sights: [
+          { name: 'Buceo en los pasos de Fakarava' },
+          { name: 'Atolones de coral infinitos' },
+          { name: 'Granjas de perlas negras' },
+          { name: 'Lagunas vírgenes' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Tahití', url: 'https://tahititourisme.es/' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
+  {
+    slug: 'panama', name: 'Panamá', code: 'pa',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/San_Blas_Islands.jpg/1280px-San_Blas_Islands.jpg',
+    imageAlt: 'Islas de San Blas (Guna Yala), Panamá',
+    capital: 'Ciudad de Panamá', currency: 'Balboa / Dólar USA (PAB/USD)', language: 'Español', plug: 'Tipo A/B (120 V)', tz: 'UTC-5',
+    budget: 'Medio', bestMonths: 'Diciembre-Abril (estación seca)',
+    difficulty: 'Fácil', duration: '8-12 días',
+    tags: ['Playa', 'Naturaleza', 'Caribe', 'Ciudades', 'Aventura'],
+    summary: 'El mítico Canal, una capital de rascacielos junto a un casco colonial, y las islas paradisíacas de San Blas. Panamá une el Caribe y el Pacífico, mezclando modernidad, selva y playas de ensueño con el dólar como moneda.',
+    opinion:
+      'Panamá sorprende por lo mucho que cabe en un país tan pequeño. La capital es un choque brutal y fascinante: rascacielos de cristal junto al Casco Viejo colonial, y a un paso, el Canal, que ver funcionar en directo impresiona más de lo que crees. Pero la joya son las islas de San Blas (Guna Yala), un archipiélago de postal gestionado por los indígenas guna, con aguas turquesa y cero lujo: pura autenticidad caribeña. Mi consejo: combina ciudad, Canal y unos días de playa en San Blas o Bocas del Toro. Es fácil, usan el dólar y está menos masificado que sus vecinos.',
+    faq: [
+      { q: '¿Cuántos días para Panamá?', a: 'Con 8-10 días ves la ciudad, el Canal y unos días de playa en San Blas o Bocas del Toro.' },
+      { q: '¿Cuándo es mejor ir?', a: 'De diciembre a abril (estación seca). Evita los meses más lluviosos (septiembre-noviembre).' },
+      { q: '¿Necesito visado?', a: 'No para turismo: los españoles pueden estar hasta 90 días solo con el pasaporte.' },
+    ],
+    paperwork: ['Pasaporte con al menos 6 meses de validez', 'Sin visado para turismo (hasta 90 días)', 'Seguro de viaje recomendable', 'Posible prueba de fondos y billete de salida'],
+    visa: 'No requerido hasta 90 días (turismo)',
+    internet: 'Bueno · eSIM recomendada',
+    difficultyNote: 'Muy fácil: moderno, seguro para la zona y usa el dólar. Une el Caribe y el Pacífico, con el icónico Canal y las islas paradisíacas de San Blas.',
+    english: 'Se habla español; bastante inglés en la ciudad.',
+    budgetLevels: { mochilero: 35, normal: 70, comodo: 140, lujo: 300 },
+    climate: [
+      { m: 'Ene', r: 'good' }, { m: 'Feb', r: 'good' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'mid' }, { m: 'Jun', r: 'mid' }, { m: 'Jul', r: 'mid' }, { m: 'Ago', r: 'mid' },
+      { m: 'Sep', r: 'avoid' }, { m: 'Oct', r: 'avoid' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'good' },
+    ],
+    cityGuides: [
+      {
+        name: 'Ciudad de Panamá y el Canal', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Panama_Papers_%28148830809%29.jpeg/500px-Panama_Papers_%28148830809%29.jpeg',
+        fact: 'Es la única capital del mundo con una selva tropical (Parque Natural Metropolitano) dentro de la ciudad.',
+        sights: [
+          { name: 'Skyline de rascacielos' },
+          { name: 'Esclusas de Miraflores (el Canal)' },
+          { name: 'Calzada de Amador' },
+          { name: 'Ruinas de Panamá Viejo' },
+        ],
+      },
+      {
+        name: 'San Blas y Bocas del Toro', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Bocas2.jpg/500px-Bocas2.jpg',
+        fact: 'San Blas (Guna Yala) es un archipiélago autónomo gestionado por el pueblo indígena guna.',
+        sights: [
+          { name: 'Islas de San Blas (Guna Yala)' },
+          { name: 'Islas de Bocas del Toro' },
+          { name: 'Playas caribeñas vírgenes' },
+          { name: 'Buceo y snorkel' },
+        ],
+      },
+      {
+        name: 'Casco Viejo y Boquete', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Casco_Antiguo_%28San_Felipe%29_-_Pamama.jpg/500px-Casco_Antiguo_%28San_Felipe%29_-_Pamama.jpg',
+        fact: 'En las tierras altas de Boquete se cultiva el café Geisha, de los más caros y premiados del mundo.',
+        sights: [
+          { name: 'Casco Antiguo (Patrimonio)' },
+          { name: 'Montañas y café de Boquete' },
+          { name: 'Avistamiento del quetzal' },
+          { name: 'Valle de Antón' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Panamá', url: 'https://www.visitpanama.com/' },
+      { label: 'Embajada de España en Panamá', url: 'https://www.exteriores.gob.es/Embajadas/panama' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
 ];
 
 export const countryBySlug = (slug: string) => COUNTRIES.find((c) => c.slug === slug);
