@@ -4996,6 +4996,142 @@ export const COUNTRIES: Country[] = [
       { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
     ],
   },
+  {
+    slug: 'montenegro', name: 'Montenegro', code: 'me',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Kotor_aerial_1.jpg/1280px-Kotor_aerial_1.jpg',
+    imageAlt: 'Bahía de Kotor, Montenegro',
+    capital: 'Podgorica', currency: 'Euro (EUR)', language: 'Montenegrino', plug: 'Tipo C/F (230 V)', tz: 'UTC+1',
+    budget: 'Medio', bestMonths: 'Mayo-Septiembre',
+    difficulty: 'Fácil', duration: '5-7 días',
+    tags: ['Playa', 'Montaña', 'Mediterráneo', 'En pareja', 'Naturaleza'],
+    summary: 'La espectacular bahía de Kotor (como un fiordo mediterráneo), playas adriáticas, ciudades amuralladas y montañas salvajes. Montenegro es pequeño pero lo tiene todo, y aún es una alternativa más tranquila y barata que Croacia.',
+    opinion:
+      'Montenegro es la joya del Adriático que cada vez gusta más, y con razón. La bahía de Kotor es de las estampas más bonitas del Mediterráneo: un entrante de mar rodeado de montañas con pueblecitos de piedra al borde del agua. Subir a la fortaleza de Kotor al atardecer, con toda la bahía a tus pies, es un planazo. Mi consejo: combina la costa (Kotor, Budva, Sveti Stefan) con un par de días en las montañas del Durmitor, que el país es chiquitín y en nada cambias de mundo. Usa el euro, es seguro y todavía sale más barato que su vecina Croacia.',
+    faq: [
+      { q: '¿Cuántos días para Montenegro?', a: 'Con 5-6 días ves la bahía de Kotor, la costa de Budva y subes a las montañas del Durmitor. Es pequeño y todo está cerca.' },
+      { q: '¿Cuándo es mejor ir?', a: 'De mayo a septiembre. Julio y agosto son temporada alta en la costa; junio y septiembre son ideales.' },
+      { q: '¿Necesito visado?', a: 'No para turismo. Aunque no está en la UE, usa el euro y los españoles no necesitan visado.' },
+    ],
+    paperwork: ['DNI o pasaporte en vigor', 'Sin visado para turismo', 'Seguro de viaje recomendable (no está en la UE)', 'Sin vacunas obligatorias'],
+    visa: 'No requerido (turismo)',
+    internet: 'Bueno · eSIM recomendada (fuera de la UE)',
+    difficultyNote: 'Muy fácil: pequeño, seguro y usa el euro aunque no esté en la UE. Combina una costa adriática preciosa con montañas espectaculares en distancias cortas.',
+    english: 'Bastante inglés en la costa y entre los jóvenes.',
+    budgetLevels: { mochilero: 45, normal: 85, comodo: 150, lujo: 290 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'good' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'mid' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Kotor y la bahía', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/20090719_Crkva_Gospa_od_Zdravlja_Kotor_Bay_Montenegro.jpg/500px-20090719_Crkva_Gospa_od_Zdravlja_Kotor_Bay_Montenegro.jpg',
+        fact: 'La bahía de Kotor parece un fiordo, pero es el cañón fluvial sumergido más al sur de Europa.',
+        sights: [
+          { name: 'Casco amurallado de Kotor (Patrimonio)' },
+          { name: 'Subir a la fortaleza de San Juan' },
+          { name: 'Navegar la bahía de Boka' },
+          { name: 'Perast y la isla de la Virgen' },
+        ],
+      },
+      {
+        name: 'Sveti Stefan y la costa', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Sveti_Stefan_%2806%29.jpg/500px-Sveti_Stefan_%2806%29.jpg',
+        fact: 'El islote de Sveti Stefan, antiguo pueblo de pescadores, es hoy un hotel de lujo de postal.',
+        sights: [
+          { name: 'El islote de Sveti Stefan' },
+          { name: 'Playas de Budva' },
+          { name: 'Casco antiguo de Budva' },
+          { name: 'Vida nocturna del Adriático' },
+        ],
+      },
+      {
+        name: 'Durmitor y las montañas', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Durmitor.jpg/500px-Durmitor.jpg',
+        fact: 'El cañón del río Tara es el más profundo de Europa y el segundo del mundo tras el Gran Cañón.',
+        sights: [
+          { name: 'Parque Nacional de Durmitor' },
+          { name: 'Rafting en el cañón del Tara' },
+          { name: 'Lagos glaciares' },
+          { name: 'Monasterio de Ostrog' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Montenegro', url: 'https://www.montenegro.travel/es' },
+      { label: 'Embajada de España (concurrente en Belgrado)', url: 'https://www.exteriores.gob.es/Embajadas/belgrado' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
+  {
+    slug: 'fiyi', name: 'Fiyi', code: 'fj',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Mamanuca.jpg/1280px-Mamanuca.jpg',
+    imageAlt: 'Islas Mamanuca, Fiyi',
+    capital: 'Suva', currency: 'Dólar fiyiano (FJD)', language: 'Inglés, fiyiano e hindi', plug: 'Tipo I (240 V)', tz: 'UTC+12',
+    budget: 'Alto', bestMonths: 'Mayo-Octubre (estación seca)',
+    difficulty: 'Fácil', duration: '8-12 días',
+    tags: ['Playa', 'Islas', 'Buceo', 'Luna de miel', 'Relax'],
+    summary: 'Más de 300 islas de aguas turquesa, arrecifes de coral, palmeras y la gente más sonriente del Pacífico. Fiyi es el paraíso tropical de postal por excelencia, perfecto para bucear, desconectar o una luna de miel de ensueño.',
+    opinion:
+      'Fiyi es la definición de paraíso del Pacífico. Aguas de un turquesa imposible, islas de palmeras y arena blanca, y un ambiente de relax total. Pero lo que más te llevas es el "Bula spirit": los fiyianos son de las personas más cálidas y sonrientes que vas a conocer, y su hospitalidad lo impregna todo. Mi consejo: hazte un island hopping por las Yasawa o las Mamanuca (donde se rodó "El Náufrago"), bucea entre corales y déjate llevar por el ritmo isleño. Eso sí, está lejísimos y no es barato, así que ve con tiempo para que merezca el viajón.',
+    faq: [
+      { q: '¿Cuántos días para Fiyi?', a: 'Mínimo 8-10 por las distancias. Lo ideal: combinar la isla principal con varios días de island hopping por las Yasawa o Mamanuca.' },
+      { q: '¿Cuándo es mejor ir?', a: 'De mayo a octubre (estación seca y más fresca). Evita la temporada de ciclones (noviembre-abril).' },
+      { q: '¿Necesito visado?', a: 'No: los españoles pueden entrar sin visado para estancias turísticas de hasta 4 meses.' },
+    ],
+    paperwork: ['Pasaporte con al menos 6 meses de validez', 'Sin visado para turismo (hasta 4 meses)', 'Billete de salida del país', 'Seguro de viaje recomendable'],
+    visa: 'No requerido hasta 4 meses (turismo)',
+    internet: 'Bueno en resorts · eSIM recomendada',
+    difficultyNote: 'Fácil pero lejísimos: 300 islas de ensueño, en inglés y con la gente más sonriente del Pacífico. El "Bula spirit" engancha. Es caro y con vuelos larguísimos.',
+    english: 'El inglés es idioma oficial; cero barrera.',
+    budgetLevels: { mochilero: 60, normal: 120, comodo: 230, lujo: 500 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'avoid' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'good' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Islas Mamanuca y Yasawa', days: '4-5 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Viti_Levu_Islands.jpg/500px-Viti_Levu_Islands.jpg',
+        fact: 'En estas islas se rodó la película "El Náufrago" con Tom Hanks.',
+        sights: [
+          { name: 'Island hopping por las Yasawa' },
+          { name: 'Playas de las Mamanuca' },
+          { name: 'Snorkel y buceo entre corales' },
+          { name: 'La isla de "El Náufrago"' },
+        ],
+      },
+      {
+        name: 'Viti Levu', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Suva%2C_Fiji_77.jpg/500px-Suva%2C_Fiji_77.jpg',
+        fact: 'Es la isla principal, donde conviven la cultura fiyiana y una gran comunidad indo-fiyiana.',
+        sights: [
+          { name: 'Capital, Suva, y sus mercados' },
+          { name: 'Ceremonia del kava en un poblado' },
+          { name: 'Cascadas y selva del interior' },
+          { name: 'Nadi y sus templos hindúes' },
+        ],
+      },
+      {
+        name: 'La Costa de Coral', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Sigatoka_fiji.jpg/500px-Sigatoka_fiji.jpg',
+        fact: 'Sus arrecifes están entre los mejores del mundo para bucear, con tiburones incluidos.',
+        sights: [
+          { name: 'Buceo en los arrecifes de coral' },
+          { name: 'Dunas de Sigatoka' },
+          { name: 'Resorts frente al mar' },
+          { name: 'Surf en las islas' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Fiyi', url: 'https://www.fiji.travel/' },
+      { label: 'Embajada de España (concurrente en Wellington)', url: 'https://www.exteriores.gob.es/Embajadas/wellington' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
 ];
 
 export const countryBySlug = (slug: string) => COUNTRIES.find((c) => c.slug === slug);
