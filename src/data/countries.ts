@@ -3637,6 +3637,142 @@ export const COUNTRIES: Country[] = [
       { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
     ],
   },
+  {
+    slug: 'finlandia', name: 'Finlandia', code: 'fi',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Arctic_circle_santa_village.jpg/1280px-Arctic_circle_santa_village.jpg',
+    imageAlt: 'Laponia finlandesa nevada',
+    capital: 'Helsinki', currency: 'Euro (EUR)', language: 'Finés y sueco', plug: 'Tipo C/F (230 V)', tz: 'UTC+2',
+    budget: 'Alto', bestMonths: 'Diciembre-Marzo (auroras) y Junio-Agosto (sol de medianoche)',
+    difficulty: 'Fácil', duration: '5-8 días',
+    tags: ['Naturaleza', 'Auroras', 'Nieve', 'En pareja', 'Aventura'],
+    summary: 'Auroras boreales, bosques nevados, miles de lagos, saunas y el pueblo de Papá Noel en Laponia. Finlandia es naturaleza nórdica en estado puro, mágica tanto en el invierno blanco como bajo el sol de medianoche.',
+    opinion:
+      'Finlandia es pura magia nórdica, sobre todo en invierno. Ver bailar las auroras boreales sobre un bosque nevado es una de esas experiencias que te dejan sin palabras. Y la Laponia finlandesa lo tiene todo: trineos de huskies, renos, iglús de cristal para dormir mirando el cielo y, cómo no, la casa de Papá Noel en Rovaniemi (un planazo si vas con peques). Mi consejo: en invierno ve preparado para el frío de verdad y persigue las auroras lejos de las luces. En verano, el sol de medianoche y los lagos son otro mundo. Cara, pero inolvidable.',
+    faq: [
+      { q: '¿Cuándo se ven las auroras?', a: 'De finales de septiembre a marzo, en noches despejadas y oscuras, sobre todo en Laponia (norte). Cuanto más al norte, más probabilidades.' },
+      { q: '¿Cuántos días para Finlandia?', a: 'Con 5-6 días combinas Helsinki con una escapada a Laponia. Para auroras, dedica varias noches por si el cielo no acompaña.' },
+      { q: '¿Hace falta visado?', a: 'No: está en Schengen, con el DNI español en vigor basta.' },
+    ],
+    paperwork: ['DNI o pasaporte en vigor (Schengen)', 'Sin visado para turismo', 'Tarjeta Sanitaria Europea recomendada', 'Ropa térmica de verdad en invierno'],
+    visa: 'No requerido (DNI, Schengen)',
+    internet: 'Excelente · roaming UE sin coste extra',
+    difficultyNote: 'Muy fácil: de los países más seguros y organizados del mundo. Cara, pero la naturaleza (auroras, lagos, bosques) es de otro nivel.',
+    english: 'Hablan un inglés excelente. Cero barrera.',
+    budgetLevels: { mochilero: 65, normal: 120, comodo: 210, lujo: 400 },
+    climate: [
+      { m: 'Ene', r: 'good' }, { m: 'Feb', r: 'good' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'mid' },
+      { m: 'May', r: 'mid' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'good' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'mid' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'good' },
+    ],
+    cityGuides: [
+      {
+        name: 'Helsinki', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Suomenlinna_%28cropped%29.jpg/500px-Suomenlinna_%28cropped%29.jpg',
+        fact: 'Los finlandeses tienen más de 3 millones de saunas para 5,5 millones de habitantes.',
+        sights: [
+          { name: 'Fortaleza marítima de Suomenlinna' },
+          { name: 'Catedral blanca' },
+          { name: 'Mercado y puerto' },
+          { name: 'Saunas y diseño nórdico' },
+        ],
+      },
+      {
+        name: 'Laponia: auroras y Papá Noel', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Kaunisp%C3%A4%C3%A4.jpg/500px-Kaunisp%C3%A4%C3%A4.jpg',
+        fact: 'En Rovaniemi está la "oficina oficial" de Papá Noel, abierta todo el año.',
+        sights: [
+          { name: 'Cazar auroras boreales' },
+          { name: 'Pueblo de Papá Noel (Rovaniemi)' },
+          { name: 'Trineo de huskies y renos' },
+          { name: 'Dormir en iglú de cristal' },
+        ],
+      },
+      {
+        name: 'Región de los lagos', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Lake_Saimaa_aerial.jpg/500px-Lake_Saimaa_aerial.jpg',
+        fact: 'Finlandia es "el país de los mil lagos"… aunque en realidad tiene unos 188.000.',
+        sights: [
+          { name: 'Lago Saimaa en barco' },
+          { name: 'Cabañas de madera y sauna' },
+          { name: 'Focas anilladas de Saimaa' },
+          { name: 'Bosques y naturaleza infinita' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Finlandia', url: 'https://www.visitfinland.com/es/' },
+      { label: 'Embajada de España en Finlandia', url: 'https://www.exteriores.gob.es/Embajadas/helsinki' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
+  {
+    slug: 'ecuador', name: 'Ecuador', code: 'ec',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Lobo_marino_%28Zalophus_californianus_wollebaeki%29%2C_Punta_Pitt%2C_isla_de_San_Crist%C3%B3bal%2C_islas_Gal%C3%A1pagos%2C_Ecuador%2C_2015-07-24%2C_DD_11.JPG/1280px-Lobo_marino_%28Zalophus_californianus_wollebaeki%29%2C_Punta_Pitt%2C_isla_de_San_Crist%C3%B3bal%2C_islas_Gal%C3%A1pagos%2C_Ecuador%2C_2015-07-24%2C_DD_11.JPG',
+    imageAlt: 'Lobo marino en las islas Galápagos, Ecuador',
+    capital: 'Quito', currency: 'Dólar estadounidense (USD)', language: 'Español', plug: 'Tipo A/B (120 V)', tz: 'UTC-5 (Galápagos UTC-6)',
+    budget: 'Bajo', bestMonths: 'Junio-Septiembre y Diciembre-Enero',
+    difficulty: 'Media', duration: '10-16 días',
+    tags: ['Naturaleza', 'Aventura', 'Fauna', 'Andes', 'Barato'],
+    summary: 'Las islas Galápagos y su fauna única, la avenida de los volcanes andinos, la selva amazónica y un Quito colonial precioso. Ecuador concentra cuatro mundos en un país pequeño y baratísimo (salvo las Galápagos).',
+    opinion:
+      'Ecuador es de los países que más sorprenden por lo que ofrecen en tan poco espacio. En unos días pasas de la Quito colonial, a los volcanes nevados de los Andes, a la selva amazónica. Y luego están las Galápagos, que son otro nivel: nadar entre lobos marinos, tortugas gigantes y piqueros de patas azules que ni se inmutan contigo es una pasada, te sientes dentro de un documental. Mi consejo: el continente es baratísimo, así que ahorra para darte el capricho de las Galápagos, que son caras pero lo valen. Y usan el dólar, lo que simplifica todo.',
+    faq: [
+      { q: '¿Cuántos días para Ecuador?', a: 'Con 10-12 días ves Quito, los Andes y las Galápagos. Si sumas la Amazonía, mejor 14-16.' },
+      { q: '¿Son caras las Galápagos?', a: 'Sí, bastante (vuelo + tasas + tours). Pero el Ecuador continental es muy barato, así que compensa.' },
+      { q: '¿Necesito visado?', a: 'No para turismo: los españoles pueden estar hasta 90 días solo con el pasaporte.' },
+    ],
+    paperwork: ['Pasaporte en vigor', 'Sin visado para turismo (hasta 90 días)', 'Tasa de entrada y tarjeta de tránsito para Galápagos', 'Vacunas recomendadas para la Amazonía (consulta)'],
+    visa: 'No requerido hasta 90 días (turismo)',
+    internet: 'Aceptable · eSIM recomendada',
+    difficultyNote: 'Media: pequeño pero variadísimo (Andes, Amazonía, costa, Galápagos), se habla español y usan el dólar. Las Galápagos son caras; el resto, baratísimo.',
+    english: 'Se habla español; poco inglés. No lo necesitas.',
+    budgetLevels: { mochilero: 30, normal: 55, comodo: 110, lujo: 240 },
+    climate: [
+      { m: 'Ene', r: 'good' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'mid' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'good' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'good' }, { m: 'Dic', r: 'good' },
+    ],
+    cityGuides: [
+      {
+        name: 'Quito y la Mitad del Mundo', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/El_Voto_Nacional_._Quito%2C_Ecuador.JPG/500px-El_Voto_Nacional_._Quito%2C_Ecuador.JPG',
+        fact: 'Su centro histórico fue uno de los primeros Patrimonios de la Humanidad del mundo.',
+        sights: [
+          { name: 'Centro histórico (Patrimonio)' },
+          { name: 'Basílica del Voto Nacional' },
+          { name: 'Monumento Mitad del Mundo' },
+          { name: 'Teleférico al volcán Pichincha' },
+        ],
+      },
+      {
+        name: 'Islas Galápagos', days: '4-6 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Galapagos_giant_tortoise_Geochelone_elephantopus.jpg/500px-Galapagos_giant_tortoise_Geochelone_elephantopus.jpg',
+        fact: 'Aquí Darwin desarrolló su teoría de la evolución: la fauna no tiene miedo al ser humano.',
+        sights: [
+          { name: 'Tortugas gigantes' },
+          { name: 'Lobos marinos y piqueros de patas azules' },
+          { name: 'Snorkel con tortugas y tiburones' },
+          { name: 'Paisajes volcánicos' },
+        ],
+      },
+      {
+        name: 'Los Andes y la aventura', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Cotopaxi_volcano_2008-06-27T1322.jpg/500px-Cotopaxi_volcano_2008-06-27T1322.jpg',
+        fact: 'La "avenida de los volcanes" reúne decenas de picos, varios de ellos por encima de los 5.000 m.',
+        sights: [
+          { name: 'Volcán Cotopaxi' },
+          { name: 'Deportes de aventura en Baños' },
+          { name: 'Mercado indígena de Otavalo' },
+          { name: 'Páramos andinos y la Amazonía' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Ecuador', url: 'https://ecuador.travel/es/' },
+      { label: 'Embajada de España en Ecuador', url: 'https://www.exteriores.gob.es/Embajadas/quito' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
 ];
 
 export const countryBySlug = (slug: string) => COUNTRIES.find((c) => c.slug === slug);
