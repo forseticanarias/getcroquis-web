@@ -4317,6 +4317,142 @@ export const COUNTRIES: Country[] = [
       { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
     ],
   },
+  {
+    slug: 'laos', name: 'Laos', code: 'la',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/The_river_of_Kuang_si_waterfalls.jpg/1280px-The_river_of_Kuang_si_waterfalls.jpg',
+    imageAlt: 'Cascadas de Kuang Si, Laos',
+    capital: 'Vientián', currency: 'Kip (LAK)', language: 'Lao', plug: 'Tipo A/B/C (230 V)', tz: 'UTC+7',
+    budget: 'Bajo', bestMonths: 'Noviembre-Marzo (estación seca)',
+    difficulty: 'Media', duration: '8-12 días',
+    tags: ['Naturaleza', 'Cultura', 'Tranquilo', 'Barato', 'Mochilero'],
+    summary: 'Cascadas turquesa, templos dorados, montañas kársticas y el Mekong serpenteando entre selva. Laos es el rincón más tranquilo y auténtico del Sudeste Asiático, perfecto para desconectar y viajar despacio.',
+    opinion:
+      'Laos es el Sudeste Asiático en su versión más relajada y auténtica. Aquí todo va más despacio, y eso es justo su encanto. Luang Prabang es una maravilla: templos dorados, monjes recogiendo limosna al amanecer y un ritmo de vida que te desconecta de todo. Y las cascadas de Kuang Si, con esas pozas turquesa, son un sueño. Mi consejo: ve sin prisa, asume que los traslados son lentos (las carreteras de montaña son lo que son) y déjate llevar. Es baratísimo y la gente, encantadora. Ideal para combinar con Tailandia o Vietnam.',
+    faq: [
+      { q: '¿Cuántos días para Laos?', a: 'Con 8-10 días ves Luang Prabang, Vang Vieng y Vientián. Si bajas a las 4000 islas del sur, suma 3-4 días.' },
+      { q: '¿Cuándo es mejor ir?', a: 'Estación seca, de noviembre a marzo. Evita el calor extremo de abril-mayo y las lluvias del verano.' },
+      { q: '¿Necesito visado?', a: 'Sí: visado a la llegada o e-Visa online, ambos de pago y sencillos.' },
+    ],
+    paperwork: ['Pasaporte con al menos 6 meses de validez', 'Visado a la llegada o e-Visa (de pago)', 'Seguro de viaje recomendable', 'Vacunas recomendadas según zona (consulta)'],
+    visa: 'Visado a la llegada o e-Visa (de pago)',
+    internet: 'Irregular · eSIM recomendada',
+    difficultyNote: 'Media: el país más tranquilo del Sudeste Asiático, baratísimo y con gente encantadora. Los traslados son lentos (carreteras de montaña), pero el viaje es parte del encanto.',
+    english: 'Algo de inglés en zonas turísticas; en pueblos, poco.',
+    budgetLevels: { mochilero: 22, normal: 45, comodo: 90, lujo: 190 },
+    climate: [
+      { m: 'Ene', r: 'good' }, { m: 'Feb', r: 'good' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'mid' },
+      { m: 'May', r: 'avoid' }, { m: 'Jun', r: 'avoid' }, { m: 'Jul', r: 'avoid' }, { m: 'Ago', r: 'avoid' },
+      { m: 'Sep', r: 'mid' }, { m: 'Oct', r: 'mid' }, { m: 'Nov', r: 'good' }, { m: 'Dic', r: 'good' },
+    ],
+    cityGuides: [
+      {
+        name: 'Luang Prabang', days: '3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Phou_si_Luang_Prabang_Laos_%E3%83%97%E3%83%BC%E3%82%B7%E3%83%BC%E3%81%AE%E4%B8%98_%E3%83%A9%E3%82%AA%E3%82%B9%E3%83%BB%E3%83%AB%E3%82%A2%E3%83%B3%E3%83%97%E3%83%A9%E3%83%90%E3%83%BC%E3%83%B3_DSCF6777.jpg/500px-Phou_si_Luang_Prabang_Laos_%E3%83%97%E3%83%BC%E3%82%B7%E3%83%BC%E3%81%AE%E4%B8%98_%E3%83%A9%E3%82%AA%E3%82%B9%E3%83%BB%E3%83%AB%E3%82%A2%E3%83%B3%E3%83%97%E3%83%A9%E3%83%90%E3%83%BC%E3%83%B3_DSCF6777.jpg',
+        fact: 'Toda la ciudad es Patrimonio de la Humanidad por su mezcla de templos y arquitectura colonial.',
+        sights: [
+          { name: 'Ceremonia del alba con los monjes' },
+          { name: 'Cascadas turquesa de Kuang Si' },
+          { name: 'Subir al monte Phousi' },
+          { name: 'Mercado nocturno' },
+        ],
+      },
+      {
+        name: 'Vang Vieng', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/VientianeProvince_VangVieng9_tango7174.jpg/500px-VientianeProvince_VangVieng9_tango7174.jpg',
+        fact: 'Sus montañas kársticas envueltas en niebla al amanecer son de las vistas más famosas del país.',
+        sights: [
+          { name: 'Paseo en globo al amanecer' },
+          { name: 'Kayak por el río Nam Song' },
+          { name: 'Lagunas azules' },
+          { name: 'Cuevas en las montañas' },
+        ],
+      },
+      {
+        name: 'Vientián y el sur', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Pha_That_Luang%2C_July_2023.jpg/500px-Pha_That_Luang%2C_July_2023.jpg',
+        fact: 'En el sur, el Mekong se abre en "las 4000 islas", donde aún viven delfines de río.',
+        sights: [
+          { name: 'Estupa dorada Pha That Luang' },
+          { name: 'Las 4000 islas (Si Phan Don)' },
+          { name: 'Delfines del Mekong' },
+          { name: 'Cascadas del sur' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Laos', url: 'https://www.tourismlaos.org/' },
+      { label: 'Embajada de España (concurrente en Bangkok)', url: 'https://www.exteriores.gob.es/Embajadas/bangkok' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
+  {
+    slug: 'guatemala', name: 'Guatemala', code: 'gt',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Tikal_3.jpg/1280px-Tikal_3.jpg',
+    imageAlt: 'Templos mayas de Tikal, Guatemala',
+    capital: 'Ciudad de Guatemala', currency: 'Quetzal (GTQ)', language: 'Español', plug: 'Tipo A/B (120 V)', tz: 'UTC-6',
+    budget: 'Bajo', bestMonths: 'Noviembre-Abril (estación seca)',
+    difficulty: 'Media', duration: '10-14 días',
+    tags: ['Cultura', 'Naturaleza', 'Maya', 'Aventura', 'Barato'],
+    summary: 'El corazón del mundo maya: los templos de Tikal sobre la selva, la colonial Antigua entre volcanes, el lago de Atitlán y mercados indígenas llenos de color. Guatemala es cultura viva, naturaleza y autenticidad a precios mínimos.',
+    opinion:
+      'Guatemala es de los países que más te llenan el alma. La cultura maya sigue viva: lo ves en los trajes coloridos de los mercados, en las lenguas indígenas y en las ceremonias. Antigua, entre volcanes, es preciosa, y subir al Acatenango para ver el volcán de Fuego rugir y escupir lava de noche es una experiencia que no se olvida. El lago de Atitlán, rodeado de pueblos mayas, es de los más bonitos del mundo. Mi consejo: infórmate de la seguridad y muévete con cabeza, pero ve con la mente abierta: es barato, auténtico y de los viajes más enriquecedores de Centroamérica.',
+    faq: [
+      { q: '¿Cuántos días para Guatemala?', a: 'Con 10-12 días ves Antigua, el lago de Atitlán y Tikal. Suele combinarse con el sur de México o Belice.' },
+      { q: '¿Cuándo es mejor ir?', a: 'De noviembre a abril (estación seca). Evita los meses más lluviosos (junio y septiembre).' },
+      { q: '¿Necesito visado?', a: 'No para turismo: los españoles pueden estar hasta 90 días solo con el pasaporte.' },
+    ],
+    paperwork: ['Pasaporte en vigor', 'Sin visado para turismo (hasta 90 días)', 'Seguro de viaje muy recomendable', 'Vacunas recomendadas según zona (consulta)'],
+    visa: 'No requerido hasta 90 días (turismo)',
+    internet: 'Aceptable · eSIM recomendada',
+    difficultyNote: 'Media: el corazón del mundo maya, baratísimo y precioso, pero conviene informarse de la seguridad y moverse con cabeza. Su gran tesoro es la cultura indígena viva.',
+    english: 'Se habla español (y lenguas mayas); poco inglés.',
+    budgetLevels: { mochilero: 25, normal: 50, comodo: 100, lujo: 220 },
+    climate: [
+      { m: 'Ene', r: 'good' }, { m: 'Feb', r: 'good' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'mid' }, { m: 'Jun', r: 'avoid' }, { m: 'Jul', r: 'mid' }, { m: 'Ago', r: 'mid' },
+      { m: 'Sep', r: 'avoid' }, { m: 'Oct', r: 'mid' }, { m: 'Nov', r: 'good' }, { m: 'Dic', r: 'good' },
+    ],
+    cityGuides: [
+      {
+        name: 'Antigua', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Antigua_-_Arco.jpg/500px-Antigua_-_Arco.jpg',
+        fact: 'Rodeada de tres volcanes, su casco colonial es Patrimonio de la Humanidad.',
+        sights: [
+          { name: 'Arco de Santa Catalina' },
+          { name: 'Calles empedradas coloniales' },
+          { name: 'Volcán Acatenango (ver el Fuego erupcionar)' },
+          { name: 'Iglesias y ruinas barrocas' },
+        ],
+      },
+      {
+        name: 'Lago de Atitlán', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Lago_Atitl%C3%A0n.JPG/500px-Lago_Atitl%C3%A0n.JPG',
+        fact: 'Aldous Huxley lo llamó "el lago más bonito del mundo": está rodeado de volcanes y pueblos mayas.',
+        sights: [
+          { name: 'Pueblos mayas junto al lago' },
+          { name: 'San Pedro y San Juan La Laguna' },
+          { name: 'Mercado de Chichicastenango' },
+          { name: 'Textiles y trajes típicos' },
+        ],
+      },
+      {
+        name: 'Tikal y la naturaleza', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Semuc_Champey%2C_Guatemala.jpg/500px-Semuc_Champey%2C_Guatemala.jpg',
+        fact: 'Las pirámides de Tikal asoman por encima de la selva; salieron en "Star Wars" como base rebelde.',
+        sights: [
+          { name: 'Templos mayas de Tikal' },
+          { name: 'Amanecer entre monos aulladores' },
+          { name: 'Pozas turquesa de Semuc Champey' },
+          { name: 'Flores y el lago Petén Itzá' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Guatemala', url: 'https://visitguatemala.com/' },
+      { label: 'Embajada de España en Guatemala', url: 'https://www.exteriores.gob.es/Embajadas/guatemala' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
 ];
 
 export const countryBySlug = (slug: string) => COUNTRIES.find((c) => c.slug === slug);
