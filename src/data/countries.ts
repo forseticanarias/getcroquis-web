@@ -4860,6 +4860,142 @@ export const COUNTRIES: Country[] = [
       { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
     ],
   },
+  {
+    slug: 'estonia', name: 'Estonia', code: 'ee',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Raekoja_plats_at_night.jpg/1280px-Raekoja_plats_at_night.jpg',
+    imageAlt: 'Plaza del Ayuntamiento de Tallin, Estonia',
+    capital: 'Tallin', currency: 'Euro (EUR)', language: 'Estonio', plug: 'Tipo C/F (230 V)', tz: 'UTC+2',
+    budget: 'Medio', bestMonths: 'Mayo-Septiembre',
+    difficulty: 'Fácil', duration: '4-6 días',
+    tags: ['Ciudades', 'Cultura', 'Medieval', 'Naturaleza', 'Tecnología'],
+    summary: 'Tallin y su casco medieval de cuento, bosques y ciénagas mágicas, islas del Báltico y el país más digital del mundo. Estonia mezcla historia hanseática con tecnología puntera, y todavía está poco descubierta.',
+    opinion:
+      'Estonia es una joyita báltica que engancha. Tallin tiene uno de los cascos medievales mejor conservados de Europa: murallas, torres y callejones empedrados que en invierno, con nieve y mercadillos navideños, parecen de cuento. Pero más allá de la capital sorprende su naturaleza: las pasarelas sobre las ciénagas de Lahemaa al amanecer son pura magia. Mi consejo: combina un par de días en Tallin con algo de naturaleza o una isla, y aprovecha lo avanzada que es (es el país de Skype, aquí se vota por internet). Pequeña, segura y aún sin masificar.',
+    faq: [
+      { q: '¿Cuántos días para Estonia?', a: 'Con 3-4 días ves Tallin a fondo y haces una escapada a la naturaleza (Lahemaa) o a Tartu.' },
+      { q: '¿Cuándo es mejor ir?', a: 'De mayo a septiembre por el buen tiempo y los días largos. El invierno es muy frío pero precioso con nieve y mercadillos.' },
+      { q: '¿Hace falta visado?', a: 'No: está en Schengen, con el DNI español en vigor basta.' },
+    ],
+    paperwork: ['DNI o pasaporte en vigor (Schengen)', 'Sin visado para turismo', 'Tarjeta Sanitaria Europea recomendada', 'Sin vacunas obligatorias'],
+    visa: 'No requerido (DNI, Schengen)',
+    internet: 'Excelente · roaming UE sin coste extra',
+    difficultyNote: 'Muy fácil: pequeña, segura y de las más digitales del mundo. Tallin es una joya medieval y la naturaleza báltica (bosques, ciénagas, islas) sorprende.',
+    english: 'Mucho inglés, sobre todo entre los jóvenes.',
+    budgetLevels: { mochilero: 50, normal: 90, comodo: 160, lujo: 300 },
+    climate: [
+      { m: 'Ene', r: 'avoid' }, { m: 'Feb', r: 'avoid' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'mid' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'good' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'mid' }, { m: 'Nov', r: 'avoid' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Tallin', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Tallinn_Toompea_Upper_Old_Town_2013.jpg/500px-Tallinn_Toompea_Upper_Old_Town_2013.jpg',
+        fact: 'Su casco antiguo medieval es de los mejor conservados del norte de Europa y es Patrimonio.',
+        sights: [
+          { name: 'Casco medieval (Patrimonio)' },
+          { name: 'Plaza del Ayuntamiento' },
+          { name: 'Colina de Toompea y sus miradores' },
+          { name: 'Murallas y torres' },
+        ],
+      },
+      {
+        name: 'Tartu y el interior', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Tartu_%282019%29.jpg/500px-Tartu_%282019%29.jpg',
+        fact: 'Tartu es la ciudad universitaria más antigua del país y fue Capital Europea de la Cultura.',
+        sights: [
+          { name: 'Ciudad universitaria de Tartu' },
+          { name: 'Casco antiguo y museos' },
+          { name: 'Ambiente joven y bohemio' },
+          { name: 'Balnearios de Pärnu' },
+        ],
+      },
+      {
+        name: 'Naturaleza báltica', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Viru_Bog%2C_Parque_Nacional_Lahemaa%2C_Estonia%2C_2012-08-12%2C_DD_26.JPG/500px-Viru_Bog%2C_Parque_Nacional_Lahemaa%2C_Estonia%2C_2012-08-12%2C_DD_26.JPG',
+        fact: 'Más de la mitad del país es bosque: la naturaleza está casi intacta.',
+        sights: [
+          { name: 'Pasarelas sobre las ciénagas de Lahemaa' },
+          { name: 'Bosques y costa báltica' },
+          { name: 'Islas de Saaremaa e Hiiumaa' },
+          { name: 'Fauna salvaje (alces, linces)' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Estonia', url: 'https://www.visitestonia.com/es' },
+      { label: 'Embajada de España en Estonia', url: 'https://www.exteriores.gob.es/Embajadas/tallin' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
+  {
+    slug: 'zimbabue', name: 'Zimbabue', code: 'zw',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Cataratas_Victoria%2C_Zambia-Zimbabue%2C_2018-07-27%2C_DD_04.jpg/1280px-Cataratas_Victoria%2C_Zambia-Zimbabue%2C_2018-07-27%2C_DD_04.jpg',
+    imageAlt: 'Cataratas Victoria, Zimbabue',
+    capital: 'Harare', currency: 'Dólar USA / ZiG', language: 'Inglés (y shona, ndebele)', plug: 'Tipo D/G (240 V)', tz: 'UTC+2',
+    budget: 'Medio', bestMonths: 'Mayo-Octubre (safari); cataratas con más caudal en Abril-Junio',
+    difficulty: 'Media', duration: '7-10 días',
+    tags: ['Cataratas', 'Safari', 'Naturaleza', 'Aventura', 'En pareja'],
+    summary: 'Las imponentes Cataratas Victoria, grandes safaris con manadas de elefantes y las misteriosas ruinas que dan nombre al país. Zimbabue es naturaleza en estado puro y una de las hospitalidades más cálidas de África.',
+    opinion:
+      'Zimbabue tiene uno de los espectáculos naturales más impresionantes del planeta: las Cataratas Victoria, que los locales llaman "el humo que truena" por la nube de agua que se ve a kilómetros. Sentir su rugido y empaparte con su rocío es algo que no se olvida. Y si te va la adrenalina, aquí puedes hacer rafting en el Zambeze o asomarte a la Piscina del Diablo, al borde mismo de la caída. Más allá de las cataratas, los safaris en Hwange son magníficos. Mi consejo: la economía es inestable, así que lleva dólares en efectivo, pon profilaxis de malaria y déjate cuidar por una gente extraordinariamente amable.',
+    faq: [
+      { q: '¿Cuántos días para Zimbabue?', a: 'Con 7-8 días ves las Cataratas Victoria y haces safari en Hwange. Suele combinarse con Botsuana o Zambia.' },
+      { q: '¿Cuándo es mejor ir?', a: 'Mayo-octubre para safari (seca). Las cataratas llevan más caudal de abril a junio, tras las lluvias.' },
+      { q: '¿Necesito visado?', a: 'Sí: visado a la llegada (de pago). Existe el KAZA UniVisa que sirve también para Zambia.' },
+    ],
+    paperwork: ['Pasaporte con al menos 6 meses de validez', 'Visado a la llegada (de pago)', 'Seguro de viaje imprescindible', 'Profilaxis de malaria (consulta) y dólares en efectivo'],
+    visa: 'Visado a la llegada (de pago)',
+    internet: 'Justo · eSIM recomendada',
+    difficultyNote: 'Media: hogar de las Cataratas Victoria y de grandes safaris, con gente muy hospitalaria. La economía es inestable (mejor llevar dólares en efectivo) y conviene poner profilaxis de malaria.',
+    english: 'El inglés es idioma oficial; cero barrera.',
+    budgetLevels: { mochilero: 45, normal: 90, comodo: 170, lujo: 380 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'good' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Cataratas Victoria', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Puente_de_las_cataratas_Victoria%2C_Zambia-Zimbabue%2C_2018-07-27%2C_DD_10.jpg/500px-Puente_de_las_cataratas_Victoria%2C_Zambia-Zimbabue%2C_2018-07-27%2C_DD_10.jpg',
+        fact: 'Con 1,7 km de ancho, son de las mayores cortinas de agua del mundo; se oyen a kilómetros.',
+        sights: [
+          { name: 'Las Cataratas Victoria' },
+          { name: "Baño en la Piscina del Diablo (Devil's Pool)" },
+          { name: 'Puenting sobre el Zambeze' },
+          { name: 'Crucero al atardecer por el río' },
+        ],
+      },
+      {
+        name: 'Safari en Hwange', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Down_the_water_hole.jpg/500px-Down_the_water_hole.jpg',
+        fact: 'Hwange es el mayor parque del país y alberga una de las mayores poblaciones de elefantes de África.',
+        sights: [
+          { name: 'Safari en el Parque de Hwange' },
+          { name: 'Grandes manadas de elefantes' },
+          { name: 'Los Big Five' },
+          { name: 'Charcas y atardeceres en la sabana' },
+        ],
+      },
+      {
+        name: 'El Gran Zimbabue', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Conical_Tower_-_Great_Enclosure_III_%2833736918448%29.jpg/500px-Conical_Tower_-_Great_Enclosure_III_%2833736918448%29.jpg',
+        fact: 'Estas ruinas de piedra del siglo XI, que dan nombre al país, se levantaron sin mortero.',
+        sights: [
+          { name: 'Ruinas del Gran Zimbabue (Patrimonio)' },
+          { name: 'La Gran Torre cónica' },
+          { name: 'Colinas de Matobo y arte rupestre' },
+          { name: 'Cultura shona local' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Zimbabue', url: 'https://www.zimbabwetourism.net/' },
+      { label: 'Embajada de España (concurrente en Pretoria)', url: 'https://www.exteriores.gob.es/Embajadas/pretoria' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
 ];
 
 export const countryBySlug = (slug: string) => COUNTRIES.find((c) => c.slug === slug);
