@@ -4588,6 +4588,142 @@ export const COUNTRIES: Country[] = [
       { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
     ],
   },
+  {
+    slug: 'malta', name: 'Malta', code: 'mt',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/St_Sebastian_Curtain_%28cropped%29.jpg/1280px-St_Sebastian_Curtain_%28cropped%29.jpg',
+    imageAlt: 'La Valeta, Malta',
+    capital: 'La Valeta', currency: 'Euro (EUR)', language: 'Maltés e inglés', plug: 'Tipo G (230 V)', tz: 'UTC+1',
+    budget: 'Medio', bestMonths: 'Abril-Junio y Septiembre-Octubre',
+    difficulty: 'Fácil', duration: '4-6 días',
+    tags: ['Playa', 'Historia', 'Mediterráneo', 'En pareja', 'Buceo'],
+    summary: 'Un archipiélago mediterráneo con miles de años de historia, calas turquesa como el Lago Azul, ciudades amuralladas y sol casi todo el año. Malta es un concentrado de mar, piedra dorada y cultura en muy pocos kilómetros.',
+    opinion:
+      'Malta es un planazo mediterráneo que muchos no esperan. La Valeta, su capital, es una preciosidad de piedra dorada con unas vistas del puerto que enamoran. Pero lo que más alucina es el Lago Azul de Comino, con un agua tan turquesa y transparente que parece photoshop. Mi consejo: combina la historia (La Valeta, la medieval Mdina) con un día de barco por las islas y unos baños en sus calas. Encima se habla inglés, está todo cerca y luce el sol casi siempre. Perfecta para una escapada de pocos días.',
+    faq: [
+      { q: '¿Cuántos días para Malta?', a: 'Con 4-5 días ves La Valeta, Mdina, la isla de Gozo y te bañas en el Lago Azul de Comino. Es pequeña y todo está cerca.' },
+      { q: '¿Cuándo es mejor ir?', a: 'Primavera (abril-junio) y otoño (septiembre-octubre). El verano es perfecto para playa, aunque caluroso y concurrido.' },
+      { q: '¿Hace falta visado?', a: 'No: está en Schengen, con el DNI español en vigor basta.' },
+    ],
+    paperwork: ['DNI o pasaporte en vigor (Schengen)', 'Sin visado para turismo', 'Tarjeta Sanitaria Europea recomendada', 'Se conduce por la izquierda (herencia británica)'],
+    visa: 'No requerido (DNI, Schengen)',
+    internet: 'Excelente · roaming UE sin coste extra',
+    difficultyNote: 'Muy fácil: en inglés (fue colonia británica), pequeña y soleada casi todo el año. Un concentrado de historia, mar y pueblos con encanto en pocos km.',
+    english: 'El inglés es idioma cooficial; cero barrera.',
+    budgetLevels: { mochilero: 50, normal: 95, comodo: 170, lujo: 320 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'good' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Comino y el Lago Azul', days: '1 día',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Sudika_Kemmuna.jpg/500px-Sudika_Kemmuna.jpg',
+        fact: 'El Lago Azul de Comino tiene un agua tan turquesa que es de las más fotografiadas del Mediterráneo.',
+        sights: [
+          { name: 'Baño en el Lago Azul (Blue Lagoon)' },
+          { name: 'Snorkel en aguas cristalinas' },
+          { name: 'Paseo en barco entre islas' },
+          { name: 'Calas escondidas' },
+        ],
+      },
+      {
+        name: 'Mdina, la ciudad silenciosa', days: '1 día',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Malta_-_Mdina_%28Triq_San_Oswald%29_02_ies.jpg/500px-Malta_-_Mdina_%28Triq_San_Oswald%29_02_ies.jpg',
+        fact: 'La antigua capital amurallada fue escenario de "Juego de Tronos" (Desembarco del Rey).',
+        sights: [
+          { name: 'Ciudad amurallada medieval' },
+          { name: 'Escenarios de Juego de Tronos' },
+          { name: 'Murallas con vistas a la isla' },
+          { name: 'Rabat y sus catacumbas' },
+        ],
+      },
+      {
+        name: 'Gozo', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Malta_Gozo%2C_Azure_Window_%2810264176345%29.jpg/500px-Malta_Gozo%2C_Azure_Window_%2810264176345%29.jpg',
+        fact: 'Gozo alberga los templos de Ġgantija, más antiguos que las pirámides de Egipto.',
+        sights: [
+          { name: 'Bahías y buceo en Gozo' },
+          { name: 'Templos megalíticos de Ġgantija' },
+          { name: 'Ciudadela de Victoria' },
+          { name: 'Pueblos con encanto' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Malta', url: 'https://www.visitmalta.com/es/' },
+      { label: 'Embajada de España en Malta', url: 'https://www.exteriores.gob.es/Embajadas/lavaleta' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
+  {
+    slug: 'botsuana', name: 'Botsuana', code: 'bw',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Okavango_Delta%2C_Botswana1.jpg/1280px-Okavango_Delta%2C_Botswana1.jpg',
+    imageAlt: 'Delta del Okavango, Botsuana',
+    capital: 'Gaborone', currency: 'Pula (BWP)', language: 'Inglés y setsuana', plug: 'Tipo D/G/M (230 V)', tz: 'UTC+2',
+    budget: 'Alto', bestMonths: 'Mayo-Octubre (estación seca, safari)',
+    difficulty: 'Media', duration: '8-12 días',
+    tags: ['Safari', 'Naturaleza', 'Lujo', 'Aventura', 'En pareja'],
+    summary: 'El Delta del Okavango, el río Chobe con sus miles de elefantes y las salinas del Kalahari. Botsuana ofrece de los mejores safaris de África, en un país estable, poco masificado y volcado en un turismo de naturaleza de calidad.',
+    opinion:
+      'Botsuana es el safari de los soñadores. Aquí la naturaleza manda: el Delta del Okavango es un fenómeno único, un río que en vez de llegar al mar se desparrama en el desierto creando un oasis lleno de vida que recorres en mokoro (la canoa tradicional), deslizándote entre nenúfares mientras pasan los elefantes. Y en Chobe ves manadas de cientos de elefantes a la vez. Mi consejo: es un destino caro porque apuesta por la exclusividad (pocos turistas, mucha naturaleza), así que ve con un buen presupuesto y disfruta de uno de los safaris más salvajes y auténticos que existen.',
+    faq: [
+      { q: '¿Cuántos días para Botsuana?', a: 'Con 8-10 días combinas el Delta del Okavango, Chobe y quizá el Kalahari. Suele unirse a las cataratas Victoria (en la frontera).' },
+      { q: '¿Cuándo es mejor ir?', a: 'Estación seca (mayo-octubre): los animales se concentran en el agua y es más fácil verlos.' },
+      { q: '¿Necesito visado?', a: 'No para turismo: los españoles pueden estar hasta 90 días solo con el pasaporte.' },
+    ],
+    paperwork: ['Pasaporte con al menos 6 meses de validez', 'Sin visado para turismo (hasta 90 días)', 'Seguro de viaje imprescindible', 'Profilaxis de malaria en el norte (consulta)'],
+    visa: 'No requerido hasta 90 días (turismo)',
+    internet: 'Justo fuera de ciudades · eSIM recomendada',
+    difficultyNote: 'Media: ofrece de los mejores safaris de África, en un país estable y poco masificado que apuesta por un turismo de calidad (caro). El Delta del Okavango es único.',
+    english: 'El inglés es idioma oficial; cero barrera.',
+    budgetLevels: { mochilero: 60, normal: 120, comodo: 250, lujo: 600 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'good' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Delta del Okavango', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Moremi_elephant.jpg/500px-Moremi_elephant.jpg',
+        fact: 'Es un delta interior: el río Okavango no desemboca en el mar, sino que se evapora en el Kalahari.',
+        sights: [
+          { name: 'Safari en mokoro (canoa tradicional)' },
+          { name: 'Reserva de Moremi' },
+          { name: 'Elefantes, leones y leopardos' },
+          { name: 'Campamentos en plena naturaleza' },
+        ],
+      },
+      {
+        name: 'Parque de Chobe', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Gnus_zebras_chobe_national_park.jpg/500px-Gnus_zebras_chobe_national_park.jpg',
+        fact: 'Chobe tiene la mayor concentración de elefantes de África: más de 50.000 ejemplares.',
+        sights: [
+          { name: 'Miles de elefantes en el río Chobe' },
+          { name: 'Safari en barco al atardecer' },
+          { name: 'Manadas y depredadores' },
+          { name: 'Hipopótamos y cocodrilos' },
+        ],
+      },
+      {
+        name: 'Kalahari y Makgadikgadi', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Botswana_Nxai_Pan_NP_Baynes_Baobabs.jpg/500px-Botswana_Nxai_Pan_NP_Baynes_Baobabs.jpg',
+        fact: 'Las salinas de Makgadikgadi son tan grandes que se ven desde el espacio.',
+        sights: [
+          { name: 'Salinas inmensas de Makgadikgadi' },
+          { name: 'Baobabs milenarios de Baines' },
+          { name: 'Suricatas curiosas' },
+          { name: 'Cielos estrellados del Kalahari' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Botsuana', url: 'https://www.botswanatourism.co.bw/' },
+      { label: 'Embajada de España (concurrente en Pretoria)', url: 'https://www.exteriores.gob.es/Embajadas/pretoria' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
 ];
 
 export const countryBySlug = (slug: string) => COUNTRIES.find((c) => c.slug === slug);
