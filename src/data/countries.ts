@@ -4045,6 +4045,142 @@ export const COUNTRIES: Country[] = [
       { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
     ],
   },
+  {
+    slug: 'georgia', name: 'Georgia', code: 'ge',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Gergeti_Trinity_Church_09.23.jpg/1280px-Gergeti_Trinity_Church_09.23.jpg',
+    imageAlt: 'Iglesia de Gergeti bajo el monte Kazbek, Georgia',
+    capital: 'Tiflis', currency: 'Lari (GEL)', language: 'Georgiano', plug: 'Tipo C/F (220 V)', tz: 'UTC+4',
+    budget: 'Bajo', bestMonths: 'Mayo-Junio y Septiembre-Octubre',
+    difficulty: 'Media', duration: '8-12 días',
+    tags: ['Montaña', 'Cultura', 'Vino', 'Aventura', 'Barato'],
+    summary: 'La cuna del vino, montañas del Cáucaso espectaculares, monasterios colgados y una hospitalidad legendaria. Georgia es el destino de moda para los viajeros: barata, auténtica y todavía poco masificada.',
+    opinion:
+      'Georgia es uno de esos descubrimientos que te hacen sentir un viajero de verdad. Tiflis tiene un encanto desordenado precioso, con sus casas de balcones de madera y sus baños de azufre, y en cuanto subes al Cáucaso, los paisajes son de quitar el hipo: la iglesia de Gergeti recortada contra una montaña de 5.000 m es de las imágenes del año. Mi consejo: déjate invitar (la hospitalidad georgiana es de otro nivel), bebe su vino (lo inventaron ellos hace 8.000 años) y come jachapuri sin parar. Encima es baratísima. Una joya antes de que se ponga de moda del todo.',
+    faq: [
+      { q: '¿Cuántos días para Georgia?', a: 'Con 8-10 días combinas Tiflis, las montañas del Cáucaso (Kazbegi, Svaneti) y la región vinícola de Kakheti.' },
+      { q: '¿Cuándo es mejor ir?', a: 'Primavera (mayo-junio) y otoño (septiembre-octubre). Las montañas altas solo son accesibles en verano.' },
+      { q: '¿Necesito visado?', a: 'No: los españoles pueden estar hasta un año sin visado, solo con el pasaporte.' },
+    ],
+    paperwork: ['Pasaporte en vigor (o DNI según vía de entrada)', 'Sin visado para turismo (hasta 1 año)', 'Seguro de viaje recomendable', 'Sin vacunas obligatorias'],
+    visa: 'No requerido hasta 1 año (turismo)',
+    internet: 'Bueno · eSIM recomendada',
+    difficultyNote: 'Media: barata, segura y de las más hospitalarias del mundo, pero el idioma (con su propio alfabeto) y las carreteras de montaña requieren algo de paciencia.',
+    english: 'Algo de inglés entre los jóvenes; menos en pueblos. El ruso es común.',
+    budgetLevels: { mochilero: 25, normal: 50, comodo: 100, lujo: 220 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'mid' }, { m: 'Ago', r: 'mid' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Tiflis', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/View_of_Tbilisi_from_Tabori_Church_2023-10-08-2.jpg/500px-View_of_Tbilisi_from_Tabori_Church_2023-10-08-2.jpg',
+        fact: 'Su nombre viene de "tbili" (cálido), por las aguas termales sobre las que se fundó.',
+        sights: [
+          { name: 'Casco antiguo y balcones de madera' },
+          { name: 'Baños de azufre de Abanotubani' },
+          { name: 'Fortaleza de Narikala' },
+          { name: 'Gastronomía y vida nocturna' },
+        ],
+      },
+      {
+        name: 'Las montañas del Cáucaso', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Ushguli_Svaneti_Georgia.JPG/500px-Ushguli_Svaneti_Georgia.JPG',
+        fact: 'Ushguli, en Svaneti, es de los pueblos habitados más altos de Europa (2.100 m).',
+        sights: [
+          { name: 'Iglesia de Gergeti bajo el Kazbek' },
+          { name: 'Pueblos torre de Ushguli (Svaneti)' },
+          { name: 'Senderismo desde Mestia' },
+          { name: 'Paisajes alpinos del Cáucaso' },
+        ],
+      },
+      {
+        name: 'Kakheti y el vino', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Sighnagi_2009.jpg/500px-Sighnagi_2009.jpg',
+        fact: 'Aquí se elabora vino desde hace 8.000 años, en ánforas de barro enterradas (qvevri).',
+        sights: [
+          { name: 'Pueblo amurallado de Sighnaghi' },
+          { name: 'Bodegas y vino en ánfora (qvevri)' },
+          { name: 'Monasterios milenarios' },
+          { name: 'Valle de Alazani' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Georgia', url: 'https://georgia.travel/' },
+      { label: 'Embajada de España en Georgia', url: 'https://www.exteriores.gob.es/Embajadas/tiflis' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
+  {
+    slug: 'bolivia', name: 'Bolivia', code: 'bo',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Salar_Uyuni_au01.jpg/1280px-Salar_Uyuni_au01.jpg',
+    imageAlt: 'Salar de Uyuni, Bolivia',
+    capital: 'La Paz / Sucre', currency: 'Boliviano (BOB)', language: 'Español, quechua y aimara', plug: 'Tipo A/C (230 V)', tz: 'UTC-4',
+    budget: 'Bajo', bestMonths: 'Mayo-Octubre (seca); efecto espejo del Salar en Enero-Marzo',
+    difficulty: 'Media', duration: '10-14 días',
+    tags: ['Naturaleza', 'Aventura', 'Andes', 'Cultura', 'Barato'],
+    summary: 'El Salar de Uyuni y su efecto espejo, La Paz colgada de los Andes, el lago Titicaca y una cultura indígena viva. Bolivia es el país más auténtico y barato de Sudamérica, puro altiplano y aventura.',
+    opinion:
+      'Bolivia es de los países más auténticos y alucinantes de Sudamérica, y encima el más barato. El Salar de Uyuni es de esos lugares que no parecen reales: en temporada de lluvias se convierte en un espejo gigante donde el cielo y la tierra se funden, una pasada para las fotos. La Paz, colgada entre montañas y con su teleférico urbano, es vibrante y caótica. Mi consejo: tómate la altura en serio (La Paz está a 3.600 m, se nota), aclimátate poco a poco y déjate sorprender por una cultura indígena viva y orgullosa. No es el viaje más cómodo, pero sí de los más genuinos.',
+    faq: [
+      { q: '¿Cuántos días para Bolivia?', a: 'Con 10-12 días ves el Salar de Uyuni, La Paz y el lago Titicaca. Suele combinarse con Perú o el norte de Chile/Argentina.' },
+      { q: '¿Cuándo es mejor ir?', a: 'Mayo-octubre (seca) en general. Pero si quieres el efecto espejo del Salar, ve en enero-marzo (lluvias).' },
+      { q: '¿Necesito visado?', a: 'No para turismo: los españoles pueden estar hasta 90 días solo con el pasaporte.' },
+    ],
+    paperwork: ['Pasaporte en vigor', 'Sin visado para turismo (hasta 90 días)', 'Seguro de viaje recomendable', 'Tómate la altura en serio: aclimatación'],
+    visa: 'No requerido hasta 90 días (turismo)',
+    internet: 'Justo · eSIM recomendada',
+    difficultyNote: 'Media: el país más barato de Sudamérica y auténtico como pocos, pero la altura (La Paz a 3.600 m) y las carreteras pasan factura. Hay que aclimatarse.',
+    english: 'Se habla español; muy poco inglés. No lo necesitas.',
+    budgetLevels: { mochilero: 20, normal: 40, comodo: 85, lujo: 200 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'good' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Salar de Uyuni', days: '3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Salar_Uyuni_au01.jpg/500px-Salar_Uyuni_au01.jpg',
+        fact: 'Es el mayor desierto de sal del mundo: 10.000 km² que en época de lluvias se vuelven un espejo perfecto.',
+        sights: [
+          { name: 'Efecto espejo del salar (ene-mar)' },
+          { name: 'Isla Incahuasi y sus cactus gigantes' },
+          { name: 'Cementerio de trenes' },
+          { name: 'Lagunas de colores y flamencos' },
+        ],
+      },
+      {
+        name: 'La Paz y los Andes', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Vista_del_centro_de_La_Paz.jpg/500px-Vista_del_centro_de_La_Paz.jpg',
+        fact: 'Su red de teleféricos urbanos es la más extensa del mundo: el transporte público va por el aire.',
+        sights: [
+          { name: 'Teleférico urbano (Mi Teleférico)' },
+          { name: 'Mercado de las Brujas' },
+          { name: 'Valle de la Luna' },
+          { name: 'Carretera de la Muerte en bici' },
+        ],
+      },
+      {
+        name: 'Lago Titicaca y Sucre', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Isladelsol.jpg/500px-Isladelsol.jpg',
+        fact: 'El Titicaca es el lago navegable más alto del mundo, a 3.812 m de altitud.',
+        sights: [
+          { name: 'Isla del Sol en el Titicaca' },
+          { name: 'Copacabana y su santuario' },
+          { name: 'Ciudad blanca de Sucre (Patrimonio)' },
+          { name: 'Minas de plata de Potosí' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Bolivia', url: 'https://bolivia.travel/' },
+      { label: 'Embajada de España en Bolivia', url: 'https://www.exteriores.gob.es/Embajadas/lapaz' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
 ];
 
 export const countryBySlug = (slug: string) => COUNTRIES.find((c) => c.slug === slug);
