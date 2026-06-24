@@ -3909,6 +3909,142 @@ export const COUNTRIES: Country[] = [
       { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
     ],
   },
+  {
+    slug: 'republica-dominicana', name: 'República Dominicana', code: 'do',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Saona_Island_December_2020.jpg/1280px-Saona_Island_December_2020.jpg',
+    imageAlt: 'Isla Saona, República Dominicana',
+    capital: 'Santo Domingo', currency: 'Peso dominicano (DOP)', language: 'Español', plug: 'Tipo A/B (120 V)', tz: 'UTC-4',
+    budget: 'Medio', bestMonths: 'Diciembre-Abril (estación seca)',
+    difficulty: 'Fácil', duration: '7-10 días',
+    tags: ['Playa', 'Caribe', 'Familia', 'Todo incluido', 'Relax'],
+    summary: 'Playas de postal con palmeras, agua turquesa, ron, merengue y la primera ciudad de América. La República Dominicana es el destino caribeño favorito para desconectar, con vuelos directos y todo incluido.',
+    opinion:
+      'República Dominicana es sinónimo de playa caribeña sin complicaciones. Las playas de Punta Cana, con su arena blanca y sus palmeras inclinadas, son justo lo que imaginas cuando piensas en el paraíso. Está genial para relajarse en un todo incluido, ir en pareja o en familia. Pero mi consejo es que no te quedes solo en el resort: la Zona Colonial de Santo Domingo es preciosa (fue la primera ciudad europea de América) y la península de Samaná, con sus ballenas y cascadas, es otro rollo. Sal, prueba el ron y baila merengue con los locales.',
+    faq: [
+      { q: '¿Cuántos días para República Dominicana?', a: 'Con 7 días desconectas de sobra en Punta Cana. Si sumas Santo Domingo y Samaná, mejor 9-10.' },
+      { q: '¿Cuándo es mejor ir?', a: 'De diciembre a abril (estación seca). Evita la temporada de huracanes (agosto-octubre).' },
+      { q: '¿Necesito visado?', a: 'No: para turismo no hace falta visado; la tasa de turismo suele ir incluida en el billete de avión.' },
+    ],
+    paperwork: ['Pasaporte en vigor', 'Sin visado para turismo (tasa incluida en el vuelo)', 'Seguro de viaje recomendable', 'Sin vacunas obligatorias'],
+    visa: 'No requerido (tasa de turismo incluida)',
+    internet: 'Bueno en zonas turísticas · eSIM recomendada',
+    difficultyNote: 'Muy fácil: el destino caribeño favorito para relajarse, con vuelos directos y todo incluido. Se habla español. Para conocer el país de verdad, sal de los resorts.',
+    english: 'Se habla español; inglés en los resorts.',
+    budgetLevels: { mochilero: 40, normal: 80, comodo: 160, lujo: 350 },
+    climate: [
+      { m: 'Ene', r: 'good' }, { m: 'Feb', r: 'good' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'mid' }, { m: 'Jun', r: 'mid' }, { m: 'Jul', r: 'mid' }, { m: 'Ago', r: 'avoid' },
+      { m: 'Sep', r: 'avoid' }, { m: 'Oct', r: 'avoid' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'good' },
+    ],
+    cityGuides: [
+      {
+        name: 'Punta Cana y las playas', days: '4-5 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Cap_Cana_Marina_Dominican_Republic.jpg/500px-Cap_Cana_Marina_Dominican_Republic.jpg',
+        fact: 'Tiene unos 50 km de playas de arena blanca bordeadas de cocoteros.',
+        sights: [
+          { name: 'Playa Bávaro y sus palmeras' },
+          { name: 'Isla Saona en catamarán' },
+          { name: 'Cenote Hoyo Azul' },
+          { name: 'Resorts todo incluido' },
+        ],
+      },
+      {
+        name: 'Santo Domingo', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/SantoDomingoedit.JPG/500px-SantoDomingoedit.JPG',
+        fact: 'Su Zona Colonial fue la primera ciudad europea de América y es Patrimonio de la Humanidad.',
+        sights: [
+          { name: 'Zona Colonial (Patrimonio)' },
+          { name: 'Primera catedral de América' },
+          { name: 'Alcázar de Colón' },
+          { name: 'Malecón y ambiente local' },
+        ],
+      },
+      {
+        name: 'Samaná y la naturaleza', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Los_Haitises_Park.jpeg/500px-Los_Haitises_Park.jpeg',
+        fact: 'Cada invierno, miles de ballenas jorobadas llegan a la bahía de Samaná a aparearse.',
+        sights: [
+          { name: 'Avistamiento de ballenas (ene-mar)' },
+          { name: 'Cascada El Limón' },
+          { name: 'Parque Nacional Los Haitises' },
+          { name: 'Playas vírgenes' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de República Dominicana', url: 'https://www.godominicanrepublic.com/es/' },
+      { label: 'Embajada de España en República Dominicana', url: 'https://www.exteriores.gob.es/Embajadas/santodomingo' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
+  {
+    slug: 'namibia', name: 'Namibia', code: 'na',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Sossusvlei.jpg/1280px-Sossusvlei.jpg',
+    imageAlt: 'Dunas de Sossusvlei, Namibia',
+    capital: 'Windhoek', currency: 'Dólar namibio (NAD)', language: 'Inglés', plug: 'Tipo D/M (220 V)', tz: 'UTC+2',
+    budget: 'Medio-alto', bestMonths: 'Mayo-Octubre (estación seca, safari)',
+    difficulty: 'Media', duration: '12-16 días',
+    tags: ['Safari', 'Desierto', 'Road trip', 'Naturaleza', 'Aventura'],
+    summary: 'Las dunas rojas más altas del mundo en Sossusvlei, safaris en Etosha, la Costa de los Esqueletos y cielos estrellados infinitos. Namibia es uno de los mejores destinos del planeta para un road trip de aventura.',
+    opinion:
+      'Namibia es pura inmensidad. Conducir durante horas por pistas de tierra sin cruzarte con nadie, rodeado de paisajes que parecen de otro planeta, es una experiencia adictiva. Las dunas rojas de Sossusvlei al amanecer y los árboles petrificados de Deadvlei son de las imágenes más impactantes que te puedes llevar de un viaje. Y luego está Etosha, donde haces safari por tu cuenta en el coche. Mi consejo: alquila un 4x4 (a poder ser con tienda en el techo), planifica bien las etapas y el combustible, y prepárate para unos cielos estrellados que no olvidarás. Aventura de la buena.',
+    faq: [
+      { q: '¿Cuántos días para Namibia?', a: 'Con 12-14 días haces el circuito clásico: Sossusvlei, Swakopmund y Etosha, en 4x4. Las distancias son enormes.' },
+      { q: '¿Cuándo es mejor ir?', a: 'Mayo-octubre (estación seca): mejor para el safari, ya que los animales se concentran en las charcas.' },
+      { q: '¿Necesito visado?', a: 'Sí: desde hace poco hace falta visado a la llegada o e-Visa (de pago). Confirma el procedimiento antes de viajar.' },
+    ],
+    paperwork: ['Pasaporte con al menos 6 meses de validez', 'Visado a la llegada o e-Visa (de pago)', 'Seguro de viaje imprescindible', 'Profilaxis de malaria en el norte (consulta)'],
+    visa: 'Visado a la llegada o e-Visa (de pago)',
+    internet: 'Justo fuera de ciudades · eSIM recomendada',
+    difficultyNote: 'Media: de los mejores destinos del mundo para un road trip en 4x4, seguro y en inglés. Las distancias son enormes por pistas de tierra: hay que planificar bien combustible y etapas.',
+    english: 'El inglés es idioma oficial; cero barrera.',
+    budgetLevels: { mochilero: 50, normal: 95, comodo: 170, lujo: 380 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'good' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Desierto del Namib', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Dead_Vlei_4.jpg/500px-Dead_Vlei_4.jpg',
+        fact: 'Las dunas de Sossusvlei son de las más altas del mundo: algunas superan los 300 metros.',
+        sights: [
+          { name: 'Dunas rojas de Sossusvlei' },
+          { name: 'Árboles petrificados de Deadvlei' },
+          { name: 'Subir la Duna 45 al amanecer' },
+          { name: 'Cañón del Sesriem' },
+        ],
+      },
+      {
+        name: 'Safari en Etosha', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/020526033Namibia.JPG/500px-020526033Namibia.JPG',
+        fact: 'En Etosha los animales acuden a las charcas, así que el safari se hace esperando junto al agua.',
+        sights: [
+          { name: 'Safari autoconducido por Etosha' },
+          { name: 'Charcas con elefantes y rinocerontes' },
+          { name: 'Buscar los Big Five' },
+          { name: 'Atardeceres en la sabana' },
+        ],
+      },
+      {
+        name: 'Costa de Swakopmund', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Mole%2C_Jetty_and_Lighthouse_Swakopmund%2C_Namibia.jpg/500px-Mole%2C_Jetty_and_Lighthouse_Swakopmund%2C_Namibia.jpg',
+        fact: 'Aquí el desierto se encuentra con el océano Atlántico, junto a la mítica Costa de los Esqueletos.',
+        sights: [
+          { name: 'Pueblo colonial alemán de Swakopmund' },
+          { name: 'Deportes de aventura en las dunas' },
+          { name: 'Walvis Bay y sus flamencos' },
+          { name: 'Costa de los Esqueletos' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Namibia', url: 'https://www.namibiatourism.com.na/' },
+      { label: 'Embajada de España (concurrente en Pretoria)', url: 'https://www.exteriores.gob.es/Embajadas/pretoria' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
 ];
 
 export const countryBySlug = (slug: string) => COUNTRIES.find((c) => c.slug === slug);
