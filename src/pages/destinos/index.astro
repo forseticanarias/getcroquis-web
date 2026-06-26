@@ -129,7 +129,7 @@ const grouped = CONT_ORDER
               data-name={c.name.toLowerCase()}
               class="country-card flex items-center gap-3 p-4 rounded-2xl bg-white/[0.03] border border-white/[0.08] hover:border-tirma-pink/30 hover:bg-white/[0.05] transition"
             >
-              <img src={`https://flagcdn.com/h24/${c.code}.png`} alt="" width="32" class="rounded-sm ring-1 ring-white/10 flex-shrink-0" />
+              <img src={`https://flagcdn.com/${c.code}.svg`} alt="" width="32" height="24" loading="lazy" class="h-6 w-8 object-cover rounded-sm ring-1 ring-white/10 flex-shrink-0" />
               <div class="min-w-0">
                 <div class="font-bold text-sm truncate">{c.name}</div>
                 <div class="text-[11px] text-tirma-beige/80 truncate italic">{TAGLINES[c.slug] ?? ''}</div>

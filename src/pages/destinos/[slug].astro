@@ -8,7 +8,7 @@ export async function getStaticPaths() {
 }
 
 const { c } = Astro.props;
-const flag = `https://flagcdn.com/h40/${c.code}.png`;
+const flag = `https://flagcdn.com/${c.code}.svg`;
 const facts = [
   ['Capital', c.capital],
   ['Moneda', c.currency],
@@ -99,7 +99,7 @@ const related = [...sameCont, ...otherCont].slice(0, 6);
     <div class="relative z-10 max-w-5xl mx-auto h-full px-5 sm:px-6 flex flex-col justify-end pb-7">
       <a href="/destinos" class="absolute top-4 left-5 sm:left-6 text-sm text-white/80 hover:text-white bg-black/30 backdrop-blur px-3 py-1.5 rounded-full">← Destinos</a>
       <div class="flex items-center gap-3 mb-2">
-        <img src={flag} alt={`Bandera de ${c.name}`} width="44" class="rounded-md ring-1 ring-white/25 shadow-lg" />
+        <img src={flag} alt={`Bandera de ${c.name}`} width="44" height="33" class="h-[33px] w-11 object-cover rounded-md ring-1 ring-white/25 shadow-lg" />
         {c.budget && <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-white/15 backdrop-blur">{c.budget}</span>}
       </div>
       <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight drop-shadow-lg">{c.name}</h1>
@@ -395,7 +395,7 @@ const related = [...sameCont, ...otherCont].slice(0, 6);
       <div class="grid grid-cols-3 sm:grid-cols-6 gap-3">
         {related.map((r) => (
           <a href={`/destinos/${r.slug}`} class="flex flex-col items-center gap-2 p-3 rounded-2xl bg-white/[0.03] border border-white/[0.08] hover:border-tirma-pink/30 hover:bg-white/[0.05] transition text-center">
-            <img src={`https://flagcdn.com/h24/${r.code}.png`} width="34" class="rounded-sm ring-1 ring-white/10" alt={`Bandera de ${r.name}`} />
+            <img src={`https://flagcdn.com/${r.code}.svg`} width="34" height="26" loading="lazy" class="h-[26px] w-[34px] object-cover rounded-sm ring-1 ring-white/10" alt={`Bandera de ${r.name}`} />
             <span class="text-xs font-semibold leading-tight">{r.name}</span>
           </a>
         ))}

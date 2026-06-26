@@ -87,7 +87,7 @@ const STYLES = ['Playa', 'Cultura', 'Aventura', 'Gastronómico', 'Naturaleza', '
       const cards = document.getElementById('cards');
       cards.innerHTML = matches.map((c) => `
         <a href="/destinos/${c.slug}" class="flex items-center gap-3 p-4 rounded-2xl bg-white/[0.03] border border-white/[0.08] hover:border-tirma-pink/30 hover:bg-white/[0.05] transition">
-          <img src="https://flagcdn.com/h20/${c.code}.png" width="28" class="rounded-sm ring-1 ring-white/10" alt="" />
+          <img src="https://flagcdn.com/${c.code}.svg" width="30" height="22" class="h-[22px] w-[30px] object-cover rounded-sm ring-1 ring-white/10" alt="" />
           <div class="min-w-0">
             <div class="font-bold text-sm truncate">${c.name}</div>
             <div class="text-[11px] text-white/45 truncate">${c.best}</div>
