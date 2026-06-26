@@ -5132,6 +5132,142 @@ export const COUNTRIES: Country[] = [
       { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
     ],
   },
+  {
+    slug: 'albania', name: 'Albania', code: 'al',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Ksamill-1.jpg/1280px-Ksamill-1.jpg',
+    imageAlt: 'Playas de Ksamil, Riviera albanesa',
+    capital: 'Tirana', currency: 'Lek (ALL)', language: 'Albanés', plug: 'Tipo C/F (230 V)', tz: 'UTC+1',
+    budget: 'Bajo', bestMonths: 'Mayo-Septiembre',
+    difficulty: 'Fácil', duration: '7-10 días',
+    tags: ['Playa', 'Montaña', 'Barato', 'Mediterráneo', 'Aventura'],
+    summary: 'Playas de agua turquesa que parecen el Caribe, montañas salvajes, ciudades otomanas de piedra y una hospitalidad arrolladora. Albania es el secreto mejor guardado del Mediterráneo: barata, auténtica y aún sin masificar.',
+    opinion:
+      'Albania es la sorpresa europea del momento, y se entiende: tienes playas como las de Ksamil, con un agua turquesa de escándalo, a precios que en Grecia o Italia ni sueñas. Pero más allá de la costa, el interior es una pasada: ciudades otomanas de piedra como Berat o Gjirokastër, montañas espectaculares en los Alpes albaneses y una gente con una hospitalidad que abruma (para bien). Mi consejo: ve pronto, antes de que se masifique del todo, combina playa con interior y déjate llevar. Es de los destinos con mejor relación belleza-precio de toda Europa.',
+    faq: [
+      { q: '¿Cuántos días para Albania?', a: 'Con 7-8 días combinas Tirana, las ciudades otomanas (Berat, Gjirokastër) y la Riviera albanesa (Ksamil, Sarandë).' },
+      { q: '¿Cuándo es mejor ir?', a: 'De mayo a septiembre. Julio y agosto son temporada alta en la costa; junio y septiembre son ideales.' },
+      { q: '¿Necesito visado?', a: 'No para turismo: los españoles pueden estar hasta 90 días solo con el pasaporte.' },
+    ],
+    paperwork: ['DNI o pasaporte en vigor', 'Sin visado para turismo (hasta 90 días)', 'Seguro de viaje recomendable (no está en la UE)', 'Sin vacunas obligatorias'],
+    visa: 'No requerido hasta 90 días (turismo)',
+    internet: 'Bueno · eSIM recomendada (fuera de la UE)',
+    difficultyNote: 'Muy fácil y de lo más barato de Europa: playas del Jónico como el Caribe, montañas salvajes y ciudades otomanas. Aún sin masificar, aunque crece rápido.',
+    english: 'Bastante inglés entre los jóvenes, y también italiano. La hospitalidad es enorme.',
+    budgetLevels: { mochilero: 30, normal: 60, comodo: 110, lujo: 220 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'good' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'mid' },
+    ],
+    cityGuides: [
+      {
+        name: 'Tirana y la Riviera', days: '3-4 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Skanderbeg_square_tirana_2016.jpg/500px-Skanderbeg_square_tirana_2016.jpg',
+        fact: 'Albania está sembrada de búnkeres del comunismo: se construyeron más de 170.000.',
+        sights: [
+          { name: 'Plaza Skanderbeg en Tirana' },
+          { name: 'Búnkeres del comunismo (Bunk\'Art)' },
+          { name: 'Teleférico de Dajti' },
+          { name: 'Playas de Ksamil y Sarandë' },
+        ],
+      },
+      {
+        name: 'Berat, la ciudad de las mil ventanas', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Berat_57.jpg/500px-Berat_57.jpg',
+        fact: 'Sus casas otomanas apiladas en la ladera le dan el apodo de "ciudad de las mil ventanas".',
+        sights: [
+          { name: 'Casco otomano (Patrimonio)' },
+          { name: 'Castillo aún habitado' },
+          { name: 'Barrio de Mangalem' },
+          { name: 'Cañón del río Osum' },
+        ],
+      },
+      {
+        name: 'Gjirokastër y el sur', days: '1-2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Gjirokaster_2016-2017.jpg/500px-Gjirokaster_2016-2017.jpg',
+        fact: 'La "ciudad de piedra" tiene tejados de losa y un imponente castillo, y es Patrimonio.',
+        sights: [
+          { name: 'Ciudad de piedra de Gjirokastër' },
+          { name: 'Castillo y antiguo bazar' },
+          { name: 'El Ojo Azul (manantial)' },
+          { name: 'Ruinas antiguas de Butrint' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Albania', url: 'https://albania.al/' },
+      { label: 'Embajada de España en Albania', url: 'https://www.exteriores.gob.es/Embajadas/tirana' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
+  {
+    slug: 'uruguay', name: 'Uruguay', code: 'uy',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/%D0%9F%D1%83%D0%BD%D1%82%D0%B0-%D0%B4%D0%B5%D0%BB%D1%8C-%D0%AD%D1%81%D1%82%D0%B5.jpg/1280px-%D0%9F%D1%83%D0%BD%D1%82%D0%B0-%D0%B4%D0%B5%D0%BB%D1%8C-%D0%AD%D1%81%D1%82%D0%B5.jpg',
+    imageAlt: 'Punta del Este, Uruguay',
+    capital: 'Montevideo', currency: 'Peso uruguayo (UYU)', language: 'Español', plug: 'Tipo C/F/I (220 V)', tz: 'UTC-3',
+    budget: 'Medio', bestMonths: 'Diciembre-Marzo (verano austral)',
+    difficulty: 'Fácil', duration: '5-8 días',
+    tags: ['Playa', 'Tranquilo', 'Gastronómico', 'En pareja', 'Relax'],
+    summary: 'Playas elegantes en Punta del Este, la colonial Colonia del Sacramento, una Montevideo con alma de tango y el mejor asado del mundo. Uruguay es el rincón más tranquilo, seguro y europeo de Sudamérica.',
+    opinion:
+      'Uruguay es la calma hecha país. Es de los lugares más seguros y relajados de Latinoamérica, con una calidad de vida que se nota: la gente va sin prisa, con el mate siempre en la mano. Montevideo tiene un encanto melancólico precioso, Colonia del Sacramento es una joyita colonial para pasear al atardecer, y Punta del Este es la playa chic donde veranea media Argentina. Mi consejo: ve en verano (dic-mar), combina ciudad, costa y campo, y déjate llevar por su gastronomía (el asado y la carne son religión). Es más caro que sus vecinos, pero la tranquilidad lo vale.',
+    faq: [
+      { q: '¿Cuántos días para Uruguay?', a: 'Con 5-6 días ves Montevideo, Colonia del Sacramento y la costa de Punta del Este. Suele combinarse con Buenos Aires (a un ferry).' },
+      { q: '¿Cuándo es mejor ir?', a: 'Verano austral (diciembre-marzo) para disfrutar de las playas. El resto del año es más tranquilo y fresco.' },
+      { q: '¿Necesito visado?', a: 'No para turismo: los españoles pueden estar hasta 90 días solo con el pasaporte.' },
+    ],
+    paperwork: ['Pasaporte en vigor', 'Sin visado para turismo (hasta 90 días)', 'Seguro de viaje recomendable', 'Sin vacunas obligatorias'],
+    visa: 'No requerido hasta 90 días (turismo)',
+    internet: 'Bueno · eSIM recomendada',
+    difficultyNote: 'Muy fácil: de los países más seguros, tranquilos y estables de Latinoamérica. Se habla español, se vive sin prisa y la carne y el mate son religión. Caro para la zona.',
+    english: 'Se habla español; algo de inglés en el sector turístico.',
+    budgetLevels: { mochilero: 40, normal: 80, comodo: 150, lujo: 300 },
+    climate: [
+      { m: 'Ene', r: 'good' }, { m: 'Feb', r: 'good' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'mid' },
+      { m: 'May', r: 'mid' }, { m: 'Jun', r: 'mid' }, { m: 'Jul', r: 'mid' }, { m: 'Ago', r: 'mid' },
+      { m: 'Sep', r: 'mid' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'good' }, { m: 'Dic', r: 'good' },
+    ],
+    cityGuides: [
+      {
+        name: 'Montevideo', days: '2 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/2016_Uruguay_Rambla_Gandhi_Montevideo.jpg/500px-2016_Uruguay_Rambla_Gandhi_Montevideo.jpg',
+        fact: 'Su rambla junto al río de la Plata es uno de los paseos costeros más largos del mundo.',
+        sights: [
+          { name: 'Paseo por la Rambla' },
+          { name: 'Ciudad Vieja y mercado del puerto' },
+          { name: 'Plaza Independencia' },
+          { name: 'Tango y candombe' },
+        ],
+      },
+      {
+        name: 'Colonia del Sacramento', days: '1 día',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Basilica_del_Sanct%C3%ADsimo_Sacramento.jpg/500px-Basilica_del_Sanct%C3%ADsimo_Sacramento.jpg',
+        fact: 'Su barrio histórico, fundado por los portugueses, es Patrimonio de la Humanidad.',
+        sights: [
+          { name: 'Barrio histórico empedrado (Patrimonio)' },
+          { name: 'Faro y murallas' },
+          { name: 'Coches antiguos y calles con encanto' },
+          { name: 'Atardecer sobre el río' },
+        ],
+      },
+      {
+        name: 'Punta del Este y la costa', days: '2-3 días',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Casapueblo.JPG/500px-Casapueblo.JPG',
+        fact: 'La escultura de "La Mano", unos dedos saliendo de la arena, es el icono de Punta del Este.',
+        sights: [
+          { name: 'La escultura de los Dedos (La Mano)' },
+          { name: 'Casapueblo, de Páez Vilaró' },
+          { name: 'Playas y balnearios chic' },
+          { name: 'José Ignacio y Punta del Diablo' },
+        ],
+      },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Uruguay', url: 'https://www.uruguaynatural.com/es/' },
+      { label: 'Embajada de España en Uruguay', url: 'https://www.exteriores.gob.es/Embajadas/montevideo' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
 ];
 
 export const countryBySlug = (slug: string) => COUNTRIES.find((c) => c.slug === slug);
