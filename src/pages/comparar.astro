@@ -15,6 +15,20 @@ const data = COUNTRIES.map((c) => ({
   difficulty: c.difficulty ?? '—',
   tags: (c.tags ?? []).slice(0, 3),
 })).sort((a, b) => a.name.localeCompare(b.name));
+
+// Agrupamos el selector por continente (mismo criterio que /destinos) para que
+// no sea una nube caótica de 70+ banderas. Dentro, alfabético.
+const CONT: Record<string, string> = {
+  jp: 'Asia', th: 'Asia', vn: 'Asia', tr: 'Asia', id: 'Asia', ae: 'Asia', ph: 'Asia', in: 'Asia', cn: 'Asia', kr: 'Asia', jo: 'Asia', kh: 'Asia', lk: 'Asia', mv: 'Asia', sg: 'Asia', np: 'Asia', ge: 'Asia', om: 'Asia', la: 'Asia', mn: 'Asia',
+  it: 'Europa', is: 'Europa', fr: 'Europa', es: 'Europa', gr: 'Europa', pt: 'Europa', hr: 'Europa', no: 'Europa', ie: 'Europa', de: 'Europa', nl: 'Europa', ch: 'Europa', cz: 'Europa', hu: 'Europa', at: 'Europa', be: 'Europa', pl: 'Europa', fi: 'Europa', si: 'Europa', mt: 'Europa', ro: 'Europa', ee: 'Europa', me: 'Europa', al: 'Europa', gb: 'Europa',
+  mx: 'América', pe: 'América', us: 'América', co: 'América', ar: 'América', cr: 'América', br: 'América', cu: 'América', ec: 'América', cl: 'América', do: 'América', bo: 'América', gt: 'América', pa: 'América', uy: 'América',
+  eg: 'África', ma: 'África', za: 'África', ke: 'África', tz: 'África', na: 'África', bw: 'África', zw: 'África',
+  au: 'Oceanía', nz: 'Oceanía', pf: 'Oceanía', fj: 'Oceanía',
+};
+const CONT_ORDER = ['Europa', 'Asia', 'América', 'África', 'Oceanía'];
+const groupedPicker = CONT_ORDER
+  .map((cont) => ({ cont, countries: data.filter((c) => CONT[c.code] === cont) }))
+  .filter((g) => g.countries.length);
 ---
 
 <Base
@@ -34,12 +48,19 @@ const data = COUNTRIES.map((c) => ({
       <span class="absolute left-3.5 top-1/2 -translate-y-1/2 text-white/40 pointer-events-none">🔍</span>
     </div>
 
-    <div id="picker" class="flex flex-wrap gap-2 mb-6">
-      {data.map((c) => (
-        <button data-slug={c.slug} data-name={c.name.toLowerCase()} class="pick-btn inline-flex items-center gap-2 px-3 py-2 rounded-full text-sm font-semibold border transition">
-          <img src={`https://flagcdn.com/${c.code}.svg`} alt="" width="24" height="18" loading="lazy" class="h-[18px] w-6 object-cover rounded-sm ring-1 ring-white/10" />
-          {c.name}
-        </button>
+    <div id="picker" class="mb-6 space-y-4">
+      {groupedPicker.map((g) => (
+        <div class="cont-group">
+          <h3 class="text-[11px] font-bold tracking-widest uppercase text-white/40 mb-2">{g.cont}</h3>
+          <div class="flex flex-wrap gap-2">
+            {g.countries.map((c) => (
+              <button data-slug={c.slug} data-name={c.name.toLowerCase()} class="pick-btn inline-flex items-center gap-2 px-3 py-2 rounded-full text-sm font-semibold border transition">
+                <img src={`https://flagcdn.com/${c.code}.svg`} alt="" width="24" height="18" loading="lazy" class="h-[18px] w-6 object-cover rounded-sm ring-1 ring-white/10" />
+                {c.name}
+              </button>
+            ))}
+          </div>
+        </div>
       ))}
     </div>
 
@@ -115,6 +136,11 @@ const data = COUNTRIES.map((c) => ({
       const q = search.value.trim().toLowerCase();
       picker.querySelectorAll('.pick-btn').forEach((b) => {
         b.style.display = b.dataset.name.includes(q) ? '' : 'none';
+      });
+      // Oculta los continentes que se quedan sin países visibles
+      picker.querySelectorAll('.cont-group').forEach((g) => {
+        const anyVisible = [...g.querySelectorAll('.pick-btn')].some((b) => b.style.display !== 'none');
+        g.style.display = anyVisible ? '' : 'none';
       });
     });
   </script>
