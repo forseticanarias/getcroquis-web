@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import { SITE, ESSENTIALS } from '../../consts';
 import { COUNTRIES } from '../../data/countries';
+import { itinerariesFor, ITIN_GRADIENTS } from '../../data/itineraries';
 
 export async function getStaticPaths() {
   return COUNTRIES.map((c) => ({ params: { slug: c.slug }, props: { c } }));
@@ -9,6 +10,7 @@ export async function getStaticPaths() {
 
 const { c } = Astro.props;
 const flag = `https://flagcdn.com/${c.code}.svg`;
+const itins = itinerariesFor(c.code);
 const facts = [
   ['Capital', c.capital],
   ['Moneda', c.currency],
@@ -121,6 +123,27 @@ const related = [...sameCont, ...otherCont].slice(0, 6);
           </div>
         )}
       </div>
+
+      {itins.length > 0 && (
+        <section class="rounded-2xl bg-gradient-to-br from-tirma-pink/[0.10] to-transparent border border-tirma-pink/20 p-5 sm:p-6">
+          <h2 class="text-2xl font-bold mb-1">Itinerarios de {c.name} listos para copiar 🗺️</h2>
+          <p class="text-sm text-white/60 mb-4">Ábrelos, cópialos a tu cuenta y ponles tus fechas. Día a día, con lugares reales.</p>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            {itins.map((it) => (
+              <a href={`${SITE.appUrl}/getcroquis/${it.slug}`} class="group relative rounded-2xl overflow-hidden aspect-[4/3] ring-1 ring-white/10 hover:ring-tirma-pink/50 transition">
+                <div class="absolute inset-0" style={`background:${ITIN_GRADIENTS[it.grad]}`}></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent"></div>
+                <span class="absolute top-2 right-2 text-[10px] font-bold bg-tirma-pink text-white px-2 py-0.5 rounded-full shadow opacity-0 group-hover:opacity-100 transition">Copiar →</span>
+                <div class="absolute inset-x-0 bottom-0 p-3">
+                  <div class="font-bold text-white leading-tight drop-shadow">{it.name}</div>
+                  <div class="text-[11px] text-white/85 drop-shadow">{it.days} días · {it.style}</div>
+                </div>
+              </a>
+            ))}
+          </div>
+          <a href={`${SITE.appUrl}/getcroquis`} class="inline-block mt-4 text-sm font-semibold text-tirma-beige hover:text-white underline underline-offset-2">Ver todos los itinerarios de getcroquis →</a>
+        </section>
+      )}
 
       <div class="lg:hidden flex flex-wrap gap-2">
         {facts.map(([k, v]) => (
