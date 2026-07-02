@@ -54,9 +54,12 @@ const links = [
 </style>
 <script>
   const menu = document.getElementById('mobile-menu');
-  const open = () => menu?.classList.remove('hidden');
-  const close = () => menu?.classList.add('hidden');
+  const open = () => { menu?.classList.remove('hidden'); document.body.style.overflow = 'hidden'; };
+  const close = () => { menu?.classList.add('hidden'); document.body.style.overflow = ''; };
   document.getElementById('menu-btn')?.addEventListener('click', open);
   document.getElementById('menu-close')?.addEventListener('click', close);
   document.getElementById('menu-overlay')?.addEventListener('click', close);
+  // Cerrar con Escape y al pasar a escritorio (que no quede el scroll bloqueado).
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+  window.addEventListener('resize', () => { if (window.innerWidth >= 640) close(); });
 </script>

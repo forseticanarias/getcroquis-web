@@ -77,6 +77,11 @@ const siteLd = {
     <style is:global>
       body { font-family: 'Sora', system-ui, -apple-system, sans-serif; }
       h1, h2, h3 { letter-spacing: -0.02em; }
+      /* Responsive/tacto: sin scroll horizontal accidental en móvil, sin flash
+         gris al tocar, y sin que iOS infle el texto en horizontal. */
+      html { -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; }
+      body { overflow-x: hidden; }
+      img { max-width: 100%; }
       .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s cubic-bezier(.2,.7,.2,1); }
       .reveal.in { opacity: 1; transform: none; }
       @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1 !important; transform: none !important; transition: none; } }
