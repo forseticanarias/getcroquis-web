@@ -25,7 +25,7 @@ const stats = [
 ];
 
 // Escaparate de itinerarios en la home (variedad geográfica).
-const HOME_PICK = ['japon-clasico-10-dias', 'italia-romantica-6-dias', 'paris-5-dias', 'tailandia-9-dias', 'grecia-7-dias', 'marruecos-7-dias'];
+const HOME_PICK = ['tenerife-5-dias', 'peru-7-dias', 'islandia-6-dias', 'vietnam-8-dias', 'japon-clasico-10-dias', 'italia-romantica-6-dias'];
 const homeItins = HOME_PICK.map((s) => ITINERARIES.find((i) => i.slug === s)).filter(Boolean);
 ---
 
@@ -33,7 +33,7 @@ const homeItins = HOME_PICK.map((s) => ITINERARIES.find((i) => i.slug === s)).fi
   <!-- HERO -->
   <section class="max-w-4xl mx-auto px-5 sm:px-6 pt-12 sm:pt-20 pb-4 text-center">
     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-tirma-pink/10 border border-tirma-pink/25 text-tirma-beige/90 text-xs font-semibold mb-6">
-      ✦ Sin postureo · gratis para empezar
+      ✦ Sin postureo · 100% a tu medida
     </div>
     <h1 class="text-4xl sm:text-6xl font-bold leading-[1.12] tracking-tight">
       Tu próximo viaje,<br />
@@ -44,13 +44,13 @@ const homeItins = HOME_PICK.map((s) => ITINERARIES.find((i) => i.slug === s)).fi
     </p>
     <div class="mt-8 flex flex-wrap gap-3 justify-center">
       <a href="/empezar" class="px-8 py-3.5 rounded-full bg-gradient-to-r from-tirma-pink to-tirma-deep text-tirma-beige font-bold shadow-lg shadow-tirma-pink/30 hover:brightness-105 transition">
-        Empieza gratis →
+        Crea tu viaje →
       </a>
       <a href="/destinos" class="px-8 py-3.5 rounded-full border border-white/15 text-white/80 font-bold hover:border-tirma-pink/40 hover:text-white transition">
         Ver destinos
       </a>
     </div>
-    <p class="mt-4 text-xs text-white/40">Sin registro para explorar · listo en minutos · sin tarjeta</p>
+    <p class="mt-4 text-xs text-white/40">Explora sin registro · listo en minutos</p>
   </section>
 
   <!-- FRANJA DE CIFRAS -->

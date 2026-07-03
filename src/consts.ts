@@ -7,7 +7,7 @@ export const SITE = {
   appUrl: 'https://getcroquis.com',
   title: 'getcroquis · Planifica tu viaje perfecto con IA, guías y consejos',
   description:
-    'Planifica tu itinerario día a día con IA en minutos: guías honestas, presupuesto real y consejos para viajar mejor y más barato. Copia viajes reales de otros viajeros. Empieza gratis, sin postureo.',
+    'Planifica tu itinerario día a día con IA en minutos: guías honestas, presupuesto real y consejos para viajar mejor y más barato. Copia viajes reales de otros viajeros. Todo a tu medida, sin postureo.',
   // Redes sociales de la marca (cambia el handle aquí en un solo sitio).
   instagram: 'https://instagram.com/getcroquis',
 };

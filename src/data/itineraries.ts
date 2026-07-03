@@ -33,6 +33,11 @@ export const ITINERARIES: Itinerary[] = [
   { code: 'gr', slug: 'grecia-7-dias',           name: 'Grecia',           days: 7,  style: 'En pareja'  },
   { code: 'pt', slug: 'portugal-6-dias',         name: 'Portugal',         days: 6,  style: 'En pareja'  },
   { code: 'ma', slug: 'marruecos-7-dias',        name: 'Marruecos',        days: 7,  style: 'En grupo'   },
+  { code: 'es', slug: 'tenerife-5-dias',         name: 'Tenerife',            days: 5, style: 'En pareja' },
+  { code: 'pe', slug: 'peru-7-dias',             name: 'Perú: Machu Picchu',  days: 7, style: 'En grupo'  },
+  { code: 'vn', slug: 'vietnam-8-dias',          name: 'Vietnam',             days: 8, style: 'En grupo'  },
+  { code: 'is', slug: 'islandia-6-dias',         name: 'Islandia',            days: 6, style: 'En pareja' },
+  { code: 'mx', slug: 'mexico-7-dias',           name: 'México',              days: 7, style: 'En grupo'  },
 ];
 
 export const itinerariesFor = (code: string): Itinerary[] =>
