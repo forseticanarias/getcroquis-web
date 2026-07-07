@@ -36,7 +36,7 @@ const budgetRows = c.budgetLevels
 
 // Esenciales HONESTOS según el destino: en la UE (roaming + Tarjeta Sanitaria
 // Europea) la eSIM y el seguro bajan de nivel. Color por nivel de necesidad.
-const EU_ROAMING = new Set(['es','pt','fr','it','gr','hr','is','de','nl','be','at','ie','dk','se','fi','pl','cz','hu','ro','bg','sk','si','ee','lv','lt','lu','mt','cy','no','li']);
+const EU_ROAMING = new Set(['es','pt','fr','it','gr','hr','is','de','nl','be','at','ie','dk','se','fi','pl','cz','hu','ro','bg','sk','si','ee','lv','lt','lu','mt','cy','no','li','va']);
 const inEU = EU_ROAMING.has(c.code);
 const NEED_COLORS: Record<string, string> = {
   'Imprescindible': 'bg-red-500/15 text-red-300 border-red-500/25',
@@ -79,7 +79,7 @@ const breadcrumb = {
     { '@type': 'ListItem', position: 3, name: c.name, item: `${SITE.url}/destinos/${c.slug}` },
   ],
 };
-const CONT_MAP: Record<string, string> = { jp: 'Asia', th: 'Asia', vn: 'Asia', it: 'Europa', is: 'Europa', fr: 'Europa', es: 'Europa', gr: 'Europa', pt: 'Europa', hr: 'Europa', gb: 'Europa', no: 'Europa', ie: 'Europa', de: 'Europa', nl: 'Europa', ch: 'Europa', cz: 'Europa', hu: 'Europa', at: 'Europa', be: 'Europa', pl: 'Europa', fi: 'Europa', si: 'Europa', mt: 'Europa', ro: 'Europa', ee: 'Europa', me: 'Europa', al: 'Europa', mx: 'América', pe: 'América', us: 'América', co: 'América', cu: 'América', ec: 'América', cl: 'América', ar: 'América', cr: 'América', br: 'América', do: 'América', bo: 'América', gt: 'América', pa: 'América', uy: 'América', ma: 'África', eg: 'África', za: 'África', ke: 'África', tz: 'África', na: 'África', bw: 'África', zw: 'África', tr: 'Asia', id: 'Asia', ae: 'Asia', ph: 'Asia', in: 'Asia', cn: 'Asia', kr: 'Asia', jo: 'Asia', kh: 'Asia', lk: 'Asia', mv: 'Asia', sg: 'Asia', np: 'Asia', ge: 'Asia', om: 'Asia', la: 'Asia', mn: 'Asia', au: 'Oceanía', nz: 'Oceanía', pf: 'Oceanía', fj: 'Oceanía' };
+const CONT_MAP: Record<string, string> = { jp: 'Asia', th: 'Asia', vn: 'Asia', it: 'Europa', is: 'Europa', fr: 'Europa', es: 'Europa', gr: 'Europa', pt: 'Europa', hr: 'Europa', gb: 'Europa', no: 'Europa', ie: 'Europa', de: 'Europa', nl: 'Europa', ch: 'Europa', cz: 'Europa', hu: 'Europa', at: 'Europa', be: 'Europa', pl: 'Europa', fi: 'Europa', si: 'Europa', mt: 'Europa', ro: 'Europa', ee: 'Europa', me: 'Europa', al: 'Europa', va: 'Europa', se: 'Europa', dk: 'Europa', bg: 'Europa', mx: 'América', pe: 'América', us: 'América', co: 'América', cu: 'América', ec: 'América', cl: 'América', ar: 'América', cr: 'América', br: 'América', do: 'América', bo: 'América', gt: 'América', pa: 'América', uy: 'América', ca: 'América', ve: 'América', ma: 'África', eg: 'África', za: 'África', ke: 'África', tz: 'África', na: 'África', bw: 'África', zw: 'África', tn: 'África', tr: 'Asia', id: 'Asia', ae: 'Asia', ph: 'Asia', in: 'Asia', cn: 'Asia', kr: 'Asia', jo: 'Asia', kh: 'Asia', lk: 'Asia', mv: 'Asia', sg: 'Asia', np: 'Asia', ge: 'Asia', om: 'Asia', la: 'Asia', mn: 'Asia', tw: 'Asia', my: 'Asia', au: 'Oceanía', nz: 'Oceanía', pf: 'Oceanía', fj: 'Oceanía' };
 const sameCont = COUNTRIES.filter((x) => x.slug !== c.slug && CONT_MAP[x.code] === CONT_MAP[c.code]);
 const otherCont = COUNTRIES.filter((x) => x.slug !== c.slug && CONT_MAP[x.code] !== CONT_MAP[c.code]);
 const related = [...sameCont, ...otherCont].slice(0, 6);

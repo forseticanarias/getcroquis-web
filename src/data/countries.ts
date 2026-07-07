@@ -5283,6 +5283,7 @@ export const COUNTRIES: Country[] = [
   // ───────────────────────── Territorios de reconocimiento especial ─────────────────────────
   {
     slug: 'taiwan', name: 'Taiwán', code: 'tw',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Taipei_Skyline_2022.06.29.jpg/1280px-Taipei_Skyline_2022.06.29.jpg',
     imageAlt: 'Taipéi 101 y el skyline de Taipéi, Taiwán',
     capital: 'Taipéi', currency: 'Nuevo dólar taiwanés (TWD)', language: 'Chino mandarín', plug: 'Tipo A/B (110 V)', tz: 'UTC+8',
     budget: 'Medio', bestMonths: 'Octubre-Abril (evita los tifones del verano)',
@@ -5333,6 +5334,7 @@ export const COUNTRIES: Country[] = [
   },
   {
     slug: 'vaticano', name: 'Ciudad del Vaticano', code: 'va',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Basilica_di_San_Pietro_in_Vaticano_September_2015-1a.jpg/1280px-Basilica_di_San_Pietro_in_Vaticano_September_2015-1a.jpg',
     imageAlt: 'Basílica de San Pedro, Ciudad del Vaticano',
     capital: 'Ciudad del Vaticano', currency: 'Euro (EUR)', language: 'Italiano (y latín)', plug: 'Tipo C/F/L (230 V)', tz: 'UTC+1',
     budget: 'Alto (como Roma)', bestMonths: 'Abril-Junio y Septiembre-Octubre',
@@ -5374,7 +5376,8 @@ export const COUNTRIES: Country[] = [
   // ───────────────────────── Destinos con aviso de seguridad ─────────────────────────
   {
     slug: 'venezuela', name: 'Venezuela', code: 've',
-    imageAlt: 'Salto Ángel, Venezuela',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Roraima3_%2879%29.JPG/1280px-Roraima3_%2879%29.JPG',
+    imageAlt: 'Monte Roraima, Venezuela',
     capital: 'Caracas', currency: 'Bolívar (VES) · en la práctica se usa el dólar', language: 'Español', plug: 'Tipo A/B (120 V)', tz: 'UTC-4',
     budget: 'Variable', bestMonths: 'Diciembre-Abril (estación seca)',
     summary: 'Naturaleza de récord: la cascada más alta del mundo (Salto Ángel), los tepuyes del Roraima y las playas del Caribe de Los Roques. Un país espectacular que hoy, sin embargo, atraviesa una situación muy delicada.',
@@ -5411,6 +5414,7 @@ export const COUNTRIES: Country[] = [
   // ───────────────────────── Grandes ausencias (destinos top que faltaban) ─────────────────────────
   {
     slug: 'canada', name: 'Canadá', code: 'ca',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Moraine_Lake_17092005.jpg/1280px-Moraine_Lake_17092005.jpg',
     imageAlt: 'Lago Moraine y las Montañas Rocosas, Canadá',
     capital: 'Ottawa', currency: 'Dólar canadiense (CAD)', language: 'Inglés y francés', plug: 'Tipo A/B (120 V)', tz: 'UTC-3:30 a UTC-8',
     budget: 'Alto', bestMonths: 'Junio-Septiembre (verano) y Sep-Oct (otoño de colores)',
@@ -5456,7 +5460,8 @@ export const COUNTRIES: Country[] = [
   },
   {
     slug: 'malasia', name: 'Malasia', code: 'my',
-    imageAlt: 'Torres Petronas, Kuala Lumpur, Malasia',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Bukit_Bintang_junction_in_2024_2.jpg/1280px-Bukit_Bintang_junction_in_2024_2.jpg',
+    imageAlt: 'Kuala Lumpur y las Torres Petronas, Malasia',
     capital: 'Kuala Lumpur', currency: 'Ringgit (MYR)', language: 'Malayo (inglés muy extendido)', plug: 'Tipo G (240 V)', tz: 'UTC+8',
     budget: 'Bajo-medio', bestMonths: 'Diciembre-Febrero (costa oeste)',
     summary: 'El sudeste asiático en versión fácil y variada: rascacielos en Kuala Lumpur, la comida callejera de Penang, selva y orangutanes en Borneo y playas de postal en Langkawi. Barato y con inglés por todas partes.',
@@ -5495,6 +5500,7 @@ export const COUNTRIES: Country[] = [
   },
   {
     slug: 'suecia', name: 'Suecia', code: 'se',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Gamla_stan_September_2014_01.jpg/1280px-Gamla_stan_September_2014_01.jpg',
     imageAlt: 'Gamla Stan, el casco viejo de Estocolmo, Suecia',
     capital: 'Estocolmo', currency: 'Corona sueca (SEK)', language: 'Sueco (inglés altísimo)', plug: 'Tipo C/F (230 V)', tz: 'UTC+1',
     budget: 'Alto', bestMonths: 'Junio-Agosto (verano) · Invierno para auroras en Laponia',
@@ -5532,6 +5538,7 @@ export const COUNTRIES: Country[] = [
   },
   {
     slug: 'dinamarca', name: 'Dinamarca', code: 'dk',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/The_Nyhavn_Canal_3.jpg/1280px-The_Nyhavn_Canal_3.jpg',
     imageAlt: 'Puerto de Nyhavn, Copenhague, Dinamarca',
     capital: 'Copenhague', currency: 'Corona danesa (DKK)', language: 'Danés (inglés altísimo)', plug: 'Tipo C/F/K (230 V)', tz: 'UTC+1',
     budget: 'Alto', bestMonths: 'Mayo-Septiembre',
@@ -5569,6 +5576,7 @@ export const COUNTRIES: Country[] = [
   },
   {
     slug: 'bulgaria', name: 'Bulgaria', code: 'bg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Rila_Monastery%2C_August_2013.jpg/1280px-Rila_Monastery%2C_August_2013.jpg',
     imageAlt: 'Monasterio de Rila, Bulgaria',
     capital: 'Sofía', currency: 'Lev búlgaro (BGN)', language: 'Búlgaro (alfabeto cirílico)', plug: 'Tipo C/F (230 V)', tz: 'UTC+2',
     budget: 'Bajo', bestMonths: 'Mayo-Septiembre (costa) · Invierno para esquí',
@@ -5608,6 +5616,7 @@ export const COUNTRIES: Country[] = [
   },
   {
     slug: 'tunez', name: 'Túnez', code: 'tn',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Sidi_Chebaan.jpg/1280px-Sidi_Chebaan.jpg',
     imageAlt: 'Sidi Bou Said, Túnez',
     capital: 'Túnez (capital)', currency: 'Dinar tunecino (TND)', language: 'Árabe (francés muy extendido)', plug: 'Tipo C/E (230 V)', tz: 'UTC+1',
     budget: 'Bajo', bestMonths: 'Abril-Junio y Septiembre-Octubre',

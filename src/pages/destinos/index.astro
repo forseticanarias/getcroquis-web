@@ -5,11 +5,11 @@ import { COUNTRIES } from '../../data/countries';
 // Continente por código ISO y eslogan con gancho por país (más atractivo que los
 // meses). Agrupamos por continente (alfabético) y ordenamos países alfabéticamente.
 const CONT: Record<string, string> = {
-  jp: 'Asia', th: 'Asia', vn: 'Asia', tr: 'Asia', id: 'Asia', ae: 'Asia', ph: 'Asia', in: 'Asia', cn: 'Asia', kr: 'Asia', jo: 'Asia', kh: 'Asia', lk: 'Asia', mv: 'Asia', sg: 'Asia', np: 'Asia', ge: 'Asia', om: 'Asia', la: 'Asia', mn: 'Asia',
+  jp: 'Asia', th: 'Asia', vn: 'Asia', tr: 'Asia', id: 'Asia', ae: 'Asia', ph: 'Asia', in: 'Asia', cn: 'Asia', kr: 'Asia', jo: 'Asia', kh: 'Asia', lk: 'Asia', mv: 'Asia', sg: 'Asia', np: 'Asia', ge: 'Asia', om: 'Asia', la: 'Asia', mn: 'Asia', tw: 'Asia', my: 'Asia',
   eg: 'África',
-  it: 'Europa', is: 'Europa', fr: 'Europa', es: 'Europa', gr: 'Europa', pt: 'Europa', hr: 'Europa', no: 'Europa', ie: 'Europa', de: 'Europa', nl: 'Europa', ch: 'Europa', cz: 'Europa', hu: 'Europa', at: 'Europa', be: 'Europa', pl: 'Europa', fi: 'Europa', si: 'Europa', mt: 'Europa', ro: 'Europa', ee: 'Europa', me: 'Europa', al: 'Europa',
-  mx: 'América', pe: 'América', us: 'América', co: 'América', ar: 'América', cr: 'América', br: 'América', cu: 'América', ec: 'América', cl: 'América', do: 'América', bo: 'América', gt: 'América', pa: 'América', uy: 'América',
-  ma: 'África', za: 'África', ke: 'África', tz: 'África', na: 'África', bw: 'África', zw: 'África',
+  it: 'Europa', is: 'Europa', fr: 'Europa', es: 'Europa', gr: 'Europa', pt: 'Europa', hr: 'Europa', no: 'Europa', ie: 'Europa', de: 'Europa', nl: 'Europa', ch: 'Europa', cz: 'Europa', hu: 'Europa', at: 'Europa', be: 'Europa', pl: 'Europa', fi: 'Europa', si: 'Europa', mt: 'Europa', ro: 'Europa', ee: 'Europa', me: 'Europa', al: 'Europa', va: 'Europa', se: 'Europa', dk: 'Europa', bg: 'Europa',
+  mx: 'América', pe: 'América', us: 'América', co: 'América', ar: 'América', cr: 'América', br: 'América', cu: 'América', ec: 'América', cl: 'América', do: 'América', bo: 'América', gt: 'América', pa: 'América', uy: 'América', ca: 'América', ve: 'América',
+  ma: 'África', za: 'África', ke: 'África', tz: 'África', na: 'África', bw: 'África', zw: 'África', tn: 'África',
   gb: 'Europa',
   au: 'Oceanía', nz: 'Oceanía', pf: 'Oceanía', fj: 'Oceanía',
 };
@@ -86,6 +86,15 @@ const TAGLINES: Record<string, string> = {
   fiyi: 'Islas, coral y Bula spirit',
   albania: 'Playas turquesa y ciudades de piedra',
   uruguay: 'Playa, calma y asado',
+  taiwan: 'Rascacielos, templos y mercados nocturnos',
+  vaticano: 'El país más pequeño del mundo',
+  venezuela: 'Salto Ángel, tepuyes y Caribe',
+  canada: 'Rocosas, lagos y naturaleza sin fin',
+  malasia: 'Rascacielos, selva y comida callejera',
+  suecia: 'Diseño, archipiélago y auroras',
+  dinamarca: 'Hygge, bici y cuento nórdico',
+  bulgaria: 'Monasterios, historia y buen precio',
+  tunez: 'Cartago, Sáhara y Mediterráneo',
 };
 
 const CONT_ORDER = ['África', 'América', 'Asia', 'Europa', 'Oceanía'];
