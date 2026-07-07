@@ -5,11 +5,11 @@ import { COUNTRIES } from '../../data/countries';
 // Continente por código ISO y eslogan con gancho por país (más atractivo que los
 // meses). Agrupamos por continente (alfabético) y ordenamos países alfabéticamente.
 const CONT: Record<string, string> = {
-  jp: 'Asia', th: 'Asia', vn: 'Asia', tr: 'Asia', id: 'Asia', ae: 'Asia', ph: 'Asia', in: 'Asia', cn: 'Asia', kr: 'Asia', jo: 'Asia', kh: 'Asia', lk: 'Asia', mv: 'Asia', sg: 'Asia', np: 'Asia', ge: 'Asia', om: 'Asia', la: 'Asia', mn: 'Asia', tw: 'Asia', my: 'Asia', uz: 'Asia', hk: 'Asia', sa: 'Asia', bt: 'Asia', mo: 'Asia', qa: 'Asia', ps: 'Asia', am: 'Asia', az: 'Asia',
+  jp: 'Asia', th: 'Asia', vn: 'Asia', tr: 'Asia', id: 'Asia', ae: 'Asia', ph: 'Asia', in: 'Asia', cn: 'Asia', kr: 'Asia', jo: 'Asia', kh: 'Asia', lk: 'Asia', mv: 'Asia', sg: 'Asia', np: 'Asia', ge: 'Asia', om: 'Asia', la: 'Asia', mn: 'Asia', tw: 'Asia', my: 'Asia', uz: 'Asia', hk: 'Asia', sa: 'Asia', bt: 'Asia', mo: 'Asia', qa: 'Asia', ps: 'Asia', am: 'Asia', az: 'Asia', il: 'Asia',
   eg: 'África',
-  it: 'Europa', is: 'Europa', fr: 'Europa', es: 'Europa', gr: 'Europa', pt: 'Europa', hr: 'Europa', no: 'Europa', ie: 'Europa', de: 'Europa', nl: 'Europa', ch: 'Europa', cz: 'Europa', hu: 'Europa', at: 'Europa', be: 'Europa', pl: 'Europa', fi: 'Europa', si: 'Europa', mt: 'Europa', ro: 'Europa', ee: 'Europa', me: 'Europa', al: 'Europa', va: 'Europa', se: 'Europa', dk: 'Europa', bg: 'Europa', cy: 'Europa', sk: 'Europa', rs: 'Europa', lt: 'Europa', lv: 'Europa', xk: 'Europa', gl: 'Europa', ba: 'Europa',
+  it: 'Europa', is: 'Europa', fr: 'Europa', es: 'Europa', gr: 'Europa', pt: 'Europa', hr: 'Europa', no: 'Europa', ie: 'Europa', de: 'Europa', nl: 'Europa', ch: 'Europa', cz: 'Europa', hu: 'Europa', at: 'Europa', be: 'Europa', pl: 'Europa', fi: 'Europa', si: 'Europa', mt: 'Europa', ro: 'Europa', ee: 'Europa', me: 'Europa', al: 'Europa', va: 'Europa', se: 'Europa', dk: 'Europa', bg: 'Europa', cy: 'Europa', sk: 'Europa', rs: 'Europa', lt: 'Europa', lv: 'Europa', xk: 'Europa', gl: 'Europa', ba: 'Europa', ad: 'Europa', lu: 'Europa', mk: 'Europa',
   mx: 'América', pe: 'América', us: 'América', co: 'América', ar: 'América', cr: 'América', br: 'América', cu: 'América', ec: 'América', cl: 'América', do: 'América', bo: 'América', gt: 'América', pa: 'América', uy: 'América', ca: 'América', ve: 'América', bz: 'América', py: 'América',
-  ma: 'África', za: 'África', ke: 'África', tz: 'África', na: 'África', bw: 'África', zw: 'África', tn: 'África', rw: 'África', gh: 'África', sn: 'África', mg: 'África',
+  ma: 'África', za: 'África', ke: 'África', tz: 'África', na: 'África', bw: 'África', zw: 'África', tn: 'África', rw: 'África', gh: 'África', sn: 'África', mg: 'África', sc: 'África', ug: 'África',
   gb: 'Europa',
   au: 'Oceanía', nz: 'Oceanía', pf: 'Oceanía', fj: 'Oceanía',
 };
@@ -118,6 +118,12 @@ const TAGLINES: Record<string, string> = {
   azerbaiyan: 'Bakú, fuego y Cáucaso',
   'bosnia-herzegovina': 'Mostar, Sarajevo y su historia',
   paraguay: 'Misiones jesuíticas y guaraní',
+  andorra: 'Pirineos, esquí y termas',
+  luxemburgo: 'Casamatas, castillos y transporte gratis',
+  'macedonia-del-norte': 'El lago de Ohrid y los Balcanes',
+  seychelles: 'Playas de granito en el Índico',
+  israel: 'Jerusalén, Mar Muerto y Tel Aviv',
+  uganda: 'Gorilas, safari y el Nilo',
 };
 
 const CONT_ORDER = ['África', 'América', 'Asia', 'Europa', 'Oceanía'];
