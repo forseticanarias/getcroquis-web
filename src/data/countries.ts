@@ -8464,6 +8464,121 @@ export const COUNTRIES: Country[] = [
       { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
     ],
   },
+
+  // ───────────────────────── Los últimos: Antillas, Índico y Micronesia ─────────────────────────
+  {
+    slug: 'san-cristobal-nieves', name: 'San Cristóbal y Nieves', code: 'kn',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/BrimstoneHill01.jpg/1280px-BrimstoneHill01.jpg',
+    imageAlt: 'Fortaleza de Brimstone Hill, San Cristóbal y Nieves',
+    capital: 'Basseterre', currency: 'Dólar del Caribe Oriental (XCD)', language: 'Inglés', plug: 'Tipo A/B/D/G (230 V)', tz: 'UTC-4',
+    budget: 'Alto', bestMonths: 'Diciembre-Abril',
+    summary: 'El país más pequeño de América: dos islas volcánicas unidas por historia, con la fortaleza de Brimstone Hill sobre el mar, un tren panorámico por antiguas plantaciones, selva y la coqueta y tranquila isla de Nieves.',
+    regions: ['Basseterre (San Cristóbal)', 'Brimstone Hill', 'Nieves (Nevis)', 'Monte Liamuiga'],
+    tips: ['El tren panorámico ("Scenic Railway") recorre las viejas plantaciones de azúcar', 'Nieves es la isla hermana, más tranquila y con encanto colonial', 'La fortaleza de Brimstone Hill es la "Gibraltar del Caribe"'],
+    visa: 'No requerido hasta 90 días (turismo)',
+    internet: 'Bueno',
+    duration: '5-7 días',
+    difficulty: 'Fácil',
+    difficultyNote: 'Fácil: se habla inglés, es segura y poco masificada. Precio alto, típico de las Antillas.',
+    english: 'Oficial: sin barrera.',
+    budgetLevels: { mochilero: 60, normal: 115, comodo: 200, lujo: 400 },
+    climate: [
+      { m: 'Ene', r: 'good' }, { m: 'Feb', r: 'good' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'mid' }, { m: 'Jun', r: 'mid' }, { m: 'Jul', r: 'mid' }, { m: 'Ago', r: 'avoid' },
+      { m: 'Sep', r: 'avoid' }, { m: 'Oct', r: 'avoid' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'good' },
+    ],
+    opinion:
+      'San Cristóbal y Nieves es el país más pequeño de todo el continente americano, y precisamente por eso tiene un encanto de "Caribe de otra época", sin masas ni grandes resorts. San Cristóbal (St. Kitts) tiene dos joyas: la fortaleza de Brimstone Hill, encaramada sobre el mar y llamada la "Gibraltar del Caribe", y un tren panorámico que recorre las antiguas plantaciones de azúcar rodeando la isla. Y a un salto en ferry está Nieves (Nevis), su isla hermana, todavía más tranquila y con un aire colonial precioso. Mi consejo: combínalas, sube al volcán o piérdete por las plantaciones, y disfruta de un Caribe pausado y auténtico. Para desconectar de verdad.',
+    cityGuides: [
+      { name: 'San Cristóbal', days: '3 días', fact: 'La fortaleza de Brimstone Hill, construida por esclavos africanos, es Patrimonio de la Humanidad.',
+        sights: [ { name: 'Fortaleza de Brimstone Hill' }, { name: 'Tren panorámico (Scenic Railway)' }, { name: 'Volcán Liamuiga' }, { name: 'Basseterre colonial' } ] },
+      { name: 'Nieves (Nevis)', days: '2 días', fact: 'Es la cuna de Alexander Hamilton, uno de los padres fundadores de EE. UU.',
+        sights: [ { name: 'Charlestown y casas coloniales' }, { name: 'Playas de Pinney\'s Beach' }, { name: 'Fuentes termales' } ] },
+    ],
+    faq: [
+      { q: '¿Es el país más pequeño de América?', a: 'Sí, San Cristóbal y Nieves es el estado soberano más pequeño del continente americano, tanto en superficie como en población.' },
+      { q: '¿Merece la pena Nieves?', a: 'Sí: la isla hermana es aún más tranquila, con un encanto colonial precioso, playas relajadas y fuentes termales. Se llega en un corto ferry.' },
+    ],
+    links: [
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
+  {
+    slug: 'comoras', name: 'Comoras', code: 'km',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Moroni-Harbour.jpg/1280px-Moroni-Harbour.jpg',
+    imageAlt: 'Puerto y mezquita de Moroni, Comoras',
+    capital: 'Moroni', currency: 'Franco comorano (KMF)', language: 'Comorano, árabe y francés', plug: 'Tipo C/E (220 V)', tz: 'UTC+3',
+    budget: 'Medio', bestMonths: 'Mayo-Octubre (más seco)',
+    summary: 'Las "islas de la luna" en el Índico: un archipiélago volcánico casi virgen entre África y Madagascar, con el gran volcán Karthala, playas desiertas, aroma a ylang-ylang y vainilla, y una cultura suajili-árabe única. Fuera de toda ruta.',
+    regions: ['Gran Comora (Moroni)', 'Volcán Karthala', 'Mohéli', 'Anjouan'],
+    tips: ['Comoras produce buena parte del ylang-ylang del mundo (perfumería)', 'La subida al volcán Karthala es una caminata dura de dos días', 'Mohéli tiene un parque marino con tortugas y ballenas'],
+    visa: 'Visa a la llegada (para españoles)',
+    internet: 'Limitado',
+    duration: '8-12 días',
+    difficulty: 'Alta',
+    difficultyNote: 'Alta: naturaleza virgen y cultura fascinante, pero con muy poca infraestructura turística, transporte entre islas complicado y el francés casi imprescindible. Para viajeros muy aventureros.',
+    english: 'Muy escaso; el francés es imprescindible.',
+    budgetLevels: { mochilero: 35, normal: 65, comodo: 120, lujo: 250 },
+    climate: [
+      { m: 'Ene', r: 'avoid' }, { m: 'Feb', r: 'avoid' }, { m: 'Mar', r: 'mid' }, { m: 'Abr', r: 'mid' },
+      { m: 'May', r: 'good' }, { m: 'Jun', r: 'good' }, { m: 'Jul', r: 'good' }, { m: 'Ago', r: 'good' },
+      { m: 'Sep', r: 'good' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'avoid' },
+    ],
+    opinion:
+      'Comoras es de los países menos visitados del mundo, y eso es justo su encanto: un archipiélago volcánico en el Índico, entre África y Madagascar, donde no vas a cruzarte a un solo turista. Su capital, Moroni, con su medina y su mezquita junto al puerto, tiene un aire suajili-árabe precioso; el gran volcán Karthala domina la isla principal; y las playas están literalmente desiertas. Le suma un detalle que enamora: huele a flores, porque produce buena parte del ylang-ylang del mundo (el de los perfumes). Te hablo con honestidad: no es un destino fácil, hay poquísima infraestructura y necesitas francés y paciencia. Pero para el viajero que busca lo auténtico de verdad, es una joya escondida.',
+    cityGuides: [
+      { name: 'Gran Comora', days: '3-4 días', fact: 'El Karthala tiene uno de los cráteres activos más grandes del mundo.',
+        sights: [ { name: 'Medina de Moroni' }, { name: 'Ascensión al volcán Karthala' }, { name: 'Playas de Chomoni' } ] },
+      { name: 'Mohéli', days: '2-3 días', fact: 'Su parque marino protege tortugas verdes que desovan en sus playas.',
+        sights: [ { name: 'Parque marino y tortugas' }, { name: 'Ballenas jorobadas (temporada)' }, { name: 'Islotes vírgenes' } ] },
+    ],
+    faq: [
+      { q: '¿Por qué las llaman "islas de la luna"?', a: 'El nombre árabe del archipiélago, "Qamar", significa luna. Son islas volcánicas poco conocidas en el canal de Mozambique, entre África continental y Madagascar.' },
+      { q: '¿Es un destino fácil?', a: 'No: es de los menos turísticos del mundo, con poca infraestructura y transporte complicado. Necesitas francés y espíritu aventurero, pero es auténtico como pocos.' },
+    ],
+    links: [
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
+  {
+    slug: 'micronesia', name: 'Micronesia', code: 'fm',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Nan_madol.jpg/1280px-Nan_madol.jpg',
+    imageAlt: 'Ruinas de Nan Madol, Pohnpei, Micronesia',
+    capital: 'Palikir', currency: 'Dólar estadounidense (USD)', language: 'Inglés (y lenguas locales)', plug: 'Tipo A/B (120 V)', tz: 'UTC+10 a UTC+11',
+    budget: 'Medio-alto', bestMonths: 'Diciembre-Abril',
+    summary: 'Cuatro estados de islas dispersas por el Pacífico: la meca del buceo de pecios en la laguna de Chuuk (una flota japonesa entera hundida), las misteriosas ruinas de Nan Madol sobre el agua y atolones remotos casi vírgenes. Aventura submarina extrema.',
+    regions: ['Chuuk (laguna)', 'Pohnpei (Nan Madol)', 'Yap', 'Kosrae'],
+    tips: ['La laguna de Chuuk es de los mejores buceos de pecios del mundo (flota japonesa de la II Guerra)', 'Nan Madol es una "Venecia" de piedra construida sobre arrecife', 'En Yap se ven las famosas "monedas de piedra" gigantes'],
+    visa: 'No requerido (para españoles; asociado a EE. UU.)',
+    internet: 'Limitado',
+    duration: '8-12 días',
+    difficulty: 'Alta',
+    difficultyNote: 'Alta: destino remotísimo, caro de logística (vuelos entre islas) y con poca infraestructura. Sobre todo para buceadores y viajeros muy aventureros. Se maneja el inglés.',
+    english: 'Extendido (idioma oficial; país asociado a EE. UU.).',
+    budgetLevels: { mochilero: 55, normal: 105, comodo: 190, lujo: 380 },
+    climate: [
+      { m: 'Ene', r: 'good' }, { m: 'Feb', r: 'good' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'mid' }, { m: 'Jun', r: 'mid' }, { m: 'Jul', r: 'mid' }, { m: 'Ago', r: 'mid' },
+      { m: 'Sep', r: 'mid' }, { m: 'Oct', r: 'mid' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'good' },
+    ],
+    opinion:
+      'Micronesia (los Estados Federados) es de los últimos confines del planeta, un puñado de islas dispersas por una inmensidad de océano Pacífico. Tiene dos joyas que justifican por sí solas el viajazo. Una, para buceadores: la laguna de Chuuk, donde reposa una flota japonesa entera hundida en la Segunda Guerra Mundial, hoy convertida en arrecifes fantasmales llenos de vida; es uno de los mejores buceos de pecios del mundo. Y dos, un misterio arqueológico: Nan Madol, una ciudad de piedra construida sobre canales y arrecife, una especie de "Venecia" del Pacífico que nadie sabe muy bien cómo levantaron. Te aviso: es carísimo de logística y remotísimo. Pero si buceas o te fascina lo remoto, pocos sitios así quedan.',
+    cityGuides: [
+      { name: 'Chuuk', days: '3-4 días', fact: 'Su laguna guarda más de 60 barcos y aviones japoneses hundidos en 1944.',
+        sights: [ { name: 'Buceo de pecios (flota japonesa)' }, { name: 'Laguna y arrecifes' } ] },
+      { name: 'Pohnpei', days: '2-3 días', fact: 'Nan Madol se levantó con enormes columnas de basalto sobre un arrecife: sigue siendo un enigma.',
+        sights: [ { name: 'Ruinas de Nan Madol' }, { name: 'Cascadas y selva' }, { name: 'Kayak por los manglares' } ] },
+      { name: 'Yap', days: '2 días', fact: 'Usa desde hace siglos "monedas de piedra" (rai) de hasta varios metros de diámetro.',
+        sights: [ { name: 'Monedas de piedra gigantes' }, { name: 'Buceo con mantarrayas' }, { name: 'Aldeas tradicionales' } ] },
+    ],
+    faq: [
+      { q: '¿Por qué es famosa para el buceo?', a: 'Por la laguna de Chuuk, donde reposa una flota japonesa entera hundida en la Segunda Guerra Mundial. Es uno de los mejores destinos de buceo de pecios del mundo.' },
+      { q: '¿Qué es Nan Madol?', a: 'Una antigua ciudad de piedra construida sobre un centenar de islotes artificiales y canales, en Pohnpei. La llaman "la Venecia del Pacífico" y sigue siendo un enigma arqueológico.' },
+    ],
+    links: [
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
 ];
 
 export const countryBySlug = (slug: string) => COUNTRIES.find((c) => c.slug === slug);
