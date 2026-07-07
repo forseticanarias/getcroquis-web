@@ -55,6 +55,16 @@ export interface Link {
   url: string;
 }
 
+// Aviso de seguridad / estatus. Se pinta destacado arriba de la ficha.
+//   'info'    → matiz neutro (p. ej. estatus político, reconocimiento limitado).
+//   'warning' → precaución (zonas o riesgos concretos; viajar informado).
+//   'danger'  → desde getcroquis NO recomendamos el viaje (conflicto/inseguridad alta).
+export interface Advisory {
+  level: 'info' | 'warning' | 'danger';
+  title?: string;
+  text: string;
+}
+
 export interface Country {
   slug: string;
   name: string;
@@ -73,6 +83,7 @@ export interface Country {
   duration?: string;
   difficulty?: string; // 'Fácil' | 'Media' | 'Alta'
   difficultyNote?: string;
+  advisory?: Advisory; // aviso de seguridad o estatus (se pinta destacado)
   tags?: string[]; // para quién es: cultural, primerizos, solo travel, friki…
   english?: string; // utilidad del inglés
   paperwork?: string[]; // pasaporte, visado, carnet internacional, vacunas…
@@ -5266,6 +5277,134 @@ export const COUNTRIES: Country[] = [
       { label: 'Web oficial de turismo de Uruguay', url: 'https://www.uruguaynatural.com/es/' },
       { label: 'Embajada de España en Uruguay', url: 'https://www.exteriores.gob.es/Embajadas/montevideo' },
       { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
+
+  // ───────────────────────── Territorios de reconocimiento especial ─────────────────────────
+  {
+    slug: 'taiwan', name: 'Taiwán', code: 'tw',
+    imageAlt: 'Taipéi 101 y el skyline de Taipéi, Taiwán',
+    capital: 'Taipéi', currency: 'Nuevo dólar taiwanés (TWD)', language: 'Chino mandarín', plug: 'Tipo A/B (110 V)', tz: 'UTC+8',
+    budget: 'Medio', bestMonths: 'Octubre-Abril (evita los tifones del verano)',
+    summary: 'Una isla que sorprende a todo el que va: rascacielos y templos, montañas de mármol, mercados nocturnos y de la mejor comida callejera de Asia. Segura, barata y facilísima de recorrer en tren.',
+    advisory: {
+      level: 'info',
+      title: 'Sobre su estatus político',
+      text: 'Taiwán se gobierna de forma autónoma pero su reconocimiento internacional es limitado (China lo reclama como parte de su territorio). En la práctica, para el viajero es un destino plenamente funcional, estable y de los más seguros de Asia: se entra con normalidad, tiene moneda propia y una infraestructura excelente.',
+    },
+    seasons: [
+      { name: 'Primavera', months: 'Mar–May', pros: ['Clima suave', 'Flores y té'], cons: ['Alguna lluvia'] },
+      { name: 'Verano', months: 'Jun–Ago', pros: ['Montaña fresca', 'Playas del sur'], cons: ['Calor y humedad', 'Tifones'] },
+      { name: 'Otoño', months: 'Sep–Nov', pros: ['La mejor época', 'Cielos limpios'], cons: ['Algún tifón temprano'] },
+      { name: 'Invierno', months: 'Dic–Feb', pros: ['Suave en el sur', 'Aguas termales'], cons: ['Norte gris y lluvioso'] },
+    ],
+    regions: ['Taipéi', 'Taroko', 'Sun Moon Lake', 'Tainan', 'Kaohsiung'],
+    tips: ['Saca una EasyCard: sirve para metro, autobús, tren y hasta tiendas', 'El tren de alta velocidad (HSR) une el oeste de la isla en 1-2 h', 'No te pierdas los mercados nocturnos: se cena a base de picoteo'],
+    visa: 'No requerido hasta 90 días (turismo)',
+    internet: 'Excelente · eSIM barata y 5G por todas partes',
+    duration: '8-12 días',
+    difficulty: 'Fácil',
+    difficultyNote: 'Muy fácil: seguro, limpio, ordenado y con transporte público impecable. La gente es amabilísima. La barrera del idioma se salva con traductor y señalética en inglés en las ciudades.',
+    english: 'Limitado fuera de Taipéi; útil llevar traductor y direcciones en chino.',
+    budgetLevels: { mochilero: 45, normal: 85, comodo: 150, lujo: 280 },
+    climate: [
+      { m: 'Ene', r: 'mid' }, { m: 'Feb', r: 'mid' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'mid' }, { m: 'Jun', r: 'avoid' }, { m: 'Jul', r: 'avoid' }, { m: 'Ago', r: 'avoid' },
+      { m: 'Sep', r: 'mid' }, { m: 'Oct', r: 'good' }, { m: 'Nov', r: 'good' }, { m: 'Dic', r: 'good' },
+    ],
+    opinion:
+      'Taiwán es de esos sitios que nadie tiene en la lista y todo el que va vuelve enamorado. Te lo digo de verdad: la comida callejera es de las mejores de Asia y cuesta cuatro duros, la gente te ayuda hasta cuando no se lo pides, y en el mismo día pasas de un rascacielos futurista a un templo lleno de incienso o a un desfiladero de mármol como el de Taroko. Mi consejo: no te quedes solo en Taipéi. Coge el tren de alta velocidad, baja a Tainan por los templos y la historia, y reserva un día para Jiufen al atardecer (el pueblo de las callejuelas y farolillos que inspiró a Ghibli). Es seguro, es barato y es facilísimo. Un destino redondo.',
+    cityGuides: [
+      { name: 'Taipéi', days: '3 días', fact: 'El Taipéi 101 fue el edificio más alto del mundo hasta 2010 y aún tiene uno de los ascensores más rápidos del planeta.',
+        sights: [ { name: 'Mirador del Taipéi 101' }, { name: 'Mercado nocturno de Shilin' }, { name: 'Templo de Longshan' }, { name: 'Aguas termales de Beitou' }, { name: 'Excursión a Jiufen y Shifen' } ] },
+      { name: 'Desfiladero de Taroko', days: '1-2 días', fact: 'Es un cañón de mármol excavado por el río: paredes de roca pulida de cientos de metros.',
+        sights: [ { name: 'Sendero Shakadang' }, { name: 'Túnel de las Nueve Curvas' }, { name: 'Templo de la Golondrina' } ] },
+      { name: 'Sun Moon Lake', days: '1 día', fact: 'El lago más grande de la isla, sagrado para el pueblo Thao, entre montañas y plantaciones de té.',
+        sights: [ { name: 'Paseo en barco por el lago' }, { name: 'Teleférico y ruta en bici' }, { name: 'Templo Wenwu' } ] },
+    ],
+    faq: [
+      { q: '¿Es seguro viajar a Taiwán?', a: 'Sí, es uno de los países más seguros de Asia: criminalidad muy baja y excelente sanidad. La única precaución real es meteorológica (temporada de tifones de junio a septiembre).' },
+      { q: '¿Se puede pagar con tarjeta?', a: 'En ciudades sí, pero lleva algo de efectivo para mercados nocturnos, templos y transporte local. La EasyCard recargable es lo más cómodo.' },
+    ],
+    links: [
+      { label: 'Web oficial de turismo de Taiwán', url: 'https://eng.taiwan.net.tw/' },
+      { label: 'Recomendaciones de viaje (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
+    ],
+  },
+  {
+    slug: 'vaticano', name: 'Ciudad del Vaticano', code: 'va',
+    imageAlt: 'Basílica de San Pedro, Ciudad del Vaticano',
+    capital: 'Ciudad del Vaticano', currency: 'Euro (EUR)', language: 'Italiano (y latín)', plug: 'Tipo C/F/L (230 V)', tz: 'UTC+1',
+    budget: 'Alto (como Roma)', bestMonths: 'Abril-Junio y Septiembre-Octubre',
+    summary: 'El país más pequeño del mundo: 0,44 km² dentro de Roma, sede de la Iglesia católica. Alberga la Capilla Sixtina, la Basílica de San Pedro y unos museos que están entre los mejores del planeta.',
+    advisory: {
+      level: 'info',
+      title: 'Es un enclave dentro de Roma',
+      text: 'La Ciudad del Vaticano no tiene aeropuerto ni fronteras con control: se entra caminando desde Roma (Italia). No necesitas trámite alguno. Lo normal es visitarlo en medio día dentro de un viaje a Roma.',
+    },
+    regions: ['Basílica de San Pedro', 'Museos Vaticanos', 'Plaza de San Pedro'],
+    tips: ['Reserva las entradas de los Museos Vaticanos online: la cola sin reserva es de horas', 'Hay código de vestimenta: hombros y rodillas cubiertos para entrar a la basílica', 'Sube a la cúpula de San Pedro temprano para las mejores vistas de Roma'],
+    visa: 'No requiere trámite: se accede desde Roma (espacio Schengen)',
+    internet: 'Buena (la de Roma) · eSIM de Italia/UE',
+    duration: 'Medio día / 1 día',
+    difficulty: 'Fácil',
+    difficultyNote: 'Muy fácil: es una visita urbana dentro de Roma. Lo único que cuesta es la logística de entradas y las colas; reservando online, un paseo.',
+    english: 'Se maneja bien inglés en museos y zonas turísticas.',
+    budgetLevels: { mochilero: 60, normal: 120, comodo: 220, lujo: 400 },
+    opinion:
+      'Que sea el país más pequeño del mundo no te engañe: aquí está concentrada una de las mayores acumulaciones de arte de la humanidad. Mi consejo de amigo es sencillo pero te cambia la visita: reserva SÍ o SÍ los Museos Vaticanos online y ve a primerísima hora, porque a media mañana aquello es una marea humana y la Capilla Sixtina se disfruta la mitad. Levanta la cabeza en la Sixtina, no corras (los guardas te meterán prisa, pero párate), y luego tómate el tiempo de subir a la cúpula de San Pedro: son unos cuantos escalones, pero la vista de Roma desde arriba es de las que no se olvidan. Lo combinas con Roma en el mismo viaje y listo.',
+    cityGuides: [
+      { name: 'Museos Vaticanos y Capilla Sixtina', days: '3-4 h', fact: 'Si te pararas 1 minuto ante cada obra, tardarías años en verlos todos: son más de 20.000 piezas expuestas.',
+        sights: [ { name: 'Capilla Sixtina (techo de Miguel Ángel)' }, { name: 'Estancias de Rafael' }, { name: 'Galería de los Mapas' }, { name: 'Escalera de Bramante' } ] },
+      { name: 'Basílica de San Pedro', days: '1-2 h', fact: 'Es la iglesia más grande del mundo y guarda La Piedad de Miguel Ángel.',
+        sights: [ { name: 'La Piedad de Miguel Ángel' }, { name: 'El baldaquino de Bernini' }, { name: 'Subida a la cúpula' } ] },
+      { name: 'Plaza de San Pedro', days: '30 min', fact: 'La abrazan 284 columnas de Bernini; en el centro, un obelisco egipcio de hace más de 3.000 años.',
+        sights: [ { name: 'La columnata de Bernini' }, { name: 'Audiencia papal (miércoles)' } ] },
+    ],
+    faq: [
+      { q: '¿Necesito visado o pasaporte para el Vaticano?', a: 'No. Se entra caminando desde Roma sin ningún control fronterizo. Basta con estar en Italia (espacio Schengen).' },
+      { q: '¿Cuánto tiempo hace falta?', a: 'Con medio día ves lo esencial (Museos + Sixtina + Basílica). Si quieres subir a la cúpula y sin prisas, resérvale un día.' },
+    ],
+    links: [
+      { label: 'Museos Vaticanos (entradas oficiales)', url: 'https://tickets.museivaticani.va/' },
+      { label: 'Web oficial del Vaticano', url: 'https://www.vaticanstate.va/es/' },
+    ],
+  },
+
+  // ───────────────────────── Destinos con aviso de seguridad ─────────────────────────
+  {
+    slug: 'venezuela', name: 'Venezuela', code: 've',
+    imageAlt: 'Salto Ángel, Venezuela',
+    capital: 'Caracas', currency: 'Bolívar (VES) · en la práctica se usa el dólar', language: 'Español', plug: 'Tipo A/B (120 V)', tz: 'UTC-4',
+    budget: 'Variable', bestMonths: 'Diciembre-Abril (estación seca)',
+    summary: 'Naturaleza de récord: la cascada más alta del mundo (Salto Ángel), los tepuyes del Roraima y las playas del Caribe de Los Roques. Un país espectacular que hoy, sin embargo, atraviesa una situación muy delicada.',
+    advisory: {
+      level: 'danger',
+      title: 'Desde getcroquis NO recomendamos viajar a Venezuela ahora mismo',
+      text: 'Por la elevada inseguridad (delincuencia violenta), la inestabilidad política y social, la escasez de servicios básicos (combustible, medicinas, electricidad) y las dificultades de asistencia consular, desaconsejamos el viaje turístico. Si aun así decides ir, hazlo solo con operadores locales de total confianza, nunca por libre, y mantén un seguro con repatriación.',
+    },
+    regions: ['Salto Ángel (Canaima)', 'Roraima', 'Los Roques', 'Mérida y los Andes', 'Isla Margarita'],
+    tips: ['La situación cambia rápido: consulta la recomendación oficial de Exteriores justo antes de decidir', 'Lleva dólares en efectivo en billetes pequeños; el bolívar está muy devaluado', 'Nada de mostrar objetos de valor ni moverse de noche'],
+    visa: 'No requerido para estancias turísticas cortas (verificar según situación)',
+    internet: 'Deficiente e inestable · cortes frecuentes de luz y red',
+    duration: '—',
+    difficulty: 'Alta',
+    difficultyNote: 'Alta: no por lo natural (que es maravilloso) sino por el contexto. Requiere planificación con operadores locales, prudencia extrema y flexibilidad ante imprevistos de suministro y seguridad.',
+    english: 'Poco extendido; imprescindible el español.',
+    budgetLevels: { mochilero: 30, normal: 70, comodo: 140, lujo: 300 },
+    climate: [
+      { m: 'Ene', r: 'good' }, { m: 'Feb', r: 'good' }, { m: 'Mar', r: 'good' }, { m: 'Abr', r: 'good' },
+      { m: 'May', r: 'mid' }, { m: 'Jun', r: 'avoid' }, { m: 'Jul', r: 'avoid' }, { m: 'Ago', r: 'avoid' },
+      { m: 'Sep', r: 'avoid' }, { m: 'Oct', r: 'mid' }, { m: 'Nov', r: 'mid' }, { m: 'Dic', r: 'good' },
+    ],
+    opinion:
+      'Voy a ser honesto contigo, que para eso estamos: Venezuela tiene una de las naturalezas más brutales del planeta. El Salto Ángel cayendo desde un tepuy entre nubes, o el amanecer sobre el Roraima, son de esas imágenes que se te quedan grabadas para siempre. Pero no puedo recomendarte el viaje ahora mismo con la mano en el corazón. La inseguridad y la falta de servicios básicos hacen que el riesgo no compense para un viaje turístico normal. Lo dejo aquí porque el país es una maravilla y ojalá pronto cambie la situación —y cuando cambie, será uno de los grandes destinos de Sudamérica—, pero hoy, si me preguntas de amigo, te diría que esperes.',
+    faq: [
+      { q: '¿Se puede visitar el Salto Ángel?', a: 'Sí existe la logística turística (vuelo a Canaima + excursión en curiara), pero dado el contexto general del país solo debería hacerse con operadores de máxima confianza y asumiendo el riesgo. Consulta antes la recomendación oficial de Exteriores.' },
+      { q: '¿Por qué aparece en getcroquis si lo desaconsejáis?', a: 'Porque queremos darte información honesta, no esconderla. Mostramos el país y su riqueza, pero con el aviso claro de que hoy no recomendamos el viaje turístico.' },
+    ],
+    links: [
+      { label: 'Recomendaciones de viaje de Venezuela (Exteriores)', url: 'https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Recomendaciones-de-viaje.aspx' },
     ],
   },
 ];
