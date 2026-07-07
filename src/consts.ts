@@ -10,6 +10,7 @@ export const SITE = {
     'Planifica tu itinerario día a día con IA en minutos: guías honestas, presupuesto real y consejos para viajar mejor y más barato. Copia viajes reales de otros viajeros. Todo a tu medida, sin postureo.',
   // Redes sociales de la marca (cambia el handle aquí en un solo sitio).
   instagram: 'https://instagram.com/getcroquis',
+  tiktok: 'https://www.tiktok.com/@getcroquis',
 };
 
 // "Ranking de necesidades" del viaje: informativo y discreto (no botones de
