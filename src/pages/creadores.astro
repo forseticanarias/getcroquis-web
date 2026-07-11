@@ -1,0 +1,180 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../consts';
+
+const stats = [
+  { n: '85%', l: 'de cada venta es para ti' },
+  { n: 'Tú', l: 'pones el precio' },
+  { n: 'Auto', l: 'cobros con Stripe' },
+  { n: '0 €', l: 'de alta, sin cuotas' },
+];
+const steps = [
+  { n: '01', t: 'Solicita ser creador', d: 'Rellenas tu perfil y pides el acceso. Verificamos que eres tú: solo creadores aprobados venden, para que tu marca esté en buena compañía.' },
+  { n: '02', t: 'Monta tu tienda', d: 'Marca tus itinerarios como premium, ponles precio y añade tus servicios de asistencia. Todo desde un panel sencillo, sin saber de tecnología.' },
+  { n: '03', t: 'Comparte con tu audiencia', d: 'Tu escaparate se ve sin registro: perfecto para tu bio y tus stories. Te damos hasta los textos listos para pegar.' },
+  { n: '04', t: 'Cobra, automático', d: 'Cuando alguien compra, el 85% cae directo en tu cuenta de Stripe. Sin facturas manuales, sin perseguir a nadie.' },
+];
+const forWho = [
+  { t: 'Influencers de viajes', d: 'Convierte los "¿me pasas tu itinerario?" en un ingreso recurrente.' },
+  { t: 'Guías locales', d: 'Vende tu conocimiento del destino y tu acompañamiento a quien llega.' },
+  { t: 'Agencias de viaje', d: 'Ofrece itinerarios y asistencia digital a tus clientes, con tu marca.' },
+];
+---
+
+<Base title="Vende tus viajes — getcroquis para creadores" description="Convierte tu audiencia en ingresos: vende tus itinerarios y tu asistencia en viaje con getcroquis. El 85% de cada venta es para ti, cobros automáticos y sin cuotas de alta.">
+
+  <!-- HERO -->
+  <section class="max-w-4xl mx-auto px-5 sm:px-6 pt-16 sm:pt-24 pb-6 text-center">
+    <p class="reveal text-[11px] sm:text-xs font-semibold tracking-[0.22em] uppercase text-tirma-pink/80 mb-6">
+      getcroquis para creadores
+    </p>
+    <h1 class="reveal text-[2.6rem] leading-[1.05] sm:text-[4.2rem] sm:leading-[1.02] font-extrabold tracking-[-0.03em]">
+      Convierte tus viajes<br class="hidden sm:block" />
+      <span class="bg-gradient-to-r from-tirma-pink to-tirma-beige bg-clip-text text-transparent">en ingresos.</span>
+    </h1>
+    <p class="reveal mt-6 text-base sm:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed">
+      Tu audiencia ya te pregunta "¿me pasas tu itinerario?". Véndeselo bien hecho —día a día, con tus sitios de verdad— y acompáñalos durante el viaje. Tú pones el precio; el 85% es para ti.
+    </p>
+    <div class="reveal mt-9 flex flex-wrap gap-3 justify-center">
+      <a href={`${SITE.appUrl}/creador`} class="px-8 py-3.5 rounded-full bg-tirma-pink text-white font-semibold shadow-xl shadow-tirma-pink/25 hover:bg-tirma-deep transition">
+        Hazte creador
+      </a>
+      <a href="#como-funciona" class="px-8 py-3.5 rounded-full border border-white/15 text-white/80 font-semibold hover:border-white/35 hover:text-white transition">
+        Ver cómo funciona
+      </a>
+    </div>
+
+    <div class="reveal mt-14 sm:mt-20 grid grid-cols-2 sm:grid-cols-4 gap-px rounded-2xl overflow-hidden bg-white/[0.06] border border-white/[0.07]">
+      {stats.map((s) => (
+        <div class="bg-[#0c1016] py-5 px-3 text-center">
+          <div class="text-2xl sm:text-3xl font-bold text-tirma-beige">{s.n}</div>
+          <div class="text-[11px] sm:text-xs text-white/45 mt-1">{s.l}</div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- LA OPORTUNIDAD -->
+  <section class="max-w-6xl mx-auto px-5 sm:px-6 py-16 sm:py-24">
+    <div class="reveal max-w-2xl mb-10">
+      <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-tirma-pink/80 mb-2">La oportunidad</p>
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-[-0.02em]">Ya tienes lo más difícil: gente que te escucha.</h2>
+    </div>
+    <div class="grid sm:grid-cols-3 gap-4">
+      <div class="reveal p-7 rounded-3xl bg-white/[0.025] border border-white/[0.08]">
+        <span class="inline-flex w-11 h-11 items-center justify-center rounded-xl bg-tirma-pink/10 border border-tirma-pink/20 text-tirma-pink mb-5">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </span>
+        <h3 class="font-bold text-lg mb-2">Tu audiencia, tu activo</h3>
+        <p class="text-sm text-white/55 leading-relaxed">Cada creador trae su propia comunidad. No dependes de que te descubran: vendes a quien ya confía en ti.</p>
+      </div>
+      <div class="reveal p-7 rounded-3xl bg-white/[0.025] border border-white/[0.08]" style="transition-delay:70ms">
+        <span class="inline-flex w-11 h-11 items-center justify-center rounded-xl bg-tirma-pink/10 border border-tirma-pink/20 text-tirma-pink mb-5">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></svg>
+        </span>
+        <h3 class="font-bold text-lg mb-2">El 85% es tuyo</h3>
+        <p class="text-sm text-white/55 leading-relaxed">Tú pones el precio y te quedas la mayor parte. Nuestra comisión solo existe cuando tú ganas — nunca antes, nunca a tu costa.</p>
+      </div>
+      <div class="reveal p-7 rounded-3xl bg-white/[0.025] border border-white/[0.08]" style="transition-delay:140ms">
+        <span class="inline-flex w-11 h-11 items-center justify-center rounded-xl bg-tirma-pink/10 border border-tirma-pink/20 text-tirma-pink mb-5">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </span>
+        <h3 class="font-bold text-lg mb-2">Las herramientas, hechas</h3>
+        <p class="text-sm text-white/55 leading-relaxed">Cobros, catálogo con candado, asistencia por chat, estadísticas… Tú te dedicas a viajar y a crear; la fontanería la ponemos nosotros.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUÉ VENDES -->
+  <section class="max-w-6xl mx-auto px-5 sm:px-6 pb-16 sm:pb-24">
+    <div class="reveal max-w-2xl mb-10">
+      <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-tirma-pink/80 mb-2">Qué vendes</p>
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-[-0.02em]">Dos formas de monetizar lo que ya sabes.</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-4">
+      <div class="reveal p-8 rounded-3xl bg-gradient-to-b from-white/[0.04] to-transparent border border-white/[0.1]">
+        <h3 class="font-bold text-xl mb-2">Tu catálogo premium</h3>
+        <p class="text-white/60 leading-relaxed">Marca tus mejores itinerarios como premium. La portada queda pública —engancha— y un solo pago desbloquea para siempre todo tu catálogo: día a día, horarios, mapas y tus sitios de verdad. Tú decides el precio.</p>
+      </div>
+      <div class="reveal p-8 rounded-3xl bg-gradient-to-b from-white/[0.04] to-transparent border border-white/[0.1]" style="transition-delay:70ms">
+        <h3 class="font-bold text-xl mb-2">Tu asistencia en viaje</h3>
+        <p class="text-white/60 leading-relaxed">Lo que no cabe en un post: acompañamiento real. Vende una sesión de planificación, una guía en destino o estar a un mensaje durante el viaje —por WhatsApp, Telegram o Discord—. Idiomas y horarios claros antes de contratar.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO FUNCIONA -->
+  <section id="como-funciona" class="max-w-5xl mx-auto px-5 sm:px-6 py-16 sm:py-24 border-t border-white/[0.06]">
+    <div class="reveal max-w-2xl mb-12">
+      <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-tirma-pink/80 mb-2">Cómo funciona</p>
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-[-0.02em]">De tu perfil a tu primer cobro, en cuatro pasos.</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-x-10 gap-y-9">
+      {steps.map((s) => (
+        <div class="reveal flex gap-5">
+          <div class="text-tirma-pink/50 font-bold text-sm pt-1 flex-shrink-0" style="font-variant-numeric:tabular-nums">{s.n}</div>
+          <div>
+            <h3 class="font-bold text-lg mb-1.5">{s.t}</h3>
+            <p class="text-sm text-white/55 leading-relaxed">{s.d}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- CUÁNTO GANAS -->
+  <section class="max-w-4xl mx-auto px-5 sm:px-6 py-16 sm:py-24">
+    <div class="reveal text-center max-w-xl mx-auto mb-10">
+      <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-tirma-pink/80 mb-2">Cuánto ganas</p>
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-[-0.02em]">Las cuentas claras.</h2>
+    </div>
+    <div class="reveal rounded-3xl border border-white/[0.1] bg-white/[0.02] p-6 sm:p-8">
+      <div class="flex items-baseline justify-between mb-4">
+        <span class="text-sm text-white/55">De una venta de</span>
+        <span class="text-xl font-bold" style="font-variant-numeric:tabular-nums">20,00 €</span>
+      </div>
+      <div class="flex h-16 rounded-2xl overflow-hidden border border-white/[0.08]">
+        <div class="flex flex-col justify-center px-5" style="flex:85; background:#171c25">
+          <span class="text-[11px] font-bold uppercase tracking-wide text-tirma-beige/80">Para ti · 85%</span>
+          <span class="text-lg font-extrabold" style="font-variant-numeric:tabular-nums">17,00 €</span>
+        </div>
+        <div class="flex flex-col justify-center px-4 text-white" style="flex:15; background:linear-gradient(180deg,#E6157F,#C30F68)">
+          <span class="text-[11px] font-bold uppercase tracking-wide opacity-80">getcroquis</span>
+          <span class="text-lg font-extrabold" style="font-variant-numeric:tabular-nums">3,00 €</span>
+        </div>
+      </div>
+      <p class="text-sm text-white/45 mt-4">Sin cuotas de alta ni mensualidades. Solo cobramos cuando tú cobras — así de simple.</p>
+    </div>
+  </section>
+
+  <!-- PARA QUIÉN -->
+  <section class="max-w-6xl mx-auto px-5 sm:px-6 pb-16 sm:pb-24">
+    <div class="reveal max-w-2xl mb-10">
+      <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-tirma-pink/80 mb-2">Para quién</p>
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-[-0.02em]">Si vives los viajes, esto es para ti.</h2>
+    </div>
+    <div class="grid sm:grid-cols-3 gap-4">
+      {forWho.map((w, i) => (
+        <div class="reveal p-7 rounded-3xl bg-white/[0.025] border border-white/[0.08]" style={`transition-delay:${i * 70}ms`}>
+          <h3 class="font-bold text-lg mb-2">{w.t}</h3>
+          <p class="text-sm text-white/55 leading-relaxed">{w.d}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="max-w-4xl mx-auto px-5 sm:px-6 pb-24">
+    <div class="reveal relative rounded-[2rem] overflow-hidden border border-white/[0.08] px-6 sm:px-12 py-14 sm:py-20 text-center">
+      <div aria-hidden="true" class="pointer-events-none absolute inset-0 bg-gradient-to-br from-tirma-pink/[0.14] via-transparent to-tirma-beige/[0.06]"></div>
+      <div class="relative">
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-[-0.02em]">Empieza a vender tus viajes hoy.</h2>
+        <p class="text-white/55 mt-3 mb-8 max-w-md mx-auto">Crea tu cuenta gratis y solicita ser creador. Sin coste, sin compromiso.</p>
+        <a href={`${SITE.appUrl}/creador`} class="inline-block px-9 py-4 rounded-full bg-tirma-pink text-white font-semibold shadow-xl shadow-tirma-pink/25 hover:bg-tirma-deep transition">
+          Hazte creador
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Base>

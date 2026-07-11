@@ -149,17 +149,19 @@ const homeItins = HOME_PICK.map((s) => ITINERARIES.find((i) => i.slug === s)).fi
         <h3 class="font-bold text-lg mb-2">Asistencia en tu viaje</h3>
         <p class="text-sm text-white/55 leading-relaxed">Contrata al creador o a la agencia y tenlos a un mensaje durante tu viaje, con idiomas y horarios claros antes de pagar.</p>
       </div>
-      <div class="reveal p-7 rounded-3xl bg-white/[0.025] border border-white/[0.08] hover:border-white/[0.16] transition duration-300" style="transition-delay:140ms">
+      <a href="/creadores" class="reveal group p-7 rounded-3xl bg-white/[0.025] border border-white/[0.08] hover:border-tirma-pink/30 transition duration-300 block" style="transition-delay:140ms">
         <span class="inline-flex w-11 h-11 items-center justify-center rounded-xl bg-tirma-pink/10 border border-tirma-pink/20 text-tirma-pink mb-5">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></svg>
         </span>
-        <h3 class="font-bold text-lg mb-2">¿Creas contenido de viajes?</h3>
-        <p class="text-sm text-white/55 leading-relaxed">Convierte tu audiencia en ingresos: comparte tus itinerarios y servicios, con cobros automáticos y sin complicaciones.</p>
-      </div>
+        <h3 class="font-bold text-lg mb-2 inline-flex items-center gap-1.5">¿Creas contenido de viajes?
+          <svg class="opacity-40 group-hover:opacity-100 group-hover:translate-x-0.5 transition" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </h3>
+        <p class="text-sm text-white/55 leading-relaxed">Convierte tu audiencia en ingresos: vende tus itinerarios y tu asistencia, con el 85% para ti. <span class="text-tirma-beige/90 font-semibold">Descúbrelo →</span></p>
+      </a>
     </div>
     <div class="reveal mt-9">
-      <a href={`${SITE.appUrl}/creador`} class="inline-block px-8 py-3.5 rounded-full bg-tirma-pink text-white font-semibold shadow-xl shadow-tirma-pink/25 hover:bg-tirma-deep transition">
-        Empieza a vender tus viajes
+      <a href="/creadores" class="inline-block px-8 py-3.5 rounded-full bg-tirma-pink text-white font-semibold shadow-xl shadow-tirma-pink/25 hover:bg-tirma-deep transition">
+        getcroquis para creadores
       </a>
     </div>
   </section>
