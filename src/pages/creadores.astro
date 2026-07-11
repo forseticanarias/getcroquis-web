@@ -20,12 +20,13 @@ const forWho = [
   { t: 'Agencias de viaje', d: 'Ofrece itinerarios y asistencia digital a tus clientes, con tu marca.' },
 ];
 
-// Supuestos prácticos: distintas formas reales de usarlo. La asistencia es
-// SIEMPRE opcional — el primer ejemplo vende solo el catálogo.
-const examples = [
-  { who: 'Creador de contenido', setup: 'Solo su catálogo', d: 'Marca sus mejores rutas como premium. Un pago y su seguidor tiene todo su catálogo. Sin asistencia ni compromisos: publica y cobra.' },
-  { who: 'Guía local', setup: 'Catálogo + sesión de planificación', d: 'Su catálogo y, además, una videollamada para ajustar el viaje a cada cliente. Suma la asistencia porque quiere, no porque tenga que hacerlo.' },
-  { who: 'Agencia de viajes', setup: 'Catálogo + asistencia en destino', d: 'Itinerarios y acompañamiento por WhatsApp durante el viaje, con su horario y sus idiomas. El paquete completo, para quien lo busca.' },
+// Las piezas que cada creador combina a su gusto. Solo el catálogo es la
+// base; el resto es opcional. Cualquiera —influencer, guía o agencia— puede
+// ofrecer una, dos o todas.
+const services = [
+  { name: 'Catálogo premium', tag: 'La base', d: 'Tus itinerarios con candado. Un solo pago desbloquea todo tu catálogo para siempre. Con esto ya vendes.' },
+  { name: 'Sesión de planificación', tag: 'Opcional', d: 'Una videollamada 1 a 1 para diseñar el viaje a medida del cliente. Le pones precio y horario.' },
+  { name: 'Asistencia en viaje', tag: 'Opcional', d: 'Estar a un mensaje durante el viaje —WhatsApp, Telegram o Discord—, con tus idiomas y tu disponibilidad claros de antemano.' },
 ];
 ---
 
@@ -131,21 +132,24 @@ const examples = [
       ))}
     </div>
 
-    <!-- Supuestos prácticos: cada creador lo usa a su manera -->
+    <!-- Tú montas tu oferta: piezas que se combinan como quieras -->
     <div class="reveal mt-14 pt-10 border-t border-white/[0.06]">
-      <h3 class="text-xl sm:text-2xl font-bold tracking-[-0.02em] mb-2">Cada creador, a su manera</h3>
+      <h3 class="text-xl sm:text-2xl font-bold tracking-[-0.02em] mb-2">Tú montas tu oferta</h3>
       <p class="text-white/55 mb-7 max-w-2xl leading-relaxed">
-        La asistencia en viaje es <strong class="text-white/80">complementaria y totalmente opcional</strong>: puedes vender solo tus itinerarios y ya está, o sumar acompañamiento si quieres ir más allá. Tres formas reales de usarlo:
+        Ofreces lo que quieras: desde <strong class="text-white/80">solo tu catálogo</strong> hasta el paquete completo. Seas influencer, guía o agencia, tienes las mismas piezas a tu disposición — combínalas a tu gusto.
       </p>
       <div class="grid sm:grid-cols-3 gap-4">
-        {examples.map((e) => (
+        {services.map((s) => (
           <div class="reveal p-6 rounded-2xl bg-white/[0.025] border border-white/[0.08]">
-            <div class="text-[11px] font-semibold tracking-[0.14em] uppercase text-tirma-pink/80 mb-2">{e.who}</div>
-            <div class="font-bold mb-2">{e.setup}</div>
-            <p class="text-sm text-white/55 leading-relaxed">{e.d}</p>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class={`text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full ${s.tag === 'La base' ? 'bg-tirma-pink/15 text-tirma-beige border border-tirma-pink/25' : 'bg-white/[0.06] text-white/50 border border-white/[0.12]'}`}>{s.tag}</span>
+            </div>
+            <div class="font-bold text-lg mb-2">{s.name}</div>
+            <p class="text-sm text-white/55 leading-relaxed">{s.d}</p>
           </div>
         ))}
       </div>
+      <p class="text-xs text-white/35 mt-4">Y no estás atado a estas: puedes crear los servicios a medida que quieras, cada uno con su precio y su canal de contacto.</p>
     </div>
   </section>
 
