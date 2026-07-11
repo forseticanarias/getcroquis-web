@@ -19,6 +19,14 @@ const forWho = [
   { t: 'Guías locales', d: 'Vende tu conocimiento del destino y tu acompañamiento a quien llega.' },
   { t: 'Agencias de viaje', d: 'Ofrece itinerarios y asistencia digital a tus clientes, con tu marca.' },
 ];
+
+// Supuestos prácticos: distintas formas reales de usarlo. La asistencia es
+// SIEMPRE opcional — el primer ejemplo vende solo el catálogo.
+const examples = [
+  { who: 'Creador de contenido', setup: 'Solo su catálogo', d: 'Marca sus mejores rutas como premium. Un pago y su seguidor tiene todo su catálogo. Sin asistencia ni compromisos: publica y cobra.' },
+  { who: 'Guía local', setup: 'Catálogo + sesión de planificación', d: 'Su catálogo y, además, una videollamada para ajustar el viaje a cada cliente. Suma la asistencia porque quiere, no porque tenga que hacerlo.' },
+  { who: 'Agencia de viajes', setup: 'Catálogo + asistencia en destino', d: 'Itinerarios y acompañamiento por WhatsApp durante el viaje, con su horario y sus idiomas. El paquete completo, para quien lo busca.' },
+];
 ---
 
 <Base title="Vende tus viajes — getcroquis para creadores" description="Convierte tu audiencia en ingresos: vende tus itinerarios y tu asistencia en viaje con getcroquis. El 85% de cada venta es para ti, cobros automáticos y sin cuotas de alta.">
@@ -97,8 +105,10 @@ const forWho = [
         <p class="text-white/60 leading-relaxed">Marca tus mejores itinerarios como premium. La portada queda pública —engancha— y un solo pago desbloquea para siempre todo tu catálogo: día a día, horarios, mapas y tus sitios de verdad. Tú decides el precio.</p>
       </div>
       <div class="reveal p-8 rounded-3xl bg-gradient-to-b from-white/[0.04] to-transparent border border-white/[0.1]" style="transition-delay:70ms">
-        <h3 class="font-bold text-xl mb-2">Tu asistencia en viaje</h3>
-        <p class="text-white/60 leading-relaxed">Lo que no cabe en un post: acompañamiento real. Vende una sesión de planificación, una guía en destino o estar a un mensaje durante el viaje —por WhatsApp, Telegram o Discord—. Idiomas y horarios claros antes de contratar.</p>
+        <h3 class="font-bold text-xl mb-2 inline-flex items-center gap-2">Tu asistencia en viaje
+          <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-white/[0.06] border border-white/[0.12] text-white/50">Opcional</span>
+        </h3>
+        <p class="text-white/60 leading-relaxed">Lo que no cabe en un post: acompañamiento real. Si quieres, vende una sesión de planificación, una guía en destino o estar a un mensaje durante el viaje —por WhatsApp, Telegram o Discord—. Idiomas y horarios claros antes de contratar.</p>
       </div>
     </div>
   </section>
@@ -119,6 +129,23 @@ const forWho = [
           </div>
         </div>
       ))}
+    </div>
+
+    <!-- Supuestos prácticos: cada creador lo usa a su manera -->
+    <div class="reveal mt-14 pt-10 border-t border-white/[0.06]">
+      <h3 class="text-xl sm:text-2xl font-bold tracking-[-0.02em] mb-2">Cada creador, a su manera</h3>
+      <p class="text-white/55 mb-7 max-w-2xl leading-relaxed">
+        La asistencia en viaje es <strong class="text-white/80">complementaria y totalmente opcional</strong>: puedes vender solo tus itinerarios y ya está, o sumar acompañamiento si quieres ir más allá. Tres formas reales de usarlo:
+      </p>
+      <div class="grid sm:grid-cols-3 gap-4">
+        {examples.map((e) => (
+          <div class="reveal p-6 rounded-2xl bg-white/[0.025] border border-white/[0.08]">
+            <div class="text-[11px] font-semibold tracking-[0.14em] uppercase text-tirma-pink/80 mb-2">{e.who}</div>
+            <div class="font-bold mb-2">{e.setup}</div>
+            <p class="text-sm text-white/55 leading-relaxed">{e.d}</p>
+          </div>
+        ))}
+      </div>
     </div>
   </section>
 
