@@ -1,13 +1,12 @@
 ---
 import { SITE } from '../consts';
+// Navegación limpia (sin emoji: se veían de "plastilina" en el menú móvil).
 const links = [
-  { href: '/empezar', label: 'Empieza aquí', emoji: '🧭' },
-  { href: '/destinos', label: 'Destinos', emoji: '🌍' },
-  { href: '/comparar', label: 'Comparar', emoji: '⚖️' },
-  { href: '/guias', label: 'Guías', emoji: '📚' },
-  { href: `${SITE.appUrl}/explora`, label: 'Explora la comunidad', emoji: '✨' },
-  { href: SITE.instagram, label: 'Síguenos en Instagram', emoji: '📸' },
-  { href: SITE.tiktok, label: 'Síguenos en TikTok', emoji: '🎵' },
+  { href: '/empezar', label: 'Empieza aquí' },
+  { href: '/destinos', label: 'Destinos' },
+  { href: '/comparar', label: 'Comparar' },
+  { href: '/guias', label: 'Guías' },
+  { href: `${SITE.appUrl}/explora`, label: 'Explora la comunidad' },
 ];
 ---
 <header class="relative z-30 max-w-5xl mx-auto px-5 sm:px-6 py-4 flex items-center justify-between gap-2">
@@ -42,11 +41,26 @@ const links = [
       <button id="menu-close" aria-label="Cerrar" class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/70">✕</button>
     </div>
     {links.map((l) => (
-      <a href={l.href} class="flex items-center gap-3 px-3 py-3 rounded-xl text-white/85 hover:bg-white/[0.06] font-semibold transition">
-        <span class="text-lg">{l.emoji}</span>{l.label}
+      <a href={l.href} class="px-3 py-3 rounded-xl text-white/85 hover:bg-white/[0.06] font-semibold transition">
+        {l.label}
       </a>
     ))}
     <a href={`${SITE.appUrl}/dashboard`} class="mt-3 text-center px-4 py-3 rounded-xl bg-gradient-to-r from-tirma-pink to-tirma-deep text-tirma-beige font-bold">Abrir la app →</a>
+
+    <!-- Redes: accesos directos al pie del desplegable (iconos, no texto) -->
+    <div class="mt-auto pt-5 border-t border-white/[0.08]">
+      <p class="text-[11px] uppercase tracking-[0.15em] text-white/35 mb-3">Síguenos</p>
+      <div class="flex items-center gap-2.5">
+        <a href={SITE.instagram} target="_blank" rel="noreferrer" aria-label="Instagram"
+           class="w-10 h-10 rounded-full border border-white/12 bg-white/[0.04] flex items-center justify-center text-white/70 hover:text-tirma-pink hover:border-tirma-pink/40 transition">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+        </a>
+        <a href={SITE.tiktok} target="_blank" rel="noreferrer" aria-label="TikTok"
+           class="w-10 h-10 rounded-full border border-white/12 bg-white/[0.04] flex items-center justify-center text-white/70 hover:text-tirma-pink hover:border-tirma-pink/40 transition">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3a5.6 5.6 0 0 0 4.5 4.5v3a8.5 8.5 0 0 1-4.5-1.3v6.3a6 6 0 1 1-6-6c.34 0 .67.03 1 .09v3.14a2.9 2.9 0 1 0 2 2.77V3z"/></svg>
+        </a>
+      </div>
+    </div>
   </nav>
 </div>
 
