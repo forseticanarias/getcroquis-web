@@ -177,4 +177,12 @@ const forWho = [
     </div>
   </section>
 
+  <script>
+    // Aparición al hacer scroll: sin esto, los elementos .reveal se quedan
+    // invisibles (opacity:0) y la página parece vacía. (La home tiene el mismo.)
+    const io = new IntersectionObserver((es) => {
+      for (const e of es) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  </script>
 </Base>
