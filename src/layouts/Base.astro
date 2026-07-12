@@ -81,6 +81,11 @@ const siteLd = {
     <script type="application/ld+json" set:html={JSON.stringify(orgLd)} />
     <script type="application/ld+json" set:html={JSON.stringify(siteLd)} />
 
+    <!-- Conexión adelantada a Supabase: al abrir un itinerario la app pide sus
+         datos ahí; con la conexión ya "caliente" la carga arranca antes. -->
+    <link rel="preconnect" href="https://kvctkirqbtxjutjybmiv.supabase.co" crossorigin />
+    <link rel="dns-prefetch" href="https://kvctkirqbtxjutjybmiv.supabase.co" />
+
     <!-- Tipografía de marca (más personalidad que la del sistema) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

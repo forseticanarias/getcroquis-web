@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import { SITE } from '../consts';
 import { COUNTRIES } from '../data/countries';
 import { ITINERARIES, ITIN_GRADIENT } from '../data/itineraries';
+import { wikiThumb, wikiSrcset } from '../lib/img';
 
 const FEATURED: { slug: string; tagline: string }[] = [
   { slug: 'japon', tagline: 'El país del sol naciente' },
@@ -79,7 +80,9 @@ const homeItins = HOME_PICK.map((s) => ITINERARIES.find((i) => i.slug === s)).fi
     <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
       {featured.map((f) => (
         <a href={`/destinos/${f.slug}`} class="reveal group relative rounded-3xl overflow-hidden aspect-[4/5] sm:aspect-[4/3] ring-1 ring-white/10">
-          <img src={f.c!.image} alt={f.c!.name} loading="lazy" class="absolute inset-0 w-full h-full object-cover transition duration-700 ease-out group-hover:scale-105" />
+          <img src={wikiThumb(f.c!.image, 640)} srcset={wikiSrcset(f.c!.image, [400, 640, 900])}
+            sizes="(min-width:1024px) 33vw, 50vw" alt={f.c!.name} loading="lazy" decoding="async" width="640" height="480"
+            class="absolute inset-0 w-full h-full object-cover transition duration-700 ease-out group-hover:scale-105" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent"></div>
           <div class="absolute bottom-0 left-0 p-4 sm:p-5">
             <div class="font-bold text-lg sm:text-xl tracking-tight drop-shadow">{f.c!.name}</div>
