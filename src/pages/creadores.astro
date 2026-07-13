@@ -32,8 +32,16 @@ const services = [
 
 <Base title="Vende tus viajes — getcroquis para creadores" description="Convierte tu audiencia en ingresos: vende tus itinerarios y tu asistencia en viaje con getcroquis. El 85% de cada venta es para ti, cobros automáticos y sin cuotas de alta.">
 
+  <!-- Selector de puerta (creador vs agencia) -->
+  <div class="max-w-4xl mx-auto px-5 sm:px-6 pt-8 flex justify-center">
+    <div class="inline-flex p-1 rounded-full bg-white/[0.05] border border-white/[0.1] text-sm font-semibold">
+      <span class="px-4 py-1.5 rounded-full bg-tirma-pink text-white">Creador o influencer</span>
+      <a href="/agencias" class="px-4 py-1.5 rounded-full text-white/55 hover:text-white transition">Agencia o profesional</a>
+    </div>
+  </div>
+
   <!-- HERO -->
-  <section class="max-w-4xl mx-auto px-5 sm:px-6 pt-16 sm:pt-24 pb-6 text-center">
+  <section class="max-w-4xl mx-auto px-5 sm:px-6 pt-10 sm:pt-14 pb-6 text-center">
     <p class="reveal text-[11px] sm:text-xs font-semibold tracking-[0.22em] uppercase text-tirma-pink/80 mb-6">
       getcroquis para creadores
     </p>
@@ -204,6 +212,7 @@ const services = [
         <a href={`${SITE.appUrl}/creador`} class="inline-block px-9 py-4 rounded-full bg-tirma-pink text-white font-semibold shadow-xl shadow-tirma-pink/25 hover:bg-tirma-deep transition">
           Hazte creador
         </a>
+        <p class="mt-5 text-sm text-white/40">¿Eres una agencia de viajes? <a href="/agencias" class="text-tirma-beige/80 hover:text-tirma-beige underline underline-offset-2">Tenemos algo distinto para ti →</a></p>
       </div>
     </div>
   </section>

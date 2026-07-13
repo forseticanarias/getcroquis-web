@@ -1,0 +1,127 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../consts';
+
+// Puerta "Agencias / Profesionales": discurso distinto al del creador. Aquí el
+// dolor es CAPTAR clientes y DIGITALIZARSE, no monetizar una audiencia propia.
+const props = [
+  { t: 'Te encuentran viajeros de toda España', d: 'Un viajero de Canarias buscando su ruta puede acabar contratando a tu agencia de Ávila. Tu escaparate se ve sin registro y se posiciona en buscadores: vendes sin depender de que pasen por tu puerta.' },
+  { t: 'Itinerarios con IA en minutos', d: 'Lo que tardabas horas en Word, hecho en minutos: la IA arma el día a día y tú lo curas con tu criterio de profesional. Más propuestas, más cierres, menos tiempo.' },
+  { t: 'Cobros seguros y automáticos', d: 'Cobras online con Stripe, sin perseguir transferencias. El dinero cae en tu cuenta; nosotros solo cobramos cuando tú cobras.' },
+  { t: 'Tu cliente, controlado de principio a fin', d: 'Panel de pedidos con el estado de cada viaje (pagado → en curso → cumplido), la ficha del cliente (nombre y teléfono) y su nota. Tu CRM de viajes, sin montar nada.' },
+  { t: 'Venta cruzada de servicios', d: 'Suma a cada viaje lo que decide el viajero: sesión de planificación 1:1, asistencia en destino, guía… Cada extra, su precio. Subes el ticket medio sin esfuerzo.' },
+  { t: 'Reputación que trabaja para ti', d: 'Reseñas verificadas de clientes reales que construyen tu prestigio digital. Tu mejor comercial, funcionando 24/7.' },
+];
+const steps = [
+  { n: '01', t: 'Solicita tu plaza', d: 'El programa fundador tiene cupo por provincia. Nos cuentas quién eres y validamos tu agencia: solo profesionales aprobados, para que el club esté en buena compañía.' },
+  { n: '02', t: 'Montamos tu agencia digital', d: 'Escaparate profesional, catálogo, servicios y cobros listos en una tarde. Sin saber de tecnología y sin tocar tu web actual.' },
+  { n: '03', t: 'Empiezas a recibir clientes', d: 'Tu perfil se posiciona y el viajero te encuentra. Tú atiendes, cierras y cobras — con tu marca y tus condiciones.' },
+];
+---
+
+<Base title="getcroquis para agencias — digitaliza y capta clientes" description="Digitaliza tu agencia de viajes y capta viajeros de toda España: escaparate profesional, itinerarios con IA, cobros seguros y CRM. Programa fundador con plazas limitadas por provincia.">
+
+  <!-- Selector de puerta (creador vs agencia) -->
+  <div class="max-w-4xl mx-auto px-5 sm:px-6 pt-8 flex justify-center">
+    <div class="inline-flex p-1 rounded-full bg-white/[0.05] border border-white/[0.1] text-sm font-semibold">
+      <a href="/creadores" class="px-4 py-1.5 rounded-full text-white/55 hover:text-white transition">Creador o influencer</a>
+      <span class="px-4 py-1.5 rounded-full bg-tirma-pink text-white">Agencia o profesional</span>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="max-w-4xl mx-auto px-5 sm:px-6 pt-10 sm:pt-14 pb-6 text-center">
+    <p class="reveal text-[11px] sm:text-xs font-semibold tracking-[0.22em] uppercase text-tirma-pink/80 mb-6">
+      getcroquis para agencias
+    </p>
+    <h1 class="reveal text-[2.4rem] leading-[1.06] sm:text-[4rem] sm:leading-[1.03] font-extrabold tracking-[-0.03em]">
+      Digitaliza tu agencia.<br class="hidden sm:block" />
+      <span class="bg-gradient-to-r from-tirma-pink to-tirma-beige bg-clip-text text-transparent">Capta clientes de toda España.</span>
+    </h1>
+    <p class="reveal mt-6 text-base sm:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed">
+      Deja de depender del local y del boca a boca. Te montamos tu agencia digital —escaparate, itinerarios con IA, cobros y CRM— y te ponemos donde el viajero busca. Tú atiendes; nosotros traemos y ordenamos.
+    </p>
+    <div class="reveal mt-9 flex flex-wrap gap-3 justify-center">
+      <a href={`${SITE.appUrl}/creador`} class="px-8 py-3.5 rounded-full bg-tirma-pink text-white font-semibold shadow-xl shadow-tirma-pink/25 hover:bg-tirma-deep transition">
+        Solicita tu plaza
+      </a>
+      <a href="#como-funciona" class="px-8 py-3.5 rounded-full border border-white/15 text-white/80 font-semibold hover:border-white/35 hover:text-white transition">
+        Ver cómo funciona
+      </a>
+    </div>
+  </section>
+
+  <!-- PROGRAMA FUNDADOR (exclusividad territorial) -->
+  <section class="max-w-4xl mx-auto px-5 sm:px-6 py-10 sm:py-14">
+    <div class="reveal relative rounded-[2rem] overflow-hidden border border-tirma-pink/25 px-6 sm:px-10 py-10 sm:py-12">
+      <div aria-hidden="true" class="pointer-events-none absolute inset-0 bg-gradient-to-br from-tirma-pink/[0.12] via-transparent to-tirma-beige/[0.05]"></div>
+      <div class="relative">
+        <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-tirma-pink/90 mb-2">Programa fundador</p>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-[-0.02em] mb-3">Sé la agencia de referencia de tu provincia.</h2>
+        <p class="text-white/60 leading-relaxed max-w-2xl">
+          No abrimos las puertas a todo el mundo. Arrancamos con un <strong class="text-white/85">cupo limitado por provincia</strong> para que cada agencia reciba clientes de verdad, no migajas. Las fundadoras entran <strong class="text-white/85">gratis mientras crecemos</strong> y se quedan con su plaza. Después, plan desde 19,90 €/mes.
+        </p>
+        <ul class="mt-6 grid sm:grid-cols-3 gap-3 text-sm">
+          <li class="rounded-2xl bg-white/[0.04] border border-white/[0.09] px-4 py-3"><span class="text-tirma-beige font-bold">Cupo por provincia</span><br /><span class="text-white/50">pocas agencias, más clientes cada una</span></li>
+          <li class="rounded-2xl bg-white/[0.04] border border-white/[0.09] px-4 py-3"><span class="text-tirma-beige font-bold">Gratis de fundador</span><br /><span class="text-white/50">0 € mientras crecemos juntos</span></li>
+          <li class="rounded-2xl bg-white/[0.04] border border-white/[0.09] px-4 py-3"><span class="text-tirma-beige font-bold">15% solo si vendes</span><br /><span class="text-white/50">nunca cobramos antes que tú</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUÉ TE LLEVAS -->
+  <section class="max-w-6xl mx-auto px-5 sm:px-6 pb-16 sm:pb-24">
+    <div class="reveal max-w-2xl mb-10">
+      <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-tirma-pink/80 mb-2">Qué te llevas</p>
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-[-0.02em]">Todo lo que necesita una agencia moderna, sin montar nada.</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {props.map((p, i) => (
+        <div class="reveal p-7 rounded-3xl bg-white/[0.025] border border-white/[0.08]" style={`transition-delay:${(i % 3) * 70}ms`}>
+          <h3 class="font-bold text-lg mb-2">{p.t}</h3>
+          <p class="text-sm text-white/55 leading-relaxed">{p.d}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- CÓMO FUNCIONA -->
+  <section id="como-funciona" class="max-w-5xl mx-auto px-5 sm:px-6 py-16 sm:py-24 border-t border-white/[0.06]">
+    <div class="reveal max-w-2xl mb-12">
+      <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-tirma-pink/80 mb-2">Cómo funciona</p>
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-[-0.02em]">De tu solicitud a tu primer cliente, sin complicaciones.</h2>
+    </div>
+    <div class="grid sm:grid-cols-3 gap-x-10 gap-y-9">
+      {steps.map((s) => (
+        <div class="reveal">
+          <div class="text-tirma-pink/50 font-bold text-sm mb-2" style="font-variant-numeric:tabular-nums">{s.n}</div>
+          <h3 class="font-bold text-lg mb-1.5">{s.t}</h3>
+          <p class="text-sm text-white/55 leading-relaxed">{s.d}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="max-w-4xl mx-auto px-5 sm:px-6 pb-24">
+    <div class="reveal relative rounded-[2rem] overflow-hidden border border-white/[0.08] px-6 sm:px-12 py-14 sm:py-20 text-center">
+      <div aria-hidden="true" class="pointer-events-none absolute inset-0 bg-gradient-to-br from-tirma-pink/[0.14] via-transparent to-tirma-beige/[0.06]"></div>
+      <div class="relative">
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-[-0.02em]">¿Tu provincia sigue libre?</h2>
+        <p class="text-white/55 mt-3 mb-8 max-w-md mx-auto">Solicita tu plaza en el programa fundador. Sin coste y sin compromiso — solo profesionales aprobados.</p>
+        <a href={`${SITE.appUrl}/creador`} class="inline-block px-9 py-4 rounded-full bg-tirma-pink text-white font-semibold shadow-xl shadow-tirma-pink/25 hover:bg-tirma-deep transition">
+          Solicita tu plaza
+        </a>
+        <p class="mt-5 text-sm text-white/40">¿Eres creador o influencer, no una agencia? <a href="/creadores" class="text-tirma-beige/80 hover:text-tirma-beige underline underline-offset-2">Tu puerta es esta →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const io = new IntersectionObserver((es) => {
+      for (const e of es) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  </script>
+</Base>
