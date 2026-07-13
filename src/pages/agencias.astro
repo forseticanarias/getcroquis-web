@@ -5,11 +5,11 @@ import { SITE } from '../consts';
 // Puerta "Agencias / Profesionales": discurso distinto al del creador. Aquí el
 // dolor es CAPTAR clientes y DIGITALIZARSE, no monetizar una audiencia propia.
 const props = [
-  { t: 'Te encuentran viajeros de toda España', d: 'Un viajero de Canarias buscando su ruta puede acabar contratando a tu agencia de Ávila. Tu escaparate se ve sin registro y se posiciona en buscadores: vendes sin depender de que pasen por tu puerta.' },
-  { t: 'Itinerarios con IA en minutos', d: 'Lo que tardabas horas en Word, hecho en minutos: la IA arma el día a día y tú lo curas con tu criterio de profesional. Más propuestas, más cierres, menos tiempo.' },
+  { t: 'Te encuentran viajeros de todo el mundo', d: 'Un viajero de cualquier país buscando su ruta puede acabar contratándote a ti. Tu escaparate se ve sin registro y se posiciona en buscadores: vendes sin depender de que pasen por tu puerta ni de tu zona.' },
+  { t: 'Itinerarios 100% a medida, en minutos', d: 'Tu diferencial: el viaje exacto que quiere cada cliente —día a día, con sus gustos y su presupuesto—. La IA te da la base en minutos; tú pones el criterio de profesional. Más propuestas, más cierres, menos horas.' },
+  { t: 'Libertad total de servicios', d: 'Ofreces lo que quieras y como quieras: sesión de planificación 1:1, asistencia en destino, guía, seguros, tus propios enlaces de referidos (con tu comisión)… Cada extra con su precio. Tú montas el paquete y subes el ticket.' },
   { t: 'Cobros seguros y automáticos', d: 'Cobras online con Stripe, sin perseguir transferencias. El dinero cae en tu cuenta; nosotros solo cobramos cuando tú cobras.' },
   { t: 'Tu cliente, controlado de principio a fin', d: 'Panel de pedidos con el estado de cada viaje (pagado → en curso → cumplido), la ficha del cliente (nombre y teléfono) y su nota. Tu CRM de viajes, sin montar nada.' },
-  { t: 'Venta cruzada de servicios', d: 'Suma a cada viaje lo que decide el viajero: sesión de planificación 1:1, asistencia en destino, guía… Cada extra, su precio. Subes el ticket medio sin esfuerzo.' },
   { t: 'Reputación que trabaja para ti', d: 'Reseñas verificadas de clientes reales que construyen tu prestigio digital. Tu mejor comercial, funcionando 24/7.' },
 ];
 const steps = [
@@ -36,10 +36,10 @@ const steps = [
     </p>
     <h1 class="reveal text-[2.4rem] leading-[1.06] sm:text-[4rem] sm:leading-[1.03] font-extrabold tracking-[-0.03em]">
       Digitaliza tu agencia.<br class="hidden sm:block" />
-      <span class="bg-gradient-to-r from-tirma-pink to-tirma-beige bg-clip-text text-transparent">Capta clientes de toda España.</span>
+      <span class="bg-gradient-to-r from-tirma-pink to-tirma-beige bg-clip-text text-transparent">Capta clientes de todo el mundo.</span>
     </h1>
     <p class="reveal mt-6 text-base sm:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed">
-      Deja de depender del local y del boca a boca. Te montamos tu agencia digital —escaparate, itinerarios con IA, cobros y CRM— y te ponemos donde el viajero busca. Tú atiendes; nosotros traemos y ordenamos.
+      Deja de depender del local y del boca a boca. Te montamos tu agencia digital —escaparate, cobros, CRM y la IA para diseñar <strong class="text-white/80">itinerarios 100% a medida</strong> de cada cliente— y te ponemos donde el viajero busca. Tú atiendes; nosotros traemos y ordenamos.
     </p>
     <div class="reveal mt-9 flex flex-wrap gap-3 justify-center">
       <a href={`${SITE.appUrl}/creador`} class="px-8 py-3.5 rounded-full bg-tirma-pink text-white font-semibold shadow-xl shadow-tirma-pink/25 hover:bg-tirma-deep transition">
@@ -59,11 +59,11 @@ const steps = [
         <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-tirma-pink/90 mb-2">Programa fundador</p>
         <h2 class="text-2xl sm:text-3xl font-bold tracking-[-0.02em] mb-3">Sé la agencia de referencia de tu provincia.</h2>
         <p class="text-white/60 leading-relaxed max-w-2xl">
-          No abrimos las puertas a todo el mundo. Arrancamos con un <strong class="text-white/85">cupo limitado por provincia</strong> para que cada agencia reciba clientes de verdad, no migajas. Las fundadoras entran <strong class="text-white/85">gratis mientras crecemos</strong> y se quedan con su plaza. Después, plan desde 19,90 €/mes.
+          No abrimos las puertas a todo el mundo. Arrancamos con un <strong class="text-white/85">cupo limitado por provincia</strong> para que cada agencia reciba clientes de verdad, no migajas. Y las primeras se quedan el <strong class="text-white/85">50% de descuento DE POR VIDA</strong>: el plan a mitad de precio para siempre, por ser fundadoras.
         </p>
         <ul class="mt-6 grid sm:grid-cols-3 gap-3 text-sm">
           <li class="rounded-2xl bg-white/[0.04] border border-white/[0.09] px-4 py-3"><span class="text-tirma-beige font-bold">Cupo por provincia</span><br /><span class="text-white/50">pocas agencias, más clientes cada una</span></li>
-          <li class="rounded-2xl bg-white/[0.04] border border-white/[0.09] px-4 py-3"><span class="text-tirma-beige font-bold">Gratis de fundador</span><br /><span class="text-white/50">0 € mientras crecemos juntos</span></li>
+          <li class="rounded-2xl bg-white/[0.04] border border-white/[0.09] px-4 py-3"><span class="text-tirma-beige font-bold">−50% de por vida</span><br /><span class="text-white/50">mitad de precio para siempre, solo fundadoras</span></li>
           <li class="rounded-2xl bg-white/[0.04] border border-white/[0.09] px-4 py-3"><span class="text-tirma-beige font-bold">15% solo si vendes</span><br /><span class="text-white/50">nunca cobramos antes que tú</span></li>
         </ul>
       </div>
@@ -109,7 +109,7 @@ const steps = [
       <div aria-hidden="true" class="pointer-events-none absolute inset-0 bg-gradient-to-br from-tirma-pink/[0.14] via-transparent to-tirma-beige/[0.06]"></div>
       <div class="relative">
         <h2 class="text-3xl sm:text-4xl font-bold tracking-[-0.02em]">¿Tu provincia sigue libre?</h2>
-        <p class="text-white/55 mt-3 mb-8 max-w-md mx-auto">Solicita tu plaza en el programa fundador. Sin coste y sin compromiso — solo profesionales aprobados.</p>
+        <p class="text-white/55 mt-3 mb-8 max-w-md mx-auto">Solicita tu plaza en el programa fundador y bloquea tu −50% de por vida. Solicitar es gratis y sin compromiso — solo profesionales aprobados.</p>
         <a href={`${SITE.appUrl}/creador`} class="inline-block px-9 py-4 rounded-full bg-tirma-pink text-white font-semibold shadow-xl shadow-tirma-pink/25 hover:bg-tirma-deep transition">
           Solicita tu plaza
         </a>

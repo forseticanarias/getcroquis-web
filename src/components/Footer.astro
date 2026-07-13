@@ -19,6 +19,7 @@ const cols = [
     links: [
       { label: 'Explora la comunidad', href: `${SITE.appUrl}/explora` },
       { label: 'Vende tus viajes', href: '/creadores' },
+      { label: 'Para agencias', href: '/agencias' },
       { label: 'Crear cuenta', href: `${SITE.appUrl}/signup` },
       { label: 'Abrir la app', href: `${SITE.appUrl}/dashboard` },
       { label: 'Síguenos en Instagram', href: SITE.instagram, external: true },
@@ -38,6 +39,13 @@ const cols = [
 ---
 <footer class="relative z-10 border-t border-white/[0.06] mt-16">
   <div class="max-w-5xl mx-auto px-6 py-8">
+    <!-- Acceso rápido a las 2 puertas del marketplace (en todas las páginas) -->
+    <div class="flex flex-wrap items-center justify-center gap-2 text-sm mb-8 pb-8 border-b border-white/[0.06]">
+      <span class="text-white/45">¿Profesional del viaje?</span>
+      <a href="/creadores" class="px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/[0.1] text-white/75 hover:border-tirma-pink/40 hover:text-white transition font-semibold">Soy creador / influencer</a>
+      <a href="/agencias" class="px-3.5 py-1.5 rounded-full bg-tirma-pink/15 border border-tirma-pink/30 text-tirma-beige hover:bg-tirma-pink/25 transition font-semibold">Soy agencia →</a>
+    </div>
+
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
       <!-- Marca -->
       <div class="col-span-2 sm:col-span-1">
