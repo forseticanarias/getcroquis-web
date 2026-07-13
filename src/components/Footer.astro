@@ -18,8 +18,9 @@ const cols = [
     title: 'Comunidad',
     links: [
       { label: 'Explora la comunidad', href: `${SITE.appUrl}/explora` },
-      { label: 'Vende tus viajes', href: '/creadores' },
+      { label: 'Para creadores e influencers', href: '/creadores' },
       { label: 'Para agencias', href: '/agencias' },
+      { label: 'Agencias colaboradoras', href: '/colaboradores' },
       { label: 'Crear cuenta', href: `${SITE.appUrl}/signup` },
       { label: 'Abrir la app', href: `${SITE.appUrl}/dashboard` },
       { label: 'Síguenos en Instagram', href: SITE.instagram, external: true },
@@ -39,29 +40,6 @@ const cols = [
 ---
 <footer class="relative z-10 border-t border-white/[0.06] mt-16">
   <div class="max-w-5xl mx-auto px-6 py-8">
-    <!-- Acceso rápido a las 2 puertas del marketplace (en todas las páginas) -->
-    <div class="mb-8 pb-8 border-b border-white/[0.06]">
-      <p class="text-center text-[11px] font-bold tracking-[0.15em] uppercase text-white/35 mb-3">Gana con getcroquis</p>
-      <div class="grid sm:grid-cols-2 gap-3 max-w-2xl mx-auto">
-        <a href="/creadores" class="group flex items-center gap-3 p-3.5 rounded-2xl bg-white/[0.04] border border-white/[0.1] hover:border-tirma-pink/40 transition">
-          <span class="text-2xl leading-none flex-shrink-0">✨</span>
-          <span class="min-w-0">
-            <span class="block font-bold text-white/90">Creadores e influencers</span>
-            <span class="block text-xs text-white/45">Blogger, guía, fotógrafo… monetiza tu audiencia</span>
-          </span>
-          <span class="ml-auto text-tirma-beige/70 group-hover:text-tirma-beige flex-shrink-0">→</span>
-        </a>
-        <a href="/agencias" class="group flex items-center gap-3 p-3.5 rounded-2xl bg-tirma-pink/10 border border-tirma-pink/30 hover:bg-tirma-pink/15 transition">
-          <span class="text-2xl leading-none flex-shrink-0">🏢</span>
-          <span class="min-w-0">
-            <span class="block font-bold text-tirma-beige">Agencias y profesionales</span>
-            <span class="block text-xs text-white/50">Capta clientes y digitaliza tu agencia</span>
-          </span>
-          <span class="ml-auto text-tirma-beige/70 group-hover:text-tirma-beige flex-shrink-0">→</span>
-        </a>
-      </div>
-    </div>
-
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
       <!-- Marca -->
       <div class="col-span-2 sm:col-span-1">

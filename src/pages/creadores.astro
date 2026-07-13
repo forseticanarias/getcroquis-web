@@ -9,24 +9,24 @@ const stats = [
   { n: '0 €', l: 'de alta, sin cuotas' },
 ];
 const steps = [
-  { n: '01', t: 'Solicita ser creador', d: 'Rellenas tu perfil y pides el acceso. Verificamos que eres tú: solo creadores aprobados venden, para que tu marca esté en buena compañía.' },
-  { n: '02', t: 'Monta tu tienda', d: 'Marca tus itinerarios como premium, ponles precio y añade tus servicios de asistencia. Todo desde un panel sencillo, sin saber de tecnología.' },
-  { n: '03', t: 'Comparte con tu audiencia', d: 'Tu escaparate se ve sin registro: perfecto para tu bio y tus stories. Te damos hasta los textos listos para pegar.' },
-  { n: '04', t: 'Cobra, automático', d: 'Cuando alguien compra, el 85% cae directo en tu cuenta de Stripe. Sin facturas manuales, sin perseguir a nadie.' },
+  { n: '01', t: 'Solicita ser creador', d: 'Rellenas tu perfil y pides acceso. Solo creadores aprobados venden.' },
+  { n: '02', t: 'Monta tu tienda', d: 'Itinerarios premium con precio + tus servicios. Panel sencillo.' },
+  { n: '03', t: 'Comparte con tu audiencia', d: 'Tu escaparate se ve sin registro: para tu bio y tus stories.' },
+  { n: '04', t: 'Cobra, automático', d: 'El 85% cae directo en tu Stripe. Sin facturas ni perseguir a nadie.' },
 ];
 const forWho = [
-  { t: 'Influencers de viajes', d: 'Convierte los "¿me pasas tu itinerario?" en un ingreso recurrente.' },
-  { t: 'Guías locales', d: 'Vende tu conocimiento del destino y tu acompañamiento a quien llega.' },
-  { t: 'Agencias de viaje', d: 'Ofrece itinerarios y asistencia digital a tus clientes, con tu marca.' },
+  { t: 'Influencers de viajes', d: 'Convierte los "¿me pasas tu itinerario?" en ingresos.' },
+  { t: 'Guías locales', d: 'Vende tu conocimiento del destino y tu acompañamiento.' },
+  { t: 'Blogueros y fotógrafos', d: 'Rentabiliza tu contenido y tus rutas con tu marca.' },
 ];
 
 // Las piezas que cada creador combina a su gusto. Solo el catálogo es la
 // base; el resto es opcional. Cualquiera —influencer, guía o agencia— puede
 // ofrecer una, dos o todas.
 const services = [
-  { name: 'Catálogo premium', tag: 'La base', d: 'Tus itinerarios con candado. Un solo pago desbloquea todo tu catálogo para siempre. Con esto ya vendes.' },
-  { name: 'Sesión de planificación', tag: 'Opcional', d: 'Una videollamada para escuchar al viajero —o al grupo— y diseñar juntos el viaje perfecto a su medida. Tú pones precio y horario.' },
-  { name: 'Asistencia en viaje', tag: 'Opcional', d: 'Estar a un mensaje durante el viaje —WhatsApp, Telegram o Discord—, con tus idiomas y tu disponibilidad claros de antemano.' },
+  { name: 'Catálogo premium', tag: 'La base', d: 'Tus itinerarios con candado. Un pago desbloquea todo tu catálogo para siempre.' },
+  { name: 'Sesión de planificación', tag: 'Opcional', d: 'Videollamada 1:1 para diseñar el viaje a medida. Tú pones precio y horario.' },
+  { name: 'Asistencia en viaje', tag: 'Opcional', d: 'A un mensaje durante el viaje (WhatsApp, Telegram, Discord), a tu disponibilidad.' },
 ];
 ---
 
@@ -50,7 +50,7 @@ const services = [
       <span class="bg-gradient-to-r from-tirma-pink to-tirma-beige bg-clip-text text-transparent">en ingresos.</span>
     </h1>
     <p class="reveal mt-6 text-base sm:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed">
-      Tu audiencia ya te pregunta "¿me pasas tu itinerario?". Véndeselo bien hecho —día a día, con tus sitios de verdad— y acompáñalos durante el viaje. Tú pones el precio; el 85% es para ti.
+      Tu audiencia ya te pregunta "¿me pasas tu itinerario?". Véndeselo bien hecho y acompáñalos en el viaje. Tú pones el precio; el 85% es para ti.
     </p>
     <div class="reveal mt-9 flex flex-wrap gap-3 justify-center">
       <a href={`${SITE.appUrl}/creador`} class="px-8 py-3.5 rounded-full bg-tirma-pink text-white font-semibold shadow-xl shadow-tirma-pink/25 hover:bg-tirma-deep transition">
@@ -83,21 +83,21 @@ const services = [
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         </span>
         <h3 class="font-bold text-lg mb-2">Tu audiencia, tu activo</h3>
-        <p class="text-sm text-white/55 leading-relaxed">Cada creador trae su propia comunidad. No dependes de que te descubran: vendes a quien ya confía en ti.</p>
+        <p class="text-sm text-white/55 leading-relaxed">Vendes a quien ya confía en ti. No dependes de que te descubran.</p>
       </div>
       <div class="reveal p-7 rounded-3xl bg-white/[0.025] border border-white/[0.08]" style="transition-delay:70ms">
         <span class="inline-flex w-11 h-11 items-center justify-center rounded-xl bg-tirma-pink/10 border border-tirma-pink/20 text-tirma-pink mb-5">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></svg>
         </span>
         <h3 class="font-bold text-lg mb-2">El 85% es tuyo</h3>
-        <p class="text-sm text-white/55 leading-relaxed">Tú pones el precio y te quedas la mayor parte. Nuestra comisión solo existe cuando tú ganas — nunca antes, nunca a tu costa.</p>
+        <p class="text-sm text-white/55 leading-relaxed">Tú pones el precio y te quedas el 85%. Solo cobramos cuando tú cobras.</p>
       </div>
       <div class="reveal p-7 rounded-3xl bg-white/[0.025] border border-white/[0.08]" style="transition-delay:140ms">
         <span class="inline-flex w-11 h-11 items-center justify-center rounded-xl bg-tirma-pink/10 border border-tirma-pink/20 text-tirma-pink mb-5">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
         </span>
         <h3 class="font-bold text-lg mb-2">Las herramientas, hechas</h3>
-        <p class="text-sm text-white/55 leading-relaxed">Cobros, catálogo con candado, asistencia por chat, estadísticas… Tú te dedicas a viajar y a crear; la fontanería la ponemos nosotros.</p>
+        <p class="text-sm text-white/55 leading-relaxed">Cobros, catálogo, asistencia por chat, estadísticas… La fontanería la ponemos nosotros.</p>
       </div>
     </div>
   </section>
@@ -111,13 +111,13 @@ const services = [
     <div class="grid sm:grid-cols-2 gap-4">
       <div class="reveal p-8 rounded-3xl bg-gradient-to-b from-white/[0.04] to-transparent border border-white/[0.1]">
         <h3 class="font-bold text-xl mb-2">Tu catálogo premium</h3>
-        <p class="text-white/60 leading-relaxed">Marca tus mejores itinerarios como premium. La portada queda pública —engancha— y un solo pago desbloquea para siempre todo tu catálogo: día a día, horarios, mapas y tus sitios de verdad. Tú decides el precio.</p>
+        <p class="text-white/60 leading-relaxed">La portada engancha y un pago desbloquea todo tu catálogo para siempre: día a día, horarios, mapas y tus sitios de verdad. Tú decides el precio.</p>
       </div>
       <div class="reveal p-8 rounded-3xl bg-gradient-to-b from-white/[0.04] to-transparent border border-white/[0.1]" style="transition-delay:70ms">
         <h3 class="font-bold text-xl mb-2 inline-flex items-center gap-2">Tu asistencia en viaje
           <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-white/[0.06] border border-white/[0.12] text-white/50">Opcional</span>
         </h3>
-        <p class="text-white/60 leading-relaxed">Lo que no cabe en un post: acompañamiento real. Si quieres, vende una sesión de planificación, una guía en destino o estar a un mensaje durante el viaje —por WhatsApp, Telegram o Discord—. Idiomas y horarios claros antes de contratar.</p>
+        <p class="text-white/60 leading-relaxed">Lo que no cabe en un post: acompañamiento real. Sesión de planificación, guía en destino o estar a un mensaje durante el viaje. Idiomas y horarios claros antes de contratar.</p>
       </div>
     </div>
   </section>
