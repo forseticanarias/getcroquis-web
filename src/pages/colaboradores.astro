@@ -1,14 +1,14 @@
 ---
 import Base from '../layouts/Base.astro';
 import { SITE } from '../consts';
-import { PROVINCIAS, AGENCIAS } from '../data/agenciasColaboradoras.js';
+import { COMUNIDADES, AGENCIAS } from '../data/agenciasColaboradoras.js';
 
-// Mapa provincia -> agencia (la primera dada de alta ocupa la plaza).
-const byProvincia = new Map();
-for (const a of AGENCIAS) if (a?.provincia && !byProvincia.has(a.provincia)) byProvincia.set(a.provincia, a);
+// Mapa comunidad -> agencia (la primera dada de alta ocupa la plaza).
+const byComunidad = new Map();
+for (const a of AGENCIAS) if (a?.comunidad && !byComunidad.has(a.comunidad)) byComunidad.set(a.comunidad, a);
 
-const provincias = [...PROVINCIAS].sort((x, y) => x.localeCompare(y, 'es'));
-const ocupadas = provincias.filter((p) => byProvincia.has(p)).length;
+const comunidades = [...COMUNIDADES].sort((x, y) => x.localeCompare(y, 'es'));
+const ocupadas = comunidades.filter((c) => byComunidad.has(c)).length;
 const inicial = (s) => (s || '?').trim().charAt(0).toUpperCase();
 ---
 
@@ -21,11 +21,11 @@ const inicial = (s) => (s || '?').trim().charAt(0).toUpperCase();
       Agencias colaboradoras de <span class="bg-gradient-to-r from-tirma-pink to-tirma-beige bg-clip-text text-transparent">getcroquis</span>
     </h1>
     <p class="reveal mt-6 text-base sm:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed">
-      Profesionales verificados, <strong class="text-white/80">una agencia por provincia</strong>, que diseñan itinerarios a medida y atienden a viajeros de todo el mundo. Estar aquí es un sello de confianza — y las plazas son limitadas.
+      Profesionales verificados, <strong class="text-white/80">una única agencia por comunidad autónoma</strong>, que diseñan itinerarios a medida y atienden a viajeros de todo el mundo. Estar aquí es un sello de confianza — y las plazas son contadas.
     </p>
     <div class="reveal mt-6 inline-flex items-center gap-2 text-sm text-white/50 rounded-full bg-white/[0.04] border border-white/[0.09] px-4 py-2">
       <span class="w-2 h-2 rounded-full bg-tirma-pink"></span>
-      {ocupadas} de {provincias.length} provincias con agencia colaboradora
+      {ocupadas} de {comunidades.length} comunidades con agencia colaboradora
     </div>
   </section>
 
@@ -49,8 +49,8 @@ const inicial = (s) => (s || '?').trim().charAt(0).toUpperCase();
   <!-- MAPA POR PROVINCIA -->
   <section class="max-w-6xl mx-auto px-5 sm:px-6 pb-16 sm:pb-24">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-      {provincias.map((prov) => {
-        const a = byProvincia.get(prov);
+      {comunidades.map((com) => {
+        const a = byComunidad.get(com);
         if (a) {
           const href = a.web || `${SITE.appUrl}`;
           return (
@@ -60,7 +60,7 @@ const inicial = (s) => (s || '?').trim().charAt(0).toUpperCase();
               </div>
               <div class="min-w-0">
                 <div class="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-tirma-beige/80">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> {prov}
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> {com}
                 </div>
                 <div class="font-bold leading-tight truncate">{a.nombre}</div>
                 <div class="text-xs text-white/45 truncate">{[a.ciudad, a.direccion].filter(Boolean).join(' · ') || 'Agencia colaboradora'}</div>
@@ -71,7 +71,7 @@ const inicial = (s) => (s || '?').trim().charAt(0).toUpperCase();
         return (
           <a href="/agencias" class="reveal group p-5 rounded-2xl bg-white/[0.015] border border-dashed border-white/[0.1] hover:border-tirma-pink/40 hover:bg-white/[0.03] transition flex items-center justify-between gap-3">
             <div class="min-w-0">
-              <div class="font-semibold text-white/70 truncate">{prov}</div>
+              <div class="font-semibold text-white/70 truncate">{com}</div>
               <div class="text-xs text-white/35">Plaza disponible</div>
             </div>
             <span class="text-xs font-bold text-tirma-beige/70 group-hover:text-tirma-beige whitespace-nowrap">Reservar →</span>

@@ -1,30 +1,27 @@
 /**
- * Agencias colaboradoras de getcroquis, por provincia (programa fundador con
- * exclusividad territorial). Este archivo es la ÚNICA fuente: rellena AGENCIAS
- * a medida que se dan de alta y aparecen en su provincia; el resto se muestra
- * como "Disponible" (refuerza el FOMO territorial).
+ * Agencias colaboradoras de getcroquis, por COMUNIDAD AUTÓNOMA (programa
+ * fundador con exclusividad territorial: UNA agencia por comunidad). Este
+ * archivo es la ÚNICA fuente: rellena AGENCIAS a medida que se dan de alta y
+ * aparecen en su comunidad; el resto se muestra como "Disponible" (FOMO).
  *
- * Ficha de agencia (todos los campos salvo `provincia` y `nombre` son opcionales):
+ * Ficha de agencia (todo salvo `comunidad` y `nombre` es opcional):
  *   {
- *     provincia: 'Ávila',                 // debe coincidir con la lista PROVINCIAS
+ *     comunidad: 'Castilla y León',        // debe coincidir con COMUNIDADES
  *     nombre:    'Viajes Ejemplo',
  *     ciudad:    'Ávila',
  *     direccion: 'C/ Mayor 1',
- *     web:       'https://…',             // su web o su perfil getcroquis.com/usuario
- *     logo:      'https://…/logo.png',    // si no hay, se usa la inicial
+ *     web:       'https://…',               // su web o su perfil getcroquis.com/usuario
+ *     logo:      'https://…/logo.png',      // si no hay, se usa la inicial
  *   }
  */
-export const PROVINCIAS = [
-  'Álava', 'Albacete', 'Alicante', 'Almería', 'Asturias', 'Ávila', 'Badajoz',
-  'Baleares', 'Barcelona', 'Burgos', 'Cáceres', 'Cádiz', 'Cantabria', 'Castellón',
-  'Ciudad Real', 'Córdoba', 'A Coruña', 'Cuenca', 'Girona', 'Granada', 'Guadalajara',
-  'Gipuzkoa', 'Huelva', 'Huesca', 'Jaén', 'León', 'Lleida', 'Lugo', 'Madrid', 'Málaga',
-  'Murcia', 'Navarra', 'Ourense', 'Palencia', 'Las Palmas', 'Pontevedra', 'La Rioja',
-  'Salamanca', 'Santa Cruz de Tenerife', 'Segovia', 'Sevilla', 'Soria', 'Tarragona',
-  'Teruel', 'Toledo', 'Valencia', 'Valladolid', 'Bizkaia', 'Zamora', 'Zaragoza',
+export const COMUNIDADES = [
+  'Andalucía', 'Aragón', 'Asturias', 'Baleares', 'Canarias', 'Cantabria',
+  'Castilla-La Mancha', 'Castilla y León', 'Cataluña', 'Comunidad Valenciana',
+  'Extremadura', 'Galicia', 'La Rioja', 'Madrid', 'Murcia', 'Navarra',
+  'País Vasco', 'Ceuta', 'Melilla',
 ];
 
 // ⬇️ Rellena aquí. Empieza vacío; añade una ficha por cada agencia aprobada.
 export const AGENCIAS = [
-  // { provincia: 'Ávila', nombre: 'Viajes Ejemplo', ciudad: 'Ávila', direccion: 'C/ Mayor 1', web: 'https://getcroquis.com/viajesejemplo', logo: '' },
+  // { comunidad: 'Castilla y León', nombre: 'Viajes Ejemplo', ciudad: 'Ávila', direccion: 'C/ Mayor 1', web: 'https://getcroquis.com/viajesejemplo', logo: '' },
 ];

@@ -40,10 +40,26 @@ const cols = [
 <footer class="relative z-10 border-t border-white/[0.06] mt-16">
   <div class="max-w-5xl mx-auto px-6 py-8">
     <!-- Acceso rápido a las 2 puertas del marketplace (en todas las páginas) -->
-    <div class="flex flex-wrap items-center justify-center gap-2 text-sm mb-8 pb-8 border-b border-white/[0.06]">
-      <span class="text-white/45">¿Profesional del viaje?</span>
-      <a href="/creadores" class="px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/[0.1] text-white/75 hover:border-tirma-pink/40 hover:text-white transition font-semibold">Soy creador / influencer</a>
-      <a href="/agencias" class="px-3.5 py-1.5 rounded-full bg-tirma-pink/15 border border-tirma-pink/30 text-tirma-beige hover:bg-tirma-pink/25 transition font-semibold">Soy agencia →</a>
+    <div class="mb-8 pb-8 border-b border-white/[0.06]">
+      <p class="text-center text-[11px] font-bold tracking-[0.15em] uppercase text-white/35 mb-3">Gana con getcroquis</p>
+      <div class="grid sm:grid-cols-2 gap-3 max-w-2xl mx-auto">
+        <a href="/creadores" class="group flex items-center gap-3 p-3.5 rounded-2xl bg-white/[0.04] border border-white/[0.1] hover:border-tirma-pink/40 transition">
+          <span class="text-2xl leading-none flex-shrink-0">✨</span>
+          <span class="min-w-0">
+            <span class="block font-bold text-white/90">Creadores e influencers</span>
+            <span class="block text-xs text-white/45">Blogger, guía, fotógrafo… monetiza tu audiencia</span>
+          </span>
+          <span class="ml-auto text-tirma-beige/70 group-hover:text-tirma-beige flex-shrink-0">→</span>
+        </a>
+        <a href="/agencias" class="group flex items-center gap-3 p-3.5 rounded-2xl bg-tirma-pink/10 border border-tirma-pink/30 hover:bg-tirma-pink/15 transition">
+          <span class="text-2xl leading-none flex-shrink-0">🏢</span>
+          <span class="min-w-0">
+            <span class="block font-bold text-tirma-beige">Agencias y profesionales</span>
+            <span class="block text-xs text-white/50">Capta clientes y digitaliza tu agencia</span>
+          </span>
+          <span class="ml-auto text-tirma-beige/70 group-hover:text-tirma-beige flex-shrink-0">→</span>
+        </a>
+      </div>
     </div>
 
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
