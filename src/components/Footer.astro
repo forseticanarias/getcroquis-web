@@ -4,6 +4,8 @@ const year = new Date().getFullYear();
 
 // Footer organizado en columnas (estilo blog de referencia): cada sección con
 // sus enlaces. Los legales viven en la app (mismo dominio, /legal/*).
+// Footer en columnas temáticas y sin duplicados (las redes viven en el bloque de
+// marca; "Abrir app" en la cabecera). Anchor text claro = mejor enlazado interno.
 const cols = [
   {
     title: 'Explora',
@@ -12,19 +14,16 @@ const cols = [
       { label: 'Destinos', href: '/destinos' },
       { label: 'Comparar países', href: '/comparar' },
       { label: 'Guías de viaje', href: '/guias' },
+      { label: 'Explora la comunidad', href: `${SITE.appUrl}/explora` },
     ],
   },
   {
-    title: 'Comunidad',
+    title: 'Profesionales',
     links: [
-      { label: 'Explora la comunidad', href: `${SITE.appUrl}/explora` },
       { label: 'Para creadores e influencers', href: '/creadores' },
       { label: 'Para agencias', href: '/agencias' },
       { label: 'Agencias colaboradoras', href: '/colaboradores' },
       { label: 'Crear cuenta', href: `${SITE.appUrl}/signup` },
-      { label: 'Abrir la app', href: `${SITE.appUrl}/dashboard` },
-      { label: 'Síguenos en Instagram', href: SITE.instagram, external: true },
-      { label: 'Síguenos en TikTok', href: SITE.tiktok, external: true },
     ],
   },
   {

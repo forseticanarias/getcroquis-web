@@ -7,6 +7,8 @@ const links = [
   { href: '/comparar', label: 'Comparar' },
   { href: '/guias', label: 'Guías' },
   { href: `${SITE.appUrl}/explora`, label: 'Explora la comunidad' },
+  { href: '/creadores', label: 'Para creadores' },
+  { href: '/agencias', label: 'Para agencias' },
 ];
 ---
 <header class="relative z-30 max-w-5xl mx-auto px-5 sm:px-6 py-4 flex items-center justify-between gap-2">
@@ -15,12 +17,26 @@ const links = [
   </a>
 
   <!-- Escritorio -->
-  <nav class="hidden sm:flex items-center gap-1.5 text-sm">
+  <nav class="hidden sm:flex items-center gap-1 text-sm">
     <a href="/empezar" class="text-tirma-beige/90 hover:text-tirma-beige font-semibold px-3 py-1.5">Empieza aquí</a>
     <a href="/destinos" class="text-white/60 hover:text-white px-3 py-1.5">Destinos</a>
     <a href="/comparar" class="text-white/60 hover:text-white px-3 py-1.5">Comparar</a>
     <a href="/guias" class="text-white/60 hover:text-white px-3 py-1.5">Guías</a>
-    <a href={`${SITE.appUrl}/dashboard`} class="font-bold px-3.5 py-1.5 rounded-full bg-gradient-to-r from-tirma-pink to-tirma-deep text-tirma-beige shadow-lg shadow-tirma-pink/25 whitespace-nowrap">Abrir app</a>
+    <!-- Profesionales: a mano arriba, con desplegable a creadores/agencias (hover, sin JS) -->
+    <div class="relative group">
+      <a href="/creadores" class="text-white/60 hover:text-white px-3 py-1.5 inline-flex items-center gap-1 cursor-pointer">
+        Profesionales
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </a>
+      <div class="absolute right-0 top-full pt-2 hidden group-hover:block z-40">
+        <div class="w-60 rounded-2xl border border-white/10 bg-[#0d1016] p-2 shadow-2xl shadow-black/50">
+          <a href="/creadores" class="block px-3 py-2 rounded-xl text-sm text-white/80 hover:bg-white/[0.06] hover:text-white transition">Para creadores e influencers</a>
+          <a href="/agencias" class="block px-3 py-2 rounded-xl text-sm text-white/80 hover:bg-white/[0.06] hover:text-white transition">Para agencias</a>
+          <a href="/colaboradores" class="block px-3 py-2 rounded-xl text-sm text-white/50 hover:bg-white/[0.06] hover:text-white transition">Agencias colaboradoras</a>
+        </div>
+      </div>
+    </div>
+    <a href={`${SITE.appUrl}/dashboard`} class="font-bold px-3.5 py-1.5 rounded-full bg-gradient-to-r from-tirma-pink to-tirma-deep text-tirma-beige shadow-lg shadow-tirma-pink/25 whitespace-nowrap ml-1">Abrir app</a>
   </nav>
 
   <!-- Móvil: Abrir app + menú -->
