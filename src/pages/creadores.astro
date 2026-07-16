@@ -185,22 +185,66 @@ const services = [
       <p class="text-sm text-white/45 mt-4">Empezar es <strong class="text-white/70">gratis</strong>: sin cuotas de alta ni mensualidades. Solo cobramos cuando tú cobras — así de simple.</p>
     </div>
 
-    <!-- Cuando vendes de verdad: Creador Pro (mismo dinero, más tuyo) -->
-    <div class="reveal mt-4 rounded-3xl border border-tirma-pink/25 bg-gradient-to-br from-tirma-pink/[0.09] to-transparent p-6 sm:p-8">
-      <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-3">
-        <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-tirma-pink/90">Cuando ya vendes</p>
-        <span class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-tirma-pink/20 text-tirma-beige">Creador Pro · 19,90 €/mes</span>
+  </section>
+
+  <!-- FREE vs PRO: la escalera. Empiezas gratis; cuando vendes, Pro se paga solo. -->
+  <section class="max-w-4xl mx-auto px-5 sm:px-6 pb-16 sm:pb-24">
+    <div class="reveal text-center max-w-xl mx-auto mb-10">
+      <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-tirma-pink/80 mb-2">Gratis o Pro</p>
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-[-0.02em]">Empieza gratis. Sube cuando te compense.</h2>
+      <p class="text-white/50 mt-3 text-sm">Sin trucos: te decimos exactamente cuándo sale a cuenta.</p>
+    </div>
+
+    <div class="reveal grid sm:grid-cols-2 gap-4">
+      <!-- FREE -->
+      <div class="rounded-3xl border border-white/[0.1] bg-white/[0.02] p-6 sm:p-7 flex flex-col">
+        <div class="flex items-baseline justify-between gap-2 mb-1">
+          <h3 class="text-lg font-bold">Free</h3>
+          <span class="text-2xl font-extrabold text-white/80" style="font-variant-numeric:tabular-nums">0 €</span>
+        </div>
+        <p class="text-sm text-white/45 mb-5">Para empezar y probarlo todo.</p>
+        <ul class="space-y-2.5 text-sm flex-1">
+          <li class="flex gap-2.5"><span class="text-white/30">•</span><span class="text-white/70">Te quedas el <strong class="text-white/90">85%</strong> de cada venta</span></li>
+          <li class="flex gap-2.5"><span class="text-white/30">•</span><span class="text-white/70">Tu tienda, tu catálogo y tus servicios</span></li>
+          <li class="flex gap-2.5"><span class="text-white/30">•</span><span class="text-white/70">Pago protegido y reseñas verificadas</span></li>
+          <li class="flex gap-2.5"><span class="text-white/30">•</span><span class="text-white/45">Créditos de IA: los compras sueltos</span></li>
+          <li class="flex gap-2.5"><span class="text-white/30">•</span><span class="text-white/45">Los itinerarios llevan la marca getcroquis</span></li>
+          <li class="flex gap-2.5"><span class="text-white/30">•</span><span class="text-white/45">La 1ª venta del mes lleva 2 € de pasarela</span></li>
+        </ul>
+        <p class="text-xs text-white/35 mt-5 pt-4 border-t border-white/[0.07]">Sin cuotas, sin permanencia. Solo cobramos si tú cobras.</p>
       </div>
-      <h3 class="text-xl sm:text-2xl font-bold tracking-[-0.02em] mb-2">Quédate el <span class="text-tirma-beige">90%</span> y hazlo tuyo.</h3>
-      <p class="text-sm text-white/55 leading-relaxed max-w-2xl">
-        Esa misma venta de 20 € te deja <strong class="text-white/85" style="font-variant-numeric:tabular-nums">18,00 €</strong> en vez de 17,00 €.
-        Y además: <strong class="text-white/85">tu marca</strong> en los itinerarios, <strong class="text-white/85">100 créditos de IA</strong> al mes,
-        perfil <strong class="text-white/85">destacado</strong> en el buscador y packs de créditos a precio de socio.
+
+      <!-- PRO -->
+      <div class="relative rounded-3xl border border-tirma-pink/35 bg-gradient-to-b from-tirma-pink/[0.1] to-transparent p-6 sm:p-7 flex flex-col">
+        <span class="absolute -top-2.5 left-6 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-tirma-pink text-white">Cuando ya vendes</span>
+        <div class="flex items-baseline justify-between gap-2 mb-1">
+          <h3 class="text-lg font-bold">Creador Pro</h3>
+          <span class="text-2xl font-extrabold text-tirma-beige" style="font-variant-numeric:tabular-nums">19,90 €<span class="text-sm font-semibold text-white/40">/mes</span></span>
+        </div>
+        <p class="text-sm text-white/45 mb-5">Cuando vender es tu trabajo, no tu hobby.</p>
+        <ul class="space-y-2.5 text-sm flex-1">
+          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80">Te quedas el <strong class="text-tirma-beige">90%</strong> — 5 puntos más en cada venta</span></li>
+          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80"><strong class="text-white">Tu marca</strong> en los itinerarios, no la nuestra</span></li>
+          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80"><strong class="text-white">100 créditos de IA</strong> cada mes, se acumulan</span></li>
+          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80">Perfil <strong class="text-white">destacado</strong> ante los viajeros</span></li>
+          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80">Packs de créditos <strong class="text-white">−20%</strong> (precio de socio)</span></li>
+          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80"><strong class="text-white">Sin</strong> los 2 € de pasarela: tu cuota ya los cubre</span></li>
+        </ul>
+        <p class="text-xs text-tirma-beige/70 mt-5 pt-4 border-t border-tirma-pink/15">
+          Cancela tú mismo cuando quieras, en dos clics. Sin llamadas ni correos.
+        </p>
+      </div>
+    </div>
+
+    <!-- El número honesto: cuándo compensa de verdad -->
+    <div class="reveal mt-4 rounded-2xl border border-white/[0.08] bg-white/[0.02] px-6 py-5 text-center">
+      <p class="text-sm text-white/60 leading-relaxed max-w-2xl mx-auto">
+        <strong class="text-white/85">¿Cuándo compensa?</strong> A partir de unos
+        <strong class="text-tirma-beige" style="font-variant-numeric:tabular-nums">400 € de ventas al mes</strong>, los 5 puntos de comisión
+        ya pagan la cuota — y los créditos, tu marca y el destacado te salen gratis.
+        <span class="block text-white/40 mt-1.5">¿Vendes menos? Quédate en Free. Te lo diremos igual.</span>
       </p>
-      <p class="text-sm text-white/40 mt-3">
-        A partir de unos 200 € de ventas al mes, el plan se paga solo. Antes de eso, quédate en gratis — sin prisa.
-      </p>
-      <a href={`${SITE.appUrl}/planes`} class="inline-flex items-center gap-1.5 mt-5 text-sm font-semibold text-tirma-beige/85 hover:text-tirma-beige">Ver todos los planes →</a>
+      <a href={`${SITE.appUrl}/planes`} class="inline-flex items-center gap-1.5 mt-4 text-sm font-semibold text-tirma-beige/85 hover:text-tirma-beige">Ver todos los planes →</a>
     </div>
   </section>
 
