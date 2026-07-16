@@ -5,12 +5,25 @@ import { SITE } from '../consts';
 // Puerta "Agencias / Profesionales": discurso distinto al del creador. Aquí el
 // dolor es CAPTAR clientes y DIGITALIZARSE, no monetizar una audiencia propia.
 const props = [
-  { t: 'Clientes nuevos, no de tu barrio', d: 'Tu escaparate se posiciona y te encuentran viajeros de todo el mundo. Sin depender del local.' },
+  { t: 'Tu marca, no la nuestra', d: 'Marca blanca: el itinerario sale con tu logo y tus colores. Para tu cliente es un producto tuyo — nosotros no aparecemos.' },
   { t: 'Itinerarios 100% a medida, en minutos', d: 'La IA arma el día a día; tú lo curas con criterio. Propuestas a medida en minutos, no horas.' },
+  { t: 'Clientes nuevos, no de tu barrio', d: 'Tu escaparate se posiciona y te encuentran viajeros de todo el mundo. Sin depender del local.' },
+  { t: 'Un servicio más que vender', d: 'Vende el itinerario como complemento del viaje que ya cerraste: margen puro sobre un cliente que ya es tuyo.' },
+  { t: 'En el idioma de tu cliente', d: 'Itinerarios en alemán o inglés automáticamente. En Canarias eso no es un extra: es el mercado.' },
   { t: 'Libertad total de servicios', d: 'Sesiones 1:1, asistencia, guía, seguros, tus referidos… cada extra a tu precio.' },
-  { t: 'Cobros seguros con Stripe', d: 'El dinero cae en tu cuenta. Solo cobramos si tú cobras.' },
+  { t: 'Cobros seguros con Stripe', d: 'Pago protegido: retenemos el importe hasta que tu cliente confirma. Solo cobramos si tú cobras.' },
   { t: 'CRM de viajes incluido', d: 'Estado de cada pedido y ficha del cliente. Sin montar nada.' },
   { t: 'Reputación que vende sola', d: 'Reseñas verificadas: tu comercial 24/7.' },
+];
+// Lo que incluye el plan Agencia. Fuente de verdad: get_plan_features('agency') en
+// Supabase — si cambian ahí, cambian aquí (ver docs/PLAN-planes-premium.md).
+const incluye = [
+  { k: '19,95 €', v: 'al mes como fundadora (39,90 € después)' },
+  { k: '8 %', v: 'de comisión, y solo si vendes por getcroquis' },
+  { k: '200', v: 'créditos de IA al mes (unos 40 itinerarios)' },
+  { k: '3', v: 'asesores en la misma cuenta' },
+  { k: 'Tu marca', v: 'en los itinerarios que entregas' },
+  { k: '−25 %', v: 'en packs de créditos extra, precio de socio' },
 ];
 const steps = [
   { n: '01', t: 'Solicita tu plaza', d: 'Cupo por comunidad. Validamos tu agencia: solo profesionales aprobados.' },
@@ -72,11 +85,31 @@ const steps = [
         <ul class="mt-6 grid sm:grid-cols-3 gap-3 text-sm">
           <li class="rounded-2xl bg-white/[0.04] border border-white/[0.09] px-4 py-3"><span class="text-tirma-beige font-bold">Representante oficial</span><br /><span class="text-white/50">sello de calidad para tu agencia</span></li>
           <li class="rounded-2xl bg-white/[0.04] border border-white/[0.09] px-4 py-3"><span class="text-tirma-beige font-bold">−50% de por vida</span><br /><span class="text-white/50">solo fundadoras</span></li>
-          <li class="rounded-2xl bg-white/[0.04] border border-white/[0.09] px-4 py-3"><span class="text-tirma-beige font-bold">15% solo si vendes</span><br /><span class="text-white/50">nunca antes que tú</span></li>
+          <li class="rounded-2xl bg-white/[0.04] border border-white/[0.09] px-4 py-3"><span class="text-tirma-beige font-bold">Tu marca, no la nuestra</span><br /><span class="text-white/50">marca blanca incluida</span></li>
         </ul>
         <a href="/colaboradores" class="inline-flex items-center gap-1.5 mt-6 text-sm font-semibold text-tirma-beige/85 hover:text-tirma-beige">Ver agencias colaboradoras y comprobar si tu comunidad sigue libre →</a>
       </div>
     </div>
+  </section>
+
+  <!-- QUÉ INCLUYE EL PLAN (números reales, sin letra pequeña) -->
+  <section class="max-w-5xl mx-auto px-5 sm:px-6 pb-12 sm:pb-16">
+    <div class="reveal max-w-2xl mb-8">
+      <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-tirma-pink/80 mb-2">Qué incluye tu plan</p>
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-[-0.02em]">Todo dentro, sin letra pequeña.</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-px rounded-3xl overflow-hidden bg-white/[0.07] border border-white/[0.08]">
+      {incluye.map((i) => (
+        <div class="bg-[#0c1016] px-6 py-6">
+          <div class="text-2xl font-extrabold text-tirma-beige tracking-[-0.03em]" style="font-variant-numeric:tabular-nums">{i.k}</div>
+          <div class="text-sm text-white/50 mt-1 leading-relaxed">{i.v}</div>
+        </div>
+      ))}
+    </div>
+    <p class="reveal mt-6 text-sm text-white/45 max-w-2xl leading-relaxed">
+      Los clientes que atiendes por tu cuenta son <strong class="text-white/70">100% tuyos</strong>: ahí no hay comisión, solo la cuota.
+      El 8% aplica únicamente si además vendes dentro del marketplace de getcroquis.
+    </p>
   </section>
 
   <!-- QUÉ TE LLEVAS -->
