@@ -91,7 +91,8 @@ const cols = [
     <!-- Barra inferior: copyright a la izquierda, frase centrada en todo el ancho -->
     <div class="mt-6 pt-6 border-t border-white/[0.06] text-xs text-white/35">
       <div class="relative flex flex-col items-center gap-2 sm:block sm:text-center sm:min-h-[1.25rem]">
-        <span class="sm:absolute sm:left-0 sm:top-1/2 sm:-translate-y-1/2">© {year} {SITE.name}</span>
+        {/* ™ se puede usar sin registro; ® SOLO con la marca concedida (ver docs/PROTECCION-marca-y-software.md) */}
+        <span class="sm:absolute sm:left-0 sm:top-1/2 sm:-translate-y-1/2">© {year} {SITE.name}™</span>
         <span class="inline-flex flex-wrap items-center justify-center gap-1.5">
           Hecho con
           <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" class="text-tirma-pink" aria-hidden="true">
