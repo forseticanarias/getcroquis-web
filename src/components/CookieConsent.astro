@@ -1,0 +1,139 @@
+---
+import { SITE } from '../consts';
+/**
+ * Consentimiento de cookies de la web (RGPD / LSSI art. 22.2).
+ *
+ * Google Analytics NO se carga hasta que el visitante acepta las analíticas.
+ * Antes se cargaba a todo el mundo sin preguntar, que es justo lo que sanciona
+ * la AEPD.
+ *
+ * Comparte la preferencia con la app: misma clave de localStorage y mismo
+ * formato que viajes-app/src/lib/consent.js (web y app viven en el mismo
+ * dominio). Quien acepta o rechaza aquí no vuelve a ver el banner en la app, y
+ * al revés. Si se sube VERSION allí, hay que subirla aquí también.
+ *
+ * Cualquier elemento con [data-cookie-settings] reabre el panel.
+ */
+---
+<div id="cc" role="dialog" aria-label="Cookies" hidden
+     class="fixed bottom-3 left-3 right-3 md:right-auto md:max-w-md z-50 p-4 rounded-2xl bg-black/90 border border-white/10 backdrop-blur shadow-2xl">
+  <div class="text-sm font-bold text-white mb-1">🍪 Cookies</div>
+  <p class="text-sm text-white/75 leading-relaxed">
+    Usamos cookies necesarias para que funcione y, si nos dejas, analíticas para saber qué mejorar.
+    <a href={`${SITE.appUrl}/legal/cookies`} class="text-tirma-pink hover:underline">Más info</a>
+  </p>
+
+  <div id="cc-config" hidden class="mt-3 rounded-xl bg-white/[0.03] border border-white/10 px-3">
+    <div class="flex items-start justify-between gap-3 py-2.5 border-b border-white/10">
+      <div>
+        <div class="text-sm font-semibold text-white">Necesarias</div>
+        <div class="text-xs text-white/55 mt-0.5">Sesión, idioma y tu elección de cookies.</div>
+      </div>
+      <span class="text-[11px] text-white/40 font-semibold whitespace-nowrap mt-1">Siempre activas</span>
+    </div>
+    <label class="flex items-start justify-between gap-3 py-2.5 border-b border-white/10 cursor-pointer">
+      <span>
+        <span class="block text-sm font-semibold text-white">Analíticas</span>
+        <span class="block text-xs text-white/55 mt-0.5">Google Analytics: qué páginas se visitan, de forma agregada.</span>
+      </span>
+      <input id="cc-analytics" type="checkbox" class="mt-1 w-5 h-5 accent-tirma-pink" />
+    </label>
+    <label class="flex items-start justify-between gap-3 py-2.5 cursor-pointer">
+      <span>
+        <span class="block text-sm font-semibold text-white">Marketing</span>
+        <span class="block text-xs text-white/55 mt-0.5">Publicidad y medición de campañas.</span>
+      </span>
+      <input id="cc-marketing" type="checkbox" class="mt-1 w-5 h-5 accent-tirma-pink" />
+    </label>
+  </div>
+
+  <div class="flex flex-wrap gap-2 mt-3">
+    <button type="button" data-cc="reject" class="flex-1 min-w-[28%] py-2 rounded-full bg-white/5 hover:bg-white/10 text-xs text-white/70 font-medium transition">Rechazar</button>
+    <button type="button" data-cc="configure" class="flex-1 min-w-[28%] py-2 rounded-full bg-white/5 hover:bg-white/10 text-xs text-white/70 font-medium transition">Configurar</button>
+    <button type="button" data-cc="save" hidden class="flex-1 min-w-[28%] py-2 rounded-full bg-white/5 hover:bg-white/10 text-xs text-white/70 font-medium transition">Guardar</button>
+    <button type="button" data-cc="accept" class="flex-1 min-w-[28%] py-2 rounded-full bg-tirma-pink text-white text-xs font-bold transition">Aceptar todo</button>
+  </div>
+</div>
+
+<script is:inline define:vars={{ GA_ID: 'G-5X1KSN1LV1' }}>
+  (function () {
+    var KEY = 'viajes-cookie-consent';
+    var VERSION = 2;
+
+    function read() {
+      try {
+        var c = JSON.parse(localStorage.getItem(KEY));
+        return c && c.v === VERSION ? c : null;
+      } catch (e) { return null; }
+    }
+    function write(analytics, marketing) {
+      var c = { v: VERSION, necessary: true, analytics: !!analytics, marketing: !!marketing, at: new Date().toISOString() };
+      try { localStorage.setItem(KEY, JSON.stringify(c)); } catch (e) { /* sin almacenamiento: vale para esta visita */ }
+      return c;
+    }
+
+    // Consent Mode v2: todo denegado por defecto; solo se concede lo aceptado.
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function () { dataLayer.push(arguments); };
+    gtag('consent', 'default', {
+      analytics_storage: 'denied', ad_storage: 'denied',
+      ad_user_data: 'denied', ad_personalization: 'denied',
+    });
+
+    var gaLoaded = false;
+    function apply(c) {
+      gtag('consent', 'update', {
+        analytics_storage: c.analytics ? 'granted' : 'denied',
+        ad_storage: c.marketing ? 'granted' : 'denied',
+        ad_user_data: c.marketing ? 'granted' : 'denied',
+        ad_personalization: c.marketing ? 'granted' : 'denied',
+      });
+      // La librería de Google solo se descarga con las analíticas aceptadas.
+      if (c.analytics && !gaLoaded) {
+        gaLoaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+        document.head.appendChild(s);
+        gtag('js', new Date());
+        gtag('config', GA_ID);
+      }
+    }
+
+    var box = document.getElementById('cc');
+    var config = document.getElementById('cc-config');
+    var inA = document.getElementById('cc-analytics');
+    var inM = document.getElementById('cc-marketing');
+    var btn = function (k) { return box.querySelector('[data-cc="' + k + '"]'); };
+
+    function show(asConfig) {
+      var c = read();
+      inA.checked = !!(c && c.analytics);
+      inM.checked = !!(c && c.marketing);
+      config.hidden = !asConfig;
+      btn('configure').hidden = asConfig;
+      btn('save').hidden = !asConfig;
+      box.hidden = false;
+    }
+    function decide(analytics, marketing) {
+      var c = write(analytics, marketing);
+      apply(c);
+      box.hidden = true;
+      // Retirar el permiso no borra lo ya medido en esta pestaña: recargar
+      // garantiza que Google Analytics deje de ejecutarse.
+      if (gaLoaded && !c.analytics) location.reload();
+    }
+
+    btn('accept').addEventListener('click', function () { decide(true, true); });
+    btn('reject').addEventListener('click', function () { decide(false, false); });
+    btn('configure').addEventListener('click', function () { show(true); });
+    btn('save').addEventListener('click', function () { decide(inA.checked, inM.checked); });
+    document.addEventListener('click', function (e) {
+      if (e.target.closest && e.target.closest('[data-cookie-settings]')) { e.preventDefault(); show(true); }
+    });
+
+    var current = read();
+    if (current) apply(current);
+    else show(false);
+  })();
+</script>

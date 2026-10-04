@@ -83,6 +83,13 @@ const cols = [
                 >{l.label}</a>
               </li>
             ))}
+            {c.title === 'Legal' && (
+              <li>
+                <button type="button" data-cookie-settings class="text-sm text-white/60 hover:text-white transition">
+                  Configurar cookies
+                </button>
+              </li>
+            )}
           </ul>
         </div>
       ))}
