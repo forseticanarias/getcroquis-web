@@ -1,0 +1,180 @@
+---
+import Base from '../layouts/Base.astro';
+import Puertas from '../components/Puertas.astro';
+import { SITE } from '../consts';
+
+// Puerta "Guía o anfitrión local": quien VIVE y trabaja en el destino. Su dolor no
+// es digitalizarse (agencia) ni monetizar una audiencia (creador): es que el
+// viajero le encuentre ANTES de llegar. Perfil Local = sin cuota, 15 %, con
+// acreditación de residencia (ver Términos 2 ter).
+const stats = [
+  { n: '0 €', l: 'de cuota, nunca' },
+  { n: '85 %', l: 'de cada venta, para ti' },
+  { n: 'Antes', l: 'de llegar: cobro por adelantado' },
+  { n: '✓', l: 'reseñas de clientes reales' },
+];
+const queVendes = [
+  { t: 'Tours y excursiones', d: 'Tu ruta por el volcán, el casco antiguo o la costa. Por persona o por grupo, con tu horario.' },
+  { t: 'Sesiones de fotos', d: 'Parejas, familias, pedidas de mano o creadores de contenido que llegan sin fotógrafo.' },
+  { t: 'Experiencias', d: 'Cocina local, surf, vino, artesanía, salidas en barco… lo que solo sabe hacer alguien de allí.' },
+  { t: 'Tus rutas', d: 'Tus itinerarios de la zona en tu tienda: el viajero los compra antes de llegar y luego te contrata a ti.' },
+];
+const pasos = [
+  { n: '01', t: 'Solicita tu perfil Local', d: 'Nos cuentas qué ofreces y en qué zona trabajas.' },
+  { n: '02', t: 'Acredita que eres de allí', d: 'Domicilio fiscal en la zona, licencia de guía si la tienes o trabajos que hayas hecho. Lo revisa una persona.' },
+  { n: '03', t: 'Abre tu tienda', d: 'Pones tus experiencias, precios, idiomas y horarios. Los viajeros te encuentran al planificar.' },
+  { n: '04', t: 'Cobras sin perseguir a nadie', d: 'El viajero paga al reservar. El dinero se te libera cuando el servicio está hecho.' },
+];
+---
+
+<Base title="Guías y anfitriones locales — getcroquis" description="¿Eres guía, fotógrafo o anfitrión y vives en el destino? Ofrece tus experiencias a los viajeros que planifican su viaje en getcroquis. Sin cuota: solo un 15 % cuando vendes.">
+
+  <Puertas actual="locales" />
+
+  <!-- HERO -->
+  <section class="max-w-4xl mx-auto px-5 sm:px-6 pt-10 sm:pt-14 pb-6 text-center">
+    <p class="reveal text-[11px] sm:text-xs font-semibold tracking-[0.22em] uppercase text-tirma-pink/80 mb-6">
+      Para guías, fotógrafos y anfitriones
+    </p>
+    <h1 class="reveal text-[2.4rem] leading-[1.06] sm:text-[4rem] sm:leading-[1.03] font-extrabold tracking-[-0.03em]">
+      Vives en el destino.<br class="hidden sm:block" />
+      <span class="bg-gradient-to-r from-tirma-pink to-tirma-beige bg-clip-text text-transparent">Que te reserven antes de llegar.</span>
+    </h1>
+    <p class="reveal mt-6 text-base sm:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed">
+      Los viajeros planifican su viaje en getcroquis semanas antes. Haz que tu tour, tu sesión de fotos o tu experiencia esté ahí cuando lo hacen.
+    </p>
+    <div class="reveal mt-9 flex flex-wrap gap-3 justify-center">
+      <a href={`${SITE.appUrl}/creador?tipo=local`} class="px-8 py-3.5 rounded-full bg-tirma-pink text-white font-semibold shadow-xl shadow-tirma-pink/25 hover:bg-tirma-deep transition">
+        Solicita tu perfil Local
+      </a>
+      <a href="#como-funciona" class="px-8 py-3.5 rounded-full border border-white/15 text-white/80 font-semibold hover:border-white/35 hover:text-white transition">
+        Ver cómo funciona
+      </a>
+    </div>
+
+    <div class="reveal mt-14 sm:mt-20 grid grid-cols-2 sm:grid-cols-4 gap-px rounded-2xl overflow-hidden bg-white/[0.06] border border-white/[0.07]">
+      {stats.map((s) => (
+        <div class="bg-[#0c1016] py-5 px-3 text-center">
+          <div class="text-2xl sm:text-3xl font-bold text-tirma-beige">{s.n}</div>
+          <div class="text-[11px] sm:text-xs text-white/45 mt-1">{s.l}</div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- EL PROBLEMA -->
+  <section class="max-w-6xl mx-auto px-5 sm:px-6 py-16 sm:py-24">
+    <div class="reveal max-w-2xl mb-10">
+      <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-tirma-pink/80 mb-2">Lo que cambia</p>
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-[-0.02em]">Deja de esperar a que te encuentren en la plaza.</h2>
+    </div>
+    <div class="grid sm:grid-cols-3 gap-4">
+      <div class="reveal p-7 rounded-3xl bg-white/[0.025] border border-white/[0.08]">
+        <h3 class="font-bold text-lg mb-2">Te reservan con tiempo</h3>
+        <p class="text-sm text-white/55 leading-relaxed">El viajero organiza su día a día antes del viaje. Si tu experiencia está ahí, entra en su plan.</p>
+      </div>
+      <div class="reveal p-7 rounded-3xl bg-white/[0.025] border border-white/[0.08]" style="transition-delay:70ms">
+        <h3 class="font-bold text-lg mb-2">Cobro protegido</h3>
+        <p class="text-sm text-white/55 leading-relaxed">Paga al reservar, no en efectivo el día. Se acabaron los clientes que no aparecen.</p>
+      </div>
+      <div class="reveal p-7 rounded-3xl bg-white/[0.025] border border-white/[0.08]" style="transition-delay:140ms">
+        <h3 class="font-bold text-lg mb-2">Tu reputación, en un sitio</h3>
+        <p class="text-sm text-white/55 leading-relaxed">Reseñas solo de clientes que te contrataron de verdad. Tu mejor comercial.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUÉ VENDES -->
+  <section class="max-w-6xl mx-auto px-5 sm:px-6 pb-16 sm:pb-24">
+    <div class="reveal max-w-2xl mb-10">
+      <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-tirma-pink/80 mb-2">Qué puedes ofrecer</p>
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-[-0.02em]">Todo lo que solo sabe hacer alguien de allí.</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {queVendes.map((q, i) => (
+        <div class="reveal p-7 rounded-3xl bg-gradient-to-b from-white/[0.04] to-transparent border border-white/[0.1]" style={`transition-delay:${i * 60}ms`}>
+          <h3 class="font-bold text-lg mb-2">{q.t}</h3>
+          <p class="text-sm text-white/55 leading-relaxed">{q.d}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- CÓMO FUNCIONA -->
+  <section id="como-funciona" class="max-w-5xl mx-auto px-5 sm:px-6 py-16 sm:py-24 border-t border-white/[0.06]">
+    <div class="reveal max-w-2xl mb-12">
+      <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-tirma-pink/80 mb-2">Cómo funciona</p>
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-[-0.02em]">De tu solicitud a tu primera reserva.</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-x-10 gap-y-9">
+      {pasos.map((s) => (
+        <div class="reveal flex gap-5">
+          <div class="text-tirma-pink/50 font-bold text-sm pt-1 flex-shrink-0" style="font-variant-numeric:tabular-nums">{s.n}</div>
+          <div>
+            <h3 class="font-bold text-lg mb-1.5">{s.t}</h3>
+            <p class="text-sm text-white/55 leading-relaxed">{s.d}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- LAS CUENTAS -->
+  <section class="max-w-4xl mx-auto px-5 sm:px-6 py-16 sm:py-24">
+    <div class="reveal text-center max-w-xl mx-auto mb-10">
+      <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-tirma-pink/80 mb-2">Sin letra pequeña</p>
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-[-0.02em]">Sin cuota. Solo pagas cuando vendes.</h2>
+    </div>
+    <div class="reveal rounded-3xl border border-white/[0.1] bg-white/[0.02] p-6 sm:p-8">
+      <div class="flex items-baseline justify-between mb-4">
+        <span class="text-sm text-white/55">De un tour de</span>
+        <span class="text-xl font-bold" style="font-variant-numeric:tabular-nums">45,00 €</span>
+      </div>
+      <div class="flex h-16 rounded-2xl overflow-hidden border border-white/[0.08]">
+        <div class="flex flex-col justify-center px-5" style="flex:85; background:#171c25">
+          <span class="text-[11px] font-bold uppercase tracking-wide text-tirma-beige/80">Para ti · 85 %</span>
+          <span class="text-lg font-extrabold" style="font-variant-numeric:tabular-nums">38,25 €</span>
+        </div>
+        <div class="flex flex-col justify-center px-4 text-white" style="flex:15; background:linear-gradient(180deg,#E6157F,#C30F68)">
+          <span class="text-[11px] font-bold uppercase tracking-wide opacity-80">getcroquis</span>
+          <span class="text-lg font-extrabold" style="font-variant-numeric:tabular-nums">6,75 €</span>
+        </div>
+      </div>
+      <ul class="mt-5 space-y-2 text-sm text-white/55">
+        <li>· Comisión del <strong class="text-white/80">15 %</strong>; la primera venta de cada mes lleva además 2 € por la pasarela de pago.</li>
+        <li>· El cobro, la protección del pago y la mediación si algo sale mal los ponemos nosotros.</li>
+        <li>· ¿Quieres tu propia marca, créditos de IA cada mes o diseñar viajes completos para tus clientes? Eso es el <a href="/agencias" class="text-tirma-beige/85 hover:text-tirma-beige underline underline-offset-2">plan Profesional</a>.</li>
+      </ul>
+    </div>
+
+    <!-- Solo para locales -->
+    <div class="reveal mt-4 rounded-2xl border border-tirma-pink/20 bg-tirma-pink/[0.05] px-6 py-5">
+      <h3 class="font-bold mb-1.5">Reservado a quien vive y trabaja en el destino</h3>
+      <p class="text-sm text-white/60 leading-relaxed">
+        El perfil Local existe para la gente de cada lugar. Revisamos cada solicitud y pedimos acreditarlo. Las agencias, los creadores de contenido y los profesionales que trabajan desde fuera tienen sus propios planes. Si detectamos un perfil Local que no cumple, se retira.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="max-w-4xl mx-auto px-5 sm:px-6 pb-24">
+    <div class="reveal relative rounded-[2rem] overflow-hidden border border-white/[0.08] px-6 sm:px-12 py-14 sm:py-20 text-center">
+      <div aria-hidden="true" class="pointer-events-none absolute inset-0 bg-gradient-to-br from-tirma-pink/[0.14] via-transparent to-tirma-beige/[0.06]"></div>
+      <div class="relative">
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-[-0.02em]">Tus experiencias, en el viaje de otros.</h2>
+        <p class="text-white/55 mt-3 mb-8 max-w-md mx-auto">Solicitarlo es gratis. En cuanto validemos tu perfil, abres tu tienda.</p>
+        <a href={`${SITE.appUrl}/creador?tipo=local`} class="inline-block px-9 py-4 rounded-full bg-tirma-pink text-white font-semibold shadow-xl shadow-tirma-pink/25 hover:bg-tirma-deep transition">
+          Solicita tu perfil Local
+        </a>
+        <p class="mt-5 text-sm text-white/40">¿Tienes una agencia o diseñas viajes a medida? <a href="/agencias" class="text-tirma-beige/80 hover:text-tirma-beige underline underline-offset-2">Tu puerta es esta →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const io = new IntersectionObserver((es) => {
+      for (const e of es) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  </script>
+</Base>

@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import Puertas from '../components/Puertas.astro';
 import { SITE } from '../consts';
 
 // Puerta "Agencias / Profesionales": discurso distinto al del creador. Aquí el
@@ -34,25 +35,19 @@ const steps = [
 
 <Base title="getcroquis para agencias — digitaliza y capta clientes" description="Digitaliza tu agencia de viajes: itinerarios con IA y con tu marca en minutos, escaparate profesional, cobros seguros y CRM. Desde 24,92 € al mes pagando el año.">
 
-  <!-- Selector de puerta (creador vs agencia) -->
-  <div class="max-w-4xl mx-auto px-5 sm:px-6 pt-8 flex justify-center">
-    <div class="inline-flex p-1 rounded-full bg-white/[0.05] border border-white/[0.1] text-sm font-semibold">
-      <a href="/creadores" class="px-4 py-1.5 rounded-full text-white/55 hover:text-white transition">Creador o influencer</a>
-      <span class="px-4 py-1.5 rounded-full bg-tirma-pink text-white">Agencia o profesional</span>
-    </div>
-  </div>
+  <Puertas actual="agencias" />
 
   <!-- HERO -->
   <section class="max-w-4xl mx-auto px-5 sm:px-6 pt-10 sm:pt-14 pb-6 text-center">
     <p class="reveal text-[11px] sm:text-xs font-semibold tracking-[0.22em] uppercase text-tirma-pink/80 mb-6">
-      getcroquis para agencias
+      Para agencias y asesores de viaje autónomos
     </p>
     <h1 class="reveal text-[2.4rem] leading-[1.06] sm:text-[4rem] sm:leading-[1.03] font-extrabold tracking-[-0.03em]">
       Digitaliza tu agencia.<br class="hidden sm:block" />
       <span class="bg-gradient-to-r from-tirma-pink to-tirma-beige bg-clip-text text-transparent">Capta clientes de todo el mundo.</span>
     </h1>
     <p class="reveal mt-6 text-base sm:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed">
-      Itinerarios día a día con <strong class="text-white/80">tu marca</strong>, hechos en minutos con IA y revisados con tu criterio. Tu cliente lo lleva en el móvil todo el viaje.
+      Tengas una agencia o diseñes viajes por tu cuenta: itinerarios día a día con <strong class="text-white/80">tu marca</strong>, hechos en minutos con IA y revisados con tu criterio. Tu cliente lo lleva en el móvil todo el viaje.
     </p>
     <div class="reveal mt-9 flex flex-wrap gap-3 justify-center">
       <a href={`${SITE.appUrl}/creador?tipo=agencia`} class="px-8 py-3.5 rounded-full bg-tirma-pink text-white font-semibold shadow-xl shadow-tirma-pink/25 hover:bg-tirma-deep transition">
@@ -110,7 +105,7 @@ const steps = [
             <span class="block text-white/40 text-xs" style="font-variant-numeric:tabular-nums">o 299 €/año · 2 meses gratis</span>
           </span>
         </div>
-        <p class="text-sm text-white/45 mb-5">Para la agencia de una persona o el asesor independiente.</p>
+        <p class="text-sm text-white/45 mb-5">Para el asesor autónomo o la agencia de una persona.</p>
         <ul class="space-y-2.5 text-sm flex-1">
           <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/75"><strong class="text-white">Tu marca</strong> y tu sello de licencia en cada itinerario</span></li>
           <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/75"><strong class="text-white">150 créditos</strong> de IA al mes (180 pagando el año)</span></li>

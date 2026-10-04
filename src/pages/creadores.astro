@@ -1,22 +1,23 @@
 ---
 import Base from '../layouts/Base.astro';
+import Puertas from '../components/Puertas.astro';
 import { SITE } from '../consts';
 
 const stats = [
-  { n: '85%', l: 'de cada venta es para ti' },
+  { n: '90 %', l: 'de cada venta es para ti' },
   { n: 'Tú', l: 'pones el precio' },
-  { n: 'Auto', l: 'cobros con Stripe' },
-  { n: '0 €', l: 'de alta, sin cuotas' },
+  { n: 'Tu marca', l: 'en cada itinerario' },
+  { n: '24,92 €', l: 'al mes pagando el año' },
 ];
 const steps = [
-  { n: '01', t: 'Solicita ser creador', d: 'Rellenas tu perfil y pides acceso. Solo creadores aprobados venden.' },
+  { n: '01', t: 'Solicita tu acceso', d: 'Rellenas tu perfil y pides acceso. Solo creadores aprobados venden.' },
   { n: '02', t: 'Monta tu tienda', d: 'Itinerarios premium con precio + tus servicios. Panel sencillo.' },
   { n: '03', t: 'Comparte con tu audiencia', d: 'Tu escaparate se ve sin registro: para tu bio y tus stories.' },
-  { n: '04', t: 'Cobra, automático', d: 'El 85% cae directo en tu Stripe. Sin facturas ni perseguir a nadie.' },
+  { n: '04', t: 'Cobra, automático', d: 'El 90 % cae en tu cuenta. Sin perseguir a nadie por Bizum.' },
 ];
 const forWho = [
   { t: 'Influencers de viajes', d: 'Convierte los "¿me pasas tu itinerario?" en ingresos.' },
-  { t: 'Guías locales', d: 'Vende tu conocimiento del destino y tu acompañamiento.' },
+  { t: 'Creadores de rutas', d: 'Tus itinerarios de siempre, por fin con un precio y una tienda.' },
   { t: 'Blogueros y fotógrafos', d: 'Rentabiliza tu contenido y tus rutas con tu marca.' },
 ];
 
@@ -30,15 +31,9 @@ const services = [
 ];
 ---
 
-<Base title="Vende tus viajes — getcroquis para creadores" description="Convierte tu audiencia en ingresos: vende tus itinerarios y tu asistencia en viaje con getcroquis. El 85% de cada venta es para ti, cobros automáticos y sin cuotas de alta.">
+<Base title="Vende tus viajes — getcroquis para creadores" description="Convierte tu audiencia en ingresos: vende tus itinerarios y tu asistencia en viaje con getcroquis, con tu marca. Te quedas el 90 % de cada venta.">
 
-  <!-- Selector de puerta (creador vs agencia) -->
-  <div class="max-w-4xl mx-auto px-5 sm:px-6 pt-8 flex justify-center">
-    <div class="inline-flex p-1 rounded-full bg-white/[0.05] border border-white/[0.1] text-sm font-semibold">
-      <span class="px-4 py-1.5 rounded-full bg-tirma-pink text-white">Creador o influencer</span>
-      <a href="/agencias" class="px-4 py-1.5 rounded-full text-white/55 hover:text-white transition">Agencia o profesional</a>
-    </div>
-  </div>
+  <Puertas actual="creadores" />
 
   <!-- HERO -->
   <section class="max-w-4xl mx-auto px-5 sm:px-6 pt-10 sm:pt-14 pb-6 text-center">
@@ -50,11 +45,11 @@ const services = [
       <span class="bg-gradient-to-r from-tirma-pink to-tirma-beige bg-clip-text text-transparent">en ingresos.</span>
     </h1>
     <p class="reveal mt-6 text-base sm:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed">
-      Tu audiencia ya te pregunta "¿me pasas tu itinerario?". Véndeselo bien hecho y acompáñalos en el viaje. Tú pones el precio; el 85% es para ti.
+      Tu audiencia ya te pregunta "¿me pasas tu itinerario?". Véndeselo bien hecho, con tu marca, y acompáñalos en el viaje. Tú pones el precio y te quedas el 90 %.
     </p>
     <div class="reveal mt-9 flex flex-wrap gap-3 justify-center">
       <a href={`${SITE.appUrl}/creador?tipo=creador`} class="px-8 py-3.5 rounded-full bg-tirma-pink text-white font-semibold shadow-xl shadow-tirma-pink/25 hover:bg-tirma-deep transition">
-        Hazte creador
+        Solicita tu acceso
       </a>
       <a href="#como-funciona" class="px-8 py-3.5 rounded-full border border-white/15 text-white/80 font-semibold hover:border-white/35 hover:text-white transition">
         Ver cómo funciona
@@ -89,8 +84,8 @@ const services = [
         <span class="inline-flex w-11 h-11 items-center justify-center rounded-xl bg-tirma-pink/10 border border-tirma-pink/20 text-tirma-pink mb-5">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></svg>
         </span>
-        <h3 class="font-bold text-lg mb-2">El 85% es tuyo</h3>
-        <p class="text-sm text-white/55 leading-relaxed">Tú pones el precio y te quedas el 85%. Solo cobramos cuando tú cobras.</p>
+        <h3 class="font-bold text-lg mb-2">El 90 % es tuyo</h3>
+        <p class="text-sm text-white/55 leading-relaxed">Tú pones el precio y te quedas el 90 %. Con dos ventas al mes, la cuota ya está pagada.</p>
       </div>
       <div class="reveal p-7 rounded-3xl bg-white/[0.025] border border-white/[0.08]" style="transition-delay:140ms">
         <span class="inline-flex w-11 h-11 items-center justify-center rounded-xl bg-tirma-pink/10 border border-tirma-pink/20 text-tirma-pink mb-5">
@@ -144,7 +139,7 @@ const services = [
     <div class="reveal mt-14 pt-10 border-t border-white/[0.06]">
       <h3 class="text-xl sm:text-2xl font-bold tracking-[-0.02em] mb-2">Tú montas tu oferta</h3>
       <p class="text-white/55 mb-7 max-w-2xl leading-relaxed">
-        Ofreces lo que quieras: desde <strong class="text-white/80">solo tu catálogo</strong> hasta el paquete completo. Seas influencer, guía o agencia, tienes las mismas piezas a tu disposición — combínalas a tu gusto.
+        Ofreces lo que quieras: desde <strong class="text-white/80">solo tu catálogo</strong> hasta el paquete completo. Tienes todas las piezas a tu disposición: combínalas a tu gusto.
       </p>
       <div class="grid sm:grid-cols-3 gap-4">
         {services.map((s) => (
@@ -173,79 +168,59 @@ const services = [
         <span class="text-xl font-bold" style="font-variant-numeric:tabular-nums">20,00 €</span>
       </div>
       <div class="flex h-16 rounded-2xl overflow-hidden border border-white/[0.08]">
-        <div class="flex flex-col justify-center px-5" style="flex:85; background:#171c25">
-          <span class="text-[11px] font-bold uppercase tracking-wide text-tirma-beige/80">Para ti · 85%</span>
-          <span class="text-lg font-extrabold" style="font-variant-numeric:tabular-nums">17,00 €</span>
+        <div class="flex flex-col justify-center px-5" style="flex:90; background:#171c25">
+          <span class="text-[11px] font-bold uppercase tracking-wide text-tirma-beige/80">Para ti · 90 %</span>
+          <span class="text-lg font-extrabold" style="font-variant-numeric:tabular-nums">18,00 €</span>
         </div>
-        <div class="flex flex-col justify-center px-4 text-white" style="flex:15; background:linear-gradient(180deg,#E6157F,#C30F68)">
-          <span class="text-[11px] font-bold uppercase tracking-wide opacity-80">getcroquis</span>
-          <span class="text-lg font-extrabold" style="font-variant-numeric:tabular-nums">3,00 €</span>
+        <div class="flex flex-col justify-center px-3 text-white" style="flex:10; background:linear-gradient(180deg,#E6157F,#C30F68)">
+          <span class="text-[11px] font-bold uppercase tracking-wide opacity-80">10 %</span>
+          <span class="text-lg font-extrabold" style="font-variant-numeric:tabular-nums">2 €</span>
         </div>
       </div>
-      <p class="text-sm text-white/45 mt-4">Empezar es <strong class="text-white/70">gratis</strong>: sin cuotas de alta ni mensualidades. Solo cobramos cuando tú cobras — así de simple.</p>
+      <p class="text-sm text-white/45 mt-4">Con el plan <strong class="text-white/70">Profesional</strong> (29,90 € al mes, o 299 € al año). Con dos catálogos vendidos al mes a 19 € ya tienes la cuota pagada; el resto es tuyo.</p>
     </div>
 
   </section>
 
-  <!-- FREE vs PRO: la escalera. Empiezas gratis; cuando vendes, Pro se paga solo. -->
+  <!-- PLAN PROFESIONAL: mensual o anual (a creadores no se les ofrece plan gratuito) -->
   <section class="max-w-4xl mx-auto px-5 sm:px-6 pb-16 sm:pb-24">
     <div class="reveal text-center max-w-xl mx-auto mb-10">
-      <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-tirma-pink/80 mb-2">Gratis o Profesional</p>
-      <h2 class="text-3xl sm:text-4xl font-bold tracking-[-0.02em]">Empieza gratis. Sube cuando te compense.</h2>
-      <p class="text-white/50 mt-3 text-sm">Sin trucos: te decimos exactamente cuándo sale a cuenta.</p>
+      <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-tirma-pink/80 mb-2">Plan Profesional</p>
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-[-0.02em]">Tu tienda, con tu marca.</h2>
+      <p class="text-white/50 mt-3 text-sm">Pagando el año, dos meses gratis.</p>
     </div>
-
     <div class="reveal grid sm:grid-cols-2 gap-4">
-      <!-- FREE -->
       <div class="rounded-3xl border border-white/[0.1] bg-white/[0.02] p-6 sm:p-7 flex flex-col">
         <div class="flex items-baseline justify-between gap-2 mb-1">
-          <h3 class="text-lg font-bold">Free</h3>
-          <span class="text-2xl font-extrabold text-white/80" style="font-variant-numeric:tabular-nums">0 €</span>
+          <h3 class="text-lg font-bold">Mensual</h3>
+          <span class="text-2xl font-extrabold text-white/85" style="font-variant-numeric:tabular-nums">29,90 €<span class="text-sm font-semibold text-white/40">/mes</span></span>
         </div>
-        <p class="text-sm text-white/45 mb-5">Para empezar y probarlo todo.</p>
+        <p class="text-sm text-white/45 mb-5">Sin permanencia.</p>
         <ul class="space-y-2.5 text-sm flex-1">
-          <li class="flex gap-2.5"><span class="text-white/30">•</span><span class="text-white/70">Te quedas el <strong class="text-white/90">85%</strong> de cada venta</span></li>
-          <li class="flex gap-2.5"><span class="text-white/30">•</span><span class="text-white/70">Tu tienda, tu catálogo y tus servicios</span></li>
-          <li class="flex gap-2.5"><span class="text-white/30">•</span><span class="text-white/70">Pago protegido y reseñas verificadas</span></li>
-          <li class="flex gap-2.5"><span class="text-white/30">•</span><span class="text-white/45">Créditos de IA: los compras sueltos</span></li>
-          <li class="flex gap-2.5"><span class="text-white/30">•</span><span class="text-white/45">Los itinerarios llevan la marca getcroquis</span></li>
-          <li class="flex gap-2.5"><span class="text-white/30">•</span><span class="text-white/45">La 1ª venta del mes lleva 2 € de pasarela</span></li>
+          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80">Te quedas el <strong class="text-tirma-beige">90 %</strong> de cada venta</span></li>
+          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80"><strong class="text-white">Tu marca</strong> en tus itinerarios, no la nuestra</span></li>
+          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80"><strong class="text-white">150 créditos de IA</strong> cada mes, se acumulan</span></li>
+          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80">Perfil <strong class="text-white">destacado</strong> y packs de créditos <strong class="text-white">−20 %</strong></span></li>
         </ul>
-        <p class="text-xs text-white/35 mt-5 pt-4 border-t border-white/[0.07]">Sin cuotas, sin permanencia. Solo cobramos si tú cobras.</p>
       </div>
-
-      <!-- PRO -->
       <div class="relative rounded-3xl border border-tirma-pink/35 bg-gradient-to-b from-tirma-pink/[0.1] to-transparent p-6 sm:p-7 flex flex-col">
-        <span class="absolute -top-2.5 left-6 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-tirma-pink text-white">Cuando ya vendes</span>
+        <span class="absolute -top-2.5 left-6 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-tirma-pink text-white">El que más conviene</span>
         <div class="flex items-baseline justify-between gap-2 mb-1">
-          <h3 class="text-lg font-bold">Profesional</h3>
-          <span class="text-2xl font-extrabold text-tirma-beige" style="font-variant-numeric:tabular-nums">29,90 €<span class="text-sm font-semibold text-white/40">/mes</span><span class="block text-right text-xs font-semibold text-white/40">o 299 €/año · 2 meses gratis</span></span>
+          <h3 class="text-lg font-bold">Anual</h3>
+          <span class="text-right">
+            <span class="text-2xl font-extrabold text-tirma-beige" style="font-variant-numeric:tabular-nums">299 €<span class="text-sm font-semibold text-white/40">/año</span></span>
+            <span class="block text-white/40 text-xs" style="font-variant-numeric:tabular-nums">≈ 24,92 € al mes</span>
+          </span>
         </div>
-        <p class="text-sm text-white/45 mb-5">Cuando vender es tu trabajo, no tu hobby.</p>
+        <p class="text-sm text-white/45 mb-5">Pagas 10 meses y tienes 12.</p>
         <ul class="space-y-2.5 text-sm flex-1">
-          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80">Te quedas el <strong class="text-tirma-beige">90%</strong> — 5 puntos más en cada venta</span></li>
-          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80"><strong class="text-white">Tu marca</strong> en los itinerarios, no la nuestra</span></li>
-          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80"><strong class="text-white">150 créditos de IA</strong> cada mes (180 pagando el año), se acumulan</span></li>
-          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80">Perfil <strong class="text-white">destacado</strong> ante los viajeros</span></li>
-          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80">Packs de créditos <strong class="text-white">−20%</strong> (precio de socio)</span></li>
-          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80"><strong class="text-white">Sin</strong> los 2 € de pasarela: tu cuota ya los cubre</span></li>
+          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80">Todo el plan mensual</span></li>
+          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80"><strong class="text-white">180 créditos</strong> al mes: un 20 % más</span></li>
+          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80">Precio <strong class="text-white">congelado</strong> 12 meses</span></li>
         </ul>
-        <p class="text-xs text-tirma-beige/70 mt-5 pt-4 border-t border-tirma-pink/15">
-          Cancela tú mismo cuando quieras, en dos clics. Sin llamadas ni correos.
-        </p>
       </div>
     </div>
-
-    <!-- El número honesto: cuándo compensa de verdad -->
-    <div class="reveal mt-4 rounded-2xl border border-white/[0.08] bg-white/[0.02] px-6 py-5 text-center">
-      <p class="text-sm text-white/60 leading-relaxed max-w-2xl mx-auto">
-        <strong class="text-white/85">¿Cuándo compensa?</strong> A partir de unos
-        <strong class="text-tirma-beige" style="font-variant-numeric:tabular-nums">560 € de ventas al mes</strong>, los 5 puntos de comisión
-        ya pagan la cuota — y los créditos, tu marca y el destacado te salen gratis.
-        <span class="block text-white/40 mt-1.5">¿Vendes menos? Quédate en Free. Te lo diremos igual.</span>
-      </p>
-      <a href={`${SITE.appUrl}/planes`} class="inline-flex items-center gap-1.5 mt-4 text-sm font-semibold text-tirma-beige/85 hover:text-tirma-beige">Ver todos los planes →</a>
-    </div>
+    <p class="reveal mt-4 text-center text-sm text-white/45">¿Eres guía, fotógrafo o anfitrión y vives en el destino? <a href="/locales" class="text-tirma-beige/85 hover:text-tirma-beige underline underline-offset-2">Tienes un perfil sin cuota →</a></p>
   </section>
 
   <!-- PARA QUIÉN -->
@@ -270,9 +245,9 @@ const services = [
       <div aria-hidden="true" class="pointer-events-none absolute inset-0 bg-gradient-to-br from-tirma-pink/[0.14] via-transparent to-tirma-beige/[0.06]"></div>
       <div class="relative">
         <h2 class="text-3xl sm:text-4xl font-bold tracking-[-0.02em]">Empieza a vender tus viajes hoy.</h2>
-        <p class="text-white/55 mt-3 mb-8 max-w-md mx-auto">Crea tu cuenta gratis y solicita ser creador. Sin coste, sin compromiso.</p>
+        <p class="text-white/55 mt-3 mb-8 max-w-md mx-auto">Solicitar es gratis y sin compromiso. Cuando aprobemos tu perfil, eliges plan y abres tu tienda.</p>
         <a href={`${SITE.appUrl}/creador?tipo=creador`} class="inline-block px-9 py-4 rounded-full bg-tirma-pink text-white font-semibold shadow-xl shadow-tirma-pink/25 hover:bg-tirma-deep transition">
-          Hazte creador
+          Solicita tu acceso
         </a>
         <p class="mt-5 text-sm text-white/40">¿Eres una agencia de viajes? <a href="/agencias" class="text-tirma-beige/80 hover:text-tirma-beige underline underline-offset-2">Tenemos algo distinto para ti →</a></p>
       </div>
