@@ -18,12 +18,12 @@ const props = [
 // Lo que incluye el plan Agencia. Fuente de verdad: get_plan_features('agency') en
 // Supabase — si cambian ahí, cambian aquí (ver docs/PLAN-planes-premium.md).
 const incluye = [
-  { k: '0 %', v: 'de comisión con tus propios clientes' },
-  { k: '10 %', v: 'solo si además vendes dentro de getcroquis' },
-  { k: '200', v: 'créditos de IA al mes (unos 40 itinerarios); 240 si pagas el año' },
+  { k: '0 %', v: 'de comisión con tus propios clientes, en cualquier plan' },
+  { k: '10 % · 8 %', v: 'solo si además vendes en tu tienda de getcroquis (Profesional · Equipo)' },
+  { k: '150 · 400', v: 'créditos de IA al mes (30 · 80 itinerarios); un 20 % más pagando el año' },
   { k: 'Tu marca', v: 'logo, colores, contacto y la firma de cada agente' },
   { k: 'Licencia ✓', v: 'sello de licencia verificada en tus itinerarios' },
-  { k: '−25 %', v: 'en packs de créditos extra, precio de socio' },
+  { k: '−20 · −25 %', v: 'en packs de créditos extra, precio de socio' },
 ];
 const steps = [
   { n: '01', t: 'Solicita tu acceso', d: 'Validamos tu agencia y tu licencia: solo profesionales aprobados.' },
@@ -32,7 +32,7 @@ const steps = [
 ];
 ---
 
-<Base title="getcroquis para agencias — digitaliza y capta clientes" description="Digitaliza tu agencia de viajes: itinerarios con IA y con tu marca en minutos, escaparate profesional, cobros seguros y CRM. Plan Agencia desde 33,25 € al mes pagando el año.">
+<Base title="getcroquis para agencias — digitaliza y capta clientes" description="Digitaliza tu agencia de viajes: itinerarios con IA y con tu marca en minutos, escaparate profesional, cobros seguros y CRM. Desde 24,92 € al mes pagando el año.">
 
   <!-- Selector de puerta (creador vs agencia) -->
   <div class="max-w-4xl mx-auto px-5 sm:px-6 pt-8 flex justify-center">
@@ -67,22 +67,16 @@ const steps = [
     </p>
   </section>
 
-  <!-- PRECIO DEL PLAN AGENCIA (fuente: get_plan_features('agency')) -->
+  <!-- PRECIO (fuente: get_plan_features) -->
   <section class="max-w-4xl mx-auto px-5 sm:px-6 py-10 sm:py-14">
     <div class="reveal relative rounded-[2rem] overflow-hidden border border-tirma-pink/25 px-6 sm:px-10 py-10 sm:py-12">
       <div aria-hidden="true" class="pointer-events-none absolute inset-0 bg-gradient-to-br from-tirma-pink/[0.12] via-transparent to-tirma-beige/[0.05]"></div>
       <div class="relative">
-        <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-tirma-pink/90 mb-2">Plan Agencia</p>
-        <h2 class="text-2xl sm:text-3xl font-bold tracking-[-0.02em] mb-3">Dos itinerarios al mes ya lo pagan.</h2>
+        <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-tirma-pink/90 mb-2">Desde 24,92 € al mes</p>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-[-0.02em] mb-3">Un itinerario cobrado al mes ya lo paga.</h2>
         <p class="text-white/60 leading-relaxed max-w-2xl">
-          Si cobras 30 € por el itinerario de un viaje que ya vendiste, con dos al mes tienes la cuota cubierta. El resto es margen.
+          Si cobras 30 € por el itinerario de un viaje que ya vendiste, con uno o dos al mes tienes la cuota cubierta. El resto es margen. Pagando el año, 2 meses gratis.
         </p>
-        <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mt-6">
-          <span class="text-3xl sm:text-4xl font-extrabold text-tirma-beige" style="font-variant-numeric:tabular-nums">39,90 €<span class="text-base font-semibold text-white/50">/mes</span></span>
-          <span class="text-white/45">o</span>
-          <span class="text-3xl sm:text-4xl font-extrabold text-tirma-beige" style="font-variant-numeric:tabular-nums">399 €<span class="text-base font-semibold text-white/50">/año</span></span>
-          <span class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-tirma-pink/20 text-tirma-beige">2 meses gratis</span>
-        </div>
       </div>
     </div>
   </section>
@@ -103,38 +97,44 @@ const steps = [
     </div>
     <p class="reveal mt-6 text-sm text-white/45 max-w-2xl leading-relaxed">
       Los clientes que atiendes por tu cuenta son <strong class="text-white/70">100% tuyos</strong>: ahí no hay comisión, solo la cuota.
-      El 10 % aplica únicamente si además vendes dentro del marketplace de getcroquis.
+      La comisión (10 % o 8 % según el plan) aplica únicamente si además vendes dentro del marketplace de getcroquis.
     </p>
 
-    <!-- Mensual vs anual del plan Agencia (para una agencia no hay plan gratuito) -->
+    <!-- Profesional vs Equipo (para una agencia no hay plan gratuito) -->
     <div class="reveal mt-10 grid sm:grid-cols-2 gap-4">
       <div class="rounded-3xl border border-white/[0.1] bg-white/[0.02] p-6 sm:p-7 flex flex-col">
         <div class="flex items-baseline justify-between gap-2 mb-1">
-          <h3 class="text-lg font-bold">Mensual</h3>
-          <span class="text-2xl font-extrabold text-white/85" style="font-variant-numeric:tabular-nums">39,90 €<span class="text-sm font-semibold text-white/40">/mes</span></span>
+          <h3 class="text-lg font-bold">Profesional</h3>
+          <span class="text-right">
+            <span class="text-2xl font-extrabold text-white/85" style="font-variant-numeric:tabular-nums">29,90 €<span class="text-sm font-semibold text-white/40">/mes</span></span>
+            <span class="block text-white/40 text-xs" style="font-variant-numeric:tabular-nums">o 299 €/año · 2 meses gratis</span>
+          </span>
         </div>
-        <p class="text-sm text-white/45 mb-5">Sin permanencia. Te das de baja cuando quieras.</p>
+        <p class="text-sm text-white/45 mb-5">Para la agencia de una persona o el asesor independiente.</p>
         <ul class="space-y-2.5 text-sm flex-1">
-          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/75">Todo el plan Agencia</span></li>
-          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/75"><strong class="text-white">200 créditos</strong> de IA al mes (~40 itinerarios)</span></li>
-          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/75">Lo que ya pagaste es tuyo hasta fin de mes</span></li>
+          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/75"><strong class="text-white">Tu marca</strong> y tu sello de licencia en cada itinerario</span></li>
+          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/75"><strong class="text-white">150 créditos</strong> de IA al mes (180 pagando el año)</span></li>
+          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/75"><strong class="text-white">0 %</strong> con tus clientes · 10 % en tu tienda</span></li>
+          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/75">Packs de créditos <strong class="text-white">−20 %</strong></span></li>
         </ul>
       </div>
 
       <div class="relative rounded-3xl border border-tirma-pink/35 bg-gradient-to-b from-tirma-pink/[0.1] to-transparent p-6 sm:p-7 flex flex-col">
-        <span class="absolute -top-2.5 left-6 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-tirma-pink text-white">El que más conviene</span>
+        <span class="absolute -top-2.5 left-6 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-tirma-pink text-white">Para agencias con equipo</span>
         <div class="flex items-baseline justify-between gap-2 mb-1">
-          <h3 class="text-lg font-bold">Anual</h3>
+          <h3 class="text-lg font-bold">Equipo</h3>
           <span class="text-right">
-            <span class="text-2xl font-extrabold text-tirma-beige" style="font-variant-numeric:tabular-nums">399 €<span class="text-sm font-semibold text-white/40">/año</span></span>
-            <span class="block text-white/40 text-xs" style="font-variant-numeric:tabular-nums">≈ 33,25 € al mes</span>
+            <span class="text-2xl font-extrabold text-tirma-beige" style="font-variant-numeric:tabular-nums">39,90 €<span class="text-sm font-semibold text-white/40">/mes</span></span>
+            <span class="block text-white/40 text-xs" style="font-variant-numeric:tabular-nums">o 399 €/año · 2 meses gratis</span>
           </span>
         </div>
-        <p class="text-sm text-white/45 mb-5">Pagas 10 meses y tienes 12.</p>
+        <p class="text-sm text-white/45 mb-5">Todo el Profesional, para varios agentes.</p>
         <ul class="space-y-2.5 text-sm flex-1">
-          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80"><strong class="text-white">2 meses gratis</strong></span></li>
-          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80"><strong class="text-white">240 créditos</strong> al mes: un 20 % más</span></li>
-          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80">Precio <strong class="text-white">congelado</strong> 12 meses</span></li>
+          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80"><strong class="text-white">3 usuarios</strong>, cada uno con su firma <span class="text-[10px] font-bold uppercase tracking-wider text-tirma-pink">Próximamente</span></span></li>
+          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80"><strong class="text-white">400 créditos</strong> al mes para el equipo (480 pagando el año)</span></li>
+          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80"><strong class="text-white">0 %</strong> con tus clientes · solo <strong class="text-tirma-beige">8 %</strong> en tu tienda</span></li>
+          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80">Varias marcas y packs <strong class="text-white">−25 %</strong></span></li>
+          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80">Destacada en nuestras redes y <strong class="text-white">soporte prioritario</strong></span></li>
         </ul>
       </div>
     </div>
