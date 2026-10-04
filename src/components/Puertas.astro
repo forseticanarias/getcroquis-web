@@ -1,0 +1,21 @@
+---
+/**
+ * Selector de "puertas" para profesionales: cada público tiene su página y su
+ * discurso. Se usa arriba de /agencias, /creadores y /locales.
+ *   <Puertas actual="agencias" />
+ */
+interface Props { actual: 'agencias' | 'creadores' | 'locales' }
+const { actual } = Astro.props;
+const puertas = [
+  { k: 'agencias', href: '/agencias', label: 'Agencia o autónomo' },
+  { k: 'creadores', href: '/creadores', label: 'Creador o influencer' },
+  { k: 'locales', href: '/locales', label: 'Guía o anfitrión local' },
+];
+---
+<div class="max-w-4xl mx-auto px-5 sm:px-6 pt-8 flex justify-center">
+  <nav aria-label="Elige tu perfil" class="inline-flex flex-wrap justify-center gap-1 p-1 rounded-3xl sm:rounded-full bg-white/[0.05] border border-white/[0.1] text-sm font-semibold">
+    {puertas.map((p) => p.k === actual
+      ? <span aria-current="page" class="px-4 py-1.5 rounded-full bg-tirma-pink text-white">{p.label}</span>
+      : <a href={p.href} class="px-4 py-1.5 rounded-full text-white/55 hover:text-white transition">{p.label}</a>)}
+  </nav>
+</div>
