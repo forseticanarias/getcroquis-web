@@ -18,21 +18,21 @@ const props = [
 // Lo que incluye el plan Agencia. Fuente de verdad: get_plan_features('agency') en
 // Supabase — si cambian ahí, cambian aquí (ver docs/PLAN-planes-premium.md).
 const incluye = [
-  { k: '19,95 €', v: 'al mes como fundadora (39,90 € después)' },
-  { k: '8 %', v: 'de comisión, y solo si vendes por getcroquis' },
-  { k: '200', v: 'créditos de IA al mes (unos 40 itinerarios)' },
-  { k: '3', v: 'asesores en la misma cuenta' },
-  { k: 'Tu marca', v: 'en los itinerarios que entregas' },
+  { k: '0 %', v: 'de comisión con tus propios clientes' },
+  { k: '10 %', v: 'solo si además vendes dentro de getcroquis' },
+  { k: '200', v: 'créditos de IA al mes (unos 40 itinerarios); 240 si pagas el año' },
+  { k: 'Tu marca', v: 'logo, colores, contacto y la firma de cada agente' },
+  { k: 'Licencia ✓', v: 'sello de licencia verificada en tus itinerarios' },
   { k: '−25 %', v: 'en packs de créditos extra, precio de socio' },
 ];
 const steps = [
-  { n: '01', t: 'Solicita tu plaza', d: 'Cupo por comunidad. Validamos tu agencia: solo profesionales aprobados.' },
-  { n: '02', t: 'Montamos tu agencia digital', d: 'Escaparate, catálogo, servicios y cobros listos en una tarde. Cero tecnicismos.' },
-  { n: '03', t: 'Recibes clientes', d: 'Tu perfil se posiciona, el viajero te encuentra y tú cierras — con tu marca.' },
+  { n: '01', t: 'Solicita tu acceso', d: 'Validamos tu agencia y tu licencia: solo profesionales aprobados.' },
+  { n: '02', t: 'Montamos tu agencia digital', d: 'Tu marca, tu escaparate y tus servicios listos en una tarde. Cero tecnicismos.' },
+  { n: '03', t: 'Entregas con tu marca', d: 'Desde el primer día tus clientes reciben itinerarios tuyos, y además apareces en el buscador de getcroquis.' },
 ];
 ---
 
-<Base title="getcroquis para agencias — digitaliza y capta clientes" description="Digitaliza tu agencia de viajes y capta viajeros de toda España: escaparate profesional, itinerarios con IA, cobros seguros y CRM. Programa fundador con plazas limitadas por provincia.">
+<Base title="getcroquis para agencias — digitaliza y capta clientes" description="Digitaliza tu agencia de viajes: itinerarios con IA y con tu marca en minutos, escaparate profesional, cobros seguros y CRM. Plan Agencia desde 33,25 € al mes pagando el año.">
 
   <!-- Selector de puerta (creador vs agencia) -->
   <div class="max-w-4xl mx-auto px-5 sm:px-6 pt-8 flex justify-center">
@@ -52,42 +52,37 @@ const steps = [
       <span class="bg-gradient-to-r from-tirma-pink to-tirma-beige bg-clip-text text-transparent">Capta clientes de todo el mundo.</span>
     </h1>
     <p class="reveal mt-6 text-base sm:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed">
-      Te montamos tu agencia digital y te ponemos donde el viajero busca. Tú atiendes; nosotros traemos los <strong class="text-white/80">clientes</strong> y las <strong class="text-white/80">herramientas</strong>.
+      Itinerarios día a día con <strong class="text-white/80">tu marca</strong>, hechos en minutos con IA y revisados con tu criterio. Tu cliente lo lleva en el móvil todo el viaje.
     </p>
     <div class="reveal mt-9 flex flex-wrap gap-3 justify-center">
       <a href={`${SITE.appUrl}/creador?tipo=agencia`} class="px-8 py-3.5 rounded-full bg-tirma-pink text-white font-semibold shadow-xl shadow-tirma-pink/25 hover:bg-tirma-deep transition">
-        Solicita tu plaza
+        Solicita tu acceso
       </a>
       <a href="#como-funciona" class="px-8 py-3.5 rounded-full border border-white/15 text-white/80 font-semibold hover:border-white/35 hover:text-white transition">
         Ver cómo funciona
       </a>
     </div>
     <p class="reveal mt-7 text-sm text-white/40 max-w-xl mx-auto">
-      El creador monetiza <em>su</em> público (gratis + 15%). Tú vienes a por clientes <strong class="text-white/65">nuevos</strong> y a digitalizarte: por eso es un plan — pagas por la distribución y las herramientas.
+      Pagas por la herramienta, no por tus clientes: con los tuyos, <strong class="text-white/65">0 % de comisión</strong>. Solo la cuota del plan.
     </p>
   </section>
 
-  <!-- PROGRAMA FUNDADOR (exclusividad territorial) -->
+  <!-- PRECIO DEL PLAN AGENCIA (fuente: get_plan_features('agency')) -->
   <section class="max-w-4xl mx-auto px-5 sm:px-6 py-10 sm:py-14">
     <div class="reveal relative rounded-[2rem] overflow-hidden border border-tirma-pink/25 px-6 sm:px-10 py-10 sm:py-12">
       <div aria-hidden="true" class="pointer-events-none absolute inset-0 bg-gradient-to-br from-tirma-pink/[0.12] via-transparent to-tirma-beige/[0.05]"></div>
       <div class="relative">
-        <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-tirma-pink/90 mb-2">Programa fundador</p>
-        <h2 class="text-2xl sm:text-3xl font-bold tracking-[-0.02em] mb-3">Representante oficial de getcroquis en tu comunidad.</h2>
+        <p class="text-[11px] font-semibold tracking-[0.18em] uppercase text-tirma-pink/90 mb-2">Plan Agencia</p>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-[-0.02em] mb-3">Dos itinerarios al mes ya lo pagan.</h2>
         <p class="text-white/60 leading-relaxed max-w-2xl">
-          Una sola agencia por comunidad autónoma. La tuya luce el <strong class="text-white/85">sello de representante oficial</strong> —un plus de confianza ante tus clientes— y recibe los viajeros de su zona.
+          Si cobras 30 € por el itinerario de un viaje que ya vendiste, con dos al mes tienes la cuota cubierta. El resto es margen.
         </p>
         <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mt-6">
-          <span class="text-white/40 line-through text-lg" style="font-variant-numeric:tabular-nums">39,90 €/mes</span>
-          <span class="text-3xl sm:text-4xl font-extrabold text-tirma-beige" style="font-variant-numeric:tabular-nums">19,95 €<span class="text-base font-semibold text-white/50">/mes</span></span>
-          <span class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-tirma-pink/20 text-tirma-beige">−50% de por vida</span>
+          <span class="text-3xl sm:text-4xl font-extrabold text-tirma-beige" style="font-variant-numeric:tabular-nums">39,90 €<span class="text-base font-semibold text-white/50">/mes</span></span>
+          <span class="text-white/45">o</span>
+          <span class="text-3xl sm:text-4xl font-extrabold text-tirma-beige" style="font-variant-numeric:tabular-nums">399 €<span class="text-base font-semibold text-white/50">/año</span></span>
+          <span class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-tirma-pink/20 text-tirma-beige">2 meses gratis</span>
         </div>
-        <ul class="mt-6 grid sm:grid-cols-3 gap-3 text-sm">
-          <li class="rounded-2xl bg-white/[0.04] border border-white/[0.09] px-4 py-3"><span class="text-tirma-beige font-bold">Representante oficial</span><br /><span class="text-white/50">sello de calidad para tu agencia</span></li>
-          <li class="rounded-2xl bg-white/[0.04] border border-white/[0.09] px-4 py-3"><span class="text-tirma-beige font-bold">−50% de por vida</span><br /><span class="text-white/50">solo fundadoras</span></li>
-          <li class="rounded-2xl bg-white/[0.04] border border-white/[0.09] px-4 py-3"><span class="text-tirma-beige font-bold">Tu marca, no la nuestra</span><br /><span class="text-white/50">marca blanca incluida</span></li>
-        </ul>
-        <a href="/colaboradores" class="inline-flex items-center gap-1.5 mt-6 text-sm font-semibold text-tirma-beige/85 hover:text-tirma-beige">Ver agencias colaboradoras y comprobar si tu comunidad sigue libre →</a>
       </div>
     </div>
   </section>
@@ -108,48 +103,39 @@ const steps = [
     </div>
     <p class="reveal mt-6 text-sm text-white/45 max-w-2xl leading-relaxed">
       Los clientes que atiendes por tu cuenta son <strong class="text-white/70">100% tuyos</strong>: ahí no hay comisión, solo la cuota.
-      El 8% aplica únicamente si además vendes dentro del marketplace de getcroquis.
+      El 10 % aplica únicamente si además vendes dentro del marketplace de getcroquis.
     </p>
 
-    <!-- Free vs Agencia: para una agencia, Free es el "pruébalo", no un destino -->
+    <!-- Mensual vs anual del plan Agencia (para una agencia no hay plan gratuito) -->
     <div class="reveal mt-10 grid sm:grid-cols-2 gap-4">
       <div class="rounded-3xl border border-white/[0.1] bg-white/[0.02] p-6 sm:p-7 flex flex-col">
         <div class="flex items-baseline justify-between gap-2 mb-1">
-          <h3 class="text-lg font-bold">Free</h3>
-          <span class="text-2xl font-extrabold text-white/80" style="font-variant-numeric:tabular-nums">0 €</span>
+          <h3 class="text-lg font-bold">Mensual</h3>
+          <span class="text-2xl font-extrabold text-white/85" style="font-variant-numeric:tabular-nums">39,90 €<span class="text-sm font-semibold text-white/40">/mes</span></span>
         </div>
-        <p class="text-sm text-white/45 mb-5">Para probarlo sin poner un euro.</p>
+        <p class="text-sm text-white/45 mb-5">Sin permanencia. Te das de baja cuando quieras.</p>
         <ul class="space-y-2.5 text-sm flex-1">
-          <li class="flex gap-2.5"><span class="text-white/30">•</span><span class="text-white/70">Monta tu escaparate y prueba la IA</span></li>
-          <li class="flex gap-2.5"><span class="text-white/30">•</span><span class="text-white/45">Los itinerarios salen con <strong class="text-white/70">nuestra marca</strong>, no la tuya</span></li>
-          <li class="flex gap-2.5"><span class="text-white/30">•</span><span class="text-white/45">Un solo usuario: sin tu equipo</span></li>
-          <li class="flex gap-2.5"><span class="text-white/30">•</span><span class="text-white/45">Créditos sueltos, sin bolsa mensual</span></li>
-          <li class="flex gap-2.5"><span class="text-white/30">•</span><span class="text-white/45">15% de comisión si vendes por getcroquis</span></li>
+          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/75">Todo el plan Agencia</span></li>
+          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/75"><strong class="text-white">200 créditos</strong> de IA al mes (~40 itinerarios)</span></li>
+          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/75">Lo que ya pagaste es tuyo hasta fin de mes</span></li>
         </ul>
-        <p class="text-xs text-white/35 mt-5 pt-4 border-t border-white/[0.07]">Útil para verlo por dentro. Poco más: tu cliente vería nuestra marca.</p>
       </div>
 
       <div class="relative rounded-3xl border border-tirma-pink/35 bg-gradient-to-b from-tirma-pink/[0.1] to-transparent p-6 sm:p-7 flex flex-col">
-        <span class="absolute -top-2.5 left-6 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-tirma-pink text-white">Para trabajar</span>
+        <span class="absolute -top-2.5 left-6 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-tirma-pink text-white">El que más conviene</span>
         <div class="flex items-baseline justify-between gap-2 mb-1">
-          <h3 class="text-lg font-bold">Agencia</h3>
+          <h3 class="text-lg font-bold">Anual</h3>
           <span class="text-right">
-            <span class="block text-white/35 line-through text-sm" style="font-variant-numeric:tabular-nums">39,90 €</span>
-            <span class="text-2xl font-extrabold text-tirma-beige" style="font-variant-numeric:tabular-nums">19,95 €<span class="text-sm font-semibold text-white/40">/mes</span></span>
+            <span class="text-2xl font-extrabold text-tirma-beige" style="font-variant-numeric:tabular-nums">399 €<span class="text-sm font-semibold text-white/40">/año</span></span>
+            <span class="block text-white/40 text-xs" style="font-variant-numeric:tabular-nums">≈ 33,25 € al mes</span>
           </span>
         </div>
-        <p class="text-sm text-white/45 mb-5">Precio de agencia fundadora, para siempre.</p>
+        <p class="text-sm text-white/45 mb-5">Pagas 10 meses y tienes 12.</p>
         <ul class="space-y-2.5 text-sm flex-1">
-          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80"><strong class="text-white">Tu marca</strong> en cada itinerario. Nosotros no aparecemos</span></li>
-          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80"><strong class="text-white">3 asesores</strong> en la misma cuenta</span></li>
-          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80"><strong class="text-white">200 créditos</strong> al mes (~40 itinerarios), se acumulan</span></li>
-          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80">Packs extra <strong class="text-white">−25%</strong> y sin los 2 € de pasarela</span></li>
-          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80">Solo <strong class="text-tirma-beige">8%</strong> — y <strong class="text-white">0%</strong> con tus propios clientes</span></li>
-          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80">Sello de <strong class="text-white">representante oficial</strong> + exclusividad</span></li>
+          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80"><strong class="text-white">2 meses gratis</strong></span></li>
+          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80"><strong class="text-white">240 créditos</strong> al mes: un 20 % más</span></li>
+          <li class="flex gap-2.5"><span class="text-tirma-pink">✓</span><span class="text-white/80">Precio <strong class="text-white">congelado</strong> 12 meses</span></li>
         </ul>
-        <p class="text-xs text-tirma-beige/70 mt-5 pt-4 border-t border-tirma-pink/15">
-          Un solo itinerario vendido al mes ya lo paga. Cancelas tú, cuando quieras.
-        </p>
       </div>
     </div>
   </section>
@@ -192,10 +178,10 @@ const steps = [
     <div class="reveal relative rounded-[2rem] overflow-hidden border border-white/[0.08] px-6 sm:px-12 py-14 sm:py-20 text-center">
       <div aria-hidden="true" class="pointer-events-none absolute inset-0 bg-gradient-to-br from-tirma-pink/[0.14] via-transparent to-tirma-beige/[0.06]"></div>
       <div class="relative">
-        <h2 class="text-3xl sm:text-4xl font-bold tracking-[-0.02em]">¿Tu comunidad sigue libre?</h2>
-        <p class="text-white/55 mt-3 mb-8 max-w-md mx-auto">Solicita tu plaza en el programa fundador y bloquea tu −50% de por vida. Solicitar es gratis y sin compromiso — solo profesionales aprobados.</p>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-[-0.02em]">Digitaliza tu agencia esta semana.</h2>
+        <p class="text-white/55 mt-3 mb-8 max-w-md mx-auto">Solicitar es gratis y sin compromiso. Validamos cada agencia para que el sello signifique algo.</p>
         <a href={`${SITE.appUrl}/creador?tipo=agencia`} class="inline-block px-9 py-4 rounded-full bg-tirma-pink text-white font-semibold shadow-xl shadow-tirma-pink/25 hover:bg-tirma-deep transition">
-          Solicita tu plaza
+          Solicita tu acceso
         </a>
         <p class="mt-5 text-sm text-white/40">¿Eres creador o influencer, no una agencia? <a href="/creadores" class="text-tirma-beige/80 hover:text-tirma-beige underline underline-offset-2">Tu puerta es esta →</a></p>
       </div>
