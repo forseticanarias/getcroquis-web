@@ -5,6 +5,8 @@ export const SITE = {
   // Una sola URL (estilo Instagram): la app vive en el MISMO dominio, bajo sus
   // rutas (/dashboard, /explora, /login…). appUrl es la base del dominio.
   appUrl: 'https://getcroquis.com',
+  // Consola para profesionales (agencias, autónomos, creadores, guías, hoteles): alta, planes y tienda.
+  proUrl: 'https://pro.getcroquis.com',
   title: 'getcroquis · Planifica tu viaje perfecto con IA, guías y consejos',
   description:
     'Planifica tu itinerario día a día con IA en minutos: guías honestas, presupuesto real y consejos para viajar mejor y más barato. Copia viajes reales de otros viajeros. Todo a tu medida, sin postureo.',
