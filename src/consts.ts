@@ -13,6 +13,8 @@ export const SITE = {
   // Redes sociales de la marca (cambia el handle aquí en un solo sitio).
   instagram: 'https://instagram.com/getcroquis',
   tiktok: 'https://www.tiktok.com/@getcroquis',
+  // La app de Android (ficha pública de Google Play).
+  playStore: 'https://play.google.com/store/apps/details?id=com.getcroquis.app',
 };
 
 // "Ranking de necesidades" del viaje: informativo y discreto (no botones de

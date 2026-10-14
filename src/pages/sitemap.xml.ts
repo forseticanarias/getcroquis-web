@@ -13,9 +13,6 @@ export const GET: APIRoute = async () => {
     'destinos',
     'comparar',
     'empezar',
-    'creadores',
-    'agencias',
-    'locales',
     ...guias.map((g) => `guias/${g.slug}`),
     ...COUNTRIES.map((c) => `destinos/${c.slug}`),
   ];
